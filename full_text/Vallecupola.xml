@@ -31,9 +31,9 @@
 		<body>
 
 			<head>
-				<placeName sameAs="https://www.wikidata.org/wiki/Q18454357">
+
 					<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/vallecupola_story.html" type="url">Vallecupola</ref>
-				</placeName>
+			
 			</head>
 
 			<div1 type="block" n="1">
@@ -52,21 +52,29 @@
 					<p>«Non ci sta nessuno a casa per accompagnarti, darti una mano?», aveva insistito Lucrezia con un pugno sul fianco.</p>
 					<p>«Sì, tra poco torna Dino, ma non ce la faccio, sento troppo dolore. Salutami Don Tomasso e digli che sarà per la prossima, ahah», si era cacciata le mani nelle 
 					saccocce e aveva scosso il capo. Aveva estratto una 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/10_lire.html" type="url">
 							<rs xml:id="10_lire_object">moneta da dieci lire</rs>
 						</ref>
+
 						: porgendola a Lucrezia, si era raccomandata di riporla nella bussola per conto suo, 
 					affinché il Signore le guarisse quanto prima la gamba difettosa.</p>
 				</div2>
 				<div2 type="scene" xml:id="scene_girl_conca_fountain">
 					<p>
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/pres_de_la_fontaine.html" type="url">La ragazza aveva poi finito di riempire l’acqua alla fontana gorgogliante;</ref> 
+							
 							acciambellata la sparra sul capo, si era diretta verso casa con la 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/conca.html" type="url">
 							<rs xml:id="conca_object">conca</rs>
 						</ref> 
+						
 							sulla testa, le braccia in alto per tenerla in equilibrio. 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/donna.html" type="url">Aveva inceduto con l’eleganza di una funambola, l’orlo della gonna che svolazzava attorno alle caviglie.</ref>
+
 					</p>
 				</div2>
 				<div2>
@@ -74,9 +82,11 @@
 					<p>«Marì, sbrigate a fà tutte ‘ste cose eh, che sennò qua a Messa non ci arriviamo manco quando fa li intocchitti»</p>
 					<p>«Essome, essome, arrivo!»</p>
 					<p>Nel callaro che riposava sui mattoni, la cenere si era depositata sul fondo. Brandendo un mestolo freddo, Lucrezia riempì una 
+						
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/catinella.html" type="url">
 							<rs xml:id="catinella_object">catinella</rs>
 						</ref> 
+
 						con la lisciva che si era formata.</p>
 					<p>Mentre si chinava con la testa, avvertì un metallico rumore di passi. Il din din, prodotto dalle bollette di scarponi che battevano sulla pietra, si insinuò tra 
 					le case svoltando per i vicoli fino a raggiungere la soglia. Il portone di legno cigolò e si infilarono due agili figure: la prima, bassa e saltellante, avvolta in 
@@ -97,10 +107,13 @@
 					riprese a spazzare. La sera prima, con gli altri uomini del paese avevano giocato a briscola e a morra e si erano scolati fiaschi di vino. Avevano passato il tempo 
 					così, a ridere e zinzinare aspettando il sonno. Evidentemente Antonio era ancora rintronato tra le lenzuola.</p>
 					<p>Aurora corse nella loro direzione con il 
+						
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/brillantina.html" type="url">
 							<rs xml:id="brillantina_object">barattolo di brillantina</rs>
 						</ref> 
-						nuovo. Lo svitò:</p>
+
+						nuovo. Lo svitò:
+					</p>
 					<p>«Adesso ti fai impomatare». Allo sbuffo di lui aggiunse: «Dai, da bravo»</p>
 					<p>Lui, che teneva le mani in tasca e la schiena aderente al muro, abbassò la testa per la tortura. Prima di iniziare l’opera, la bimba porse alla sorella un foglietto.</p>
 					<p>«Questo me lo ha dato Edoardo… se vuoi te lo leggo io… visto che ho fatto la seconda e leggo molto bene», si esibì in tronfie moine, «me lo dice anche Settimio quando 
@@ -152,19 +165,27 @@
 					<p>«Eh… erano altri tempi. Poi ce ne siamo andati tutti, io qua a Rocca, tua nonna a Roma, e Vallecupola s’è svuotata», si siede di nuovo, «Quand’è che sei tornato?»</p>
 					<p>«Per la sagra dei maccheroni a fezze. Penso di rimanere un paio di settimane», rispondo pensieroso. «Mi sa che vado, altrimenti si fa tardi»</p>
 					<p>Stando a Google Maps, la distanza da percorrere da 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/usil.html" type="url">
-							<placeName sameAs="https://www.wikidata.org/wiki/Q224430">Rocca Sinibalda</placeName>
+							Rocca Sinibalda
 						</ref> 
-						a Vallecupola consta di 18,3 km, per un totale di 27 minuti di viaggio in macchina.</p>
+
+						a Vallecupola consta di 18,3 km, per un totale di 27 minuti di viaggio in macchina.
+					</p>
 					<p>Spengo il telefono e do un bacio alla zia.</p>
 					<p>«Ah, i fiori!», mi aiuta a sistemare l’involucro nel portabagagli.</p>
 					<p>Prima di partire faccio due passi. Il 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/stamp.html" type="url">
-							<rs type="castle" sameAs="https://www.wikidata.org/wiki/Q113584546">castello</rs>
+							<rs xml:id="castle">castello</rs>
 						</ref>
+
 							, che dal bar si vede oltre le poste e la farmacia, si erge in un gioco di merli e cipressi. 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/feudo_di_rocca_sinibalda.html">Composto, elegante come un cervo, impera sull’intera valle.</ref> 
-							Riattraverso la piazza per raggiungere la macchina. La fontana, come una coppa, rovescia acqua con un sussurrìo. Fontana di rustico amore.</p>
+							
+						Riattraverso la piazza per raggiungere la macchina. La fontana, come una coppa, rovescia acqua con un sussurrìo. Fontana di rustico amore.
+					</p>
 				</div2>
 			</div1>
 
@@ -181,11 +202,14 @@
 					<p>Così avevano chiacchierato qualche volta sul sagrato. E avevano anche passeggiato assieme. Quel giorno però lui non si era visto e la curiosità – non priva di 
 					timore – di conoscere quale ne fosse il motivo era cresciuta, soprattutto per via di quel biglietto che teneva tra le dita e le sembrava troppo misterioso.</p>
 					<p>Raggiunse un piazzale circondato dalle stalle e da un orto ribassato rispetto alla via. Davanti a lei, il fontanile invaso da un nugolo di donne. Strofinavano i 
-					tessuti con dei pezzi di sapone mentre intonavano come fringuelli 
+						tessuti con dei pezzi di sapone mentre intonavano come fringuelli 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/quel_mazzolin_di_fiori.html" type="url">
 							<quote xml:id="quel_mazzolin_di_fiori_verse">«Quel maaazzolìììn di fioriii, che vien dalla montaaagna»</quote>
 						</ref>
-							. Dal coro si levò una voce che esclamò:</p>
+
+							. Dal coro si levò una voce che esclamò:
+					</p>
 					<p>«Caterì, l’hai visti che belli ‘sti cococcióli che hanno piantato qua?» fece cenno con la testa, per poi grattarsi dietro l’orecchio con la spalla, «Sarebbe da 
 					fregassene un paio, giusto pe prende i semi e ripiantalli n’altr’anno»</p>
 					<p>«Eh già» l’assecondò Caterina, che si staccò dal gruppo per stendere le lenzuola in cima alla macera.</p>
@@ -212,23 +236,29 @@
 
 			<div1 type="block" n="4">
 				<div2>
-					<p>Imbocco la salita che conduce alla piazza principale di Vallecupola, su cui affaccia la 
+					<p>Imbocco la salita che conduce alla piazza principale di Vallecupola, su cui affaccia la
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/croce.html" type="url">
-							<rs type="church" sameAs="https://www.wikidata.org/wiki/Q121161221">Chiesa di Santa Maria della Neve</rs>
+							<rs xml:id="church">Chiesa di Santa Maria della Neve</rs>
 						</ref>
-							, ma poi torno in retromarcia in direzione dei giardini pubblici e parcheggio accanto al marciapiede. «È più comodo», mi dico.</p>
+
+							, ma poi torno in retromarcia in direzione dei giardini pubblici e parcheggio accanto al marciapiede. «È più comodo», mi dico.
+					</p>
 				</div2>
 				<div2 type="scene" xml:id="scene_in_the_graveyard">
 					<p>Mi incammino in direzione di Varco Sabino con il mazzo di semprevivi incartati sottobraccio. Da piccolo, durante le estati in cui tornavamo a Vallecupola, ho 
-					percorso questa strada decine di volte con le ali ai piedi, abbandonando le voci lontane di nonna e zia che parlottavano dietro di me. Fino ad arrivare lì, in quel 
-					<rs type="graveyard" sameAs="https://www.wikidata.org/wiki/Q113470846">camposanto</rs> sperduto, di rado visitato da qualcuno. Supero la cinta muraria e mi immergo in un altro mondo, fatto di ricordi che sbiadiscono. Ripenso a una canzone 
-					che fa 
+						percorso questa strada decine di volte con le ali ai piedi, abbandonando le voci lontane di nonna e zia che parlottavano dietro di me. Fino ad arrivare lì, in quel 
+						<rs xml:id="graveyard">camposanto</rs> sperduto, di rado visitato da qualcuno. Supero la cinta muraria e mi immergo in un altro mondo, fatto di ricordi che sbiadiscono. Ripenso a una canzone 
+						che fa 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/cemetry_gates.html" type="url">
-							<quote xml:id="cemetry_gates_verse">They were born and then they lived and then they died</quote>
+							<quote xml:id="cemetry_gates_verse">They were born and then they lived and then they died.</quote>
 						</ref>
-							. I miei passi rimbombano tra le pietre. Tutte queste persone dove sono adesso? Dove i loro amori, gli 
-					odi, le passioni? Il vuoto che ho attorno mi fa pensare a un Partenone che crolla, il frontone – con tutta la sua mitologia – si sbriciola, le colonne rotolano a 
-					valle.</p>
+
+						I miei passi rimbombano tra le pietre. Tutte queste persone dove sono adesso? Dove i loro amori, gli 
+						odi, le passioni? Il vuoto che ho attorno mi fa pensare a un Partenone che crolla, il frontone – con tutta la sua mitologia – si sbriciola, le colonne rotolano a 
+						valle.
+					</p>
 					<p>Ritrovo la lapide dei nonni, effigiati in pose austere. A terra spacchetto i semprevivi. Compongo mazzetti variopinti che distribuisco nei loro vasi e in quelli 
 					di altri parenti, destreggiandomi tra le pareti di nomi e inerpicandomi sulla pesante scala a castello che cigola non appena la trascino.</p>
 					<p>Mi inoltro in un’altra zona dove riposano anime che non conosco. Con la nonna e la zia passavamo lì per visitare una persona soltanto. Eccolo, proprio di fronte a 
@@ -283,25 +313,36 @@
 					capello fosse nato da un chiccolino piantato e cresciuto sulla tua testa, sarebbe incredibile! Ce la scriverò io, una poesia», ed era corsa a cercare carta, penna e 
 					calamaio, le trecce che saltellavano sulla schiena.</p>
 					<p>Aurora si accingeva a frequentare la terza elementare e tanto sperava di poter continuare fino in quinta. In pochi avevano potuto permetterselo, ma lei amava leggere 
-					e studiare, li aveva pregati. Certo, rimuginava Lucrezia, questo avrebbe significato lavoro in più, quei pochi tacchini e qualche saltuario rammendo retribuito non 
-					avrebbero potuto essere sufficienti. Ne avevano discusso tutti e tre a tavola e il fratello le aveva ricordato che gli ultimi due anni di scuola non si sarebbero 
-					svolti a Vallecupola ma a Varco, a quattro chilometri di distanza. 
-					<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/video.html" type="url">Avrebbe dovuto camminare a lungo ogni giorno e, d’inverno, sulla neve.</ref>
-						Aurora si dichiarava pronta a tutto, irremovibile guerriera.</p>
+						e studiare, li aveva pregati. Certo, rimuginava Lucrezia, questo avrebbe significato lavoro in più, quei pochi tacchini e qualche saltuario rammendo retribuito non 
+						avrebbero potuto essere sufficienti. Ne avevano discusso tutti e tre a tavola e il fratello le aveva ricordato che gli ultimi due anni di scuola non si sarebbero 
+						svolti a Vallecupola ma a Varco, a quattro chilometri di distanza. 
+
+						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/video.html" type="url">Avrebbe dovuto camminare a lungo ogni giorno e, d’inverno, sulla neve.</ref>
+						
+						Aurora si dichiarava pronta a tutto, irremovibile guerriera.
+					</p>
 					<p>«Che schifo!», una larva si contorceva dentro a uno scartoccio come un nobile signorotto nella sua poltrona.</p>
 					<p>Entrò Antonio sbattendo la porta, una sigaretta in bocca. Maledisse il vento che ululava tra i vicoli e spegneva le 
+						
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/lampada.html" type="url">
 							<rs xml:id="lampada_object">lampade a carburo</rs>
 						</ref> 
+
 							dei lampioni. Si sfregò le mani:</p>
 					<p>«Fa freschetto, stasera». Buttò la cicca nel camino, «Scusate il ritardo… avete ancora bisogno di una mano?»</p>
 					<p>«No, qui abbiamo finito» rispose Edoardo a cui Lucrezia passava l’ultima pannocchia, «aiutaci a spicciare e poi inizi con l’organetto»</p>
 					<p>La stanza si trasformò in un formicaio, per qualche minuto tutti furono indaffarati a ripulire la polvere piovuta sulle mattonelle durante il lavoro e a mettere a 
 					posto, accatastare i sacchi, agganciare le fiette alle travi.</p>
 					<p>Antonio s’assettò in un angolo e suonò una polka, poi un valzer. I giovani turbinavano nella stanza flessuosi. Lo pregarono di eseguire anche una 
+						
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/quadriglia.html" type="url">quadriglia</ref>
-							. Avevano poco spazio ma si divertirono, con Alvaro che amava comandare il ballo burlescamente: i suoi ordini confondevano le dame e i cavalieri fino a farli incespicare. 
-						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/ballerini.html" type="url">«Contré!» urlava salterellando tra i ballerini allegri. «Zighete zaghete!», e intanto si infilava tra di loro roteando come una pantasima.</ref>
+							
+						. Avevano poco spazio ma si divertirono, con Alvaro che amava comandare il ballo burlescamente: i suoi ordini confondevano le dame e i cavalieri fino a farli incespicare. 
+						
+						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/ballerini.html" type="url">
+							
+							«Contré!» urlava salterellando tra i ballerini allegri. «Zighete zaghete!», 
+							e intanto si infilava tra di loro roteando come una pantasima.</ref>
 					</p>
 					<p>Antonio continuava a far soffiare lo strumento, inebriato dalle giravolte di suoni. Maria gli offrì un bicchiere di vino e lui suonò con più foga, piegato 
 					sull’organetto, molleggiando la testa e battendo il tacco a tempo.</p>
@@ -313,7 +354,9 @@
 					<p>Poi raggiunse il muraglione vicino alla Madonnella, da cui si scorgevano tutte le valli e i campi attorno al paese, per seguire dall’alto la carovana di pecore che 
 					se ne andava lungo la mulattiera. La marcia era guidata dai campanacci dei viarelli. Gli asini chiudevano la fila, carichi di reti, coperte, cupelle.</p>
 					<p>
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/vallecupola_performance.html" type="url">«Ti aspetto», ripeté.</ref>
+					
 					</p>
 				</div2>
 			</div1>
@@ -331,9 +374,11 @@
 				<div2 type="scene" xml:id="scene_with_grandma_and_grandson">
 					<p>Risalgo gli scaloni e non riesco a darmi una risposta, procedo tra le vie a zigzag fino a raggiungere la Madonnella incastonata nella parete: ha una corona, 
 						dalle mani fuoriescono dei raggi. Sotto di lei si dipana il lungo 
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/poesie.html" type="url">
 							<rs xml:id="wall">muraglione.</rs>
 						</ref>
+
 					</p>
 					<p>Lucrezia è ancora lì. È sempre rimasta lì. Asciuga le guance con le maniche:</p>
 					<p>«Lucrè, ma che hai? Perché piangi così?», si dice da sola, «Mi sembri una bambina!». Stropiccia gli occhi con le nocche: «Da quando sei così frignona? Tornerà… come 
@@ -352,7 +397,9 @@
 					procede, cappello e bastone, tra le macchie bianche in marcia. Socchiudo gli occhi – due pozze – e adagio la testa accanto alla sua. Mi esce un gemito accorato:</p>
 					<p>«Nonna…», con le mani bagnate di lacrime le accarezzo i capelli d’oro, che io ho visto solo quando erano diventati ormai candidi.</p>
 					<p>
+
 						<ref target="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/nonno_e_nipote.html" type="url">In silenzio, osserviamo la mulattiera. Il gregge non si vede più.</ref>
+					
 					</p>
 				</div2>
 			</div1>

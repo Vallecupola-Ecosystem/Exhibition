@@ -1,0 +1,17 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Cemetry Gates,Type,Musical Composition,val:cemetry_gates,rdf:type,fabio:MusicalComposition
+Cemetry Gates,Title,Cemetry Gates,val:cemetry_gates,mo:title,"""Cemetry Gates""^^xsd:string"
+Cemetry Gates,Artist,The Smiths,val:cemetry_gates,mo:performer,wd:Q180598
+Cemetry Gates,Duration,2:39,val:cemetry_gates,mo:duration,"""PT2M39S""^^xsd:duration"
+Cemetry Gates,Album,The Queen Is Dead,val:cemetry_gates,mo:record,wd:Q853308
+Cemetry Gates,Release Date,1986-06-16,val:cemetry_gates,mo:release_date,"""1986-06-16""^^xsd:date"
+Cemetry Gates,Instrumentation,"Guitar, :BassGuitar, :Drums, :Vocals",val:cemetry_gates,mo:instrument,"""Guitar, :BassGuitar, :Drums, :Vocals""^^xsd:string"
+Cemetry Gates,Recording Location, Farnham,val:cemetry_gates,mo:recorded_in,gn:2649660
+Cemetry Gates,Language,English,val:cemetry_gates,dcterms:language,iso639:eng
+Cemetry Gates,Genre,Alternative Rock,val:cemetry_gates,mo:genre,wd:Q11366
+Cemetry Gates,Publisher, Rough Trade Records,val:cemetry_gates,mo:publisher,wd:Q385558
+Cemetry Gates,coverage, United Kingdom,val:cemetry_gates,dcterms:coverage,gn:2635167
+Cemetry Gates,Producer,Stephen Street,val:cemetry_gates,mo:producer,wd:Q182427
+Cemetry Gates,Lyricist,Morrissey,val:cemetry_gates,mo:lyricist,wd:Q202246
+Cemetry Gates,Composer,Johnny Marr,val:cemetry_gates,mo:composer,wd:Q317742
+Cemetry Gates,Has part,cemetry gates verse,val:cemetry_gates,frbr:part,val:cemetry_gates_verse

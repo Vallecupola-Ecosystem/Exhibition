@@ -1,0 +1,13 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+conca,Type,Physical Human Made Thing,val:conca,crm:P2_has_type,crm:E24_Physical_Human_Made_Thing
+conca,Keeper,ll museo diffuso delle tradizioni contadine e artigiane (Posticciola),val:conca,crm:P50_has_current_keeper,val:museo_posticciola
+conca,Title,Conca,val:conca,dc:title,"""Conca""@it"
+conca,Alternative,Conca tradizionale dell'Italia centro-meridionale,val:conca,dc:alternative,"""Conca tradizionale dell'Italia centro-meridionale""@it"
+conca,Description,"Recipiente in rame battuto utilizzato dalle donne per trasportare acqua da fontane pubbliche. Simbolo del lavoro femminile e della vita comunitaria nell'Italia rurale. Capacità: 15-20 litri, peso: 3.5 kg.",val:conca,dc:description,"""""""Recipiente in rame battuto utilizzato dalle donne per trasportare acqua da fontane pubbliche. Simbolo del lavoro femminile e della vita comunitaria nell'Italia rurale. Capacità: 15-20 litri, peso: 3.5 kg.""""""@it
+
+"
+conca,Format,"Rame battuto, rivetti manuali",val:conca,dc:format,"""Rame battuto, rivetti manuali""@it"
+conca,Coverage,"Abruzzo, Italia centro-meridionale",val:conca,dc:coverage,"""Abruzzo, Italia centro-meridionale""@it"
+conca,Subject,"Artigianato tradizionale, Storia sociale",val:conca,dc:subject,"""Artigianato tradizionale"", ""Storia sociale""@it"
+conca,Source,"<http://www.faldus.it/conca.htm>, <https://it.wikipedia.org/wiki/Conca_abruzzese>",val:conca,dc:source,"<http://www.faldus.it/conca.htm>, <https://it.wikipedia.org/wiki/Conca_abruzzese>"
+conca,Temporal,1800-1960,val:conca,dc:temporal,"""1800-1960"""

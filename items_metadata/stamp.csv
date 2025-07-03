@@ -1,0 +1,15 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+550 Lire Stamp – Castello di Rocca Sinibalda,Type,Visual Artwork,val:stamp,rdf:type,schema:VisualArtwork
+550 Lire Stamp – Castello di Rocca Sinibalda,Title,550 Lire – Castello di Rocca Sinibalda,val:stamp,crm:P102_has_title  ,"""550 Lire – Castello di Rocca Sinibalda""^^xsd:string"
+550 Lire Stamp – Castello di Rocca Sinibalda,Creator,Egidio Vangelli,val:stamp,crm:P14_carried_out_by,"""Egidio Vangelli""^^xsd:string"
+550 Lire Stamp – Castello di Rocca Sinibalda,Date Issued,1984-02-14,val:stamp,crm:P4_has_time-span,"""1984""^^xsd:gYear"
+550 Lire Stamp – Castello di Rocca Sinibalda,Resource Genre/Nature, Postage Stamp,val:stamp,crm:P2_has_type,wd:Q37930
+550 Lire Stamp – Castello di Rocca Sinibalda,Shows,Rocca Sinibalda Castle,val:stamp,crm:P138_shows,val:castle
+550 Lire Stamp – Castello di Rocca Sinibalda,Catalog code, 1522-Aa;(Catalogo Specializzato Italiano Francobolli),val:stamp,crm:P1_is_identified_by,"""1522-Aa""^^xsd:string"
+550 Lire Stamp – Castello di Rocca Sinibalda,Language,Italian,val:stamp,dcterms:language,wd:Q652
+550 Lire Stamp – Castello di Rocca Sinibalda,Rights,© Istituto Poligrafico e Zecca dello Stato (IPZS),val:stamp,crm:P104_is_subject_to,wd:Q81191
+550 Lire Stamp – Castello di Rocca Sinibalda,Source,Poste Italiane; Castelli d’Italia series,val:stamp,crm:P70_documents,wd:Q495026
+550 Lire Stamp – Castello di Rocca Sinibalda,Publisher,Poste Italiane,val:stamp,dcterms:publisher,wd:Q495026
+550 Lire Stamp – Castello di Rocca Sinibalda,Material,"Paper stamp,  multicolor",val:stamp,crm:P45_consists_of,wd:Q11472
+550 Lire Stamp – Castello di Rocca Sinibalda,Dimensions,"30 mm height x 26 mm width, Perforation 13¼",val:stamp,crm:P43_has_dimension,"""30 mm height x 26 mm width, Perforation 13¼""^^xsd:string"
+550 Lire Stamp – Castello di Rocca Sinibalda,Holding Institution,"Museo Storico della Comunicazione (Rome, Italy)",val:stamp,crm:P50_has_current_keeper,wd:Q3868153

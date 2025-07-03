@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Conca</title>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .top-icons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .icon-button {
+      background: #1e2a38;
+      border: 1px solid #4b6b88;
+      color: #f0f0f0;
+      font-size: 1.1em;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto 40px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .object-image {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #1e2a38;
+      border: 1px solid #4b6b88;
+      color: #f0f0f0;
+      font-size: 1.5em;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-left { left: -20px; }
+    .nav-right { right: -20px; }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+    }
+
+    .accordion-container {
+      background-color: #1e2a38;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+
+    .accordion-item {
+      margin-bottom: 10px;
+      border: 1px solid #34495e;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .accordion-label {
+      display: block;
+      background-color: #2c3e50;
+      padding: 16px 20px;
+      font-size: 1.05em;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .accordion-label:hover {
+      background-color: #3a536d;
+    }
+
+    .accordion-label::after {
+      content: '▾';
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked + .accordion-label::after {
+      transform: rotate(180deg);
+    }
+
+    .note {
+      display: block;
+      font-size: 0.85em;
+      font-style: italic;
+      color: #b0c4de;
+      margin-top: 5px;
+    }
+
+    .accordion-content {
+      background-color: #263645;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 20px;
+    }
+
+    input[type="checkbox"]:checked ~ .accordion-content {
+      max-height: 10000px;
+      padding: 15px 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    td {
+      padding: 12px 16px;
+      text-align: left;
+      min-width: 200px;
+      color: #f0f0f0;
+      background-color: #1f2d3c;
+      border: 1px solid #4a5a6a;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #223344;
+    }
+  </style>
+</head>
+<body>
+<!-- Top Buttons -->
+<div class="top-icons">
+<a class="icon-button" href="#">🌐 Translate</a>
+<a class="icon-button" href="#">📤 Share</a>
+</div>
+<div class="container">
+<!-- Image and Navigation -->
+<div class="image-wrapper">
+<a class="nav-button nav-left" href="object20.html" title="Previous Object">←</a>
+<img alt="Conca" class="object-image" src="Conca.jpeg"/>
+<a class="nav-button nav-right" href="object2.html" title="Next Object">→</a>
+</div>
+<div class="accordion-container">
+<h1>🥣 Conca – Descriptions for Everyone</h1>
+<div class="accordion-item">
+<input id="acc1" type="checkbox"/>
+<label class="accordion-label" for="acc1">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
+<div class="accordion-content">
+            <p>
+              Let’s travel back to a time when villages had no kitchen taps. Instead, girls and women walked daily to the nearest fountain, carrying a special copper container called a <strong>conca</strong>. It looked like a wide vase with two handles and a rounded body. When full, it held up to 20 liters of water—pretty heavy!
+            </p>
+            <p>
+              The conca was usually placed on the head, often with a cloth ring underneath for balance. In Posticciola, a small village in central Italy, murals still show women with concas on their heads. This object is part of the “Museo diffuso delle tradizioni contadine e artigiane,” an open-air museum that spreads traditional tools all around the village.
+            </p>
+            <p>
+              Copper concas were also beautiful. People polished them until they shone like gold. They symbolized care, strength, and women’s connection to their community.
+            </p>
+            <p>
+              So next time you fill a water bottle, imagine walking miles with a glowing copper vessel on your head. That was everyday life for many!
+            </p></div>
+</div>
+<div class="accordion-item">
+<input id="acc2" type="checkbox"/>
+<label class="accordion-label" for="acc2">⌛ In a Minute <span class="note">for those in a rush</span></label>
+<div class="accordion-content">
+            <p>
+              The <strong>conca</strong> is a traditional water vessel that played a key role in the everyday life of rural Italy, especially in the central and southern regions. Typically made of hammered copper and held together with rivets, the conca was designed to carry large quantities of water—up to 20 liters—from public fountains or wells to homes and fields. It was engineered with a rounded bottom and broad shoulders for better balance, often transported on the head or shoulder with the help of a cloth ring called a “ciambella.”
+            </p>
+            <p>
+              The conca is also accompanied by a ladle, or <em>piccaru</em>, used to scoop and drink directly from the container. Together, these items formed a mobile hydration system, long before thermoses or taps. While plumbing has replaced the need for concas, their role in Italian cultural memory remains vivid. Today, they are admired for their craftsmanship and elegance.
+            </p>
+            <p>
+              For modern observers, the conca is more than a container. It’s a vessel of stories: of women walking together, children waiting at fountains, and whole communities formed around daily water rituals. Museums like the one in Posticciola ensure these stories are not lost. They remain visible—in bronze, in paint, and in performance—reminding us of how water once shaped every step of the day.
+            </p></div>
+</div>
+<div class="accordion-item">
+<input id="acc3" type="checkbox"/>
+<label class="accordion-label" for="acc3">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
+<div class="accordion-content">
+<p><strong>Craft &amp; Form</strong><br/>
+This conca was raised from a single copper sheet, annealed, and riveted by village smiths. The metal’s thermal conductivity chilled water, while the shape centred weight over the spine for head carrying.</p>
+<p><strong>Gendered Ritual</strong><br/>
+Fetching water was women’s work. Oral histories describe pre‑dawn walks where gossip, songs, and matchmaking flourished. Balancing a conca without spillage marked a girl’s passage into adulthood.</p>
+<p><strong>Community &amp; Economy</strong><br/>
+Fountains acted as social hubs; polished concas signalled thrift and care. Peddlers sold tin paste to plug leaks, and annual fairs judged the brightest shine.</p>
+<p><strong>Decline &amp; Revival</strong><br/>
+Plumbing after 1950 ended the ritual, but artists now repaint village walls with conca scenes, and festivals stage balancing races to keep the skill alive.</p>
+<p><strong>Meaning Today</strong><br/>
+Museums frame the conca as a lens on water scarcity, women’s resilience, and circular craft. Holding one—heavy, warm, reflective—makes abstract history tangible.</p>
+</div>
+</div>
+<div class="accordion-item">
+<input id="acc4" type="checkbox"/>
+<label class="accordion-label" for="acc4">📱 #ShareIt! <span class="note">for modern influencers</span></label>
+<div class="accordion-content">
+            <p>
+              💧🚶‍♀️This isn’t just a pot—it’s history in motion. Meet the <strong>conca</strong>, the copper water vessel used by women in rural Italy for over a century. Up to 20 liters. Carried on the head. No hands. Full elegance.
+            </p>
+            <p>
+              📍 Found today in murals and outdoor museums like Posticciola’s “Museo Diffuso delle Tradizioni Contadine,” the conca isn’t hidden behind glass. It’s <em>on the streets</em>. Painted, perched, polished. A real memory marker.
+            </p>
+            <p>
+              🔥 Hook your captions with:<br>
+              • “Before plumbing, there was posture.”<br>
+              • “What 20kg on your head teaches you about grace.”<br>
+              • “My grandma did this daily—so I could just turn a tap.”
+            </p>
+            <p>
+              🌍 More than a vessel. It’s a mirror. It reflects sun, memory, effort, and women’s legacy. So next time you sip water? Remember the copper, the curve, the courage.
+            </p>
+            <p>
+              #ConcaVibes #MuseoDiffuso #RuralHeritage #HerStoryInCopper
+            </p></div>
+</div>
+<div class="accordion-item">
+<input id="acc5" type="checkbox"/>
+<label class="accordion-label" for="acc5">📊 Metadata <span class="note">for those who need structured information</span></label>
+<div class="accordion-content">
+<table class="metadata-table">
+<thead>
+<tr>
+<th>Predicate (Natural Language)</th>
+<th>Object (Natural Language)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Conca</td>
+</tr>
+<tr>
+<td>Alternative</td>
+<td>Conca tradizionale dell'Italia centro-meridionale</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+                    Recipiente in rame battuto utilizzato dalle donne per trasportare acqua da fontane pubbliche.
+                    Simbolo del lavoro femminile e della vita comunitaria nell'Italia rurale.
+                    Capacità: 15-20 litri, peso: 3.5 kg.
+                  </td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Manufatto artigianale</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Rame battuto, rivetti manuali</td>
+</tr>
+<tr>
+<td>Coverage</td>
+<td>Abruzzo, Italia centro-meridionale</td>
+</tr>
+<tr>
+<td>Subject</td>
+<td>Artigianato tradizionale, Storia sociale</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>
+<a href="http://www.faldus.it/conca.htm" target="_blank">faldus.it/conca</a>,
+                    <a href="https://it.wikipedia.org/wiki/Conca_abruzzese" target="_blank">Wikipedia</a>
+</td>
+</tr>
+<tr>
+<td>Temporal</td>
+<td>1800–1960</td>
+</tr>
+<tr>
+<td>Keeper</td>
+<td>Il museo diffuso delle tradizioni contadine e artigiane</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lampada a carburo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .top-icons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .icon-button {
+      background: #1e2a38;
+      border: 1px solid #4b6b88;
+      color: #f0f0f0;
+      font-size: 1.1em;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto 40px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .object-image {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #1e2a38;
+      border: 1px solid #4b6b88;
+      color: #f0f0f0;
+      font-size: 1.5em;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-left { left: -20px; }
+    .nav-right { right: -20px; }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+    }
+
+    .accordion-container {
+      background-color: #1e2a38;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+
+    .accordion-item {
+      margin-bottom: 10px;
+      border: 1px solid #34495e;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .accordion-label {
+      display: block;
+      background-color: #2c3e50;
+      padding: 16px 20px;
+      font-size: 1.05em;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .accordion-label:hover {
+      background-color: #3a536d;
+    }
+
+    .accordion-label::after {
+      content: '▾';
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked + .accordion-label::after {
+      transform: rotate(180deg);
+    }
+
+    .note {
+      display: block;
+      font-size: 0.85em;
+      font-style: italic;
+      color: #b0c4de;
+      margin-top: 5px;
+    }
+
+    .accordion-content {
+      background-color: #263645;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 20px;
+    }
+
+    input[type="checkbox"]:checked ~ .accordion-content {
+      max-height: 10000px;
+      padding: 15px 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    td {
+      padding: 12px 16px;
+      text-align: left;
+      min-width: 200px;
+      color: #f0f0f0;
+      background-color: #1f2d3c;
+      border: 1px solid #4a5a6a;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #223344;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Buttons -->
+  <div class="top-icons">
+    <a href="#" class="icon-button">🌐 Translate</a>
+    <a href="#" class="icon-button">📤 Share</a>
+  </div>
+
+  <div class="container">
+    <!-- Image and Navigation -->
+    <div class="image-wrapper">
+      <a href="object20.html" class="nav-button nav-left" title="Previous Object">←</a>
+      <img class="object-image" src="https://beniculturali.regione.veneto.it/xway-front/application/crv/engine/crv.jsp?verbo=attach&db=crv_back&id=82XZAgaV0l0%3D.jpg" alt="Lampada a Carburo">
+      <a href="object2.html" class="nav-button nav-right" title="Next Object">→</a>
+    </div>
+
+    <div class="accordion-container">
+      <h1>🕯️ Lampada a Carburo – Descriptions for Everyone</h1>
+
+      <!-- 1. LET'S DISCOVER! -->
+      <div class="accordion-item">
+        <input type="checkbox" id="acc1">
+        <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
+        <div class="accordion-content">
+            <p>
+              Imagine standing in a dark barn a hundred years ago. Someone pours a trickle of water onto dull gray stones, and—<em>fwoosh!</em>—a bright white flame bursts from a funny metal lamp. That gadget is a carbide lamp, or <em>lampada a carburo</em>, and it turns water plus rock into light that outshines any candle.
+            </p>
+            <p>
+              The trick is simple: the lamp has two pockets. Water drips from the top chamber onto calcium carbide in the bottom one, making acetylene gas. Strike a spark, and the gas burns with a steady glow that even gusty wind can’t snuff out. Miners, cyclists, and farmers loved it because it was light to carry, easy to fix, and four times brighter than an oil lantern—perfect for late‑night adventures!
+            </p>
+        </div>
+      </div>
+
+      <!-- 2. IN A MINUTE -->
+      <div class="accordion-item">
+        <input type="checkbox" id="acc2">
+        <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
+        <div class="accordion-content">
+            <p>
+              Patented in 1892, the carbide lamp produces acetylene by letting measured drops of water fall onto calcium carbide. The resulting jet of gas, lit at a tiny nozzle and bounced off a reflector, yields roughly forty candlepower—four to ten times the output of kerosene. Our example (catalogue CRV‑BDM 0004306, Cesiomaggiore, 1890) stands 18 cm tall and combines a wrought‑iron body, copper cap, and cork gasket for a leak‑free seal.
+            </p>
+            <p>
+              Cheap fuel, a wind‑proof flame, and hands‑free head‑mounts made the lamp a favorite in mines, on bicycles, and in rural homes before electricity arrived. By the 1950s it was eclipsed by battery lights, but cavers and collectors still prize its warm beam, mechanical simplicity, and built‑in hand‑warmer qualities.
+            </p>
+        </div>
+      </div>
+
+      <!-- 3. DEEP DIVE -->
+      <div class="accordion-item">
+        <input type="checkbox" id="acc3">
+        <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
+        <div class="accordion-content">
+          <p><strong>Illuminating Chemistry & Craft</strong><br>
+          Thomas Willson’s 1892 breakthrough—cheap calcium carbide—made the acetylene lamp possible. When water meets CaC₂, acetylene gas forms instantly and burns with a 2,800 K, soot‑free flame. The CRV‑BDM 0004306 lamp reveals early industrial hybridisation: hand‑hammered rivets coexist with machine‑stamped shells, while a replaceable cork gasket tames backfires.</p>
+
+          <p><strong>Underground to Countryside</strong><br>
+          Italian mining regulations endorsed carbide lamps by 1905 because their bright, steady cones reduced accidents. Soon cyclists tackling Dolomite passes and farmers milking before dawn adopted pocket‑sized versions. One kilo of carbide produced eight cubic metres of gas—twelve hours of light for less than the cost of imported kerosene.</p>
+
+          <p><strong>Cultural Echoes</strong><br>
+          The lamp’s glow slipped into literature: Giovanni Pascoli likened it to “a star held in the fist.” In 2024 Venice’s Teatro Goldoni revived that image during the Campiello Giovani finale, using an original lamp to bathe performers in authentic amber light while musicians from CPM Music Institute played a custom score.</p>
+
+          <p><strong>Legacy & Preservation</strong><br>
+          Open flames disappeared from mines after mid‑century methane disasters, yet the lamp survives as heritage technology. Museums battle corrosion from leftover hydroxide and showcase live demos under fume hoods. Cavers still carry belt‑mounted generators for their silent flame and reliable warmth—evidence that ingenious chemistry can outlive the era that spawned it.</p>
+        </div>
+      </div>
+
+      <!-- 4. #SHAREIT! -->
+      <div class="accordion-item">
+        <input type="checkbox" id="acc4">
+        <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern influencers</span></label>
+        <div class="accordion-content">
+          <p>
+            ⚡️ Vintage hack alert! Drip water on calcium carbide and you get a pocket‑sized flamethrower that lit mines, barns, and Giro d’Italia night stages before LEDs were cool. Our star, CRV‑BDM 0004306 (1890), rocks iron chic and a copper cap—proof that #IndustrialDesign was gorgeous long before smartphones. Challenge: compare its 40‑candlepower beam to your phone’s flashlight in total darkness, then tag the winner. #LampadaACarburo #VintageGlow #SlowTech #StoryBehindTheSpark
+          </p>
+        </div>
+      </div>
+
+      <!-- 5. METADATA -->
+      <div class="accordion-item">
+        <input type="checkbox" id="acc5">
+        <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured information</span></label>
+        <div class="accordion-content">
+          <table class="metadata-table">
+            <tbody>
+              <tr><td>Subject</td><td>lampada a carburo</td></tr>
+              <tr><td>Title</td><td>lampada a carburo</td></tr>
+              <tr><td>Description</td><td>lampada a carburo</td></tr>
+              <tr><td>Type</td><td>lampada a carburo</td></tr>
+              <tr><td>Coverage</td><td>Cesio Maggiore (BL)</td></tr>
+              <tr><td>Rights</td><td>proprietà privata</td></tr>
+              <tr><td>Reference</td><td>CRV-BDM_0004306</td></tr>
+              <tr><td>Source</td><td>CRV-BDM_0004306</td></tr>
+              <tr><td>Format</td><td>ferro, rame, sughero; battitura e sagomatura a caldo / assemblaggio; modellatura a stampo industriale / assemblaggio; sezionatura</td></tr>
+              <tr><td>Use</td><td>utilizzata per l’illuminazione, soprattutto nelle miniere, per la sua maggiore luminosità rispetto alle lampade a petrolio o alle lucerne</td></tr>
+              <tr><td>Designation in time</td><td>lànpeda</td></tr>
+              <tr><td>Technique</td><td>battitura e sagomatura a caldo; modellatura a stampo industriale; sezionatura</td></tr>
+              <tr><td>Created</td><td>1890</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

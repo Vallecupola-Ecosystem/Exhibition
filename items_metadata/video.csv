@@ -1,0 +1,11 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Vallecupola Innevata,Type,Video,val:video,rdf:type,fabio:MovingImage
+Vallecupola Innevata,Title,Rocca in Musica 2020 - Vallecupola innevata,val:video,dcterms:title,"""Rocca in Musica 2020 - Vallecupola innevata""^^xsd:string"
+Vallecupola Innevata,Video Maker,Michael Braha,val:video,dcterms:creator,"""Michael Braha""^^xsd:string"
+Vallecupola Innevata,Period,2020,val:video,dcterms:date,"""2020""^^xsd:gYear"
+Vallecupola Innevata,Publisher,Comune di Rocca Sinibalda,val:video,dcterms:publisher,wd:Q224430
+Vallecupola Innevata,Holding Institution,Associazione Arte del Suono,val:video,crm:P50_has_current_keeper,"""Associazione Arte del Suono""^^xsd:string"
+Vallecupola Innevata,Description,"Video showing Vallecupola village in snow. Displayed at the beginning of 2020 Edition of ""Rocca in Musica"" festival",val:video,dcterms:description,"""Video showing Vallecupola village in snow. Displayed at the beginning of 2020 Edition of ""Rocca in Musica"" festival""^^xsd:string"
+Vallecupola Innevata,Duration,00:01:40,val:video,dcterms:extent,"""PT1M40S""^^xsd:duration"
+Vallecupola Innevata,Shows,Vallecupola Village,val:video,crm:P138_shows,val:vallecupola_village
+Vallecupola Innevata,Page,https://www.youtube.com/watch?v=l7hyC9NNZhE,val:video,foaf:page,<https://www.youtube.com/watch?v=l7hyC9NNZhE>

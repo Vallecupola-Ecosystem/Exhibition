@@ -1,0 +1,16 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Quel mazzolin di fiori,Type,Musical Composition,val:quel_mazzolin_di_fiori,rdf:type,fabio:MusicalComposition
+Quel mazzolin di fiori,Title,Quel mazzolin di fiori,val:quel_mazzolin_di_fiori,mo:title,"""Quel mazzolin di fiori""^^xsd:string"
+Quel mazzolin di fiori,Artist,Coro della SAT,val:quel_mazzolin_di_fiori,mo:performer,"""Coro della SAT""^^xsd:string"
+Quel mazzolin di fiori,Duration,~2:45,val:quel_mazzolin_di_fiori,mo:duration,"""PT2M45S""^^xsd:duration"
+Quel mazzolin di fiori,Album,Canti della montagna,val:quel_mazzolin_di_fiori,mo:record,"""Canti della montagna""^^xsd:string"
+Quel mazzolin di fiori,Release Date,2015,val:quel_mazzolin_di_fiori,mo:release_date,"""2015""^^xsd:date"
+Quel mazzolin di fiori,Instrumentation,choral,val:quel_mazzolin_di_fiori,mo:instrument,wd:Q1076513
+Quel mazzolin di fiori,Recording Location,"Trentino-Alto Adige, Italy",val:quel_mazzolin_di_fiori,mo:recorded_in,gn:3165244
+Quel mazzolin di fiori,Language,Italian,val:quel_mazzolin_di_fiori,dcterms:language,iso639:ita
+Quel mazzolin di fiori,Genre,Folk,val:quel_mazzolin_di_fiori,mo:genre,wd:Q43343
+Quel mazzolin di fiori,Publisher,Fratelli Pedrotti,val:quel_mazzolin_di_fiori,mo:publisher,"""Fratelli Pedrotti""^^xsd:string"
+Quel mazzolin di fiori,coverage,Italy,val:quel_mazzolin_di_fiori,dcterms:coverage,gn:3175395
+Quel mazzolin di fiori,Producer,RCA SpA,val:quel_mazzolin_di_fiori,mo:producer,"""RCA SpA""^^xsd:string"
+Quel mazzolin di fiori,subject,bouquet,val:quel_mazzolin_di_fiori,dcterms:subject,"""bouquet""^^xsd:string"
+Quel mazzolin di fiori,Has part,Quel mazzolin di fiori verse,val:quel_mazzolin_di_fiori,frbr:part,val:quel_mazzolin_di_fiori_verse

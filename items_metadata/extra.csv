@@ -1,0 +1,109 @@
+Subject (URI),Predicate (URI),Object (URI)
+val:grandparent_and_grandchildren_bond,rdf:type,skos:Concept
+val:grandparent_and_grandchildren_bond,rdfs:label,"""Grandparent and grandchildren bond""^^xsd:string"
+,,
+val:angelo_di_mario,rdf:type,crm:E21_Person
+val:angelo_di_mario,owl:sameAs,wd:Q123498039
+val:angelo_di_mario,rdfs:label,"""Angelo Di Mario"""
+val:angelo_di_mario,schema:birthPlace,val:vallecupola_village
+,,
+val:museo_di_mario,rdf:type,schema:Museum
+val:museo_di_mario,owl:sameAs,wd:Q113535938
+val:museo_di_mario,rdfs:label,"""Biblioteca casa museo Angelo Di Mario""^^xsd:string"
+val:museo_di_mario,dbpedia:namedAfter,val:angelo_di_mario
+val:museo_di_mario,schema:location,val:vallecupola_village
+,,
+val:cemetry_gates_verse,rdf:type,dcmitype:Text
+val:cemetry_gates_verse,rdfs:label,"""Cemetry Gates Verse""^^xsd:string"
+,,
+val:dancers_concept,rdf:type,skos:Concept
+val:dancers_concept,rdfs:label,"""dancers""^^xsd:string"
+,,
+val:woman_daily_life_concept,rdf:type,skos:Concept
+val:woman_daily_life_concept,rdfs:label,"""woman daily life""^^xsd:string"
+,,
+val:castle,rdf:type,crm:E53_Place
+val:castle,owl:sameAs,wd:Q113584546
+val:castle,rdfs:label,"""Rocca Sinibalda Castle""^^xsd:string"
+val:castle,schema:containedInPlace,val:rocca_sinibalda
+,,
+val:poem_4,rdf:type,dcmitype:Text
+val:poem_4,rdfs:label,"""Poem n.IV""^^xsd:string"
+val:poem_4,schema:contentLocation,val:wall
+,,
+val:wall,rdf:type,crm:E53_Place
+val:wall,rdfs:label,"""Wall""^^xsd:string"
+val:wall,schema:containedInPlace,val:vallecupola_village
+,,
+val:conca_object,rdf:type,crm:E24_Physical_Human_Made_Thing
+val:conca_object,rdf:label,"""Conca Object""^^xsd:string"
+val:conca_object,schema:isSimilarTo,val:conca
+,,
+val:graveyard,rdf:type,crm:E53_Place
+val:graveyard,rdf:label,"""Graveyard""^^xsd:string"
+val:graveyard,owl:sameAs,wd:Q113470846
+val:graveyard,schema:containedInPlace,val:vallecupola_village
+,,
+val:quel_mazzolin_di_fiori_verse,rdf:type,dcmitype:Text
+val:quel_mazzolin_di_fiori_verse,rdfs:label,"""Quel mazzolin di fiori verse""^^xsd:string"
+,,
+val:brillantina_object,rdf:type,crm:E24_Physical_Human_Made_Thing
+val:brillantina_object,rdf:label,"""Brillantina Object""^^xsd:string"
+val:brillantina_object,schema:isSimilarTo,val:brillantina
+,,
+val:lampada_object,rdf:type,crm:E24_Physical_Human_Made_Thing
+val:lampada_object,rdf:label,"""Lampada Object""^^xsd:string"
+val:lampada_object,schema:isSimilarTo,val:lampada
+,,
+val:catinella_object,rdf:type,crm:E24_Physical_Human_Made_Thing
+val:catinella_object,rdf:label,"""Catinella Object""^^xsd:string"
+val:catinella_object,schema:isSimilarTo,val:catinella
+,,
+val:museo_posticciola,rdf:type,schema:Museum
+val:museo_posticciola,rdf:label,ll museo diffuso delle tradizioni contadine e artigiane@it
+val:museo_posticciola,schema:location,val:posticciola
+,,
+val:posticciola,rdf:type,crm:E53_Place
+val:posticciola,owl:sameAs,wd:Q3909462
+,,
+val:ten_lire_object,"
+
+rdf:type",crm:E24_Physical_Human_Made_Thing
+val:ten_lire_object,rdf:label,"""10 Lire Object""^^xsd:string"
+val:ten_lire_object,schema:isSimilarTo,val:ten_lire
+,,
+val:vallecupola_village,rdf:type,crm:E53_Place
+val:vallecupola_village,owl:sameAs,wd:Q18454357
+val:vallecupola_village,rdf:label,"""Vallecupola""^^xsd:string"
+val:vallecupola_village,prov:influenced,val:vallecupola_story
+,,
+val:agapito_miniucchi,rdf:type,crm:E21_Person
+val:agapito_miniucchi,owl:sameAs,Q94626558
+val:agapito_miniucchi,rdf:label,"""Agapito Miniucchi""^^xsd:string"
+val:agapito_miniucchi,schema:birthPlace,val:rocca_sinibalda
+,,
+val:rocca_sinibalda,rdf:type,crm:E53_Place
+val:rocca_sinibalda,owl:sameAs,wd:Q224430
+val:rocca_sinibalda,rdf:label,"""Rocca Sinibalda""^^xsd:string"
+val:rocca_sinibalda,frbr:part,val:vallecupola_village
+val:rocca_sinibalda,frbr:part,val:posticciola
+,,
+val:church,rdf:type,crm:E53_Place
+val:church,rdf:label,Chiesa di S. Maria della Neve
+val:church,schema:containedInPlace,val:vallecupola_village
+val:church,owl:sameAs,wd:Q121161221
+,,
+val:performance_video,rdf:type,fabio:MovingImage
+val:performance_video,foaf:page,<https://youtu.be/eZRKpIoJ0WQ?t=5620>
+,,
+val:scene_with_dancers,dcterms:subject,val:dancers_concept
+val:scene_with_dancers,prov:influenced,val:vallecupola_music
+,,
+val:scene_with_grandma_and_grandson,dcterms:subject,val:grandparent_and_grandchildren_bond
+val:scene_with_grandma_and_grandson,schema:contentLocation,val:wall
+,,
+val:scene_girl_conca_fountain,dcterms:subject,val:woman_daily_life_concept
+,,
+val:scene_in_the_graveyard,schema:contentLocation,val:graveyard
+,,
+val:scene_in_rocca_sinibalda,schema:contentLocation,val:rocca_sinibalda

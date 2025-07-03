@@ -1,0 +1,11 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Vallecupola Story,Type,Text,val:vallecupola_story,dcterms:type,dcmitype:Text
+Vallecupola Story,Title,Vallecupola,val:vallecupola_story,dcterms:title	,"""Vallecupola""^^xsd:string"
+Vallecupola Story,Author,Daniele Camagna,val:vallecupola_story,dcterms:creator,"""Daniele Camagna""^^xsd:string"
+Vallecupola Story,Publisher,Fondazione Il Campiello,val:vallecupola_story,dcterms:publisher,wd:Q2108706
+Vallecupola Story,Publication Date,2024,val:vallecupola_story,dcterms:issued,"""2024""^^xsd:gYear"
+Vallecupola Story,Language,Italian,val:vallecupola_story,dcterms:language	,iso639:ita
+Vallecupola Story,Object Description,Digital Publication,val:vallecupola_story,dcterms:description	,"""digital publication through sfogliami.it""^^xsd:string"
+Vallecupola Story,Award,Finalist at Campiello Giovani Prize,val:vallecupola_story,schema:award,"""Finalist at Campiello Giovani Prize""^^xsd:string"
+Vallecupola Story,Url,https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx,val:vallecupola_story,foaf:page,<https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx>
+Vallecupola Story,Setting,Vallecupola,val:vallecupola_story,schema:contentLocation,val:vallecupola_village

@@ -1,0 +1,16 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Quadriglia ,Type,Musical Composition,val:quadriglia,rdf:type,fabio:MusicalComposition
+Quadriglia ,Title,Quadriglia ,val:quadriglia,mo:title,"""Quadriglia""^^xsd:string"
+Quadriglia ,Artist, Anonymous / Traditional,val:quadriglia,mo:performer,"""Anonymous""^^xsd:string"
+Quadriglia ,Duration,~2:30,val:quadriglia,mo:duration,"""PT2M30S""^^xsd:duration"
+Quadriglia ,Album,La saltarella dell'Alta Sabina,val:quadriglia,mo:record,"""La saltarella dell'Altra Sabina""^^xsd:string"
+Quadriglia ,Release Date,2000,val:quadriglia,mo:release_date,"""2000""^^xsd:date"
+Quadriglia ,Instrumentation,"Organetto, tamburello",val:quadriglia,mo:instrument,"""Organetto, tamburello""^^xsd:string"
+Quadriglia ,Recording Location,Italy ,val:quadriglia,mo:recorded_in,gn:3175395
+Quadriglia ,Language,Italian,val:quadriglia,dcterms:language,iso639:ita
+Quadriglia ,Genre,Folk,val:quadriglia,mo:genre,wd:Q43343
+Quadriglia ,Publisher,Taranta Cultural Association,val:quadriglia,mo:publisher,"""Taranta Cultural Association""^^xsd:string"
+Quadriglia ,coverage,Lazio,val:quadriglia,dcterms:coverage,gn:3174976
+Quadriglia ,Producer,Taranta Cultural Association,val:quadriglia,mo:producer,"""Taranta Cultural Association""^^xsd:string"
+Quadriglia ,subject,dance,val:quadriglia,dcterms:subject,"""dance""^^xsd:string"
+Quadriglia ,Lyricist,Giuseppe Michele Gala,val:quadriglia,mo:lyricist,"""Giuseppe Michele Gala""^^xsd:string"

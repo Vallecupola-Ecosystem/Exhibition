@@ -1,0 +1,24 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+lampada,Type,Physical Human Made Thing,val:lampada,crm:P2_has_type,crm:E24_Physical_Human_Made_Thing
+lampada,Subject,lampada a carburo,val:lampada,dc:subject,"""lampada a carburo""@it"
+lampada,Title,lampada a carburo,val:lampada,dc:title,"""lampada a carburo""@it"
+lampada,Description,lampada a carburo,val:lampada,dc:description,"""lampada a carburo""@it"
+lampada,Coverage,CESIOMAGGIORE (BL),val:lampada,dc:coverage,"""CESIOMAGGIORE (BL)"""
+lampada,Rights,proprietà privata,val:lampada,dc:rights,"""proprietà privata""@it "
+lampada,Reference,CRV-BDM_0004306,val:lampada,dcterms:isReferencedBy,<https://w3id.org/arco/resource/Veneto/CatalogueRecordBDM/CRV-BDM_0004306>
+lampada,Source,"CRV-BDM_0004306,
+",val:lampada,dc:source,"<https://w3id.org/arco/resource/Veneto/CatalogueRecordBDM/CRV-BDM_0004306> ,
+<https://beniculturali.regione.veneto.it/xway-front/application/crv/engine/crv.jsp?verbo=queryplain&view=@completa&query=(%5bser_gen%5d=%22CRV-BDM_0004306%22)>
+
+"
+lampada,Format,"ferro, rame, sughero, battitura e sagomatura a caldo/ assemblaggio, modellatura a stampo industriale/ assemblaggio, sezionatura
+",val:lampada,pico:materialAndTechnique,"""ferro""@it, ""rame""@it, ""sughero""@it, ""battitura e sagomatura a caldo/ assemblaggio""@it, ""modellatura a stampo industriale/ assemblaggio""@it, ""sezionatura""@it
+"
+lampada,Use,"utilizzata per l'illuminazione, soprattutto nelle miniere, per la sua maggiore luminosità rispetto alle precedenti lampade a petrolio o alle lucerne",val:lampada, a-cd:hasUse,<https://w3id.org/arco/resource/Veneto/Use/CRV-BDM_0004306-use-1>
+lampada,Designation in time,lànpeda,val:lampada,a-dd:hasDesignationInTime,<https://w3id.org/arco/resource/Veneto/DesignationInTime/CRV-BDM_0004306-lanpeda>
+lampada,Technique,"""battitura e sagomatura a caldo/ assemblaggio""@it, ""modellatura a stampo industriale/ assemblaggio""@it, ""sezionatura""@it",val:lampada,a-dd:hasTechnique,"<https://w3id.org/arco/resource/Veneto/TechnicalCharacteristic/battitura-e-sagomatura-a-caldo-assemblaggio> ,
+<https://w3id.org/arco/resource/Veneto/TechnicalCharacteristic/modellatura-a-stampo-industriale-assemblaggio> ,
+
+<https://w3id.org/arco/resource/Veneto/TechnicalCharacteristic/sezionatura>
+"
+lampada,Created,1890,val:lampada,dcterms:created,“1890”

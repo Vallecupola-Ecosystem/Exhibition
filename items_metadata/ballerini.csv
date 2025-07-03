@@ -1,0 +1,12 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Ballerini,Type,Sculpture,val:ballerini,crm:P2_has_type,schema:Sculpture
+Ballerini,Title,Ballerini,val:ballerini,crm:P102_has_title,"""Ballerini""^^xsd:string"
+Ballerini,Sculptor,Angelo Di Mario,val:ballerini,crm:P14_carried_out_by,val:angelo_di_mario
+Ballerini,Holding Institution,Biblioteca casa museo Angelo Di Mario,val:ballerini,crm:P50_has_current_keeper,val:museo_di_mario
+Ballerini,Subject,dancers,val:ballerini,crm:P129_is_about,val:dancers_concept
+Ballerini,Description,bronze sculpture representing two dancers,val:ballerini,crm:P3_has_note,"""bronze sculpture representing two dancers""^^xsd:string"
+Ballerini,Period,1986,val:ballerini,crm:P4_has_time-span,"""1986""^^xsd:gYear"
+Ballerini,Source,https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608720877&dettagli=media,val:ballerini,crm:P70_documents,<https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608720877&dettagli=media>
+Ballerini,Location,"Vallecupola (Rocca Sinibalda, RI)",val:ballerini,crm:P55_has_current_location,gn:3164858
+Ballerini,Material,Bronze,val:ballerini,crm:P45_consists_of,aat:300010957
+Ballerini,Measures,35×32 cm,val:ballerini,crm:P43_has_dimension,"""35×32 cm""^^xsd:string"

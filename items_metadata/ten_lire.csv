@@ -1,0 +1,22 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+10 lire,Type,Physical Human Made Thing,val:ten_lire,crm:P2_has_type,crm:E24_Physical_Human_Made_Thing
+10 lire,Subject,10 Lire,val:ten_lire,dc:subject,"""10 Lire""@en"
+10 lire,Title,10 Lire,val:ten_lire,dc:title,"""10 Lire""@en"
+10 lire,Description,"Italian aluminum coin minted between 1951 and 2001. Features an olive branch on the obverse and a plough on the reverse. Very common in circulation.
+",val:ten_lire,dc:description,"""Italian aluminum coin minted between 1951 and 2001. Features an olive branch on the obverse and a plough on the reverse. Very common in circulation.""@en
+"
+10 lire,Issued,1951,val:ten_lire,dcterms:issued,"""1951""^^xsd:gYear"
+10 lire,Valid,2001,val:ten_lire,dcterms:valid,"""2001""^^xsd:gYear"
+10 lire,Source,<https://en.numista.com/catalogue/pieces728.html>,val:ten_lire,dc:source,<https://en.numista.com/catalogue/pieces728.html>
+10 lire,Weight,1.6 gram,val:ten_lire,nmo:hasWeight,"[
+        qudt:numericValue ""1.6""^^xsd:decimal ;
+        qudt:hasUnit qudt:Gram 
+    ]
+"
+10 lire,Diameter,23.3 mm,val:ten_lire,nmo:hasDiameter,"[
+        qudt:numericValue ""23.3""^^xsd:decimal ;
+        qudt:hasUnit qudt:MilliM 
+    ]"
+10 lire,Thickness,1.6,val:ten_lire,nmo:hasThickness,"""1.6""^^xsd:decimal"
+10 lire,Shape,Round,val:ten_lire,nmo:hasShape,"""Round""@en"
+10 lire,Keeper,Museo numismatico della Zecca Italiana,val:ten_lire,crm:P50_has_current_keeper,"""Museo numismatico della Zecca Italiana"""

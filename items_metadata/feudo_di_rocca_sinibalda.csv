@@ -1,0 +1,14 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Feudo di Rocca Sinibalda,Type,Visual Artwork,val:feudo_di_rocca_sinibalda,rdf:type,schema:VisualArtwork
+Feudo di Rocca Sinibalda,Title,Feudo di Rocca Sinibalda,val:feudo_di_rocca_sinibalda,crm:P102_has_title  ,"""Feudo di rocca sinibalda""^^xsd:string"
+Feudo di Rocca Sinibalda,Artist,Paul Bril,val:feudo_di_rocca_sinibalda,crm:P14_carried_out_by  ,wd:Q540753
+Feudo di Rocca Sinibalda,Date,1601,val:feudo_di_rocca_sinibalda,crm:P4_has_time-span,"""1601""^^xsd:gYear"
+Feudo di Rocca Sinibalda,Shows,Rocca Sinibalda Castle,val:feudo_di_rocca_sinibalda,crm:P138_shows,val:castle
+Feudo di Rocca Sinibalda,Technique,Oil on canvas,val:feudo_di_rocca_sinibalda,crm:P45_consists_of,wd:Q174705
+Feudo di Rocca Sinibalda,Source,"https://commons.wikimedia.org/wiki/File:Bril,_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg",val:feudo_di_rocca_sinibalda,crm:P70_documents,"https://commons.wikimedia.org/wiki/File:Bril,_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"
+Feudo di Rocca Sinibalda,Rights,Public domain,val:feudo_di_rocca_sinibalda,crm:P104_is_subject_to,http://creativecommons.org/publicdomain/zero/1.0/
+Feudo di Rocca Sinibalda,Subject,Rocca Sinibalda feud,val:feudo_di_rocca_sinibalda,crm:P129_is_about,"""Rocca Sinibalda feud""^^xsd:string"
+Feudo di Rocca Sinibalda,Dimensions,155 × 220 cm,val:feudo_di_rocca_sinibalda,crm:P43_has_dimension ,"""155x220 cm""^^xsd:string"
+Feudo di Rocca Sinibalda,Holding Institution,"Galleria Nazionale d'Arte Antica, Palazzo Barberini",val:feudo_di_rocca_sinibalda,crm:P50_has_current_keeper,wd:Q2266081
+Feudo di Rocca Sinibalda,Location,"Rome, Italy",val:feudo_di_rocca_sinibalda,crm:P55_has_current_location  ,gn:3169070
+Feudo di Rocca Sinibalda,spatial topic,"Italy, 17th century",val:feudo_di_rocca_sinibalda,crm:P53_has_former_location ,wd:Q38

@@ -1,0 +1,12 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Nonno e nipote,Type,Sculpture,val:nonno_e_nipote,crm:P2_has_type,schema:Sculpture
+Nonno e nipote,Title,Nonno e nipote,val:nonno_e_nipote,crm:P102_has_title,"""Nonno e nipote""^^xsd:string"
+Nonno e nipote,Sculptor,Angelo Di Mario,val:nonno_e_nipote,crm:P14_carried_out_by,val:angelo_di_mario
+Nonno e nipote,Holding Institution,Biblioteca casa museo Angelo Di Mario,val:nonno_e_nipote,crm:P50_has_current_keeper,val:museo_di_mario
+Nonno e nipote,Subject,grandparent and grandchildren bond,val:nonno_e_nipote,crm:P129_is_about,val:grandparent_and_grandchildren_bond
+Nonno e nipote,Description,bronze sculpture representing a grandfather with his grandchild,val:nonno_e_nipote,crm:P3_has_note,"""bronze sculpture representing a grandfather with his grandchild""xsd:string"
+Nonno e nipote,Period,Late 1980s,val:nonno_e_nipote,crm:P4_has_time-span,"""Late 1980s""^^xsd:string"
+Nonno e nipote,Source,https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1609772426&dettagli=media,val:nonno_e_nipote,crm:P70_documents,<https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1609772426&dettagli=media>
+Nonno e nipote,Location,"Vallecupola (Rocca Sinibalda, RI)",val:nonno_e_nipote,crm:P55_has_current_location,gn:3164858
+Nonno e nipote,Material,Bronze,val:nonno_e_nipote,crm:P45_consists_of,aat:300010957
+Nonno e nipote,Measures,68×16×13 cm,val:nonno_e_nipote,crm:P43_has_dimension,"""68×16×13 cm""^^xsd:string"

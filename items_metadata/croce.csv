@@ -1,0 +1,16 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Croce,Type,Physical Human Made Thing,val:croce,crm:P2_has_type,crm:E24_Physical_Human_Made_Thing
+Croce,Provenance,Chiesa di S. Maria della Neve (Vallecupola),val:croce,dcterms:provenance,val:church
+Croce,Title,Croce astile di Vallecupola,val:croce,dc:title,"""Croce astile di Vallecupola""@it"
+Croce,Creator,Jacopo Del Duca,val:croce,dc:creator,wd:Q1522199
+Croce,Subject,"Arte sacra, Rinascimento italiano",val:croce,dc:subject,"""Arte sacra"", ""Rinascimento italiano""@it"
+Croce,Created,1554,val:croce,dcterms:created,"""1554""^^xsd:date"
+Croce,Description,"Croce processionale in argento commissionata dal cardinale Ranuccio Farnese, simbolo di fede e identità comunitaria della frazione di Vallecupola.",val:croce,dc:description,"""""""Croce processionale in argento commissionata dal cardinale Ranuccio Farnese, simbolo di fede e identità comunitaria della frazione di Vallecupola.""""@it """
+Croce,Material,"Argento sbalzato, rame dorato",val:croce,schema:material,"""Argento sbalzato, rame dorato""@it"
+Croce,Created location,"Vallecupola, Roccasinibalda (RI), Italia",val:croce,schema:locationCreated,"""Vallecupola, Roccasinibalda (RI), Italia""@it"
+Croce,Art medium,Metallurgia rinascimentale,val:croce,schema:artMedium,"""Metallurgia rinascimentale""@it"
+Croce,Image,<https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg>,val:croce,schema:image,<https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg>
+Croce,Height/Width,43 cm × 25 cm,val:croce,schema:height/width,"""43 cm × 25 cm"""
+Croce,Weight,2.4 kg,val:croce,schema:weight,"""2.4 kg"""
+Croce,Produced,Commission: Cardinal Ranuccio Farnese (1546-1565),val:croce,crm:P108i_was_produced_by,"""Commission: Cardinal Ranuccio Farnese (1546-1565)""@en"
+Croce,Current Keeper,Museo Diocesano (Rieti),val:croce,crm:P50_has_current_keeper,wd:Q21660041

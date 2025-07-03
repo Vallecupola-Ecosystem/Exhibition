@@ -1,0 +1,21 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Vallecupola Music,Type,Music,val:vallecupola_music,rdf:type,fabio:MusicalComposition
+Vallecupola Music,Title,Vallecupola,val:vallecupola_music,dcterms:title,"""Vallecupola""^^xsd:string"
+Vallecupola Music,ISWC Code,T-327.873.610-6,val:vallecupola_music,mo:iswc,"""T-327.873.610-6""^^xsd:string"
+Vallecupola Music,Composer,Giovanni Deidda,val:vallecupola_music,mo:composer,"""Giovanni Deidda""^^xsd:string"
+Vallecupola Music,Composer,Giulia Leone,val:vallecupola_music,mo:composer,"""Giulia Leone""^^xsd:string"
+Vallecupola Music,Contributor,CPM Music Institute,val:vallecupola_music,dcterms:contributor,wd:Q3664741
+Vallecupola Music,Has Manifestation,Vallecupola Performance,val:vallecupola_music,fabio:hasManifestation,val:vallecupola_performance
+,,,,,
+Vallecupola Performance,Type,Performance,val:vallecupola_performance,rdf:type,frbroo:F31_Performance
+Vallecupola Performance,Place,Teatro Goldoni (Venezia),val:vallecupola_performance,event:place,wd:Q3982376
+Vallecupola Performance,Date,20/09/2024,val:vallecupola_performance,dcterms:date,"""2024-09-20""^^xsd:date"
+Vallecupola Performance,Guitar,Nicola Stefanello,val:vallecupola_performance,mo:performer,"""Nicola Stefanello""^^xsd:string"
+Vallecupola Performance,Drums,Vincenzo Garofalo,val:vallecupola_performance,mo:performer,"""Vincenzo Garofalo""^^xsd:string"
+Vallecupola Performance,Keyboard,Giacomo Gulino,val:vallecupola_performance,mo:performer,"""Giacomo Gulino""^^xsd:string"
+Vallecupola Performance,Singer,Sofia Pragliola,val:vallecupola_performance,mo:performer,"""Sofia Pragliola""^^xsd:string"
+Vallecupola Performance,Reader,Leone Tarchiani,val:vallecupola_performance,mo:performer,"""Leone Tarchiani""^^xsd:string"
+Vallecupola Performance,Reader,Magdalena Soldati,val:vallecupola_performance,mo:performer,"""Magdalena Soldati""^^xsd:string"
+Vallecupola Performance,Dancers,Diaghilev Dance School,val:vallecupola_performance,mo:performer,"""Diaghilev Dance School""^^xsd:string"
+Vallecupola Performance,Contributor,Fondazione Il Campiello,val:vallecupola_performance,dcterms:contributor,wd:Q2108706
+Vallecupola Performance,Is Exemplified By,https://youtu.be/eZRKpIoJ0WQ?t=5620,val:vallecupola_performance,frbr:exemplar,val:performance_video

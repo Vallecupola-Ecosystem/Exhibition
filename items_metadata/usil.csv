@@ -1,0 +1,14 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+Usil,Type,Sculpture,val:usil,crm:P2_has_type,schema:Sculpture
+Usil,Creator,Agapito Miniucchi,val:usil,crm:P14_carried_out_by,val:agapito_miniucchi
+Usil,Subject,Usil,val:usil,dc:subject,"""Usil""@en"
+Usil,Title,Usil,val:usil,dc:title,"""Usil""@en"
+Usil,Description,"A painting by Agapito Miniucchi, thematically connected to the Etruscan deity Usil.",val:usil,dc:description,"""A painting by Agapito Miniucchi, thematically connected to the Etruscan deity Usil.""@en"
+Usil,Source,<https://museodefelice.comune.terni.it/le-opere/scheda-oa/?idScheda=165932>,val:usil,dc:source,<https://museodefelice.comune.terni.it/le-opere/scheda-oa/?idScheda=165932>
+Usil,Keeper,Comune di Terni,val:usil,crm:P50_has_current_keeper,wd:Q81179703
+Usil,Location,Aurelio De Felice - CAOS museum,val:usil,crm:P55_has_current_location,wd:Q55673069
+Usil,Dimension,"Altezza: 166 cm, Larghezza: 50 cm, Profondità: 75 cm
+",val:usil,crm:P43_has_dimension,"""[ a crm:E54_Dimension ; crm:P90_has_value """"166"""" ; crm:P91_has_unit """"cm"""" ; crm:P2_has_type """"Altezza"""" ], [ a crm:E54_Dimension ; crm:P90_has_value """"50"""" ; crm:P91_has_unit """"cm"""" ; crm:P2_has_type """"Larghezza"""" ], [ a crm:E54_Dimension ; crm:P90_has_value """"75"""" ; crm:P91_has_unit """"cm"""" ; crm:P2_has_type """"Profondità"""" ]"""
+Usil,Format,legno,val:usil,crm:P45_consists_of,"""legno""@it"
+Usil,Conservation,Buono,val:usil,crm:P3_has_note,"""Buono""@it"
+Usil,Time-span,2019,val:usil,crm:P4_has_time-span,"""2019""^^xsd:gYear"

@@ -1,0 +1,28 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+catinella,Type,Physical Human Made Thing,val:catinella,crm:P2_has_type,crm:E24_Physical_Human_Made_Thing
+catinella,Subject,catinella,val:catinella,dc:subject,"""catinella""@it"
+catinella,Title,catinella,val:catinella,dc:title,"""catinella""@it"
+catinella,Description,"Catinella dipinta a fiorellini sparsi su fondo bianco. Bordura decorata a foglioline verdi (a \""vitalba\"")",val:catinella,dc:description,"""Catinella dipinta a fiorellini sparsi su fondo bianco. Bordura decorata a foglioline verdi (a \""vitalba\"")""@it"
+catinella,Coverage,Firenze (FI),val:catinella,dc:coverage,"""Firenze (FI)""@it"
+catinella,Rights,proprietà Stato,val:catinella,dc:rights,"""proprietà Stato""@it"
+catinella,Source,"https://w3id.org/arco/resource/CatalogueRecordOA/0900162643A ,
+
+https://catalogo.beniculturali.it/detail/HistoricOrArtisticProperty/0900162643A",val:catinella,dc:source,"<https://w3id.org/arco/resource/CatalogueRecordOA/0900162643A> ,
+
+<https://catalogo.beniculturali.it/detail/HistoricOrArtisticProperty/0900162643A>"
+catinella,Reference,Catalogue Record n: 0900162643A ,val:catinella,dcterms:isReferencedBy,<https://w3id.org/arco/resource/CatalogueRecordOA/0900162643A> 
+catinella,Date,ca 1800-ca 1849,val:catinella,dc:date,"""ca 1800-ca 1849"""
+catinella,Format,porcellana/ pittura/ doratura,val:catinella,pico:materialAndTechnique,"""porcellana/ pittura/ doratura""@it"
+catinella,Documentation,"Sources and documents 1 of cultural property: 0900162643A,
+Sources and documents 2 of cultural property: 0900162643A,
+Sources and documents 3 of cultural property: 0900162643A,
+Photographic documentation 1 of cultural property: 0900162643A,
+Photographic documentation 2 of cultural property: 0900162643A
+",val:catinella,a-cd:hasDocumentation,"<https://w3id.org/arco/resource/SourceAndDocument/0900162643A-source-document-1> ,
+ <https://w3id.org/arco/resource/SourceAndDocument/0900162643A-source-document-2> ,
+<https://w3id.org/arco/resource/SourceAndDocument/0900162643A-source-document-3> ,
+<https://w3id.org/arco/resource/PhotographicDocumentation/0900162643A-photographic-documentation-1> ,
+
+ <https://w3id.org/arco/resource/PhotographicDocumentation/0900162643A-photographic-documentation-2> 
+"
+catinella,Technical status,Technical status of cultural property 0900162643A,val:catinella,a-dd:hasTechnicalStatus,<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0900162643A>

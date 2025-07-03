@@ -1,0 +1,16 @@
+Subject (Natural Language),Predicate (Natural Language),Object (Natural Language),Subject (URI),Predicate (URI),Object (URI)
+vasetto per brillantina,Type,Physical Human Made Thing,val:brillantina,crm:P2_has_type,crm:E24_Physical_Human_Made_Thing
+vasetto per brillantina,Subject,vasetto per brillantina,val:brillantina,dc:subject,"""vasetto per brillantina""@it"
+vasetto per brillantina,Title,vasetto per brillantina,val:brillantina,dc:title,"""vasetto per brillantina""@it"
+vasetto per brillantina,Description,vasetto per brillantina,val:brillantina,dc:description,"""vasetto per brillantina""@it"
+vasetto per brillantina,Rights,proprietà privata,val:brillantina,dc:rights,"""proprietà privata""@it"
+vasetto per brillantina,Reference,Catalogue Record n: 1100195082 ,val:brillantina,dcterms:isReferencedBy,<https://w3id.org/arco/resource/CatalogueRecordBDM/1100195082>
+vasetto per brillantina,Source,"<https://w3id.org/arco/resource/CatalogueRecordBDM/1100195082><https://catalogo.beniculturali.it/detail/DemoEthnoAnthropologicalHeritage/1100195082>
+",val:brillantina,dc:source,"<https://w3id.org/arco/resource/CatalogueRecordBDM/1100195082><https://catalogo.beniculturali.it/detail/DemoEthnoAnthropologicalHeritage/1100195082>
+"
+vasetto per brillantina,Coverage,San Lorenzo in Campo (PU),val:brillantina,dc:coverage,"""San Lorenzo in Campo (PU)""@it"
+vasetto per brillantina,Format,vetro,val:brillantina,pico:materialAndTechnique,"""vetro""@it"
+vasetto per brillantina,Dating,"""XIV secolo""@it",val:brillantina,a-cd:hasDating,<https://w3id.org/arco/resource/Dating/1100195082-1>
+vasetto per brillantina,Use,contenere la brillantina per dar lucentezza ai capelli,val:brillantina,a-cd:hasUse,<https://w3id.org/arco/resource/Use/1100195082-use-1>
+vasetto per brillantina,Technical status,Technical status of cultural property 1100195082 ,val:brillantina,a-dd:hasTechnicalStatus,<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1100195082>
+vasetto per brillantina,Created,1900,val:brillantina,dcterms:created,"""1900"""

@@ -1,0 +1,314 @@
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix gn: <http://sws.geonames.org/> .
+@prefix iso639: <http://id.loc.gov/vocabulary/iso639-2/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix nmo: <http://nomisma.org/ontology#> .
+@prefix pico: <http://data.cochrane.org/ontologies/pico/> .
+@prefix schema: <https://schema.org/> .
+@prefix val: <https://github.com/Vallecupola-Ecosystem/Exhibition/entities/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+val:ballerini crm:P102_has_title "Ballerini"^^xsd:string ;
+    crm:P129_is_about val:dancers_concept ;
+    crm:P14_carried_out_by val:angelo_di_mario ;
+    crm:P2_has_type schema:Sculpture ;
+    crm:P3_has_note "bronze sculpture representing two dancers"^^xsd:string ;
+    crm:P43_has_dimension "35×32 cm"^^xsd:string ;
+    crm:P45_consists_of aat:300010957 ;
+    crm:P4_has_time-span "1986"^^xsd:gYear ;
+    crm:P50_has_current_keeper val:museo_di_mario ;
+    crm:P55_has_current_location gn:3164858 ;
+    crm:P70_documents <https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608720877&dettagli=media> .
+
+val:brillantina pico:materialAndTechnique "vetro"@it ;
+    dc:coverage "San Lorenzo in Campo (PU)"@it ;
+    dc:description "vasetto per brillantina"@it ;
+    dc:rights "proprietà privata"@it ;
+    dc:source <https://catalogo.beniculturali.it/detail/DemoEthnoAnthropologicalHeritage/1100195082>,
+        <https://w3id.org/arco/resource/CatalogueRecordBDM/1100195082> ;
+    dc:subject "vasetto per brillantina"@it ;
+    dc:title "vasetto per brillantina"@it ;
+    dcterms:created "1900" ;
+    dcterms:isReferencedBy <https://w3id.org/arco/resource/CatalogueRecordBDM/1100195082> ;
+    crm:P2_has_type crm:E24_Physical_Human_Made_Thing ;
+    a-cd:hasDating <https://w3id.org/arco/resource/Dating/1100195082-1> ;
+    a-cd:hasUse <https://w3id.org/arco/resource/Use/1100195082-use-1> ;
+    a-dd:hasTechnicalStatus <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1100195082> .
+
+val:catinella pico:materialAndTechnique "porcellana/ pittura/ doratura"@it ;
+    dc:coverage "Firenze (FI)"@it ;
+    dc:date "ca 1800-ca 1849" ;
+    dc:description "Catinella dipinta a fiorellini sparsi su fondo bianco. Bordura decorata a foglioline verdi (a \\\"vitalba\\\")"@it ;
+    dc:rights "proprietà Stato"@it ;
+    dc:source <https://catalogo.beniculturali.it/detail/HistoricOrArtisticProperty/0900162643A>,
+        <https://w3id.org/arco/resource/CatalogueRecordOA/0900162643A> ;
+    dc:subject "catinella"@it ;
+    dc:title "catinella"@it ;
+    dcterms:isReferencedBy <https://w3id.org/arco/resource/CatalogueRecordOA/0900162643A> ;
+    crm:P2_has_type crm:E24_Physical_Human_Made_Thing ;
+    a-cd:hasDocumentation <https://w3id.org/arco/resource/PhotographicDocumentation/0900162643A-photographic-documentation-1>,
+        <https://w3id.org/arco/resource/PhotographicDocumentation/0900162643A-photographic-documentation-2>,
+        <https://w3id.org/arco/resource/SourceAndDocument/0900162643A-source-document-1>,
+        <https://w3id.org/arco/resource/SourceAndDocument/0900162643A-source-document-2>,
+        <https://w3id.org/arco/resource/SourceAndDocument/0900162643A-source-document-3> ;
+    a-dd:hasTechnicalStatus <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0900162643A> .
+
+val:cemetry_gates a fabio:MusicalComposition ;
+    dcterms:coverage gn:2635167 ;
+    dcterms:language iso639:eng ;
+    mo:composer wd:Q317742 ;
+    mo:duration "PT2M39S"^^xsd:duration ;
+    mo:genre wd:Q11366 ;
+    mo:instrument "Guitar, :BassGuitar, :Drums, :Vocals"^^xsd:string ;
+    mo:lyricist wd:Q202246 ;
+    mo:performer wd:Q180598 ;
+    mo:producer wd:Q182427 ;
+    mo:publisher wd:Q385558 ;
+    mo:record wd:Q853308 ;
+    mo:recorded_in gn:2649660 ;
+    mo:release_date "1986-06-16"^^xsd:date ;
+    mo:title "Cemetry Gates"^^xsd:string ;
+    frbr:part val:cemetry_gates_verse .
+
+val:conca dc:alternative "Conca tradizionale dell'Italia centro-meridionale"@it ;
+    dc:coverage "Abruzzo, Italia centro-meridionale"@it ;
+    dc:description "\"\"Recipiente in rame battuto utilizzato dalle donne per trasportare acqua da fontane pubbliche. Simbolo del lavoro femminile e della vita comunitaria nell'Italia rurale. Capacità: 15-20 litri, peso: 3.5 kg.\"\""@it ;
+    dc:format "Rame battuto, rivetti manuali"@it ;
+    dc:source <http://www.faldus.it/conca.htm>,
+        <https://it.wikipedia.org/wiki/Conca_abruzzese> ;
+    dc:subject "Artigianato tradizionale\", \"Storia sociale"@it ;
+    dc:temporal "1800-1960" ;
+    dc:title "Conca"@it ;
+    crm:P2_has_type crm:E24_Physical_Human_Made_Thing ;
+    crm:P50_has_current_keeper val:museo_posticciola .
+
+val:croce dc:creator wd:Q1522199 ;
+    dc:description "\"\"Croce processionale in argento commissionata dal cardinale Ranuccio Farnese, simbolo di fede e identità comunitaria della frazione di Vallecupola.\"\"@it " ;
+    dc:subject "Arte sacra\", \"Rinascimento italiano"@it ;
+    dc:title "Croce astile di Vallecupola"@it ;
+    dcterms:created "1554"^^xsd:gYear ;
+    dcterms:provenance val:church ;
+    crm:P108i_was_produced_by "Commission: Cardinal Ranuccio Farnese (1546-1565)"@en ;
+    crm:P2_has_type crm:E24_Physical_Human_Made_Thing ;
+    crm:P50_has_current_keeper wd:Q21660041 ;
+    schema:artMedium "Metallurgia rinascimentale"@it ;
+    schema:height "43 cm" ;
+    schema:image <https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg> ;
+    schema:locationCreated "Vallecupola, Roccasinibalda (RI), Italia"@it ;
+    schema:material "Argento sbalzato, rame dorato"@it ;
+    schema:weight "2.4 kg" ;
+    schema:width "25 cm" .
+
+val:donna crm:P102_has_title "Donna"^^xsd:string ;
+    crm:P129_is_about val:woman_daily_life_concept ;
+    crm:P14_carried_out_by val:angelo_di_mario ;
+    crm:P2_has_type schema:Sculpture ;
+    crm:P3_has_note "sculpture representing a woman during her daily works"^^xsd:string ;
+    crm:P43_has_dimension "37×17 cm"^^xsd:string ;
+    crm:P45_consists_of aat:300015111 ;
+    crm:P4_has_time-span "1966"^^xsd:gYear ;
+    crm:P50_has_current_keeper val:museo_di_mario ;
+    crm:P55_has_current_location gn:3164858 ;
+    crm:P70_documents <https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608675561&dettagli=media> .
+
+val:feudo_di_rocca_sinibalda a schema:VisualArtwork ;
+    crm:P102_has_title "Feudo di rocca sinibalda"^^xsd:string ;
+    crm:P104_is_subject_to <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    crm:P129_is_about "Rocca Sinibalda feud"^^xsd:string ;
+    crm:P138_shows val:castle ;
+    crm:P14_carried_out_by wd:Q540753 ;
+    crm:P43_has_dimension "155x220 cm"^^xsd:string ;
+    crm:P45_consists_of wd:Q174705 ;
+    crm:P4_has_time-span "1601"^^xsd:gYear ;
+    crm:P50_has_current_keeper wd:Q2266081 ;
+    crm:P53_has_former_location wd:Q38 ;
+    crm:P55_has_current_location gn:3169070 ;
+    crm:P70_documents <https://commons.wikimedia.org/wiki/File:Bril,_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg> .
+
+val:lampada pico:materialAndTechnique "ferro\"@it, \"rame\"@it, \"sughero\"@it, \"battitura e sagomatura a caldo/ assemblaggio\"@it, \"modellatura a stampo industriale/ assemblaggio\"@it, \"sezionatura"@it ;
+    dc:coverage "CESIOMAGGIORE (BL)" ;
+    dc:description "lampada a carburo"@it ;
+    dc:rights "proprietà privata"@it ;
+    dc:source <https://beniculturali.regione.veneto.it/xway-front/application/crv/engine/crv.jsp?verbo=queryplain&view=@completa&query=(%5bser_gen%5d=%22CRV-BDM_0004306%22)>,
+        <https://w3id.org/arco/resource/Veneto/CatalogueRecordBDM/CRV-BDM_0004306> ;
+    dc:subject "lampada a carburo"@it ;
+    dc:title "lampada a carburo"@it ;
+    dcterms:created "1890" ;
+    dcterms:isReferencedBy <https://w3id.org/arco/resource/Veneto/CatalogueRecordBDM/CRV-BDM_0004306> ;
+    crm:P2_has_type crm:E24_Physical_Human_Made_Thing ;
+    a-cd:hasUse <https://w3id.org/arco/resource/Veneto/Use/CRV-BDM_0004306-use-1> ;
+    a-dd:hasDesignationInTime <https://w3id.org/arco/resource/Veneto/DesignationInTime/CRV-BDM_0004306-lanpeda> ;
+    a-dd:hasTechnique <https://w3id.org/arco/resource/Veneto/TechnicalCharacteristic/battitura-e-sagomatura-a-caldo-assemblaggio>,
+        <https://w3id.org/arco/resource/Veneto/TechnicalCharacteristic/modellatura-a-stampo-industriale-assemblaggio>,
+        <https://w3id.org/arco/resource/Veneto/TechnicalCharacteristic/sezionatura> .
+
+val:nonno_e_nipote crm:P102_has_title "Nonno e nipote"^^xsd:string ;
+    crm:P129_is_about val:grandparent_and_grandchildren_bond ;
+    crm:P14_carried_out_by val:angelo_di_mario ;
+    crm:P2_has_type schema:Sculpture ;
+    crm:P3_has_note "\"bronze sculpture representing a grandfather with his grandchild\"xsd:string" ;
+    crm:P43_has_dimension "68×16×13 cm"^^xsd:string ;
+    crm:P45_consists_of aat:300010957 ;
+    crm:P4_has_time-span "Late 1980s"^^xsd:string ;
+    crm:P50_has_current_keeper val:museo_di_mario ;
+    crm:P55_has_current_location gn:3164858 ;
+    crm:P70_documents <https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1609772426&dettagli=media> .
+
+val:poesie dcterms:coverage gn:3175395 ;
+    dcterms:creator val:angelo_di_mario ;
+    dcterms:description "32 p., 4 p. di tav. ; 21 cm"^^xsd:string ;
+    dcterms:identifier "IT\\ICCU\\IEI\\0409482"^^xsd:string ;
+    dcterms:isPartOf "Poeti d'oggi"^^xsd:string ;
+    dcterms:issued "1975"^^xsd:gYear ;
+    dcterms:language iso639:ita ;
+    dcterms:publisher "Gabrielli"^^xsd:string ;
+    dcterms:source <https://opac.sbn.it/risultati-ricerca-avanzata/-/opac-adv/detail/IEI0409482?fieldvalue%5B1%5D=poesie+angelo+di+mario&fieldaccess%5B1%5D=Keywords%3A1016&fieldstruct%5B1%5D=ricerca.parole_tutte%3A4%3D6&struct%3A1001=ricerca.parole_almeno_una%3A%40or%40> ;
+    dcterms:spatial gn:3164527 ;
+    dcterms:title "Poesie"^^xsd:string ;
+    dcterms:type dcmitype:Text ;
+    frbr:part val:poem_4 .
+
+val:pres_de_la_fontaine a schema:VisualArtwork ;
+    crm:P102_has_title "Pres de la Fontaine"^^xsd:string ;
+    crm:P104_is_subject_to <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    crm:P129_is_about "val:woman_daily_ life" ;
+    crm:P138_shows val:conca_object ;
+    crm:P14_carried_out_by wd:Q2087614 ;
+    crm:P43_has_dimension "unknown"^^xsd:string ;
+    crm:P45_consists_of wd:Q174705 ;
+    crm:P4_has_time-span "1832"^^xsd:gYear ;
+    crm:P50_has_current_keeper "Private collector"^^xsd:string ;
+    crm:P53_has_former_location gn:2802361 ;
+    crm:P55_has_current_location "unknown"^^xsd:string ;
+    crm:P70_documents <https://commons.wikimedia.org/wiki/File:Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg> .
+
+val:quadriglia a fabio:MusicalComposition ;
+    dcterms:coverage gn:3174976 ;
+    dcterms:language iso639:ita ;
+    dcterms:subject "dance"^^xsd:string ;
+    mo:duration "PT2M30S"^^xsd:duration ;
+    mo:genre wd:Q43343 ;
+    mo:instrument "Organetto, tamburello"^^xsd:string ;
+    mo:lyricist "Giuseppe Michele Gala"^^xsd:string ;
+    mo:performer "Anonymous"^^xsd:string ;
+    mo:producer "Taranta Cultural Association"^^xsd:string ;
+    mo:publisher "Taranta Cultural Association"^^xsd:string ;
+    mo:record "La saltarella dell'Altra Sabina"^^xsd:string ;
+    mo:recorded_in gn:3175395 ;
+    mo:release_date "2000"^^xsd:gYear ;
+    mo:title "Quadriglia"^^xsd:string .
+
+val:quel_mazzolin_di_fiori a fabio:MusicalComposition ;
+    dcterms:coverage gn:3175395 ;
+    dcterms:language iso639:ita ;
+    dcterms:subject "bouquet"^^xsd:string ;
+    mo:duration "PT2M45S"^^xsd:duration ;
+    mo:genre wd:Q43343 ;
+    mo:instrument wd:Q1076513 ;
+    mo:performer "Coro della SAT"^^xsd:string ;
+    mo:producer "RCA SpA"^^xsd:string ;
+    mo:publisher "Fratelli Pedrotti"^^xsd:string ;
+    mo:record "Canti della montagna"^^xsd:string ;
+    mo:recorded_in gn:3165244 ;
+    mo:release_date "2015"^^xsd:gYear ;
+    mo:title "Quel mazzolin di fiori"^^xsd:string ;
+    frbr:part val:quel_mazzolin_di_fiori_verse .
+
+val:stamp a schema:VisualArtwork ;
+    dcterms:language wd:Q652 ;
+    dcterms:publisher wd:Q495026 ;
+    crm:P102_has_title "550 Lire – Castello di Rocca Sinibalda"^^xsd:string ;
+    crm:P104_is_subject_to wd:Q81191 ;
+    crm:P138_shows val:castle ;
+    crm:P14_carried_out_by "Egidio Vangelli"^^xsd:string ;
+    crm:P1_is_identified_by "1522-Aa"^^xsd:string ;
+    crm:P2_has_type wd:Q37930 ;
+    crm:P43_has_dimension "30 mm height x 26 mm width, Perforation 13¼"^^xsd:string ;
+    crm:P45_consists_of wd:Q11472 ;
+    crm:P4_has_time-span "1984"^^xsd:gYear ;
+    crm:P50_has_current_keeper wd:Q3868153 ;
+    crm:P70_documents wd:Q495026 .
+
+val:ten_lire nmo:hasDiameter """qudt:numericValue "23.3"^^xsd:decimal ;
+        qudt:hasUnit qudt:MilliM""" ;
+    nmo:hasShape "Round"@en ;
+    nmo:hasThickness 1.6 ;
+    nmo:hasWeight """qudt:numericValue "1.6"^^xsd:decimal ;
+        qudt:hasUnit qudt:Gram""" ;
+    dc:description "Italian aluminum coin minted between 1951 and 2001. Features an olive branch on the obverse and a plough on the reverse. Very common in circulation."@en ;
+    dc:source <https://en.numista.com/catalogue/pieces728.html> ;
+    dc:subject "10 Lire"@en ;
+    dc:title "10 Lire"@en ;
+    dcterms:issued "1951"^^xsd:gYear ;
+    dcterms:valid "2001"^^xsd:gYear ;
+    crm:P2_has_type crm:E24_Physical_Human_Made_Thing ;
+    crm:P50_has_current_keeper "Museo numismatico della Zecca Italiana" .
+
+val:usil dc:description "A painting by Agapito Miniucchi, thematically connected to the Etruscan deity Usil."@en ;
+    dc:source <https://museodefelice.comune.terni.it/le-opere/scheda-oa/?idScheda=165932> ;
+    dc:subject "Usil"@en ;
+    dc:title "Usil"@en ;
+    crm:P14_carried_out_by val:agapito_miniucchi ;
+    crm:P2_has_type schema:Sculpture ;
+    crm:P3_has_note "Buono"@it ;
+    crm:P43_has_dimension "[ a crm:E54_Dimension ; crm:P90_has_value \"\"166\"\" ; crm:P91_has_unit \"\"cm\"\" ; crm:P2_has_type \"\"Altezza\"\" ], [ a crm:E54_Dimension ; crm:P90_has_value \"\"50\"\" ; crm:P91_has_unit \"\"cm\"\" ; crm:P2_has_type \"\"Larghezza\"\" ], [ a crm:E54_Dimension ; crm:P90_has_value \"\"75\"\" ; crm:P91_has_unit \"\"cm\"\" ; crm:P2_has_type \"\"Profondità\"\" ]" ;
+    crm:P45_consists_of "legno"@it ;
+    crm:P4_has_time-span "2019"^^xsd:gYear ;
+    crm:P50_has_current_keeper wd:Q81179703 ;
+    crm:P55_has_current_location wd:Q55673069 .
+
+val:vallecupola_music a fabio:MusicalComposition ;
+    dcterms:contributor wd:Q3664741 ;
+    dcterms:title "Vallecupola"^^xsd:string ;
+    mo:composer "Giovanni Deidda"^^xsd:string,
+        "Giulia Leone"^^xsd:string ;
+    mo:iswc "T-327.873.610-6"^^xsd:string ;
+    fabio:hasManifestation val:vallecupola_performance .
+
+val:vallecupola_story dcterms:creator "Daniele Camagna"^^xsd:string ;
+    dcterms:description "digital publication through sfogliami.it"^^xsd:string ;
+    dcterms:issued "2024"^^xsd:gYear ;
+    dcterms:language iso639:ita ;
+    dcterms:publisher wd:Q2108706 ;
+    dcterms:title "Vallecupola"^^xsd:string ;
+    dcterms:type dcmitype:Text ;
+    foaf:page <https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx> ;
+    schema:award "Finalist at Campiello Giovani Prize"^^xsd:string ;
+    schema:contentLocation val:vallecupola_village .
+
+val:video a fabio:MovingImage ;
+    dcterms:creator "Michael Braha"^^xsd:string ;
+    dcterms:date "2020"^^xsd:gYear ;
+    dcterms:description "Video showing Vallecupola village in snow. Displayed at the beginning of 2020 Edition of \"Rocca in Musica\" festival"^^xsd:string ;
+    dcterms:extent "PT1M40S"^^xsd:duration ;
+    dcterms:publisher wd:Q224430 ;
+    dcterms:title "Rocca in Musica 2020 - Vallecupola innevata"^^xsd:string ;
+    crm:P138_shows val:vallecupola_village ;
+    crm:P50_has_current_keeper "Associazione Arte del Suono"^^xsd:string ;
+    foaf:page <https://www.youtube.com/watch?v=l7hyC9NNZhE> .
+
+val:vallecupola_performance a frbroo:F31_Performance ;
+    event:place wd:Q3982376 ;
+    dcterms:contributor wd:Q2108706 ;
+    dcterms:date "2024-09-20"^^xsd:date ;
+    mo:performer "Diaghilev Dance School"^^xsd:string,
+        "Giacomo Gulino"^^xsd:string,
+        "Leone Tarchiani"^^xsd:string,
+        "Magdalena Soldati"^^xsd:string,
+        "Nicola Stefanello"^^xsd:string,
+        "Sofia Pragliola"^^xsd:string,
+        "Vincenzo Garofalo"^^xsd:string ;
+    frbr:exemplar val:performance_video .
+

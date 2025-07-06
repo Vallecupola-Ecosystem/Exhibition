@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallecupola Ecosystem Exhibition - Documentation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e9ecef;
+            --hover-color: #ecf0f1;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 350px;
+            background: var(--gradient-1);
+            color: white;
+            padding: 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-header .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .nav-section {
+            padding: 1rem 0;
+        }
+
+        .nav-section-title {
+            padding: 0.5rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-item {
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-left-color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.15);
+            border-left-color: white;
+            font-weight: 500;
+        }
+
+        .nav-link i {
+            margin-right: 0.75rem;
+            width: 16px;
+            text-align: center;
+        }
+
+        /* Chapter styles */
+        .nav-chapter {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .nav-chapter i {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Section styles */
+        .nav-section-item {
+            padding-left: 3rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-section-item i {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Subsection styles */
+        .nav-subsection {
+            padding-left: 4.5rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .nav-subsection i {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .sidebar-footer {
+            padding: 2rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-link i {
+            margin-right: 0.5rem;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 350px;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: var(--gradient-2);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .subsection-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+            color: var(--secondary-color);
+        }
+
+        .subsubsection-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--text-color);
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .content-text strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, var(--accent-color), transparent);
+            margin: 3rem 0;
+        }
+
+        .footer-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-column p, .footer-column li {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 280px;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Mobile menu button */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>Vallecupola Ecosystem</h1>
+                <div class="subtitle">Exhibition Documentation</div>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Table of Contents</div>
+                
+                <!-- Chapter 1: Introduction -->
+                <div class="nav-item">
+                    <a href="#introduction" class="nav-link nav-chapter active">
+                        <i class="fas fa-home"></i>
+                        Introduction
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#project-idea" class="nav-link nav-section-item">
+                        <i class="fas fa-lightbulb"></i>
+                        Project Idea
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#exhibition-items" class="nav-link nav-section-item">
+                        <i class="fas fa-th-large"></i>
+                        Items in the Exhibition
+                    </a>
+                </div>
+
+                <!-- Chapter 2: Knowledge Management -->
+                <div class="nav-item">
+                    <a href="#knowledge-management" class="nav-link nav-chapter">
+                        <i class="fas fa-brain"></i>
+                        Knowledge Management
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#knowledge-organization" class="nav-link nav-section-item">
+                        <i class="fas fa-sitemap"></i>
+                        Knowledge Organization
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#metadata-analysis" class="nav-link nav-subsection">
+                        <i class="fas fa-search"></i>
+                        Metadata Analysis
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#theoretical-model" class="nav-link nav-subsection">
+                        <i class="fas fa-project-diagram"></i>
+                        Theoretical Model
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#conceptual-model" class="nav-link nav-subsection">
+                        <i class="fas fa-cubes"></i>
+                        Conceptual Model
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#knowledge-representation" class="nav-link nav-section-item">
+                        <i class="fas fa-code"></i>
+                        Knowledge Representation
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#csv-descriptions" class="nav-link nav-subsection">
+                        <i class="fas fa-table"></i>
+                        CSV Descriptions of Items
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#xml-tei-encoding" class="nav-link nav-subsection">
+                        <i class="fas fa-file-code"></i>
+                        XML-TEI Encoding of the Story
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#html-conversion" class="nav-link nav-subsection">
+                        <i class="fas fa-code"></i>
+                        HTML Conversion of the Story
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#rdf-conversion" class="nav-link nav-subsection">
+                        <i class="fas fa-share-alt"></i>
+                        RDF Conversion from CSV and XML
+                    </a>
+                </div>
+
+                <!-- Chapter 3: Website Development -->
+                <div class="nav-item">
+                    <a href="#website-development" class="nav-link nav-chapter">
+                        <i class="fas fa-globe"></i>
+                        Website Development
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#items-descriptions" class="nav-link nav-section-item">
+                        <i class="fas fa-list"></i>
+                        Items Descriptions
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#target-audiences" class="nav-link nav-subsection">
+                        <i class="fas fa-users"></i>
+                        Target Audiences
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#html-structure" class="nav-link nav-subsection">
+                        <i class="fas fa-code"></i>
+                        HTML Structure
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#themes" class="nav-link nav-section-item">
+                        <i class="fas fa-palette"></i>
+                        Themes
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#css-theme-1" class="nav-link nav-subsection">
+                        <i class="fas fa-paint-brush"></i>
+                        CSS Theme 1
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#css-theme-2" class="nav-link nav-subsection">
+                        <i class="fas fa-paint-brush"></i>
+                        CSS Theme 2
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#css-theme-3" class="nav-link nav-subsection">
+                        <i class="fas fa-paint-brush"></i>
+                        CSS Theme 3
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#css-theme-4" class="nav-link nav-subsection">
+                        <i class="fas fa-paint-brush"></i>
+                        CSS Theme 4
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#narratives" class="nav-link nav-section-item">
+                        <i class="fas fa-book"></i>
+                        Narratives
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#chronological-order" class="nav-link nav-subsection">
+                        <i class="fas fa-clock"></i>
+                        Chronological Order
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#story" class="nav-link nav-subsection">
+                        <i class="fas fa-book-open"></i>
+                        Story
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#guided-tour" class="nav-link nav-subsection">
+                        <i class="fas fa-route"></i>
+                        Guided Tour
+                    </a>
+                </div>
+
+                <!-- Chapter 4: About -->
+                <div class="nav-item">
+                    <a href="#about" class="nav-link nav-chapter">
+                        <i class="fas fa-info-circle"></i>
+                        About
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="footer-links">
+                    <a href="https://github.com/Vallecupola-Ecosystem/Exhibition" class="footer-link">
+                        <i class="fab fa-github"></i>
+                        GitHub Repository
+                    </a>
+                    <a href="downloads.html" class="footer-link">
+                        <i class="fas fa-download"></i>
+                        Downloads
+                    </a>
+                </div>
+                <div class="copyright">
+                    © 2025 Vallecupola Ecosystem
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Vallecupola Ecosystem</h1>
+                    <p class="hero-subtitle">Unveiling the Hidden Cultural Network of a Mountain Village</p>
+                </div>
+            </section>
+
+            <!-- Introduction Section -->
+            <section id="introduction" class="content-section">
+                <div class="section-container">
+                    <h2 class="section-title">Introduction</h2>
+                    
+                    <div id="project-idea">
+                        <h3 class="subsection-title">Project Idea</h3>
+                        <p class="content-text">
+                            <strong>Vallecupola</strong> is a small mountain village in the centre of Italy. Hamlet of <strong>Rocca Sinibalda (RI)</strong>, it is set in a geographical region called <strong>Sabina</strong>. Full of art and history, it hosts a library house museum devoted to the poet, writer, sculptor and etruscologist <strong>Angelo Di Mario</strong>. Moreover, it inspired and became the main setting of a short story named after it and finalist at <strong>Premio Campiello Giovani 2024</strong>, one of the most important Italian literary prizes.
+                        </p>
+                        <p class="content-text">
+                            <strong>Vallecupola Ecosystem</strong> is a project by a group of students at <strong>Digital Humanities and Digital Knowledge</strong> Master Degree at the University of Bologna, aiming to unveil its hidden value and its connections with a variety of artistic contents, showing how also a small village can become a centre of a big cultural framework. The project, which gives birth both to a small "knowledge base" and a simple "virtual exhibition", leverages the principles of Linked Open Data and offers to the user a full experience, carefully thought for various target audiences to allow anyone to get inside the network around Vallecupola.
+                        </p>
+                        <p class="content-text">
+                            To get inside <strong>Vallecupola Ecosystem</strong>.
+                        </p>
+                        <p class="content-text">
+                            After this introductory chapter, the documentation is divided as follows:
+                            <ul>
+                                <li><a href="#knowledge-management">Knowledge Management</a>, describing the work required for Information Science and Cultural Heritage exam;</li>
+                                <li><a href="#website-development">Website Development</a>, describing the work required for Information Modelling and Web Technologies exam.</li>
+                            </ul>
+                        </p>
+                    </div>
+
+                    <div id="exhibition-items">
+                        <h3 class="subsection-title">Items in the Exhibition (JOHN)</h3>
+                        <p class="content-text">
+                            The exhibition features a carefully curated collection of items that represent the cultural richness and historical significance of Vallecupola and its surrounding ecosystem. Each item has been selected to tell a part of the story that connects this small mountain village to broader cultural and artistic networks.
+                        <p>
+                            CARDS:
+                            https://getbootstrap.com/docs/4.0/components/card/
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Knowledge Management Section -->
+            <section id="knowledge-management" class="content-section">
+                <div class="section-container">
+                    <h2 class="section-title">Knowledge Management</h2>
+                    
+                    <div id="knowledge-organization">
+                        <h3 class="subsection-title">Knowledge Organization</h3>
+                        <p class="content-text">
+                            The knowledge management strategy for the Vallecupola Ecosystem project is built upon a comprehensive framework that ensures systematic organization, representation, and accessibility of cultural data. Our approach combines traditional archival methods with modern digital humanities techniques.
+                        </p>
+                        
+                        <div id="metadata-analysis">
+                            <h4 class="subsubsection-title">Metadata Analysis (YANG)</h4>
+                            <p class="content-text">
+                                A thorough analysis of metadata standards has been conducted to ensure interoperability and long-term preservation of the cultural data. We have adopted internationally recognized standards such as Dublin Core, CIDOC-CRM, and custom extensions tailored to the specific needs of the Vallecupola collection.
+                            </p>
+                        </div>
+                        
+                        <div id="theoretical-model">
+                            <h4 class="subsubsection-title">Theoretical Model</h4>
+                            <p class="content-text">
+                                The theoretical framework underlying our knowledge organization approach draws from information science, digital humanities, and cultural heritage studies. It emphasizes the importance of context, provenance, and interconnectedness in cultural data representation.
+                            </p>
+                        </div>
+                        
+                        <div id="conceptual-model">
+                            <h4 class="subsubsection-title">Conceptual Model</h4>
+                            <p class="content-text">
+                                Our conceptual model provides a structured approach to representing the complex relationships between people, places, objects, and events within the Vallecupola ecosystem. It serves as the foundation for all subsequent data modeling and representation efforts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="knowledge-representation">
+                        <h3 class="subsection-title">Knowledge Representation</h3>
+                        <p class="content-text">
+                            The knowledge representation strategy encompasses multiple formats and standards to ensure maximum accessibility and reusability of the cultural data. Our multi-format approach allows for different use cases and technical requirements.
+                        </p>
+                        
+                        <div id="csv-descriptions">
+                            <h4 class="subsubsection-title">CSV Descriptions of Items (JOHN)</h4>
+                            <p class="content-text">
+                                Structured tabular data representations provide a straightforward and accessible format for describing exhibition items. The CSV format ensures compatibility with spreadsheet applications and database systems while maintaining human readability.
+                            <ul>
+                                <li>creation of the excel with different sheets, containing tables</li>
+                                <li>every table has subject predicate object description, both in natural language for humans and uri for machine</li>
+                                <li>we uploaded the excel in github for storage reasons, but it is a proprietary format, se we converted every sheet into a csv</li>
+                                <li>we uploaded the CSVs in github, too. content of the CSVs:
+                                <ul>
+                                    <li>20 descriptions of the objects</li>
+                                    <li>1 extra table for extra entities (the grey ones in the theoretical map)</li>
+                                    <li>1 table matching all the prefixes we used with the corresponding namespaces</li>
+                                </ul>
+                            </li>
+                            </ul>
+                            </p>
+                        </div>
+                        
+                        <div id="xml-tei-encoding">
+                            <h4 class="subsubsection-title">XML-TEI Encoding of the Story</h4>
+                            <p class="content-text">
+                                The Text Encoding Initiative (TEI) standard has been employed to encode the narrative elements of the Vallecupola story. This approach ensures scholarly rigor and enables sophisticated textual analysis and presentation options.
+                            </p>
+                        </div>
+                        
+                        <div id="html-conversion">
+                            <h4 class="subsubsection-title">HTML Conversion of the Story (JOHN)</h4>
+                            <p class="content-text">
+                                Web-ready HTML versions of the encoded texts provide immediate accessibility for online audiences. The conversion process maintains the structural integrity of the original TEI encoding while optimizing for web presentation.
+                            </p>
+                        </div>
+                        
+                        <div id="rdf-conversion">
+                            <h4 class="subsubsection-title">RDF Conversion from CSV and XML (YANG)</h4>
+                            <p class="content-text">
+                                Resource Description Framework (RDF) representations enable semantic web integration and linked data functionality. The conversion process creates machine-readable data that can be integrated with other cultural heritage datasets and repositories.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- Website Development Section -->
+            <section id="website-development" class="content-section">
+                <div class="section-container">
+                    <h2 class="section-title">Website Development</h2>
+                    
+                    <div id="items-descriptions">
+                        <h3 class="subsection-title">Items Descriptions</h3>
+                        <p class="content-text">
+                            The website development process focuses on creating an engaging and accessible platform for presenting the Vallecupola Ecosystem exhibition. Our approach emphasizes user experience, accessibility, and responsive design principles.
+                        </p>
+                        
+                        <div id="target-audiences">
+                            <h4 class="subsubsection-title">Target Audiences</h4>
+                            <p class="content-text">
+                                The website is designed to serve multiple target audiences, including academic researchers, cultural heritage professionals, tourists, and local community members. Each audience has specific needs and expectations that inform the design and functionality decisions.
+                            </p>
+                        </div>
+                        
+                        <div id="html-structure">
+                            <h4 class="subsubsection-title">HTML Structure</h4>
+                            <p class="content-text">
+                                The HTML structure follows semantic markup principles and web accessibility guidelines. The markup provides a solid foundation for styling and interactive functionality while ensuring compatibility across different browsers and assistive technologies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="themes">
+                        <h3 class="subsection-title">Themes</h3>
+                        <p class="content-text">
+                            Multiple visual themes have been developed to accommodate different preferences and use cases. Each theme maintains consistency with the overall brand identity while offering unique visual experiences.
+                        </p>
+                        
+                        <div id="css-theme-1">
+                            <h4 class="subsubsection-title">CSS Theme 1</h4>
+                            <p class="content-text">
+                                The first theme emphasizes clean, minimal design with a focus on readability and accessibility. It uses a neutral color palette and traditional typography to create a professional, scholarly appearance.
+                            </p>
+                        </div>
+                        
+                        <div id="css-theme-2">
+                            <h4 class="subsubsection-title">CSS Theme 2</h4>
+                            <p class="content-text">
+                                The second theme incorporates warmer colors and more dynamic visual elements to create a more engaging and inviting experience. It balances visual appeal with functional requirements.
+                            </p>
+                        </div>
+                        
+                        <div id="css-theme-3">
+                            <h4 class="subsubsection-title">CSS Theme 3</h4>
+                            <p class="content-text">
+                                The third theme explores contemporary design trends with bold typography and vibrant colors. It aims to attract younger audiences while maintaining professional standards.
+                            </p>
+                        </div>
+                        
+                        <div id="css-theme-4">
+                            <h4 class="subsubsection-title">CSS Theme 4</h4>
+                            <p class="content-text">
+                                The fourth theme focuses on high contrast and accessibility features, ensuring that the content is accessible to users with various visual needs and preferences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="narratives">
+                        <h3 class="subsection-title">Narratives</h3>
+                        <p class="content-text">
+                            The narrative structure of the website supports multiple ways of exploring the Vallecupola Ecosystem, allowing users to choose their preferred approach to discovering the content.
+                        </p>
+                        
+                        <div id="chronological-order">
+                            <h4 class="subsubsection-title">Chronological Order</h4>
+                            <p class="content-text">
+                                The chronological narrative presents the story of Vallecupola through time, allowing users to understand the historical development of the village and its cultural significance.
+                            </p>
+                        </div>
+                        
+                        <div id="story">
+                            <h4 class="subsubsection-title">Story</h4>
+                            <p class="content-text">
+                                The story-based narrative provides a more literary approach to exploring the content, weaving together historical facts, cultural insights, and personal experiences into a cohesive narrative.
+                            

@@ -668,29 +668,99 @@
                         <div id="metadata-analysis">
                             <h4 class="subsubsection-title">Metadata Analysis (YANG)</h4>
                             <p class="content-text">
-                                A thorough analysis of metadata standards has been conducted to ensure interoperability and long-term preservation of the cultural data. We have adopted internationally recognized standards such as Dublin Core, CIDOC-CRM, and custom extensions tailored to the specific needs of the Vallecupola collection.
+                                A thorough analysis of metadata standards has been conducted.
                             </p>
                         </div>
                         
                         <div id="theoretical-model">
                             <h4 class="subsubsection-title">Theoretical Model</h4>
                             <p class="content-text">
-                                The theoretical framework underlying our knowledge organization approach draws from information science, digital humanities, and cultural heritage studies. It emphasizes the importance of context, provenance, and interconnectedness in cultural data representation.
-                            
-                                <img width="100%" src="./images/theoretical_model.svg"/ alt="Conceptual Model">
-                            
-                            
+                                As a first step, it was necessary to shape the knowledge domain, connecting the selected items.
+                                In order to show the interconnections between the objects, it was created a graph made of nodes and edges labelled in natural language, 
+                                explicitly describing the important links between the items. Of course, only the most meaningful features and relations were chosen.
+                                The graph resembles a spider web, making it a small dense "knowledge graph", representing real instances and their meaningful bonds.
                             </p>
+                            <p class="content-text">
+                                For the reader, it will be sufficiently easy to follow the various paths that bring from one object to the other, understanding the density
+                                and relevance of the cultural framework built all around Vallecupola.
+                            </p> 
+                            <p class="content-text">   
+                                In this theoretical model, not only can we see the items themselves, but also some extra entities necessary to
+                                connect them (they are basically intermediate nodes). 
+                            </p>
+                            <p class="content-text">
+                                In the following reproduction of the theoretical model:
+                            </p> 
+
+                                <ul class="content-text">
+                                    <li>the <strong>green</strong> circle represents the main concept of the domain;</li>
+                                    <li>the <strong>yellow</strong> circles represent the twenty chosen items composing the exhibition;</li>
+                                    <li>the <strong>grey</strong> circles represent the extra entities (intermediate nodes).</li>
+                                </ul>
+                            </p>
+                            <br/><br/>
+                            <p>
+                                <img width="100%" src="./images/theoretical_model.svg" alt="Conceptual Model"/>
+                            </p>
+                            
+                            
                         </div>
                         
                         <div id="conceptual-model">
                             <h4 class="subsubsection-title">Conceptual Model</h4>
                             <p class="content-text">
                                 Our conceptual model provides a structured approach to representing the complex relationships between people, places, objects, and events within the Vallecupola ecosystem. It serves as the foundation for all subsequent data modeling and representation efforts.
-                            
-                                <img width="100%" src="./images/conceptual_model.png"/ alt="Conceptual Model">
-                            
                             </p>
+                            <p class="content-text">
+                                Starting from the theoretical model, containing the individuals of the knowledge domain, put in relation between each other,
+                                it was possibile to elaborate a "conceptual model" by converting the previous into a more abstract level of representation. 
+                                We collapsed the various individuals in classes, grouping similar ones, also based on their common features.
+                            </p>
+                            <p class="content-text">
+                            The result is a schema made of 11 classes, of which:
+                                <ul class="content-text">
+                                    <li>7 representing the museum items:</li>
+                                    <ul class="content-text">
+                                        <li><strong>dcmitype:Text</strong> for collections, poems, stories, scenes of stories;</li>
+                                        <li><strong>crm:E24_Physical_Human_Made_Thing</strong> for various objects and artifacts;</li>
+                                        <li><strong>schema:VisualArtwork</strong> for paintings and stamps;</li>
+                                        <li><strong>fabio:MovingImage</strong> for videos;</li>
+                                        <li><strong>schema:Sculpture</strong> for sculptures and installations;</li>
+                                        <li><strong>fabio:MusicalComposition</strong> for songs and musics;</li>
+                                        <li><strong>frbroo:F31_Performance</strong> for stage performances;</li>
+                                    </ul>
+                                    <li>4 representing the extra entities:</li>
+                                    <ul class="content-text">
+                                        <li><strong>crm:E53_Place</strong> for villages, hamlets and locations in them;</li>
+                                        <li><strong>crm:E21_Person</strong> for people, artists;</li>
+                                        <li><strong>schema:Museum</strong> for museums holding some items;</li>
+                                        <li><strong>skos:Concept</strong> for subjects represented or topics conveyed by the cultural items.</li>
+                                    </ul>
+                                </ul>
+                            </p>
+                            <br/><br/>
+                            <p>
+                                <img width="100%" src="./images/conceptual_model.png" alt="Conceptual Model"/>
+                            </p>
+                            <p>
+                                This model is abstract and work like an ontology. Here - as in the previous theoretical model - only the most meaningful
+                                part of the knowledge domain has been shown. Indeed, we can only see classes and relations, not all the attributes associated to a class. 
+                                In the following list, we recap all the predicates that have been used for each class representing items when describing them in detail during the 
+                                <a href="#csv-descriptions">CSV creation phase</a> (in <em>italic</em> the ones that you can actually see in the conceptual model):
+                                <ul>
+                                    <li><strong>dcmitype:Text</strong>:</li>
+                                    <li><strong>crm:E24_Physical_Human_Made_Thing</strong>:</li>
+                                    <li><strong>schema:VisualArtwork</strong>:</li>
+                                    <li><strong>fabio:MovingImage</strong>:</li>
+                                    <li><strong>schema:Sculpture</strong>: crm:P2_has_type, crm:P102_has_title, <em>crm:P14_carried_out_by</em>, <em>crm:P50_has_current_keeper</em>, <em>crm:P129_is_about</em>, crm:P3_has_note, crm:P4_has_time-span, crm:P70_documents, crm:P55_has_current_location, crm:P45_consists_of, crm:P43_has_dimension</li>
+                                    <li><strong>fabio:MusicalComposition</strong>:</li>
+                                    <li><strong>frbroo:F31_Performance</strong>:</li>
+                                </ul>
+                            </p>
+                            <p>Explain, maybe, also the attributes of extra entities</p>
+                            <p>Also add that, when possible, entities have been reconciled with controlled authorities</p>
+                            <p>List of all the ontologies reused, with their: name, prefix, short description</p>
+                            
                         </div>
                     </div>
 

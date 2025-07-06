@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Croce astile di Vallecupola</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+            color: #f0f0f0;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .top-icons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .icon-button {
+            background: #1e2a38;
+            border: 1px solid #4b6b88;
+            color: #f0f0f0;
+            font-size: 1.1em;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 80px auto 40px;
+        }
+
+        .image-wrapper {
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .object-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #1e2a38;
+            border: 1px solid #4b6b88;
+            color: #f0f0f0;
+            font-size: 1.5em;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-left {
+            left: -20px;
+        }
+
+        .nav-right {
+            right: -20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        .accordion-container {
+            background-color: #1e2a38;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+            border: 1px solid #34495e;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .accordion-label {
+            display: block;
+            background-color: #2c3e50;
+            padding: 16px 20px;
+            font-size: 1.05em;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .accordion-label:hover {
+            background-color: #3a536d;
+        }
+
+        .accordion-label::after {
+            content: '▾';
+            position: absolute;
+            right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        input[type="checkbox"]:checked+.accordion-label::after {
+            transform: rotate(180deg);
+        }
+
+        .note {
+            display: block;
+            font-size: 0.85em;
+            font-style: italic;
+            color: #b0c4de;
+            margin-top: 5px;
+        }
+
+        .accordion-content {
+            background-color: #263645;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding: 0 20px;
+        }
+
+        input[type="checkbox"]:checked~.accordion-content {
+            max-height: 1000px;
+            padding: 15px 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        td {
+            padding: 12px 16px;
+            text-align: left;
+            min-width: 200px;
+            color: #f0f0f0;
+            background-color: #1f2d3c;
+            border: 1px solid #4a5a6a;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #223344;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Buttons -->
+    <div class="top-icons">
+        <a href="#" class="icon-button">🌐 Translate</a>
+        <a href="#" class="icon-button">📤 Share</a>
+    </div>
+
+    <div class="container">
+        <!-- Image and Navigation -->
+        <div class="image-wrapper">
+            <a href="object20.html" class="nav-button nav-left" title="Previous Object">←</a>
+            <img class="object-image"
+                src="https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg"
+                alt="Croce astile di Vallecupola">
+            <a href="object2.html" class="nav-button nav-right" title="Next Object">→</a>
+        </div>
+
+        <div class="accordion-container">
+            <h1>🎨 Croce astile di Vallecupola – Descriptions for Everyone</h1>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc1">
+                <label for="acc1" class="accordion-label">👧 Let’s Learn!<span class="note">for young
+                        adventurers</span></label>
+                <div class="accordion-content">
+                    <p>
+                        The <strong>Croce astile di Vallecupola</strong> is a mid-16th-century processional cross
+                        crafted in 1554 by the Renaissance sculptor Jacopo Del Duca. Commissioned by Cardinal Ranuccio
+                        Farnese (1546–1565) for the little parish church of Santa Maria della Neve in Vallecupola
+                        (Rieti), it served as both a liturgical object and a symbol of communal identity for the
+                        villagers.
+                    </p>
+                    <p>
+                        Executed in “argento sbalzato” (repoussé silver) with gilded copper details, the cross measures
+                        78 × 48 cm and weighs approximately 2.4 kg. Its surface features finely chased scenes from
+                        Christ’s Passion—each panel framed by delicate vine scrolls—while the gilded copper accents
+                        highlight figures of saints and angels at the terminals. After centuries of seasonal
+                        processions, the cross now resides in the Museo Diocesano di Rieti, where it is preserved in
+                        pristine condition.
+                    </p>
+                    <p>
+                        As you explore this masterpiece, note how Del Duca’s classical training under Michelangelo
+                        manifests in the naturalistic drapery, balanced composition, and sculptural relief. The Croce
+                        astile di Vallecupola remains a testament to Renaissance metallurgical artistry and the deep
+                        faith of its rural community.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc2">
+                <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
+                        rush</span></label>
+                <div class="accordion-content">
+                    <p>
+                        Hold Del Duca’s <em>Croce astile</em> upright by its long staff—or imagine doing so—and feel the
+                        cool heft of silver under your fingertips. The cross’s height (78 cm) and width (48 cm) give it
+                        a statuesque presence in your hands, while its 2.4 kg weight is perfectly balanced for slow,
+                        dignified movement in a church procession.
+                    </p>
+                    <p>
+                        Bring your eyes to the central medallion: a dynamic relief of the Crucifixion, Christ’s limbs
+                        carved with anatomical precision, the surrounding figures of Mary and John rendered in deep
+                        relief. Trace with your gaze the vines and grapes that frame the scene—symbols of the
+                        Eucharist—chased into the silver by skilled hammer blows.
+                    </p>
+                    <p>
+                        Move outward to the four arms: each terminus holds a saint or angel in gilded copper, their
+                        wings and garments highlighted by subtle gold tones. Notice the contrast of warm gold against
+                        cool silver—a Renaissance play of light and material that would have glittered in candlelight.
+                    </p>
+                    <p>
+                        In ninety seconds, you’ve felt the convergence of theology and craftsmanship: a portable altar
+                        whose iconography guided the faithful, and a luxury object demonstrating Del Duca’s mastery of
+                        repoussé, chasing, and gilding. Imagine the villagers of Vallecupola lifting this Croce astile
+                        each feast day, its gleam proclaiming their devotion down centuries of rural tradition.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc3">
+                <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
+                        detail</span></label>
+                <div class="accordion-content">
+                    <h3>Historical & Cultural Context</h3>
+                    <p>
+                        In the years following the Council of Trent (1545–1563), the Catholic Church emphasized the
+                        visual power of liturgical objects to inspire devotion and reinforce doctrine. Commissioned in
+                        1554 by Cardinal Ranuccio Farnese for the rural parish of Santa Maria della Neve in Vallecupola,
+                        Jacopo Del Duca’s processional cross exemplifies this Counter-Reformation ethos.
+                    </p>
+
+                    <h3>Artist & Patronage</h3>
+                    <p>
+                        Jacopo Del Duca (1529–1605) trained under Michelangelo in Rome, absorbing his master’s
+                        anatomical precision and classical vocabulary. Farnese—a powerful patron and member of one of
+                        Italy’s leading families—sought to endow even remote communities with objects of the highest
+                        quality. Del Duca’s appointment reflects Farnese’s desire to unify the realm of pastoral care
+                        with the era’s foremost artistic talents.
+                    </p>
+
+                    <h3>Materials & Techniques</h3>
+                    <p>
+                        <strong>Materials:</strong> Argento sbalzato (repoussé silver), rame dorato (gilded copper)<br>
+                        <strong>Dimensions:</strong> H 78 cm × W 48 cm<br>
+                        <strong>Weight:</strong> 2.4 kg
+                    </p>
+                    <p>
+                        The cross was formed from a series of silver sheets, each beaten from behind to raise figures
+                        and then refined from the front with chasing tools. Artisans then engraved fine details—hair,
+                        drapery folds, facial expressions—before soldering the panels onto a silver framework. Gilded
+                        copper was applied selectively: saints’ halos, angels’ wings, and decorative terminals,
+                        affording a polychromatic effect without paint.
+                    </p>
+
+                    <h3>Iconography</h3>
+                    <p>
+                        At its heart is the Crucifixion, with Jesus flanked by the Virgin Mary and St. John. The four
+                        arms present:
+                    </p>
+                    <ul>
+                        <li><strong>Top:</strong> The Risen Christ holding a banner.</li>
+                        <li><strong>Bottom:</strong> The Pelican feeding her chicks—an early Christian symbol of
+                            sacrifice.</li>
+                        <li><strong>Left and Right:</strong> Archangels Michael and Gabriel, their gilded wings
+                            outstretched.</li>
+                    </ul>
+                    <p>
+                        The vine-scroll border alludes to Christ as the “true vine” (John 15:1), while the wheat ears at
+                        the cross-base reference the Eucharist. Del Duca’s harmony of biblical narrative and symbolic
+                        ornament invites the observer to a multilayered meditation on sacrifice, resurrection, and
+                        communion.
+                    </p>
+
+                    <h3>Procession & Ritual Use</h3>
+                    <p>
+                        The Croce astile was mounted on a wooden staff and carried at the head of processions—feast
+                        days, Pentecost, and Corpus Christi—through Vallecupola’s narrow lanes. Its polished surfaces
+                        and gilded highlights caught sunlight and torchlight alike, dramatizing the presence of the
+                        divine in communal worship.
+                    </p>
+
+                    <h3>Conservation & Current Keeper</h3>
+                    <p>
+                        <strong>Current Keeper:</strong> Museo Diocesano di Rieti<br>
+                        <strong>Provenance:</strong> Chiesa di S. Maria della Neve, Vallecupola
+                    </p>
+                    <p>
+                        Restored in the 1990s to stabilize solder joints and remove centuries of tarnish, the cross is
+                        now displayed in a climate-controlled vitrine. Conservation guidelines include maintaining 40–60
+                        % RH, 18–20 °C, and minimal direct lighting to protect the silver’s patina.
+                    </p>
+
+                    <h3>Art Historical Significance</h3>
+                    <p>
+                        Del Duca’s Croce astile bridges the urban workshops of Renaissance Rome and the pastoral life of
+                        rural Lazio. It stands alongside silverWorks in major cathedrals—yet its survival in Vallecupola
+                        underscores the reach of high art beyond metropolitan centers. Scholars highlight its fusion of
+                        Michelangelesque musculature with refined metalcraft as emblematic of mid-16th-century
+                        ecclesiastical commissions.
+                    </p>
+
+                    <h3>Legacy</h3>
+                    <p>
+                        Today, the Croce astile di Vallecupola is both a devotional relic and a case study in
+                        Renaissance metallurgy. Its presence in the Museo Diocesano invites reflection on how art,
+                        faith, and community intertwine—reminding us that even remote villages once participated fully
+                        in the grand movements of Italian art.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc4">
+                <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+                        influencers</span></label>
+                <div class="accordion-content">
+                    <p>
+                        ✨ <strong>Encountered the Croce astile di Vallecupola?</strong> Share your photos with
+                        <strong>#VallecupolaCross</strong>! Whether you captured its gilded highlights or chased silver
+                        reliefs, we want to see how this 1554 masterpiece moves you.
+                    </p>
+
+                    <h3>🔎 Quick facts:</h3>
+                    <ul>
+                        <li><strong>Artist:</strong> Jacopo Del Duca</li>
+                        <li><strong>Year:</strong> 1554</li>
+                        <li><strong>Materials:</strong> Repoussé silver & gilded copper</li>
+                        <li><strong>Dimensions:</strong> 78 × 48 cm; Weight 2.4 kg</li>
+                        <li><strong>Keeper:</strong> Museo Diocesano di Rieti</li>
+                    </ul>
+
+                    <h3>📸 Photo tips:</h3>
+                    <ul>
+                        <li>Shoot close-up of the central Crucifixion relief for dramatic detail.</li>
+                        <li>Capture side-lighting to emphasize repoussé textures.</li>
+                        <li>Include a glimpse of the church window or vitrine for context.</li>
+                    </ul>
+
+                    <p>
+                        🗣️ Tag your shots with <strong>#RenaissanceMetals</strong>, <strong>#SacredArt</strong>, and
+                        <strong>@DiocesiRieti</strong> to be featured in our digital gallery!
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc5">
+                <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
+                        information</span></label>
+                <div class="accordion-content">
+                    <table>
+                        <tbody>
+                            <!-- 13 empty rows -->
+                            ${Array(13).fill('<tr>
+                                <td></td>
+                                <td></td>
+                            </tr>').join('\n')}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

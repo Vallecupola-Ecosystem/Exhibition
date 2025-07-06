@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16405pt" height="16566pt" viewBox="0.00 0.00 16405.39 16565.80">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 16561.8)">
+<title>ERDiagram</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-16561.8 16401.3918,-16561.8 16401.3918,4 -4,4"/>
+<!-- layout -->
+<g id="node1" class="node">
+<title>layout</title>
+<ellipse fill="none" stroke="#000000" cx="15095.176" cy="-11313" rx="35.3528" ry="18"/>
+<text text-anchor="middle" x="15095.176" y="-11308.8" font-family="Times,serif" font-size="14.00" fill="#000000">layout</text>
+</g>
+<!-- vallecupola_village -->
+<g id="node2" class="node">
+<title>vallecupola_village</title>
+<ellipse fill="#b2f2b2" stroke="#000000" cx="8257.9786" cy="-6478.7251" rx="360" ry="360"/>
+<ellipse fill="none" stroke="#000000" cx="8257.9786" cy="-6478.7251" rx="364" ry="364"/>
+<text text-anchor="middle" x="8257.9786" y="-6508.7251" font-family="Times,serif" font-size="100.00" fill="#000000">Vallecupola</text>
+<text text-anchor="middle" x="8257.9786" y="-6388.7251" font-family="Times,serif" font-size="100.00" fill="#000000"> (Village)</text>
+</g>
+<!-- vallecupola_story -->
+<g id="node3" class="node">
+<title>vallecupola_story</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="8102.8198" cy="-9170.9397" rx="288" ry="288"/>
+<text text-anchor="middle" x="8102.8198" y="-9194.9397" font-family="Times,serif" font-size="80.00" fill="#000000">Vallecupola</text>
+<text text-anchor="middle" x="8102.8198" y="-9098.9397" font-family="Times,serif" font-size="80.00" fill="#000000"> (Story)</text>
+</g>
+<!-- vallecupola_village&#45;&gt;vallecupola_story -->
+<g id="edge2" class="edge">
+<title>vallecupola_village-&gt;vallecupola_story</title>
+<path fill="none" stroke="#000000" d="M8232.2506,-6841.8833C8198.5596,-7379.0609 8141.261,-8375.3504 8115.5784,-8872.5502"/>
+<polygon fill="#000000" stroke="#000000" points="8112.0723,-8872.5786 8115.0526,-8882.7456 8119.0631,-8872.9392 8112.0723,-8872.5786"/>
+<text text-anchor="middle" x="8058.1579" y="-7893.2258" font-family="Times,serif" font-size="70.00" fill="#000000">inspired</text>
+</g>
+<!-- rocca_sinibalda -->
+<g id="node23" class="node">
+<title>rocca_sinibalda</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="11600.0933" cy="-5696.5077" rx="216" ry="216"/>
+<text text-anchor="middle" x="11600.0933" y="-5714.5077" font-family="Times,serif" font-size="60.00" fill="#000000">Rocca</text>
+<text text-anchor="middle" x="11600.0933" y="-5642.5077" font-family="Times,serif" font-size="60.00" fill="#000000"> Sinibalda</text>
+</g>
+<!-- vallecupola_village&#45;&gt;rocca_sinibalda -->
+<g id="edge1" class="edge">
+<title>vallecupola_village-&gt;rocca_sinibalda</title>
+<path fill="none" stroke="#000000" d="M8590.8796,-6331.1935C10238.5855,-5602.3028 10407.4506,-5559.6842 11375.4323,-5670.1848"/>
+<polygon fill="#000000" stroke="#000000" points="11375.0872,-5673.668 11385.4202,-5671.3271 11375.8827,-5666.7134 11375.0872,-5673.668"/>
+<text text-anchor="middle" x="10134.0585" y="-5874.9154" font-family="Times,serif" font-size="70.00" fill="#000000">is</text>
+<text text-anchor="middle" x="10134.0585" y="-5790.9154" font-family="Times,serif" font-size="70.00" fill="#000000"> hamlet</text>
+<text text-anchor="middle" x="10134.0585" y="-5706.9154" font-family="Times,serif" font-size="70.00" fill="#000000"> of</text>
+</g>
+<!-- church -->
+<g id="node26" class="node">
+<title>church</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="9056.6715" cy="-8267.8485" rx="239.0143" ry="239.0143"/>
+<text text-anchor="middle" x="9056.6715" y="-8285.8485" font-family="Times,serif" font-size="60.00" fill="#000000">Chiesa di Santa</text>
+<text text-anchor="middle" x="9056.6715" y="-8213.8485" font-family="Times,serif" font-size="60.00" fill="#000000"> Maria della Neve</text>
+</g>
+<!-- vallecupola_village&#45;&gt;church -->
+<g id="edge4" class="edge">
+<title>vallecupola_village-&gt;church</title>
+<path fill="none" stroke="#000000" d="M8519.5124,-6732.1767C8813.9084,-7035.9777 8866.8515,-7216.4337 9012.6488,-8022.4141"/>
+<polygon fill="#000000" stroke="#000000" points="9009.2533,-8023.3062 9014.4766,-8032.5239 9016.1416,-8022.0608 9009.2533,-8023.3062"/>
+<text text-anchor="middle" x="8687.4254" y="-7361.078" font-family="Times,serif" font-size="70.00" fill="#000000">is location of</text>
+</g>
+<!-- angelo_di_mario -->
+<g id="node27" class="node">
+<title>angelo_di_mario</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="6072.9722" cy="-4116.3344" rx="216" ry="216"/>
+<text text-anchor="middle" x="6072.9722" y="-4134.3344" font-family="Times,serif" font-size="60.00" fill="#000000">Angelo</text>
+<text text-anchor="middle" x="6072.9722" y="-4062.3344" font-family="Times,serif" font-size="60.00" fill="#000000"> di Mario</text>
+</g>
+<!-- vallecupola_village&#45;&gt;angelo_di_mario -->
+<g id="edge7" class="edge">
+<title>vallecupola_village-&gt;angelo_di_mario</title>
+<path fill="none" stroke="#000000" d="M8043.5727,-6184.4805C7041.4754,-4810.5063 6918.4743,-4671.1766 6262.8855,-4240.2035"/>
+<polygon fill="#000000" stroke="#000000" points="6264.4526,-4237.0453 6254.1731,-4234.4795 6260.6089,-4242.8956 6264.4526,-4237.0453"/>
+<text text-anchor="middle" x="6813.353" y="-4879.7107" font-family="Times,serif" font-size="70.00" fill="#000000">is birthplace of</text>
+</g>
+<!-- graveyard -->
+<g id="node28" class="node">
+<title>graveyard</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="10159.3284" cy="-7807.0736" rx="216" ry="216"/>
+<text text-anchor="middle" x="10159.3284" y="-7789.0736" font-family="Times,serif" font-size="60.00" fill="#000000">Graveyard</text>
+</g>
+<!-- vallecupola_village&#45;&gt;graveyard -->
+<g id="edge3" class="edge">
+<title>vallecupola_village-&gt;graveyard</title>
+<path fill="none" stroke="#000000" d="M8610.9364,-6568.686C9455.1617,-6789.1576 9569.6618,-6886.0482 10037.6465,-7616.1256"/>
+<polygon fill="#000000" stroke="#000000" points="10034.8266,-7618.2123 10043.1685,-7624.744 10040.7206,-7614.4358 10034.8266,-7618.2123"/>
+<text text-anchor="middle" x="9288.2704" y="-6926.5126" font-family="Times,serif" font-size="70.00" fill="#000000">is location of</text>
+</g>
+<!-- museo_di_mario -->
+<g id="node30" class="node">
+<title>museo_di_mario</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="6360.2398" cy="-4896.2562" rx="230.5496" ry="230.5496"/>
+<text text-anchor="middle" x="6360.2398" y="-4950.2562" font-family="Times,serif" font-size="60.00" fill="#000000">Biblioteca Casa</text>
+<text text-anchor="middle" x="6360.2398" y="-4878.2562" font-family="Times,serif" font-size="60.00" fill="#000000"> Museo Angelo</text>
+<text text-anchor="middle" x="6360.2398" y="-4806.2562" font-family="Times,serif" font-size="60.00" fill="#000000"> Di Mario</text>
+</g>
+<!-- vallecupola_village&#45;&gt;museo_di_mario -->
+<g id="edge6" class="edge">
+<title>vallecupola_village-&gt;museo_di_mario</title>
+<path fill="none" stroke="#000000" d="M8017.0408,-6205.6283C7242.407,-5329.5787 7110.2057,-5212.298 6582.8947,-4988.61"/>
+<polygon fill="#000000" stroke="#000000" points="6584.1027,-4985.3207 6573.5296,-4984.6436 6581.3727,-4991.7665 6584.1027,-4985.3207"/>
+<text text-anchor="middle" x="7024.4752" y="-5373.4797" font-family="Times,serif" font-size="70.00" fill="#000000">is location of</text>
+</g>
+<!-- wall -->
+<g id="node36" class="node">
+<title>wall</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="5989.3108" cy="-5703.251" rx="216" ry="216"/>
+<text text-anchor="middle" x="5989.3108" y="-5685.251" font-family="Times,serif" font-size="60.00" fill="#000000">Wall</text>
+</g>
+<!-- vallecupola_village&#45;&gt;wall -->
+<g id="edge5" class="edge">
+<title>vallecupola_village-&gt;wall</title>
+<path fill="none" stroke="#000000" d="M7946.4502,-6289.7054C7006.9385,-5722.0942 6857.7616,-5669.5445 6215.6747,-5693.4188"/>
+<polygon fill="#000000" stroke="#000000" points="6215.0905,-5689.9383 6205.2293,-5693.8122 6215.354,-5696.9333 6215.0905,-5689.9383"/>
+<text text-anchor="middle" x="6786.7808" y="-5790.7532" font-family="Times,serif" font-size="70.00" fill="#000000">is location of</text>
+</g>
+<!-- vallecupola_story&#45;&gt;vallecupola_village -->
+<g id="edge11" class="edge">
+<title>vallecupola_story-&gt;vallecupola_village</title>
+<path fill="none" stroke="#000000" d="M8123.7673,-8883.396C8155.029,-8393.2576 8212.6392,-7396.386 8241.2724,-6852.7564"/>
+<polygon fill="#000000" stroke="#000000" points="8244.7872,-6852.5637 8241.8175,-6842.3936 8237.7969,-6852.1959 8244.7872,-6852.5637"/>
+<text text-anchor="middle" x="8091.6204" y="-7800.181" font-family="Times,serif" font-size="70.00" fill="#000000">setting</text>
+</g>
+<!-- vallecupola_story&#45;&gt;church -->
+<g id="edge37" class="edge">
+<title>vallecupola_story-&gt;church</title>
+<path fill="none" stroke="#000000" d="M8370.5829,-9064.3396C8698.4487,-8926.7513 8779.341,-8842.5392 8949.7926,-8493.0796"/>
+<polygon fill="#000000" stroke="#000000" points="8952.9899,-8494.508 8954.2199,-8483.9847 8946.696,-8491.4441 8952.9899,-8494.508"/>
+<text text-anchor="middle" x="8606.6112" y="-8862.9779" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- scene -->
+<g id="node29" class="node">
+<title>scene</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="5208.1895" cy="-10236.7905" rx="216" ry="216"/>
+<text text-anchor="middle" x="5208.1895" y="-10254.7905" font-family="Times,serif" font-size="60.00" fill="#000000">Scene</text>
+<text text-anchor="middle" x="5208.1895" y="-10182.7905" font-family="Times,serif" font-size="60.00" fill="#000000"> with dancers</text>
+</g>
+<!-- vallecupola_story&#45;&gt;scene -->
+<g id="edge21" class="edge">
+<title>vallecupola_story-&gt;scene</title>
+<path fill="none" stroke="#000000" d="M7845.252,-9299.8412C6340.8077,-10052.2389 6174.5681,-10120.9376 5433.0404,-10210.5169"/>
+<polygon fill="#000000" stroke="#000000" points="5432.4209,-10207.0661 5422.9115,-10211.7375 5433.2585,-10214.0158 5432.4209,-10207.0661"/>
+<text text-anchor="middle" x="6243.2326" y="-10024.7387" font-family="Times,serif" font-size="70.00" fill="#000000">has part</text>
+</g>
+<!-- scene_in_the_graveyard -->
+<g id="node31" class="node">
+<title>scene_in_the_graveyard</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="9826.9412" cy="-10768.8369" rx="216" ry="216"/>
+<text text-anchor="middle" x="9826.9412" y="-10786.8369" font-family="Times,serif" font-size="60.00" fill="#000000">Scene in</text>
+<text text-anchor="middle" x="9826.9412" y="-10714.8369" font-family="Times,serif" font-size="60.00" fill="#000000"> the graveyard</text>
+</g>
+<!-- vallecupola_story&#45;&gt;scene_in_the_graveyard -->
+<g id="edge33" class="edge">
+<title>vallecupola_story-&gt;scene_in_the_graveyard</title>
+<path fill="none" stroke="#000000" d="M8290.9259,-9389.4171C9059.7667,-10281.4713 9180.5339,-10402.9145 9629.1803,-10658.2493"/>
+<polygon fill="#000000" stroke="#000000" points="9627.7316,-10661.4517 9638.1549,-10663.3501 9631.1905,-10655.366 9627.7316,-10661.4517"/>
+<text text-anchor="middle" x="8970.3177" y="-10283.6069" font-family="Times,serif" font-size="70.00" fill="#000000">has part</text>
+</g>
+<!-- scene_grandma_and_grandson -->
+<g id="node32" class="node">
+<title>scene_grandma_and_grandson</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="5934.1276" cy="-7858.3592" rx="216" ry="216"/>
+<text text-anchor="middle" x="5934.1276" y="-7912.3592" font-family="Times,serif" font-size="60.00" fill="#000000">Scene with</text>
+<text text-anchor="middle" x="5934.1276" y="-7840.3592" font-family="Times,serif" font-size="60.00" fill="#000000"> grandma and</text>
+<text text-anchor="middle" x="5934.1276" y="-7768.3592" font-family="Times,serif" font-size="60.00" fill="#000000"> grandson</text>
+</g>
+<!-- vallecupola_story&#45;&gt;scene_grandma_and_grandson -->
+<g id="edge27" class="edge">
+<title>vallecupola_story-&gt;scene_grandma_and_grandson</title>
+<path fill="none" stroke="#000000" d="M7831.184,-9075.1512C6639.0122,-8653.5577 6502.3762,-8579.3845 6073.6866,-8037.0159"/>
+<polygon fill="#000000" stroke="#000000" points="6076.2993,-8034.6769 6067.3549,-8028.9982 6070.8057,-8039.0153 6076.2993,-8034.6769"/>
+<text text-anchor="middle" x="6556.3116" y="-8622.371" font-family="Times,serif" font-size="70.00" fill="#000000">has part</text>
+</g>
+<!-- scene_girl_with_conca -->
+<g id="node34" class="node">
+<title>scene_girl_with_conca</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="9343.7583" cy="-6374.8244" rx="220.5706" ry="220.5706"/>
+<text text-anchor="middle" x="9343.7583" y="-6428.8244" font-family="Times,serif" font-size="60.00" fill="#000000">Scene of girl</text>
+<text text-anchor="middle" x="9343.7583" y="-6356.8244" font-family="Times,serif" font-size="60.00" fill="#000000"> with conca</text>
+<text text-anchor="middle" x="9343.7583" y="-6284.8244" font-family="Times,serif" font-size="60.00" fill="#000000"> at the fountain</text>
+</g>
+<!-- vallecupola_story&#45;&gt;scene_girl_with_conca -->
+<g id="edge30" class="edge">
+<title>vallecupola_story-&gt;scene_girl_with_conca</title>
+<path fill="none" stroke="#000000" d="M8247.7781,-8921.7841C9082.9731,-7485.3451 9163.6866,-7321.4401 9301.3231,-6601.7908"/>
+<polygon fill="#000000" stroke="#000000" points="9304.7623,-6602.44 9303.2001,-6591.961 9297.8865,-6601.127 9304.7623,-6602.44"/>
+<text text-anchor="middle" x="8926.3258" y="-7513.9842" font-family="Times,serif" font-size="70.00" fill="#000000">has part</text>
+</g>
+<!-- scene_in_rocca_sinibalda -->
+<g id="node35" class="node">
+<title>scene_in_rocca_sinibalda</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="11058.6578" cy="-8275.2693" rx="225.9263" ry="225.9263"/>
+<text text-anchor="middle" x="11058.6578" y="-8293.2693" font-family="Times,serif" font-size="60.00" fill="#000000">Scene in</text>
+<text text-anchor="middle" x="11058.6578" y="-8221.2693" font-family="Times,serif" font-size="60.00" fill="#000000"> Rocca Sinibalda</text>
+</g>
+<!-- vallecupola_story&#45;&gt;scene_in_rocca_sinibalda -->
+<g id="edge18" class="edge">
+<title>vallecupola_story-&gt;scene_in_rocca_sinibalda</title>
+<path fill="none" stroke="#000000" d="M8388.6241,-9135.0759C10025.7124,-8928.9136 10193.6564,-8887.3708 10866.3781,-8412.3147"/>
+<polygon fill="#000000" stroke="#000000" points="10868.6687,-8414.9818 10874.8156,-8406.3524 10864.629,-8409.2651 10868.6687,-8414.9818"/>
+<text text-anchor="middle" x="9879.3336" y="-8895.5283" font-family="Times,serif" font-size="70.00" fill="#000000">has part</text>
+</g>
+<!-- quel_mazzolin_di_fiori_verse -->
+<g id="node42" class="node">
+<title>quel_mazzolin_di_fiori_verse</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="7834.1629" cy="-11620.6344" rx="216" ry="216"/>
+<text text-anchor="middle" x="7834.1629" y="-11674.6344" font-family="Times,serif" font-size="60.00" fill="#000000">Quel mazzolin</text>
+<text text-anchor="middle" x="7834.1629" y="-11602.6344" font-family="Times,serif" font-size="60.00" fill="#000000"> di fiori</text>
+<text text-anchor="middle" x="7834.1629" y="-11530.6344" font-family="Times,serif" font-size="60.00" fill="#000000"> (verse)</text>
+</g>
+<!-- vallecupola_story&#45;&gt;quel_mazzolin_di_fiori_verse -->
+<g id="edge12" class="edge">
+<title>vallecupola_story-&gt;quel_mazzolin_di_fiori_verse</title>
+<path fill="none" stroke="#000000" d="M8071.4754,-9457.4349C7933.797,-10715.8369 7913.7146,-10899.1396 7859.0057,-11395.3542"/>
+<polygon fill="#000000" stroke="#000000" points="7855.4881,-11395.3221 7857.871,-11405.6455 7862.4459,-11396.0893 7855.4881,-11395.3221"/>
+<text text-anchor="middle" x="7842.7518" y="-10733.2209" font-family="Times,serif" font-size="70.00" fill="#000000">quotes</text>
+</g>
+<!-- carbide_lamp_object -->
+<g id="node46" class="node">
+<title>carbide_lamp_object</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="6028.9122" cy="-9511.6402" rx="216" ry="216"/>
+<text text-anchor="middle" x="6028.9122" y="-9565.6402" font-family="Times,serif" font-size="60.00" fill="#000000">Carbide</text>
+<text text-anchor="middle" x="6028.9122" y="-9493.6402" font-family="Times,serif" font-size="60.00" fill="#000000"> Lamp</text>
+<text text-anchor="middle" x="6028.9122" y="-9421.6402" font-family="Times,serif" font-size="60.00" fill="#000000"> (In Story)</text>
+</g>
+<!-- vallecupola_story&#45;&gt;carbide_lamp_object -->
+<g id="edge14" class="edge">
+<title>vallecupola_story-&gt;carbide_lamp_object</title>
+<path fill="none" stroke="#000000" d="M7830.1085,-9263.7399C6887.0415,-9583.5647 6733.582,-9616.654 6252.5496,-9546.5379"/>
+<polygon fill="#000000" stroke="#000000" points="6252.9717,-9543.0624 6242.5699,-9545.0754 6251.9567,-9549.9885 6252.9717,-9543.0624"/>
+<text text-anchor="middle" x="6739.7336" y="-9572.3676" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- brilliantine_object -->
+<g id="node47" class="node">
+<title>brilliantine_object</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="8854.808" cy="-11620.6269" rx="216" ry="216"/>
+<text text-anchor="middle" x="8854.808" y="-11638.6269" font-family="Times,serif" font-size="60.00" fill="#000000">Brilliantine</text>
+<text text-anchor="middle" x="8854.808" y="-11566.6269" font-family="Times,serif" font-size="60.00" fill="#000000"> (In Story)</text>
+</g>
+<!-- vallecupola_story&#45;&gt;brilliantine_object -->
+<g id="edge15" class="edge">
+<title>vallecupola_story-&gt;brilliantine_object</title>
+<path fill="none" stroke="#000000" d="M8174.2215,-9450.0151C8504.7901,-10741.1442 8555.2634,-10917.6695 8765.4616,-11412.3559"/>
+<polygon fill="#000000" stroke="#000000" points="8762.3755,-11414.0428 8769.5096,-11421.8757 8768.8173,-11411.3035 8762.3755,-11414.0428"/>
+<text text-anchor="middle" x="8386.6548" y="-10750.8576" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- ten_lire_coin_object -->
+<g id="node48" class="node">
+<title>ten_lire_coin_object</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="10474.9412" cy="-10621.2819" rx="216" ry="216"/>
+<text text-anchor="middle" x="10474.9412" y="-10639.2819" font-family="Times,serif" font-size="60.00" fill="#000000">10 lire coin</text>
+<text text-anchor="middle" x="10474.9412" y="-10567.2819" font-family="Times,serif" font-size="60.00" fill="#000000"> (In Story)</text>
+</g>
+<!-- vallecupola_story&#45;&gt;ten_lire_coin_object -->
+<g id="edge16" class="edge">
+<title>vallecupola_story-&gt;ten_lire_coin_object</title>
+<path fill="none" stroke="#000000" d="M8328.9697,-9350.0958C9481.2266,-10262.2042 9626.7298,-10359.726 10258.2743,-10555.3732"/>
+<polygon fill="#000000" stroke="#000000" points="10257.4892,-10558.7939 10268.077,-10558.4058 10259.5582,-10552.1066 10257.4892,-10558.7939"/>
+<text text-anchor="middle" x="9360.5676" y="-10242.4112" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- antique_basin_with_pitcher_object -->
+<g id="node49" class="node">
+<title>antique_basin_with_pitcher_object</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="6931.0048" cy="-11153.5696" rx="216" ry="216"/>
+<text text-anchor="middle" x="6931.0048" y="-11171.5696" font-family="Times,serif" font-size="60.00" fill="#000000">Antique basin</text>
+<text text-anchor="middle" x="6931.0048" y="-11099.5696" font-family="Times,serif" font-size="60.00" fill="#000000"> (In Story)</text>
+</g>
+<!-- vallecupola_story&#45;&gt;antique_basin_with_pitcher_object -->
+<g id="edge17" class="edge">
+<title>vallecupola_story-&gt;antique_basin_with_pitcher_object</title>
+<path fill="none" stroke="#000000" d="M7969.5887,-9426.3964C7436.4805,-10447.9715 7348.8863,-10603.838 7068.5965,-10973.8023"/>
+<polygon fill="#000000" stroke="#000000" points="7065.6135,-10971.9436 7062.3606,-10982.0268 7071.1914,-10976.1729 7065.6135,-10971.9436"/>
+<text text-anchor="middle" x="7295.9554" y="-10465.4583" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- carbide_lamp -->
+<g id="node4" class="node">
+<title>carbide_lamp</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="2860.933" cy="-10001.209" rx="288" ry="288"/>
+<text text-anchor="middle" x="2860.933" y="-10025.209" font-family="Times,serif" font-size="80.00" fill="#000000">Carbide</text>
+<text text-anchor="middle" x="2860.933" y="-9929.209" font-family="Times,serif" font-size="80.00" fill="#000000"> Lamp</text>
+</g>
+<!-- carbide_lamp&#45;&gt;carbide_lamp_object -->
+<g id="edge38" class="edge">
+<title>carbide_lamp-&gt;carbide_lamp_object</title>
+<path fill="none" stroke="#000000" d="M3149.1865,-9997.7296C3845.1529,-9986.1652 4065.6449,-9943.2216 5807.7323,-9560.2785"/>
+<polygon fill="#000000" stroke="#000000" points="5808.6406,-9563.6624 5817.656,-9558.097 5807.1377,-9556.8257 5808.6406,-9563.6624"/>
+<text text-anchor="middle" x="4367.0362" y="-9946.83" font-family="Times,serif" font-size="70.00" fill="#000000">is similar</text>
+<text text-anchor="middle" x="4367.0362" y="-9862.83" font-family="Times,serif" font-size="70.00" fill="#000000"> to</text>
+</g>
+<!-- brilliantine -->
+<g id="node5" class="node">
+<title>brilliantine</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="9516.2763" cy="-14475.9352" rx="288" ry="288"/>
+<text text-anchor="middle" x="9516.2763" y="-14451.9352" font-family="Times,serif" font-size="80.00" fill="#000000">Brilliantine</text>
+</g>
+<!-- brilliantine&#45;&gt;brilliantine_object -->
+<g id="edge39" class="edge">
+<title>brilliantine-&gt;brilliantine_object</title>
+<path fill="none" stroke="#000000" d="M9446.9261,-14196.2937C9304.1199,-13618.7768 9253.8318,-13397.385 8904.4345,-11841.6111"/>
+<polygon fill="#000000" stroke="#000000" points="8907.7926,-11840.5909 8902.1864,-11831.6009 8900.9627,-11842.1248 8907.7926,-11840.5909"/>
+<text text-anchor="middle" x="9039.2927" y="-13119.9938" font-family="Times,serif" font-size="70.00" fill="#000000">is similar</text>
+<text text-anchor="middle" x="9039.2927" y="-13035.9938" font-family="Times,serif" font-size="70.00" fill="#000000"> to</text>
+</g>
+<!-- ten_lire_coin -->
+<g id="node6" class="node">
+<title>ten_lire_coin</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="12714.997" cy="-12505.1612" rx="288" ry="288"/>
+<text text-anchor="middle" x="12714.997" y="-12481.1612" font-family="Times,serif" font-size="80.00" fill="#000000">10 lire coin</text>
+</g>
+<!-- ten_lire_coin&#45;&gt;ten_lire_coin_object -->
+<g id="edge40" class="edge">
+<title>ten_lire_coin-&gt;ten_lire_coin_object</title>
+<path fill="none" stroke="#000000" d="M12486.1173,-12329.7265C12014.388,-11966.6605 11842.7556,-11818.5923 10645.7278,-10770.7873"/>
+<polygon fill="#000000" stroke="#000000" points="10647.6348,-10767.8051 10637.805,-10763.8521 10643.0242,-10773.0722 10647.6348,-10767.8051"/>
+<text text-anchor="middle" x="11421.0785" y="-11665.2457" font-family="Times,serif" font-size="70.00" fill="#000000">is similar</text>
+<text text-anchor="middle" x="11421.0785" y="-11581.2457" font-family="Times,serif" font-size="70.00" fill="#000000"> to</text>
+</g>
+<!-- antique_basin_with_pitcher -->
+<g id="node7" class="node">
+<title>antique_basin_with_pitcher</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="6029.5844" cy="-13989.4537" rx="288" ry="288"/>
+<text text-anchor="middle" x="6029.5844" y="-14013.4537" font-family="Times,serif" font-size="80.00" fill="#000000">Antique basin</text>
+<text text-anchor="middle" x="6029.5844" y="-13917.4537" font-family="Times,serif" font-size="80.00" fill="#000000"> with pitcher</text>
+</g>
+<!-- antique_basin_with_pitcher&#45;&gt;antique_basin_with_pitcher_object -->
+<g id="edge41" class="edge">
+<title>antique_basin_with_pitcher-&gt;antique_basin_with_pitcher_object</title>
+<path fill="none" stroke="#000000" d="M6103.7172,-13710.9075C6261.6925,-13122.073 6333.3446,-12906.5703 6857.9403,-11367.8566"/>
+<polygon fill="#000000" stroke="#000000" points="6861.3046,-11368.8346 6861.2189,-11358.2401 6854.6791,-11366.5757 6861.3046,-11368.8346"/>
+<text text-anchor="middle" x="6335.025" y="-12633.438" font-family="Times,serif" font-size="70.00" fill="#000000">is similar</text>
+<text text-anchor="middle" x="6335.025" y="-12549.438" font-family="Times,serif" font-size="70.00" fill="#000000"> to</text>
+</g>
+<!-- usil -->
+<g id="node8" class="node">
+<title>usil</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="13580.0446" cy="-288" rx="288" ry="288"/>
+<text text-anchor="middle" x="13580.0446" y="-312" font-family="Times,serif" font-size="80.00" fill="#000000">Usil</text>
+<text text-anchor="middle" x="13580.0446" y="-216" font-family="Times,serif" font-size="80.00" fill="#000000"> (Installation)</text>
+</g>
+<!-- agapito_miniucchi -->
+<g id="node24" class="node">
+<title>agapito_miniucchi</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="12515.2214" cy="-2949.4384" rx="216" ry="216"/>
+<text text-anchor="middle" x="12515.2214" y="-2967.4384" font-family="Times,serif" font-size="60.00" fill="#000000">Agapito</text>
+<text text-anchor="middle" x="12515.2214" y="-2895.4384" font-family="Times,serif" font-size="60.00" fill="#000000"> Miniucchi</text>
+</g>
+<!-- usil&#45;&gt;agapito_miniucchi -->
+<g id="edge44" class="edge">
+<title>usil-&gt;agapito_miniucchi</title>
+<path fill="none" stroke="#000000" d="M13516.0807,-568.8601C13378.827,-1153.9639 13288.428,-1353.9455 12613.9616,-2745.7429"/>
+<polygon fill="#000000" stroke="#000000" points="12610.7087,-2744.4296 12609.4973,-2754.9549 12617.008,-2747.4823 12610.7087,-2744.4296"/>
+<text text-anchor="middle" x="12966.8189" y="-1708.9179" font-family="Times,serif" font-size="70.00" fill="#000000">has creator</text>
+</g>
+<!-- stamp -->
+<g id="node9" class="node">
+<title>stamp</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="15750.8668" cy="-9224.1588" rx="288" ry="288"/>
+<text text-anchor="middle" x="15750.8668" y="-9200.1588" font-family="Times,serif" font-size="80.00" fill="#000000">Stamp</text>
+</g>
+<!-- castle -->
+<g id="node25" class="node">
+<title>castle</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="13437.6161" cy="-7649.184" rx="216" ry="216"/>
+<text text-anchor="middle" x="13437.6161" y="-7631.184" font-family="Times,serif" font-size="60.00" fill="#000000">Castle</text>
+</g>
+<!-- stamp&#45;&gt;castle -->
+<g id="edge46" class="edge">
+<title>stamp-&gt;castle</title>
+<path fill="none" stroke="#000000" d="M15573.7098,-8996.456C15153.8786,-8466.8466 14982.6501,-8371.3366 13642.855,-7745.0475"/>
+<polygon fill="#000000" stroke="#000000" points="13644.0334,-7741.7349 13633.4921,-7740.6711 13641.0692,-7748.0763 13644.0334,-7741.7349"/>
+<text text-anchor="middle" x="14582.9199" y="-8264.3173" font-family="Times,serif" font-size="70.00" fill="#000000">shows</text>
+</g>
+<!-- bril_painting -->
+<g id="node10" class="node">
+<title>bril_painting</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="16072.1161" cy="-7455.6959" rx="325.0517" ry="325.0517"/>
+<text text-anchor="middle" x="16072.1161" y="-7527.6959" font-family="Times,serif" font-size="80.00" fill="#000000">Feudo di</text>
+<text text-anchor="middle" x="16072.1161" y="-7431.6959" font-family="Times,serif" font-size="80.00" fill="#000000"> Rocca Sinibalda</text>
+<text text-anchor="middle" x="16072.1161" y="-7335.6959" font-family="Times,serif" font-size="80.00" fill="#000000"> (Painting)</text>
+</g>
+<!-- bril_painting&#45;&gt;castle -->
+<g id="edge47" class="edge">
+<title>bril_painting-&gt;castle</title>
+<path fill="none" stroke="#000000" d="M15746.984,-7471.7761C15260.3617,-7496.7541 15015.6952,-7516.522 13663.4534,-7630.1949"/>
+<polygon fill="#000000" stroke="#000000" points="13662.677,-7626.7477 13653.0054,-7631.0732 13663.2635,-7633.7231 13662.677,-7626.7477"/>
+<text text-anchor="middle" x="14612.1629" y="-7564.8954" font-family="Times,serif" font-size="70.00" fill="#000000">shows</text>
+</g>
+<!-- pres_de_la_fontaine -->
+<g id="node11" class="node">
+<title>pres_de_la_fontaine</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="10130.2354" cy="-989.5911" rx="288" ry="288"/>
+<text text-anchor="middle" x="10130.2354" y="-1061.5911" font-family="Times,serif" font-size="80.00" fill="#000000">Près de</text>
+<text text-anchor="middle" x="10130.2354" y="-965.5911" font-family="Times,serif" font-size="80.00" fill="#000000"> la fontaine</text>
+<text text-anchor="middle" x="10130.2354" y="-869.5911" font-family="Times,serif" font-size="80.00" fill="#000000"> (Painting)</text>
+</g>
+<!-- woman_daily_life -->
+<g id="node33" class="node">
+<title>woman_daily_life</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="8706.5596" cy="-3224.4944" rx="221.5521" ry="221.5521"/>
+<text text-anchor="middle" x="8706.5596" y="-3206.4944" font-family="Times,serif" font-size="60.00" fill="#000000">Woman daily life</text>
+</g>
+<!-- pres_de_la_fontaine&#45;&gt;woman_daily_life -->
+<g id="edge50" class="edge">
+<title>pres_de_la_fontaine-&gt;woman_daily_life</title>
+<path fill="none" stroke="#000000" d="M9925.4943,-1192.1446C9529.262,-1591.9793 9428.0865,-1775.2544 8810.0477,-3016.5314"/>
+<polygon fill="#000000" stroke="#000000" points="8806.8246,-3015.1523 8805.5007,-3025.6641 8813.0909,-3018.2722 8806.8246,-3015.1523"/>
+<text text-anchor="middle" x="9193.0118" y="-2090.0341" font-family="Times,serif" font-size="70.00" fill="#000000">subject</text>
+</g>
+<!-- conca_object -->
+<g id="node50" class="node">
+<title>conca_object</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="11230.2719" cy="-3772.4943" rx="216" ry="216"/>
+<text text-anchor="middle" x="11230.2719" y="-3790.4943" font-family="Times,serif" font-size="60.00" fill="#000000">Conca</text>
+<text text-anchor="middle" x="11230.2719" y="-3718.4943" font-family="Times,serif" font-size="60.00" fill="#000000"> (In Story)</text>
+</g>
+<!-- pres_de_la_fontaine&#45;&gt;conca_object -->
+<g id="edge49" class="edge">
+<title>pres_de_la_fontaine-&gt;conca_object</title>
+<path fill="none" stroke="#000000" d="M10325.9924,-1201.0093C10889.1864,-1817.3709 10938.0295,-1991.9696 11193.714,-3549.2985"/>
+<polygon fill="#000000" stroke="#000000" points="11190.2852,-3550.0184 11195.3589,-3559.3193 11197.1928,-3548.8844 11190.2852,-3550.0184"/>
+<text text-anchor="middle" x="10879.1368" y="-2349.9936" font-family="Times,serif" font-size="70.00" fill="#000000">shows</text>
+</g>
+<!-- quadriglia -->
+<g id="node12" class="node">
+<title>quadriglia</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="2802.9303" cy="-11087.469" rx="288" ry="288"/>
+<text text-anchor="middle" x="2802.9303" y="-11111.469" font-family="Times,serif" font-size="80.00" fill="#000000">Quadriglia</text>
+<text text-anchor="middle" x="2802.9303" y="-11015.469" font-family="Times,serif" font-size="80.00" fill="#000000"> (Music)</text>
+</g>
+<!-- quel_mazzolin_di_fiori -->
+<g id="node13" class="node">
+<title>quel_mazzolin_di_fiori</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="7773.8495" cy="-14576.5108" rx="288" ry="288"/>
+<text text-anchor="middle" x="7773.8495" y="-14648.5108" font-family="Times,serif" font-size="80.00" fill="#000000">Quel mazzolin</text>
+<text text-anchor="middle" x="7773.8495" y="-14552.5108" font-family="Times,serif" font-size="80.00" fill="#000000"> di fiori</text>
+<text text-anchor="middle" x="7773.8495" y="-14456.5108" font-family="Times,serif" font-size="80.00" fill="#000000"> (Song)</text>
+</g>
+<!-- cemetry_gates -->
+<g id="node14" class="node">
+<title>cemetry_gates</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="13054.9329" cy="-15740.5482" rx="288" ry="288"/>
+<text text-anchor="middle" x="13054.9329" y="-15764.5482" font-family="Times,serif" font-size="80.00" fill="#000000">Cemetry Gates</text>
+<text text-anchor="middle" x="13054.9329" y="-15668.5482" font-family="Times,serif" font-size="80.00" fill="#000000"> (Song)</text>
+</g>
+<!-- croce_astile -->
+<g id="node15" class="node">
+<title>croce_astile</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="12253.086" cy="-9569.4679" rx="288" ry="288"/>
+<text text-anchor="middle" x="12253.086" y="-9593.4679" font-family="Times,serif" font-size="80.00" fill="#000000">Croce astile</text>
+<text text-anchor="middle" x="12253.086" y="-9497.4679" font-family="Times,serif" font-size="80.00" fill="#000000"> (Crux)</text>
+</g>
+<!-- croce_astile&#45;&gt;church -->
+<g id="edge51" class="edge">
+<title>croce_astile-&gt;church</title>
+<path fill="none" stroke="#000000" d="M11996.5095,-9438.2976C11327.4315,-9098.3029 11111.1884,-9015.7665 9290.9673,-8353.1288"/>
+<polygon fill="#000000" stroke="#000000" points="9291.8636,-8349.7304 9281.2696,-8349.5985 9289.469,-8356.3081 9291.8636,-8349.7304"/>
+<text text-anchor="middle" x="10492.605" y="-8874.8704" font-family="Times,serif" font-size="70.00" fill="#000000">provenance</text>
+</g>
+<!-- poems -->
+<g id="node16" class="node">
+<title>poems</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="4935.1319" cy="-1664.6938" rx="288" ry="288"/>
+<text text-anchor="middle" x="4935.1319" y="-1688.6938" font-family="Times,serif" font-size="80.00" fill="#000000">Poesie</text>
+<text text-anchor="middle" x="4935.1319" y="-1592.6938" font-family="Times,serif" font-size="80.00" fill="#000000"> (Book)</text>
+</g>
+<!-- poems&#45;&gt;angelo_di_mario -->
+<g id="edge52" class="edge">
+<title>poems-&gt;angelo_di_mario</title>
+<path fill="none" stroke="#000000" d="M5051.4028,-1928.2234C5265.9309,-2413.1098 5361.243,-2615.6292 5976.0848,-3912.051"/>
+<polygon fill="#000000" stroke="#000000" points="5972.9337,-3913.5746 5980.3813,-3921.1102 5979.2584,-3910.575 5972.9337,-3913.5746"/>
+<text text-anchor="middle" x="5365.0389" y="-2948.3581" font-family="Times,serif" font-size="70.00" fill="#000000">has author</text>
+</g>
+<!-- poem -->
+<g id="node37" class="node">
+<title>poem</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="3787.2139" cy="-2955.3705" rx="216" ry="216"/>
+<text text-anchor="middle" x="3787.2139" y="-2973.3705" font-family="Times,serif" font-size="60.00" fill="#000000">Poem</text>
+<text text-anchor="middle" x="3787.2139" y="-2901.3705" font-family="Times,serif" font-size="60.00" fill="#000000"> n.IV</text>
+</g>
+<!-- poems&#45;&gt;poem -->
+<g id="edge53" class="edge">
+<title>poems-&gt;poem</title>
+<path fill="none" stroke="#000000" d="M4674.6811,-1787.7974C4214.8091,-2012.2964 4136.1598,-2120.1783 3873.9466,-2746.4682"/>
+<polygon fill="#000000" stroke="#000000" points="3870.7046,-2745.1489 3870.0734,-2755.7249 3877.1622,-2747.8509 3870.7046,-2745.1489"/>
+<text text-anchor="middle" x="4037.6561" y="-2207.9306" font-family="Times,serif" font-size="70.00" fill="#000000">has part</text>
+</g>
+<!-- grandpa_and_grandson -->
+<g id="node17" class="node">
+<title>grandpa_and_grandson</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="3653.4155" cy="-3993.2156" rx="288" ry="288"/>
+<text text-anchor="middle" x="3653.4155" y="-4065.2156" font-family="Times,serif" font-size="80.00" fill="#000000">Nonno</text>
+<text text-anchor="middle" x="3653.4155" y="-3969.2156" font-family="Times,serif" font-size="80.00" fill="#000000"> e nipote</text>
+<text text-anchor="middle" x="3653.4155" y="-3873.2156" font-family="Times,serif" font-size="80.00" fill="#000000"> (Sculpture)</text>
+</g>
+<!-- grandpa_and_grandson&#45;&gt;angelo_di_mario -->
+<g id="edge55" class="edge">
+<title>grandpa_and_grandson-&gt;angelo_di_mario</title>
+<path fill="none" stroke="#000000" d="M3925.8861,-3899.0603C4544.3133,-3692.3706 4711.9414,-3719.426 5855.6949,-4052.8352"/>
+<polygon fill="#000000" stroke="#000000" points="5854.7989,-4056.2196 5865.3789,-4055.6586 5856.7583,-4049.4994 5854.7989,-4056.2196"/>
+<text text-anchor="middle" x="4784.0176" y="-3908.1626" font-family="Times,serif" font-size="70.00" fill="#000000">has</text>
+<text text-anchor="middle" x="4784.0176" y="-3824.1626" font-family="Times,serif" font-size="70.00" fill="#000000"> sculptor</text>
+</g>
+<!-- grandpa_and_grandson&#45;&gt;museo_di_mario -->
+<g id="edge56" class="edge">
+<title>grandpa_and_grandson-&gt;museo_di_mario</title>
+<path fill="none" stroke="#000000" d="M3941.6383,-3998.065C4626.6283,-4015.5553 4809.3672,-4093.8132 6146.1355,-4785.4007"/>
+<polygon fill="#000000" stroke="#000000" points="6144.9871,-4788.7472 6155.4771,-4790.2339 6148.2038,-4782.5301 6144.9871,-4788.7472"/>
+<text text-anchor="middle" x="4993.9443" y="-4370.9515" font-family="Times,serif" font-size="70.00" fill="#000000">is</text>
+<text text-anchor="middle" x="4993.9443" y="-4286.9515" font-family="Times,serif" font-size="70.00" fill="#000000"> held by</text>
+</g>
+<!-- grand_bond_subject -->
+<g id="node40" class="node">
+<title>grand_bond_subject</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="3104.891" cy="-6690.073" rx="250.0186" ry="250.0186"/>
+<text text-anchor="middle" x="3104.891" y="-6780.073" font-family="Times,serif" font-size="60.00" fill="#000000">Grandparents</text>
+<text text-anchor="middle" x="3104.891" y="-6708.073" font-family="Times,serif" font-size="60.00" fill="#000000"> and</text>
+<text text-anchor="middle" x="3104.891" y="-6636.073" font-family="Times,serif" font-size="60.00" fill="#000000"> grandchildren</text>
+<text text-anchor="middle" x="3104.891" y="-6564.073" font-family="Times,serif" font-size="60.00" fill="#000000"> bond</text>
+</g>
+<!-- grandpa_and_grandson&#45;&gt;grand_bond_subject -->
+<g id="edge57" class="edge">
+<title>grandpa_and_grandson-&gt;grand_bond_subject</title>
+<path fill="none" stroke="#000000" d="M3488.4225,-4229.6286C2945.4535,-5015.0196 2925.2722,-5169.0613 3074.0615,-6431.3205"/>
+<polygon fill="#000000" stroke="#000000" points="3070.6197,-6432.0205 3075.2671,-6441.5416 3077.5715,-6431.2004 3070.6197,-6432.0205"/>
+<text text-anchor="middle" x="2901.8634" y="-5334.1689" font-family="Times,serif" font-size="70.00" fill="#000000">subject</text>
+</g>
+<!-- dancers -->
+<g id="node18" class="node">
+<title>dancers</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="3515.7573" cy="-5402.2852" rx="288" ry="288"/>
+<text text-anchor="middle" x="3515.7573" y="-5426.2852" font-family="Times,serif" font-size="80.00" fill="#000000">Ballerini</text>
+<text text-anchor="middle" x="3515.7573" y="-5330.2852" font-family="Times,serif" font-size="80.00" fill="#000000"> (Sculpture)</text>
+</g>
+<!-- dancers&#45;&gt;angelo_di_mario -->
+<g id="edge58" class="edge">
+<title>dancers-&gt;angelo_di_mario</title>
+<path fill="none" stroke="#000000" d="M3700.8381,-5181.4246C4370.243,-4388.7112 4509.3354,-4334.1166 5848.6524,-4147.4025"/>
+<polygon fill="#000000" stroke="#000000" points="5849.5814,-4150.807 5859.0026,-4145.9603 5848.6152,-4143.8739 5849.5814,-4150.807"/>
+<text text-anchor="middle" x="4555.5943" y="-4478.9904" font-family="Times,serif" font-size="70.00" fill="#000000">has</text>
+<text text-anchor="middle" x="4555.5943" y="-4394.9904" font-family="Times,serif" font-size="70.00" fill="#000000"> sculptor</text>
+</g>
+<!-- dancers&#45;&gt;museo_di_mario -->
+<g id="edge59" class="edge">
+<title>dancers-&gt;museo_di_mario</title>
+<path fill="none" stroke="#000000" d="M3757.9173,-5245.8574C4496.3644,-4774.9878 4665.4545,-4762.0813 6120.2338,-4877.1278"/>
+<polygon fill="#000000" stroke="#000000" points="6120.1556,-4880.6325 6130.4006,-4877.9322 6120.7078,-4873.6543 6120.1556,-4880.6325"/>
+<text text-anchor="middle" x="4815.3851" y="-4924.0848" font-family="Times,serif" font-size="70.00" fill="#000000">is</text>
+<text text-anchor="middle" x="4815.3851" y="-4840.0848" font-family="Times,serif" font-size="70.00" fill="#000000"> held by</text>
+</g>
+<!-- dancers_subject -->
+<g id="node41" class="node">
+<title>dancers_subject</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="2976.8778" cy="-8178.6323" rx="216" ry="216"/>
+<text text-anchor="middle" x="2976.8778" y="-8160.6323" font-family="Times,serif" font-size="60.00" fill="#000000">Dancers</text>
+</g>
+<!-- dancers&#45;&gt;dancers_subject -->
+<g id="edge60" class="edge">
+<title>dancers-&gt;dancers_subject</title>
+<path fill="none" stroke="#000000" d="M3357.0142,-5642.7705C2741.2349,-6581.4905 2723.7399,-6722.7581 2937.8667,-7955.6461"/>
+<polygon fill="#000000" stroke="#000000" points="2934.441,-7956.3765 2939.6015,-7965.6296 2941.3377,-7955.178 2934.441,-7956.3765"/>
+<text text-anchor="middle" x="2725.7252" y="-6786.2616" font-family="Times,serif" font-size="70.00" fill="#000000">subject</text>
+</g>
+<!-- woman -->
+<g id="node19" class="node">
+<title>woman</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="6795.5185" cy="-2006.448" rx="288" ry="288"/>
+<text text-anchor="middle" x="6795.5185" y="-2030.448" font-family="Times,serif" font-size="80.00" fill="#000000">Donna</text>
+<text text-anchor="middle" x="6795.5185" y="-1934.448" font-family="Times,serif" font-size="80.00" fill="#000000"> (Sculpture)</text>
+</g>
+<!-- woman&#45;&gt;angelo_di_mario -->
+<g id="edge61" class="edge">
+<title>woman-&gt;angelo_di_mario</title>
+<path fill="none" stroke="#000000" d="M6617.3879,-2232.8381C6307.7131,-2639.0373 6266.2165,-2815.7661 6106.133,-3892.4054"/>
+<polygon fill="#000000" stroke="#000000" points="6102.668,-3891.9119 6104.6596,-3902.3179 6109.5919,-3892.9412 6102.668,-3891.9119"/>
+<text text-anchor="middle" x="6125.8477" y="-3148.6293" font-family="Times,serif" font-size="70.00" fill="#000000">has</text>
+<text text-anchor="middle" x="6125.8477" y="-3064.6293" font-family="Times,serif" font-size="70.00" fill="#000000"> sculptor</text>
+</g>
+<!-- woman&#45;&gt;museo_di_mario -->
+<g id="edge62" class="edge">
+<title>woman-&gt;museo_di_mario</title>
+<path fill="none" stroke="#000000" d="M6677.5693,-2269.2203C6404.9103,-2890.309 6389.3227,-3095.476 6364.0745,-4655.5506"/>
+<polygon fill="#000000" stroke="#000000" points="6360.5744,-4655.5334 6363.9122,-4665.5887 6367.5735,-4655.6466 6360.5744,-4655.5334"/>
+<text text-anchor="middle" x="6284.4474" y="-3565.3243" font-family="Times,serif" font-size="70.00" fill="#000000">is</text>
+<text text-anchor="middle" x="6284.4474" y="-3481.3243" font-family="Times,serif" font-size="70.00" fill="#000000"> held by</text>
+</g>
+<!-- woman&#45;&gt;woman_daily_life -->
+<g id="edge63" class="edge">
+<title>woman-&gt;woman_daily_life</title>
+<path fill="none" stroke="#000000" d="M7079.2432,-2056.2905C7687.0315,-2169.9253 7814.211,-2271.802 8547.8561,-3054.7928"/>
+<polygon fill="#000000" stroke="#000000" points="8545.4911,-3057.3876 8554.8822,-3062.2925 8550.5995,-3052.6018 8545.4911,-3057.3876"/>
+<text text-anchor="middle" x="7821.8746" y="-2445.718" font-family="Times,serif" font-size="70.00" fill="#000000">subject</text>
+</g>
+<!-- performance -->
+<g id="node20" class="node">
+<title>performance</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="1854.6987" cy="-14606.8858" rx="288" ry="288"/>
+<text text-anchor="middle" x="1854.6987" y="-14582.8858" font-family="Times,serif" font-size="80.00" fill="#000000">Performance</text>
+</g>
+<!-- performance_video -->
+<g id="node39" class="node">
+<title>performance_video</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="216" cy="-16341.8" rx="216" ry="216"/>
+<text text-anchor="middle" x="216" y="-16359.8" font-family="Times,serif" font-size="60.00" fill="#000000">Performance</text>
+<text text-anchor="middle" x="216" y="-16287.8" font-family="Times,serif" font-size="60.00" fill="#000000"> Video</text>
+</g>
+<!-- performance&#45;&gt;performance_video -->
+<g id="edge26" class="edge">
+<title>performance-&gt;performance_video</title>
+<path fill="none" stroke="#000000" d="M1655.1857,-14814.9673C816.7283,-15689.4887 690.5994,-15822.1783 368.7668,-16174.3831"/>
+<polygon fill="#000000" stroke="#000000" points="366.0134,-16172.2078 361.852,-16181.9512 371.1812,-16176.9295 366.0134,-16172.2078"/>
+<text text-anchor="middle" x="575.2329" y="-15711.5482" font-family="Times,serif" font-size="70.00" fill="#000000">is exemplified by</text>
+</g>
+<!-- video -->
+<g id="node21" class="node">
+<title>video</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="9079.7117" cy="-4459.9761" rx="288" ry="288"/>
+<text text-anchor="middle" x="9079.7117" y="-4531.9761" font-family="Times,serif" font-size="80.00" fill="#000000">Vallecupola</text>
+<text text-anchor="middle" x="9079.7117" y="-4435.9761" font-family="Times,serif" font-size="80.00" fill="#000000"> Innevata</text>
+<text text-anchor="middle" x="9079.7117" y="-4339.9761" font-family="Times,serif" font-size="80.00" fill="#000000"> (Video)</text>
+</g>
+<!-- video&#45;&gt;vallecupola_village -->
+<g id="edge64" class="edge">
+<title>video-&gt;vallecupola_village</title>
+<path fill="none" stroke="#000000" d="M8935.359,-4709.5651C8749.9246,-5039.149 8676.7865,-5233.1221 8377.1037,-6123.9141"/>
+<polygon fill="#000000" stroke="#000000" points="8373.7722,-6122.8404 8373.9012,-6133.4345 8380.4069,-6125.0723 8373.7722,-6122.8404"/>
+<text text-anchor="middle" x="8535.2059" y="-5430.9352" font-family="Times,serif" font-size="70.00" fill="#000000">shows</text>
+</g>
+<!-- conca -->
+<g id="node22" class="node">
+<title>conca</title>
+<ellipse fill="#f2e9b2" stroke="#000000" cx="13825.7846" cy="-2267.5889" rx="288" ry="288"/>
+<text text-anchor="middle" x="13825.7846" y="-2243.5889" font-family="Times,serif" font-size="80.00" fill="#000000">Conca</text>
+</g>
+<!-- museo_diffuso -->
+<g id="node45" class="node">
+<title>museo_diffuso</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="15915.3793" cy="-2967.4617" rx="310.2495" ry="310.2495"/>
+<text text-anchor="middle" x="15915.3793" y="-3021.4617" font-family="Times,serif" font-size="60.00" fill="#000000">Museo diffuso</text>
+<text text-anchor="middle" x="15915.3793" y="-2949.4617" font-family="Times,serif" font-size="60.00" fill="#000000"> delle tradizioni</text>
+<text text-anchor="middle" x="15915.3793" y="-2877.4617" font-family="Times,serif" font-size="60.00" fill="#000000"> contadine e artigiane</text>
+</g>
+<!-- conca&#45;&gt;museo_diffuso -->
+<g id="edge43" class="edge">
+<title>conca-&gt;museo_diffuso</title>
+<path fill="none" stroke="#000000" d="M14113.8827,-2281.3575C15060.1515,-2328.4472 15226.5571,-2367.6874 15675.5088,-2754.9135"/>
+<polygon fill="#000000" stroke="#000000" points="15673.286,-2757.6185 15683.1416,-2761.5068 15677.8619,-2752.3212 15673.286,-2757.6185"/>
+<text text-anchor="middle" x="14945.0936" y="-2411.5858" font-family="Times,serif" font-size="70.00" fill="#000000">is held by</text>
+</g>
+<!-- conca&#45;&gt;conca_object -->
+<g id="edge42" class="edge">
+<title>conca-&gt;conca_object</title>
+<path fill="none" stroke="#000000" d="M13551.3104,-2355.142C12916.9455,-2562.5094 12738.2607,-2681.1681 11413.6547,-3639.7432"/>
+<polygon fill="#000000" stroke="#000000" points="11411.4255,-3637.036 11405.3762,-3645.7342 11415.5294,-3642.7069 11411.4255,-3637.036"/>
+<text text-anchor="middle" x="12294.7606" y="-3026.0118" font-family="Times,serif" font-size="70.00" fill="#000000">is similar</text>
+<text text-anchor="middle" x="12294.7606" y="-2942.0118" font-family="Times,serif" font-size="70.00" fill="#000000"> to</text>
+</g>
+<!-- agapito_miniucchi&#45;&gt;rocca_sinibalda -->
+<g id="edge45" class="edge">
+<title>agapito_miniucchi-&gt;rocca_sinibalda</title>
+<path fill="none" stroke="#000000" d="M12502.848,-3165.1945C12458.3654,-3887.7187 12397.6545,-4040.7662 11698.302,-5492.7234"/>
+<polygon fill="#000000" stroke="#000000" points="11695.1172,-5491.2701 11693.9308,-5501.7983 11701.4238,-5494.3079 11695.1172,-5491.2701"/>
+<text text-anchor="middle" x="12116.5543" y="-4404.9575" font-family="Times,serif" font-size="70.00" fill="#000000">born in</text>
+</g>
+<!-- castle&#45;&gt;rocca_sinibalda -->
+<g id="edge48" class="edge">
+<title>castle-&gt;rocca_sinibalda</title>
+<path fill="none" stroke="#000000" d="M13364.5673,-7445.7408C13034.1629,-6533.0075 12942.6791,-6444.2788 11798.1407,-5806.6142"/>
+<polygon fill="#000000" stroke="#000000" points="11799.7345,-5803.4957 11789.2952,-5801.6868 11796.328,-5809.6109 11799.7345,-5803.4957"/>
+<text text-anchor="middle" x="12591.2367" y="-6425.951" font-family="Times,serif" font-size="70.00" fill="#000000">has location</text>
+</g>
+<!-- scene&#45;&gt;quadriglia -->
+<g id="edge22" class="edge">
+<title>scene-&gt;quadriglia</title>
+<path fill="none" stroke="#000000" d="M5008.2255,-10319.0704C3780.7488,-10824.0079 3572.0028,-10905.8346 3093.7173,-11020.1789"/>
+<polygon fill="#000000" stroke="#000000" points="3092.717,-11016.8193 3083.8025,-11022.5448 3094.3418,-11023.6281 3092.717,-11016.8193"/>
+<text text-anchor="middle" x="3641.6911" y="-10837.0994" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- vallecupola_music -->
+<g id="node38" class="node">
+<title>vallecupola_music</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="3675.4159" cy="-12742.6236" rx="216" ry="216"/>
+<text text-anchor="middle" x="3675.4159" y="-12760.6236" font-family="Times,serif" font-size="60.00" fill="#000000">Vallecupola</text>
+<text text-anchor="middle" x="3675.4159" y="-12688.6236" font-family="Times,serif" font-size="60.00" fill="#000000"> Music</text>
+</g>
+<!-- scene&#45;&gt;vallecupola_music -->
+<g id="edge24" class="edge">
+<title>scene-&gt;vallecupola_music</title>
+<path fill="none" stroke="#000000" d="M5079.3187,-10410.4761C4094.2585,-11738.4444 3994.5554,-11885.7055 3753.7558,-12530.3426"/>
+<polygon fill="#000000" stroke="#000000" points="3750.4184,-12529.2753 3750.2009,-12539.8679 3756.9765,-12531.7229 3750.4184,-12529.2753"/>
+<text text-anchor="middle" x="4024.6829" y="-11747.665" font-family="Times,serif" font-size="70.00" fill="#000000">inspired</text>
+</g>
+<!-- scene&#45;&gt;dancers_subject -->
+<g id="edge23" class="edge">
+<title>scene-&gt;dancers_subject</title>
+<path fill="none" stroke="#000000" d="M5016.8959,-10136.4737C3598.9238,-9392.0543 3489.0329,-9305.4202 3070.0415,-8384.8856"/>
+<polygon fill="#000000" stroke="#000000" points="3073.2015,-8383.3792 3065.8748,-8375.7261 3066.8298,-8386.2778 3073.2015,-8383.3792"/>
+<text text-anchor="middle" x="3569.7076" y="-9347.7176" font-family="Times,serif" font-size="70.00" fill="#000000">subject</text>
+</g>
+<!-- museo_di_mario&#45;&gt;angelo_di_mario -->
+<g id="edge8" class="edge">
+<title>museo_di_mario-&gt;angelo_di_mario</title>
+<path fill="none" stroke="#000000" d="M6272.5738,-4682.842C6199.169,-4503.5011 6163.1501,-4412.3739 6136.525,-4333.4631"/>
+<polygon fill="#000000" stroke="#000000" points="6139.8157,-4332.2673 6133.3227,-4323.8953 6133.1776,-4334.4891 6139.8157,-4332.2673"/>
+<text text-anchor="middle" x="6093.7056" y="-4575.4862" font-family="Times,serif" font-size="70.00" fill="#000000">named</text>
+<text text-anchor="middle" x="6093.7056" y="-4491.4862" font-family="Times,serif" font-size="70.00" fill="#000000"> after</text>
+</g>
+<!-- scene_in_the_graveyard&#45;&gt;graveyard -->
+<g id="edge34" class="edge">
+<title>scene_in_the_graveyard-&gt;graveyard</title>
+<path fill="none" stroke="#000000" d="M9934.9161,-10581.259C10484.982,-9621.117 10493.5113,-9492.1725 10203.5071,-8029.1272"/>
+<polygon fill="#000000" stroke="#000000" points="10206.9114,-8028.3006 10201.5333,-8019.1722 10200.0451,-8029.662 10206.9114,-8028.3006"/>
+<text text-anchor="middle" x="10299.5258" y="-9318.3938" font-family="Times,serif" font-size="70.00" fill="#000000">setting</text>
+</g>
+<!-- cemetry_gates_verse -->
+<g id="node43" class="node">
+<title>cemetry_gates_verse</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="11572.3142" cy="-13493.867" rx="216" ry="216"/>
+<text text-anchor="middle" x="11572.3142" y="-13511.867" font-family="Times,serif" font-size="60.00" fill="#000000">Cemetry Gates</text>
+<text text-anchor="middle" x="11572.3142" y="-13439.867" font-family="Times,serif" font-size="60.00" fill="#000000"> (verse)</text>
+</g>
+<!-- scene_in_the_graveyard&#45;&gt;cemetry_gates_verse -->
+<g id="edge35" class="edge">
+<title>scene_in_the_graveyard-&gt;cemetry_gates_verse</title>
+<path fill="none" stroke="#000000" d="M9943.9352,-10950.7958C10956.1267,-12525.0484 11058.0035,-12683.7743 11450.9754,-13302.7206"/>
+<polygon fill="#000000" stroke="#000000" points="11448.1738,-13304.8379 11456.4886,-13311.4042 11454.0834,-13301.086 11448.1738,-13304.8379"/>
+<text text-anchor="middle" x="10838.2927" y="-12506.0053" font-family="Times,serif" font-size="70.00" fill="#000000">quotes</text>
+</g>
+<!-- scene_grandma_and_grandson&#45;&gt;wall -->
+<g id="edge29" class="edge">
+<title>scene_grandma_and_grandson-&gt;wall</title>
+<path fill="none" stroke="#000000" d="M5881.5638,-7648.5027C5630.923,-6643.447 5623.9316,-6511.8352 5895.0098,-5909.4295"/>
+<polygon fill="#000000" stroke="#000000" points="5898.306,-5910.6336 5899.2228,-5900.0785 5891.9239,-5907.7581 5898.306,-5910.6336"/>
+<text text-anchor="middle" x="5599.3147" y="-6648.967" font-family="Times,serif" font-size="70.00" fill="#000000">setting</text>
+</g>
+<!-- scene_grandma_and_grandson&#45;&gt;grand_bond_subject -->
+<g id="edge28" class="edge">
+<title>scene_grandma_and_grandson-&gt;grand_bond_subject</title>
+<path fill="none" stroke="#000000" d="M5731.6656,-7783.0907C4120.7532,-7184.1259 3926.442,-7108.7526 3336.7397,-6808.7387"/>
+<polygon fill="#000000" stroke="#000000" points="3338.0908,-6805.4992 3327.5911,-6804.0825 3334.9156,-6811.7376 3338.0908,-6805.4992"/>
+<text text-anchor="middle" x="4052.1039" y="-7204.8051" font-family="Times,serif" font-size="70.00" fill="#000000">subject</text>
+</g>
+<!-- scene_girl_with_conca&#45;&gt;woman_daily_life -->
+<g id="edge31" class="edge">
+<title>scene_girl_with_conca-&gt;woman_daily_life</title>
+<path fill="none" stroke="#000000" d="M9326.7187,-6154.5094C9185.6929,-4334.7596 9161.0448,-4159.5743 8808.5681,-3432.7842"/>
+<polygon fill="#000000" stroke="#000000" points="8811.6589,-3431.1365 8804.1439,-3423.6682 8805.3613,-3434.1929 8811.6589,-3431.1365"/>
+<text text-anchor="middle" x="9047.7984" y="-4404.7786" font-family="Times,serif" font-size="70.00" fill="#000000">subject</text>
+</g>
+<!-- scene_girl_with_conca&#45;&gt;conca_object -->
+<g id="edge32" class="edge">
+<title>scene_girl_with_conca-&gt;conca_object</title>
+<path fill="none" stroke="#000000" d="M9470.8954,-6194.0925C10536.1504,-4679.8308 10645.7565,-4526.1894 11091.2474,-3951.5764"/>
+<polygon fill="#000000" stroke="#000000" points="11094.1362,-3953.5627 11097.4978,-3943.5152 11088.6043,-3949.2734 11094.1362,-3953.5627"/>
+<text text-anchor="middle" x="10385.1604" y="-4741.4593" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- scene_in_rocca_sinibalda&#45;&gt;rocca_sinibalda -->
+<g id="edge19" class="edge">
+<title>scene_in_rocca_sinibalda-&gt;rocca_sinibalda</title>
+<path fill="none" stroke="#000000" d="M11161.0404,-8073.7302C11765.7264,-6881.3814 11803.8238,-6748.1383 11643.8674,-5918.7348"/>
+<polygon fill="#000000" stroke="#000000" points="11647.2499,-5917.7913 11641.9168,-5908.6366 11640.377,-5919.119 11647.2499,-5917.7913"/>
+<text text-anchor="middle" x="11595.8688" y="-6881.1215" font-family="Times,serif" font-size="70.00" fill="#000000">setting</text>
+</g>
+<!-- scene_in_rocca_sinibalda&#45;&gt;castle -->
+<g id="edge20" class="edge">
+<title>scene_in_rocca_sinibalda-&gt;castle</title>
+<path fill="none" stroke="#000000" d="M11279.595,-8229.0435C12569.3076,-7959.0462 12744.0003,-7918.0918 13226.4475,-7731.7396"/>
+<polygon fill="#000000" stroke="#000000" points="13228.0275,-7734.8813 13236.0925,-7728.0106 13225.5032,-7728.3523 13228.0275,-7734.8813"/>
+<text text-anchor="middle" x="12427.4244" y="-7970.0231" font-family="Times,serif" font-size="70.00" fill="#000000">mentions</text>
+</g>
+<!-- poem&#45;&gt;wall -->
+<g id="edge54" class="edge">
+<title>poem-&gt;wall</title>
+<path fill="none" stroke="#000000" d="M3919.9574,-3126.0524C4426.2737,-3776.7979 4541.7722,-3920.002 5846.493,-5527.3133"/>
+<polygon fill="#000000" stroke="#000000" points="5843.9439,-5529.7265 5852.9637,-5535.2847 5849.3787,-5525.3148 5843.9439,-5529.7265"/>
+<text text-anchor="middle" x="4786.7518" y="-4356.5328" font-family="Times,serif" font-size="70.00" fill="#000000">setting</text>
+</g>
+<!-- vallecupola_music&#45;&gt;performance -->
+<g id="edge25" class="edge">
+<title>vallecupola_music-&gt;performance</title>
+<path fill="none" stroke="#000000" d="M3523.7992,-12896.5154C2565.0048,-13869.713 2404.7594,-14032.8268 2061.1552,-14391.2483"/>
+<polygon fill="#000000" stroke="#000000" points="2058.4272,-14389.0364 2054.0338,-14398.6775 2063.4805,-14393.8805 2058.4272,-14389.0364"/>
+<text text-anchor="middle" x="2315.8732" y="-13895.4277" font-family="Times,serif" font-size="70.00" fill="#000000">has manifestation</text>
+</g>
+<!-- quel_mazzolin_di_fiori_verse&#45;&gt;quel_mazzolin_di_fiori -->
+<g id="edge13" class="edge">
+<title>quel_mazzolin_di_fiori_verse-&gt;quel_mazzolin_di_fiori</title>
+<path fill="none" stroke="#000000" d="M7825.9668,-11836.765C7764.9058,-13447.971 7757.4354,-13681.0954 7768.0097,-14278.193"/>
+<polygon fill="#000000" stroke="#000000" points="7764.5129,-14278.4074 7768.1906,-14288.3435 7771.5118,-14278.2827 7764.5129,-14278.4074"/>
+<text text-anchor="middle" x="7645.7208" y="-13458.7773" font-family="Times,serif" font-size="70.00" fill="#000000">is part of</text>
+</g>
+<!-- cemetry_gates_verse&#45;&gt;cemetry_gates -->
+<g id="edge36" class="edge">
+<title>cemetry_gates_verse-&gt;cemetry_gates</title>
+<path fill="none" stroke="#000000" d="M11690.9917,-13674.5437C12474.269,-14867.0102 12600.6284,-15059.0879 12889.4454,-15492.4148"/>
+<polygon fill="#000000" stroke="#000000" points="12886.5419,-15494.3694 12895.0006,-15500.7492 12892.3666,-15490.487 12886.5419,-15494.3694"/>
+<text text-anchor="middle" x="12351.241" y="-14889.1623" font-family="Times,serif" font-size="70.00" fill="#000000">is part of</text>
+</g>
+<!-- posticciola_village -->
+<g id="node44" class="node">
+<title>posticciola_village</title>
+<ellipse fill="#e2dbdb" stroke="#000000" cx="14174.2303" cy="-4822.4956" rx="216" ry="216"/>
+<text text-anchor="middle" x="14174.2303" y="-4804.4956" font-family="Times,serif" font-size="60.00" fill="#000000">Posticciola</text>
+</g>
+<!-- posticciola_village&#45;&gt;rocca_sinibalda -->
+<g id="edge9" class="edge">
+<title>posticciola_village-&gt;rocca_sinibalda</title>
+<path fill="none" stroke="#000000" d="M13961.3318,-4859.4334C13358.0531,-4966.3621 13195.9526,-5027.638 11808.791,-5609.0093"/>
+<polygon fill="#000000" stroke="#000000" points="11807.2228,-5605.8715 11799.353,-5612.9649 11809.9287,-5612.3274 11807.2228,-5605.8715"/>
+<text text-anchor="middle" x="12752.8499" y="-5366.0826" font-family="Times,serif" font-size="70.00" fill="#000000">is</text>
+<text text-anchor="middle" x="12752.8499" y="-5282.0826" font-family="Times,serif" font-size="70.00" fill="#000000"> hamlet</text>
+<text text-anchor="middle" x="12752.8499" y="-5198.0826" font-family="Times,serif" font-size="70.00" fill="#000000"> of</text>
+</g>
+<!-- posticciola_village&#45;&gt;museo_diffuso -->
+<g id="edge10" class="edge">
+<title>posticciola_village-&gt;museo_diffuso</title>
+<path fill="none" stroke="#000000" d="M14332.8875,-4675.6869C15288.3804,-3791.31 15456.4872,-3628.759 15734.3306,-3232.2326"/>
+<polygon fill="#000000" stroke="#000000" points="15737.218,-3234.2111 15740.0837,-3224.0111 15731.4827,-3230.1977 15737.218,-3234.2111"/>
+<text text-anchor="middle" x="15142.8916" y="-3876.0112" font-family="Times,serif" font-size="70.00" fill="#000000">is location</text>
+<text text-anchor="middle" x="15142.8916" y="-3792.0112" font-family="Times,serif" font-size="70.00" fill="#000000"> of</text>
+</g>
+</g>
+</svg>

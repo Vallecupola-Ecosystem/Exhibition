@@ -398,6 +398,14 @@
                 display: block;
             }
         }
+
+        code { 
+            color:#9753db;      <!--#2dcc3f-->
+        }
+
+        code.relation {
+            color: #f9dd4f;
+        }
     </style>
 </head>
 <body>
@@ -698,7 +706,7 @@
                                     <li>the <strong>grey</strong> circles represent the extra entities (intermediate nodes).</li>
                                 </ul>
                             </p>
-                            <br/><br/>
+                            <br/>
                             <p>
                                 <img width="100%" src="./images/theoretical_model.svg" alt="Conceptual Model"/>
                             </p>
@@ -721,45 +729,197 @@
                                 <ul class="content-text">
                                     <li>7 representing the museum items:</li>
                                     <ul class="content-text">
-                                        <li><strong>dcmitype:Text</strong> for collections, poems, stories, scenes of stories;</li>
-                                        <li><strong>crm:E24_Physical_Human_Made_Thing</strong> for various objects and artifacts;</li>
-                                        <li><strong>schema:VisualArtwork</strong> for paintings and stamps;</li>
-                                        <li><strong>fabio:MovingImage</strong> for videos;</li>
-                                        <li><strong>schema:Sculpture</strong> for sculptures and installations;</li>
-                                        <li><strong>fabio:MusicalComposition</strong> for songs and musics;</li>
-                                        <li><strong>frbroo:F31_Performance</strong> for stage performances;</li>
+                                        <li><code>dcmitype:Text</code> for collections, poems, stories;</li>
+                                        <li><code>crm:E24_Physical_Human_Made_Thing</code> for various objects and artifacts;</li>
+                                        <li><code>schema:VisualArtwork</code> for paintings and stamps;</li>
+                                        <li><code>fabio:MovingImage</code> for videos;</li>
+                                        <li><code>schema:Sculpture</code> for sculptures and installations;</li>
+                                        <li><code>fabio:MusicalComposition</code> for songs and musics;</li>
+                                        <li><code>frbroo:F31_Performance</code> for stage performances;</li>
                                     </ul>
-                                    <li>4 representing the extra entities:</li>
+                                    <li>4 representing only the extra entities:</li>
                                     <ul class="content-text">
-                                        <li><strong>crm:E53_Place</strong> for villages, hamlets and locations in them;</li>
-                                        <li><strong>crm:E21_Person</strong> for people, artists;</li>
-                                        <li><strong>schema:Museum</strong> for museums holding some items;</li>
-                                        <li><strong>skos:Concept</strong> for subjects represented or topics conveyed by the cultural items.</li>
+                                        <li><code>crm:E53_Place</code> for villages, hamlets and locations in them;</li>
+                                        <li><code>crm:E21_Person</code> for people, artists;</li>
+                                        <li><code>schema:Museum</code> for museums holding some items;</li>
+                                        <li><code>skos:Concept</code> for subjects represented or topics conveyed by the cultural items.</li>
                                     </ul>
                                 </ul>
                             </p>
-                            <br/><br/>
+                            <p class="content-text">
+                            Actually, also some extra entities have classes <code>dcmitype:Text</code> (scenes of the story), <code>crm:E24_Physical_Human_Made_Thing</code> (objects mentioned in the story) and <code>fabio:MovingImage</code>, 
+                            because they were useful to better express the connections.
+                            </p>
+                            <br/>
                             <p>
                                 <img width="100%" src="./images/conceptual_model.png" alt="Conceptual Model"/>
                             </p>
-                            <p>
-                                This model is abstract and work like an ontology. Here - as in the previous theoretical model - only the most meaningful
-                                part of the knowledge domain has been shown. Indeed, we can only see classes and relations, not all the attributes associated to a class. 
-                                In the following list, we recap all the predicates that have been used for each class representing items when describing them in detail during the 
-                                <a href="#csv-descriptions">CSV creation phase</a> (in <em>italic</em> the ones that you can actually see in the conceptual model):
-                                <ul>
-                                    <li><strong>dcmitype:Text</strong>:</li>
-                                    <li><strong>crm:E24_Physical_Human_Made_Thing</strong>:</li>
-                                    <li><strong>schema:VisualArtwork</strong>:</li>
-                                    <li><strong>fabio:MovingImage</strong>:</li>
-                                    <li><strong>schema:Sculpture</strong>: crm:P2_has_type, crm:P102_has_title, <em>crm:P14_carried_out_by</em>, <em>crm:P50_has_current_keeper</em>, <em>crm:P129_is_about</em>, crm:P3_has_note, crm:P4_has_time-span, crm:P70_documents, crm:P55_has_current_location, crm:P45_consists_of, crm:P43_has_dimension</li>
-                                    <li><strong>fabio:MusicalComposition</strong>:</li>
-                                    <li><strong>frbroo:F31_Performance</strong>:</li>
+                            <br/>
+                            <p class="content-text">
+                                This is a model on a really high level of abstraction. It resembles an ontology. Here - as in the previous theoretical model - only the most meaningful
+                                part of the knowledge domain has been shown. Indeed, we can only see classes and relations, not all the attributes associated to the classes.
+                            </p>
+                            <p class="content-text">
+                                In the following list, we recap all the predicates that we used for each class when describing their instances in detail during the 
+                                <a href="#csv-descriptions">CSV creation phase</a> (in <code class="relation">yellow</code> the actual relations that you can see as edges in the conceptual model above):
+                            </p>    
+                                <ul class="content-text">
+                                    <li><code>dcmitype:Text</code>:</li>
+                                        dcterms:type,
+                                        dcterms:title,
+                                        <code class="relation">dcterms:creator</code>,
+                                        dcterms:publisher,
+                                        dcterms:spatial,
+                                        dcterms:issued,
+                                        dcterms:isPartOf,
+                                        dcterms:language,
+                                        dcterms:coverage,
+                                        dcterms:description,
+                                        dcterms:identifier,
+                                        dcterms:source,
+                                        <code class="relation">frbr:part</code>,
+                                        schema:award,
+                                        foaf:page,
+                                        <code class="relation">schema:contentLocation</code>,
+                                        <code class="relation">schema:mentions</code>,
+                                        <code class="relation">schema:citation</code>,
+                                        <code class="relation">prov:influenced</code>;
+                                    
+                                    <li><code>crm:E24_Physical_Human_Made_Thing</code>:</li>
+                                        crm:P2_has_type,
+                                        dc:subject,
+                                        dc:title,
+                                        dc:description,
+                                        dcterms:issued,
+                                        dcterms:valid,
+                                        dc:source,
+                                        nmo:hasWeight,
+                                        nmo:hasDiameter,
+                                        nmo:hasThickness,
+                                        nmo:hasShape,
+                                        <code class="relation">crm:P50_has_current_keeper</code>,
+                                        dc:rights,
+                                        dcterms:isReferencedBy,
+                                        dc:coverage,
+                                        pico:materialAndTechnique,
+                                        a-cd:hasDating,
+                                        a-cd:hasUse,
+                                        a-dd:hasTechnicalStatus,
+                                        a-cd:hasDocumentation,
+                                        dcterms:created,
+                                        a-dd:hasDesignationInTime,
+                                        a-dd:hasTechnique,
+                                        dc:format,
+                                        dc:temporal,
+                                        <code class="relation">dcterms:provenance</code>,
+                                        dc:creator,
+                                        schema:material,
+                                        schema:locationCreated,
+                                        schema:artMedium,
+                                        schema:image,
+                                        schema:weight,
+                                        <code class="relation">schema:isSimilarTo</code>;
+                                    
+                                    <li><code>schema:VisualArtwork</code>:</li>
+                                        rdf:type,
+                                        <code class="relation">crm:P129_is_about</code>,
+                                        crm:P102_has_title,
+                                        crm:P14_carried_out_by, 
+                                        crm:P4_has_time-span,
+                                        <code class="relation">crm:P138_shows</code>,
+                                        crm:P45_consists_of,
+                                        crm:P70_documents,
+                                        crm:P104_is_subject_to,
+                                        crm:P43_has_dimension,
+                                        crm:P50_has_current_keeper,
+                                        crm:P55_has_current_location,
+                                        crm:P53_has_former_location;
+
+                                    <li><code>fabio:MovingImage</code>:</li>
+                                        rdf:type,
+                                        dcterms:title,
+                                        dcterms:creator,
+                                        dcterms:date,
+                                        dcterms:publisher,
+                                        crm:P50_has_current_keeper,
+                                        dcterms:description,
+                                        dcterms:extent,
+                                        <code class="relation">crm:P138_shows</code>,
+                                        foaf:page;
+
+                                    <li><code>schema:Sculpture</code>:</li>
+                                        crm:P2_has_type, 
+                                        crm:P102_has_title, 
+                                        <code class="relation">crm:P14_carried_out_by</code>, 
+                                        <code class="relation">crm:P50_has_current_keeper</code>, 
+                                        <code class="relation">crm:P129_is_about</code>, 
+                                        crm:P3_has_note, 
+                                        crm:P4_has_time-span, 
+                                        crm:P70_documents, 
+                                        crm:P55_has_current_location, 
+                                        crm:P45_consists_of, 
+                                        crm:P43_has_dimension;
+
+                                    <li><code>fabio:MusicalComposition</code>:</li>
+                                        rdf:type,
+                                        mo:title,
+                                        mo:iswc,
+                                        mo:performer,
+                                        mo:duration,
+                                        mo:record,
+                                        mo:release_date,
+                                        mo:instrument,
+                                        mo:recorded_in,
+                                        dcterms:language,
+                                        mo:genre,
+                                        mo:publisher,
+                                        dcterms:coverage,
+                                        mo:producer,
+                                        mo:lyricist,
+                                        mo:composer,
+                                        dcterms:contributor,
+                                        dcterms:subject,
+                                        <code class="relation">frbr:part</code>,
+                                        <code class="relation">fabio:hasManifestation</code>;
+
+                                    <li><code>frbroo:F31_Performance</code>:</li>
+                                        rdf:type,
+                                        event:place,
+                                        dcterms:date,
+                                        mo:performer,
+                                        dcterms:contributor,
+                                        <code class="relation">frbr:exemplar</code>;
+                                    
+                                    <li><code>crm:E53_Place</code>:</li>
+                                        rdf:type,
+                                        owl:sameAs,
+                                        rdfs:label,
+                                        <code class="relation">schema:containedInPlace</code>,
+                                        <code class="relation">prov:influenced</code>,
+                                        <code class="relation">frbr:part</code>;
+
+                                    <li><code>crm:E21_Person</code>:</li>
+                                        rdf:type,
+                                        owl:sameAs,
+                                        rdfs:label,
+                                        <code class="relation">schema:birthPlace</code>;
+
+                                    <li><code>schema:Museum</code>:</li>
+                                        rdf:type,
+                                        owl:sameAs,
+                                        rdfs:label,
+                                        <code class="relation">dbpedia:namedAfter</code>,
+                                        <code class="relation">schema:location</code>;
+
+                                    <li><code>skos:Concept</code>:</li>
+                                        rdf:type,
+                                        rdfs:label.
                                 </ul>
                             </p>
-                            <p>Explain, maybe, also the attributes of extra entities</p>
-                            <p>Also add that, when possible, entities have been reconciled with controlled authorities</p>
+
                             <p>List of all the ontologies reused, with their: name, prefix, short description</p>
+
+                            <p>Also add that, when possible, entities have been reconciled with controlled authorities</p>
                             
                         </div>
                     </div>

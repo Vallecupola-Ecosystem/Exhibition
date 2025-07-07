@@ -665,6 +665,7 @@
                     <a href="#csv-descriptions" class="nav-link nav-subsection">
                         <i class="fas fa-table"></i>
                         CSV Descriptions of Items
+
                     </a>
                 </div>
                 <div class="nav-item">
@@ -677,6 +678,7 @@
                     <a href="#html-conversion" class="nav-link nav-subsection">
                         <i class="fas fa-code"></i>
                         HTML Conversion of the Story
+
                     </a>
                 </div>
                 <div class="nav-item">
@@ -833,16 +835,7 @@
                             The exhibition features a carefully curated collection of items that represent the cultural richness and historical significance of Vallecupola and its surrounding ecosystem. Each item has been selected to tell a part of the story that connects this small mountain village to broader cultural and artistic networks.
                         </p>
                         <div class="card-gallery">
-                            <p class="content-text">
-                                The exhibition features a carefully curated collection of items that represent the
-                                cultural
-                                richness and historical significance of Vallecupola and its surrounding ecosystem. Each
-                                item
-                                has been selected to tell a part of the story that connects this small mountain village
-                                to
-                                broader cultural and artistic networks.
-
-                            </p>
+                            
                             <div class="card-gallery">
                                 <a class="card" href="./items_descriptions/video.html">
                                     <img src="https://img.youtube.com/vi/l7hyC9NNZhE/maxresdefault.jpg"
@@ -1445,22 +1438,65 @@
                         </p>
                         
                         <div id="csv-descriptions">
-                            <h4 class="subsubsection-title">CSV Descriptions of Items (JOHN)</h4>
+                            <h4 class="subsubsection-title">CSV Descriptions of Items </h4>
                             <p class="content-text">
                                 Structured tabular data representations provide a straightforward and accessible format for describing exhibition items. The CSV format ensures compatibility with spreadsheet applications and database systems while maintaining human readability.
-                            <ul>
-                                <li>creation of the excel with different sheets, containing tables</li>
-                                <li>every table has subject predicate object description, both in natural language for humans and uri for machine</li>
-                                <li>we uploaded the excel in github for storage reasons, but it is a proprietary format, se we converted every sheet into a csv</li>
-                                <li>we uploaded the CSVs in github, too. content of the CSVs:
-                                <ul>
-                                    <li>20 descriptions of the objects</li>
-                                    <li>1 extra table for extra entities (the grey ones in the theoretical map)</li>
-                                    <li>1 table matching all the prefixes we used with the corresponding namespaces</li>
-                                </ul>
-                            </li>
-                            </ul>
-                            </p>
+<p>
+  The project knowledge representation strategy is built around 
+  <strong>accessibility</strong>, <strong>reusability</strong>, and 
+  <strong>interoperability</strong> within the context of a 
+  <strong>Linked Open Data (LOD)</strong> project.
+</p>
+
+<p>
+  We adopted a <strong>multi-format approach</strong> to ensure that the cultural data can serve diverse audiences and technical environments.
+</p>
+
+<p>
+  To model the cultural heritage objects and their related entities, we created a comprehensive 
+  <strong>Excel file</strong> containing <strong>multiple sheets</strong>. Each sheet corresponds to a distinct conceptual table in the data model. 
+  The format of the tables follows a <strong>Subject–Predicate–Object</strong> structure, combining both:
+</p>
+
+<ul>
+  <li><strong>Human-readable descriptions</strong> (in natural language), and</li>
+  <li><strong>Machine-readable URIs</strong> (for semantic web compatibility).</li>
+</ul>
+
+<p>
+  This approach ensures that the metadata can be easily understood by non-experts while remaining fully compatible with 
+  <strong>LOD principles</strong>.
+</p>
+
+<p>
+  Given that Excel is a <strong>proprietary format</strong>, we exported each sheet into individual 
+  <strong>CSV files</strong> to enhance long-term accessibility and machine processing. 
+  CSV was chosen for its wide support across platforms, readability, and compatibility with both relational databases and 
+  <strong>RDF transformation workflows</strong>.
+</p>
+
+<p>
+  In total, we produced <strong>22 CSV files</strong>:
+</p>
+<ul>
+  <li><strong>20 CSVs</strong> describe the core <strong>exhibition objects</strong>.</li>
+  <li><strong>1 CSV</strong> contains metadata for <strong>additional entities</strong> (those referenced but not primary objects — often displayed in grey in our conceptual map).</li>
+  <li><strong>1 CSV</strong> provides a <strong>prefix–namespace mapping table</strong>, listing all ontological prefixes used in the dataset alongside their corresponding full URIs.</li>
+</ul>
+
+<p>
+  All the files produced for the project are:
+</p>
+<ul>
+  <li>Stored in the <strong>GitHub repository</strong>, serving as both a version-controlled archival platform and a public access point.</li>
+  <li>Downloadable in the <strong>Download Section</strong> of this website.</li>
+</ul>
+
+
+                           
+                                
+
+                            
                         </div>
                         
                         <div id="xml-tei-encoding">
@@ -1472,17 +1508,71 @@
                         </div>
                         
                         <div id="html-conversion">
-                            <h4 class="subsubsection-title">HTML Conversion of the Story (JOHN)</h4>
+                            <h4 class="subsubsection-title">HTML Conversion of the Story </h4>
                             <p class="content-text">
                                 Web-ready HTML versions of the encoded texts provide immediate accessibility for online audiences. The conversion process maintains the structural integrity of the original TEI encoding while optimizing for web presentation.
                             </p>
+                            <p>
+  For this stage, the goal was the development of the <strong>XSLT stylesheet</strong> and the generation of the final 
+  <strong>HTML output</strong> from the <strong>TEI-encoded short story</strong>. The primary objective was to ensure that the 
+  <strong>semantically marked-up XML</strong> could be rendered as a clean, accessible HTML document, while preserving the 
+  narrative structure and interpretive elements encoded in TEI.
+</p>
+
+<p>
+  The <strong>TEI file</strong>—produced by another teammate—was formed based on the 
+  <strong>TEI P5 guidelines</strong> and included a variety of structural and semantic elements, such as 
+  <code>&lt;teiHeader&gt;</code>, <code>&lt;div1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ref&gt;</code>, 
+  <code>&lt;lg&gt;</code>, and <code>&lt;milestone&gt;</code>. As the 
+  <strong>TEI namespace</strong> (<code>http://www.tei-c.org/ns/1.0</code>) was used as the default, a prefix 
+  (<code>tei</code>) had to be declared and applied within all <strong>XPath expressions</strong> in the XSLT.
+</p>
+
+<p>
+  In the transformation process, the following tasks were carried out:
+</p>
+
+<ul>
+  <li>
+    The <strong>title</strong> and <strong>author information</strong> were extracted from the 
+    <code>&lt;teiHeader&gt;</code> and inserted into the <code>&lt;head&gt;</code> and 
+    <code>&lt;body&gt;</code> sections of the HTML using <strong>XPath</strong>.
+  </li>
+  <li>
+    Elements such as <code>&lt;div1&gt;</code>, <code>&lt;div2&gt;</code>, and <code>&lt;p&gt;</code> were converted into corresponding 
+    HTML <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code> tags to maintain <strong>semantic and structural clarity</strong>.
+  </li>
+  <li>
+    Tags used for quotations, hyperlinks, and poetic or lyrical formatting—including 
+    <code>&lt;quote&gt;</code>, <code>&lt;ref&gt;</code>, <code>&lt;lg&gt;</code>, and <code>&lt;l&gt;</code>—were matched to semantic 
+    HTML equivalents: <code>&lt;blockquote&gt;</code>, <code>&lt;a&gt;</code>, and styled <code>&lt;div&gt;</code> elements.
+  </li>
+  <li>
+    Special handling was done for <strong>visual breaks</strong>, with 
+    <code>&lt;milestone rend="*" /&gt;</code> being transformed into <code>&lt;hr /&gt;</code> elements.
+  </li>
+</ul>
+
+<p>
+  The transformation was done using the online tool <strong>FreeFormatter.com</strong>, which allowed the 
+  <strong>TEI XML</strong> and <strong>XSLT files</strong> to be processed together and the resulting HTML to be previewed and downloaded. 
+  This approach was chosen for its <strong>accessibility</strong> and <strong>convenience</strong>, 
+  as a local XML/XSLT processing environment is <em>not available</em>.
+</p>
+
+
+
+
                         </div>
                         
                         <div id="rdf-conversion">
-                            <h4 class="subsubsection-title">RDF Conversion from CSV and XML (YANG)</h4>
-                            <p class="content-text">
-                                Resource Description Framework (RDF) representations enable semantic web integration and linked data functionality. The conversion process creates machine-readable data that can be integrated with other cultural heritage datasets and repositories.
-                            </p>
+                            <h4 class="subsubsection-title">RDF Conversion from CSV and XML</h4>
+                            <div class="table-iframe-wrapper" style="margin-top:1rem;">
+                            <iframe src="Conversion.html"
+                                    style="width:100%; height:600px; border:1px solid var(--border-color);"
+                                    title="RDF conversion">
+                            </iframe>
+                          </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
+  exclude-result-prefixes="tei">
+
+  <xsl:output method="html" encoding="UTF-8" indent="yes"/>
+
+  <!-- Root match: TEI -->
+  <xsl:template match="/tei:TEI">
+    <html>
+      <head>
+        <title>
+          <xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
+        </title>
+        <meta charset="UTF-8"/>
+        <style>
+          body { font-family: Georgia, serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 2em; }
+          h1 { font-size: 1.8em; border-bottom: 1px solid #ccc; }
+          h2 { font-size: 1.4em; margin-top: 2em; }
+          a { color: #0066cc; text-decoration: none; }
+          a:hover { text-decoration: underline; }
+          .poem { font-style: italic; margin-left: 2em; }
+        </style>
+      </head>
+      <body>
+        <h1>
+          <xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
+        </h1>
+        <p><strong>Author:</strong>
+          <xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author/tei:forename"/>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author/tei:surname"/>
+        </p>
+
+        <!-- Process text body -->
+        <xsl:apply-templates select="tei:text/tei:body"/>
+      </body>
+    </html>
+  </xsl:template>
+
+  <!-- div1 -->
+  <xsl:template match="tei:div1">
+    <div class="section">
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+
+  <!-- div2 -->
+  <xsl:template match="tei:div2">
+    <div class="subsection">
+      <xsl:if test="@type">
+        <h2><xsl:value-of select="@type"/></h2>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+
+  <!-- paragraphs -->
+  <xsl:template match="tei:p">
+    <p><xsl:apply-templates/></p>
+  </xsl:template>
+
+  <!-- references -->
+  <xsl:template match="tei:ref">
+    <a href="{@target}" target="_blank">
+      <xsl:apply-templates/>
+    </a>
+  </xsl:template>
+
+  <!-- quote -->
+  <xsl:template match="tei:quote">
+    <blockquote>
+      <xsl:apply-templates/>
+    </blockquote>
+  </xsl:template>
+
+  <!-- line group (poetry or nursery rhyme) -->
+  <xsl:template match="tei:lg">
+    <div class="poem">
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+
+  <!-- line -->
+  <xsl:template match="tei:l">
+    <div><xsl:apply-templates/></div>
+  </xsl:template>
+
+  <!-- milestone separator -->
+  <xsl:template match="tei:milestone[@rend='***']">
+    <hr/>
+  </xsl:template>
+
+  <!-- fallback for text nodes -->
+  <xsl:template match="text()">
+    <xsl:value-of select="."/>
+  </xsl:template>
+
+</xsl:stylesheet>

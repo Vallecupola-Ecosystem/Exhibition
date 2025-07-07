@@ -1,0 +1,34 @@
+@prefix val: <https://github.com/Vallecupola-Ecosystem/Exhibition/entities#> .
+@prefix schema: <https://schema.org/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+
+val:vallecupola_story
+    frbr:part val:scene_girl_conca_fountain ;
+    frbr:part val:scene_in_rocca_sinibalda;
+    frbr:part val:scene_in_the_graveyard ;
+    frbr:part val:scene_with_dancers ;
+    frbr:part val:scene_with_grandma_and_grandson ;
+    schema:mentions val:catinella_object ;
+    schema:mentions val:brillantina_object ;
+    schema:citation val:quel_mazzolin_di_fiori_verse ;
+    schema:mentions val:church ;
+
+val:scene_girl_conca_fountain
+    schema:mentions val:conca_object . 
+
+val:scene_in_rocca_sinibalda
+    schema:mentions val:rocca_sinibalda ;
+    schema:mentions val:castle .
+
+val:scene_in_the_graveyard
+    schema:mentions val:graveyard ;
+    schema:citation val:cemetry_gates_verse .
+
+val:scene_with_dancers
+    schema:mentions val:lampada_object . 
+
+val:scene_with_grandma_and_grandson
+    schema:mentions val:wall ;
+    
+
+

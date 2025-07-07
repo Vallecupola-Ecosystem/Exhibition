@@ -400,11 +400,139 @@
         }
 
         code { 
-            color:#9753db;      <!--#2dcc3f-->
+            color:#9753db;      
         }
 
         code.relation {
             color: #f9dd4f;
+        }
+
+        .ontologies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .ontologies-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .ontologies-header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .ontologies-header p {
+            font-size: 1.1em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .ontologies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .ontology-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ontology-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        
+        .ontology-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+        
+        .ontology-prefix {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+            color: #e74c3c;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .ontology-name {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        
+        .ontology-url {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85em;
+            color: #7f8c8d;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 10px 0;
+            word-break: break-all;
+            border-left: 3px solid #3498db;
+        }
+        
+        .ontology-description {
+            color: #555;
+            font-size: 0.95em;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+        
+        .note {
+            background: #f8f9fa;
+            border-left: 4px solid #2ecc71;
+            padding: 20px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .note p {
+            margin: 0;
+            color: #555;
+            font-style: italic;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .ontologies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ontologies-header h1 {
+                font-size: 2em;
+            }
+            
+            .ontology-card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -917,9 +1045,172 @@
                                 </ul>
                             </p>
 
-                            <p>List of all the ontologies reused, with their: name, prefix, short description</p>
+                            <p class="content-text">As shown, in order to describe cultural objects in a standard-compliant and interoperable way, Vallecupola Ecosystem uses many classes 
+                                and predicates taken from already existing ontologies. Models cover simple to complex metadata, enabling rich, integrable knowledge.</p>
+                            <p class="content-text">Here, we list all the selected ontologies with prefix, full name, namespace and short description:</p>
 
-                            <p>Also add that, when possible, entities have been reconciled with controlled authorities</p>
+                            <div class="ontologies-container">
+                                <div class="ontologies-grid">
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">crm</div>
+                                <div class="ontology-name">CIDOC Conceptual Reference Model</div>
+                                <div class="ontology-url">http://www.cidoc-crm.org/cidoc-crm/</div>
+                                <div class="ontology-description">A standard for integrating heritage data.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">schema</div>
+                                <div class="ontology-name">Schema.org</div>
+                                <div class="ontology-url">https://schema.org/</div>
+                                <div class="ontology-description">A web data schema backed by search engines.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">dc</div>
+                                <div class="ontology-name">Dublin Core Elements</div>
+                                <div class="ontology-url">http://purl.org/dc/elements/1.1/</div>
+                                <div class="ontology-description">Basic metadata for digital and physical items.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">dcterms</div>
+                                <div class="ontology-name">Dublin Core Terms</div>
+                                <div class="ontology-url">http://purl.org/dc/terms/</div>
+                                <div class="ontology-description">Detailed terms for describing resources.</div>
+                                </div>
+                                <div class="ontology-card">
+                                    <div class="ontology-prefix">dcmitype</div>
+                                    <div class="ontology-name">DCMI Type Vocabulary</div>
+                                    <div class="ontology-url">http://purl.org/dc/dcmitype/</div>
+                                    <div class="ontology-description">Defines a standard set of resource types used in Dublin Core metadata.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">pico</div>
+                                <div class="ontology-name">PICO Ontology</div>
+                                <div class="ontology-url">http://data.cochrane.org/ontologies/pico/</div>
+                                <div class="ontology-description">Describes materials and techniques of artifacts.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">a-cd</div>
+                                <div class="ontology-name">ArCo Context Description</div>
+                                <div class="ontology-url">https://w3id.org/arco/ontology/context-description/</div>
+                                <div class="ontology-description">Describes heritage context and provenance.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">a-dd</div>
+                                <div class="ontology-name">ArCo Denotative Description</div>
+                                <div class="ontology-url">https://w3id.org/arco/ontology/denotative-description/</div>
+                                <div class="ontology-description">Describes physical and technical features.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">frbr</div>
+                                <div class="ontology-name">Functional Requirements for Bibliographic Records</div>
+                                <div class="ontology-url">http://purl.org/vocab/frbr/core#</div>
+                                <div class="ontology-description">Model of bibliographic abstraction levels.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">rdf</div>
+                                <div class="ontology-name">Resource Description Framework</div>
+                                <div class="ontology-url">http://www.w3.org/1999/02/22-rdf-syntax-ns#</div>
+                                <div class="ontology-description">Basic structure for web-based knowledge.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">rdfs</div>
+                                <div class="ontology-name">RDF Schema</div>
+                                <div class="ontology-url">http://www.w3.org/2000/01/rdf-schema#</div>
+                                <div class="ontology-description">Adds classes and properties to RDF.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">foaf</div>
+                                <div class="ontology-name">Friend of a Friend</div>
+                                <div class="ontology-url">http://xmlns.com/foaf/0.1/</div>
+                                <div class="ontology-description">Describes people and their relationships.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">frbroo</div>
+                                <div class="ontology-name">FRBR Object Oriented</div>
+                                <div class="ontology-url">http://iflastandards.info/ns/fr/frbr/frbroo/</div>
+                                <div class="ontology-description">Connects library and museum data models.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">fabio</div>
+                                <div class="ontology-name">FRBR-aligned Bibliographic Ontology</div>
+                                <div class="ontology-url">http://purl.org/spar/fabio/</div>
+                                <div class="ontology-description">Describes scholarly and bibliographic works.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">mo</div>
+                                <div class="ontology-name">Music Ontology</div>
+                                <div class="ontology-url">http://purl.org/ontology/mo/</div>
+                                <div class="ontology-description">Describes music works, artists, and recordings.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">event</div>
+                                <div class="ontology-name">Event Ontology</div>
+                                <div class="ontology-url">http://purl.org/NET/c4dm/event.owl#</div>
+                                <div class="ontology-description">Describes events in time and space.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">nmo</div>
+                                <div class="ontology-name">Nomisma Ontology</div>
+                                <div class="ontology-url">http://nomisma.org/ontology#</div>
+                                <div class="ontology-description">Models numismatic and monetary data.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">skos</div>
+                                <div class="ontology-name">Simple Knowledge Organization System</div>
+                                <div class="ontology-url">http://www.w3.org/2004/02/skos/core#</div>
+                                <div class="ontology-description">Framework for thesauri and taxonomies.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">prov</div>
+                                <div class="ontology-name">PROV Ontology</div>
+                                <div class="ontology-url">http://www.w3.org/ns/prov#</div>
+                                <div class="ontology-description">Captures data origin and transformation.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">owl</div>
+                                <div class="ontology-name">Web Ontology Language</div>
+                                <div class="ontology-url">http://www.w3.org/2002/07/owl#</div>
+                                <div class="ontology-description">Defines rich web ontologies with logic.</div>
+                                </div>
+                                <div class="ontology-card">
+                                <div class="ontology-prefix">dbpedia</div>
+                                <div class="ontology-name">DBpedia Ontology</div>
+                                <div class="ontology-url">http://dbpedia.org/ontology/</div>
+                                <div class="ontology-description">Structures Wikipedia knowledge semantically.</div>
+                                </div>
+                                </div>
+                            </div> 
+
+                            <p class="content-text">When possible, entities have been aligned with authority controls. In particular, the controlled vocabularies used by the project are:</p>
+                            <div class="ontologies-grid">
+
+                                <div class="ontology-card">
+                                    <div class="ontology-prefix">gn</div>
+                                    <div class="ontology-name">GeoNames</div>
+                                    <div class="ontology-url">http://sws.geonames.org/</div>
+                                    <div class="ontology-description">A geographical database that provides unique identifiers for place names worldwide.</div>
+                                </div>
+
+                                <div class="ontology-card">
+                                    <div class="ontology-prefix">aat</div>
+                                    <div class="ontology-name">Art & Architecture Thesaurus (AAT)</div>
+                                    <div class="ontology-url">http://vocab.getty.edu/aat/</div>
+                                    <div class="ontology-description">A structured vocabulary for describing objects, materials, and activities related to art and architecture.</div>
+                                </div>
+
+                                <div class="ontology-card">
+                                    <div class="ontology-prefix">iso639</div>
+                                    <div class="ontology-name">ISO 639-2 Language Codes</div>
+                                    <div class="ontology-url">http://id.loc.gov/vocabulary/iso639-2/</div>
+                                    <div class="ontology-description">A controlled vocabulary of three-letter codes representing languages.</div>
+                                </div>
+
+                                <div class="ontology-card">
+                                    <div class="ontology-prefix">wd</div>
+                                    <div class="ontology-name">Wikidata</div>
+                                    <div class="ontology-url">https://www.wikidata.org/wiki/</div>
+                                    <div class="ontology-description">A collaborative knowledge base that provides structured identifiers for concepts and entities.</div>
+                                </div>
+                            </div>
                             
                         </div>
                     </div>

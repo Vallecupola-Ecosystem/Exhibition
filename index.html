@@ -665,26 +665,7 @@
                     <a href="#csv-descriptions" class="nav-link nav-subsection">
                         <i class="fas fa-table"></i>
                         CSV Descriptions of Items
-<p>The project knowledge representation strategy is built around *accessibility, **reusability, and **interoperability* within the context of a *Linked Open Data (LOD)* project. We adopted a *multi-format approach* to ensure that the cultural data can serve diverse audiences and technical environments.
 
-To model the cultural heritage objects and their related entities, we created a comprehensive *Excel file* containing *multiple sheets. Each sheet corresponds to a distinct conceptual table in the data model. The format of the tables follows a **Subject–Predicate–Object* structure, combining both:
-
-* *Human-readable descriptions* (in natural language), and
-* *Machine-readable URIs* (for semantic web compatibility).
-
-This approach ensures that the metadata can be easily understood by non-experts while remaining fully compatible with LOD principles.
-
-Given that Excel is a *proprietary format, we exported each sheet into individual **CSV files* to enhance long-term accessibility and machine processing. CSV was chosen for its wide support across platforms, readability, and compatibility with both relational databases and RDF transformation workflows.
-
-In total, we produced *22 CSV files*:
-
-* *20 CSVs* describe the core *exhibition objects*.
-* *1 CSV* contains metadata for *additional entities* (those referenced but not primary objects — often displayed in grey in our conceptual map).
-* *1 CSV* provides a *prefix–namespace mapping table*, listing all ontological prefixes used in the dataset alongside their corresponding full URIs.
-
-All the files produced for the project are:
-- stored in the *GitHub repository*, serving as both a version-controlled archival platform and a public access point;
-- downloadable in the Download Section of this website.</p>
                     </a>
                 </div>
                 <div class="nav-item">
@@ -697,22 +678,7 @@ All the files produced for the project are:
                     <a href="#html-conversion" class="nav-link nav-subsection">
                         <i class="fas fa-code"></i>
                         HTML Conversion of the Story
-<p>For this stage, the goal was  development of the XSLT stylesheet and the generation of the final HTML output from the TEI-encoded short story. The primary objective was to ensure that the semantically marked-up XML could be rendered as a clean, accessible HTML document, while preserving the narrative structure and interpretive elements encoded in TEI.
 
-The TEI file—produced by another teammate—was formed based on the  TEI P5 guidelines and included a variety of structural and semantic elements, such as <teiHeader>, <div1>, <p>, <ref>, <lg>, and <milestone>. As the TEI namespace (http://www.tei-c.org/ns/1.0) was used as the default, a prefix (tei) had to be declared and  applied within all XPath expressions in the XSLT.
-
-In the transformation process, the following tasks were carried out:
-
-* The title and author information were extracted from the <teiHeader> and inserted into the <head> and <body> sections of the HTML using XPath.
-
-* Elements such as <div1>, <div2>, and <p> were converted into corresponding HTML <div> and <p> tags to maintain semantic and structural clarity.
-
-* Tags used for quotations, hyperlinks, and poetic or lyrical formatting—including <quote>, <ref>, <lg>, and <l>—were matched to semantic HTML equivalents (<blockquote>, <a>, and styled <div> elements).
-
-* Special handling was done for visual breaks, with <milestone rend="*"/> being transformed into <hr/> elements.
-
-
-The transformation was done using the online tool FreeFormatter.com, which allowed the TEI XML and XSLT files to be processed together and the resulting HTML to be previewed and downloaded. This approach was chosen for its accessibility and convenience, as a  local XML/XSLT processing environment is not available.</p>
                     </a>
                 </div>
                 <div class="nav-item">
@@ -1484,6 +1450,26 @@ The transformation was done using the online tool FreeFormatter.com, which allow
                             <h4 class="subsubsection-title">CSV Descriptions of Items (JOHN)</h4>
                             <p class="content-text">
                                 Structured tabular data representations provide a straightforward and accessible format for describing exhibition items. The CSV format ensures compatibility with spreadsheet applications and database systems while maintaining human readability.
+<p>The project knowledge representation strategy is built around *accessibility, **reusability, and **interoperability* within the context of a *Linked Open Data (LOD)* project. We adopted a *multi-format approach* to ensure that the cultural data can serve diverse audiences and technical environments.
+
+To model the cultural heritage objects and their related entities, we created a comprehensive *Excel file* containing *multiple sheets. Each sheet corresponds to a distinct conceptual table in the data model. The format of the tables follows a **Subject–Predicate–Object* structure, combining both:
+
+* *Human-readable descriptions* (in natural language), and
+* *Machine-readable URIs* (for semantic web compatibility).
+
+This approach ensures that the metadata can be easily understood by non-experts while remaining fully compatible with LOD principles.
+
+Given that Excel is a *proprietary format, we exported each sheet into individual **CSV files* to enhance long-term accessibility and machine processing. CSV was chosen for its wide support across platforms, readability, and compatibility with both relational databases and RDF transformation workflows.
+
+In total, we produced *22 CSV files*:
+
+* *20 CSVs* describe the core *exhibition objects*.
+* *1 CSV* contains metadata for *additional entities* (those referenced but not primary objects — often displayed in grey in our conceptual map).
+* *1 CSV* provides a *prefix–namespace mapping table*, listing all ontological prefixes used in the dataset alongside their corresponding full URIs.
+
+All the files produced for the project are:
+- stored in the *GitHub repository*, serving as both a version-controlled archival platform and a public access point;
+- downloadable in the Download Section of this website.</p>
                             <ul>
                                 <li>creation of the excel with different sheets, containing tables</li>
                                 <li>every table has subject predicate object description, both in natural language for humans and uri for machine</li>
@@ -1511,6 +1497,22 @@ The transformation was done using the online tool FreeFormatter.com, which allow
                             <p class="content-text">
                                 Web-ready HTML versions of the encoded texts provide immediate accessibility for online audiences. The conversion process maintains the structural integrity of the original TEI encoding while optimizing for web presentation.
                             </p>
+<p>For this stage, the goal was  development of the XSLT stylesheet and the generation of the final HTML output from the TEI-encoded short story. The primary objective was to ensure that the semantically marked-up XML could be rendered as a clean, accessible HTML document, while preserving the narrative structure and interpretive elements encoded in TEI.
+
+The TEI file—produced by another teammate—was formed based on the  TEI P5 guidelines and included a variety of structural and semantic elements, such as <teiHeader>, <div1>, <p>, <ref>, <lg>, and <milestone>. As the TEI namespace (http://www.tei-c.org/ns/1.0) was used as the default, a prefix (tei) had to be declared and  applied within all XPath expressions in the XSLT.
+
+In the transformation process, the following tasks were carried out:
+
+* The title and author information were extracted from the <teiHeader> and inserted into the <head> and <body> sections of the HTML using XPath.
+
+* Elements such as <div1>, <div2>, and <p> were converted into corresponding HTML <div> and <p> tags to maintain semantic and structural clarity.
+
+* Tags used for quotations, hyperlinks, and poetic or lyrical formatting—including <quote>, <ref>, <lg>, and <l>—were matched to semantic HTML equivalents (<blockquote>, <a>, and styled <div> elements).
+
+* Special handling was done for visual breaks, with <milestone rend="*"/> being transformed into <hr/> elements.
+
+
+The transformation was done using the online tool FreeFormatter.com, which allowed the TEI XML and XSLT files to be processed together and the resulting HTML to be previewed and downloaded. This approach was chosen for its accessibility and convenience, as a  local XML/XSLT processing environment is not available.</p>
                         </div>
                         
                         <div id="rdf-conversion">

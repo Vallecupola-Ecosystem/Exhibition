@@ -534,6 +534,58 @@
                 padding: 20px;
             }
         }
+
+        .card-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            font-family: 'Georgia', serif;
+        }
+
+        .card-gallery .card {
+            width: 220px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s ease;
+        }
+
+        .card-gallery .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-gallery .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-gallery .card .type {
+            margin-top: 10px;
+            color: #1e90ff;
+            font-weight: bold;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-gallery .card h3 {
+            margin: 5px 0 5px;
+            font-size: 1.1em;
+        }
+
+        .card-gallery .card p {
+            font-size: 0.9em;
+            padding: 0 10px 10px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -768,7 +820,7 @@
                         </p>
                         <p class="content-text">
                             After this introductory chapter, the documentation is divided as follows:
-                            <ul>
+                            <ul class="content-text">
                                 <li><a href="#knowledge-management">Knowledge Management</a>, describing the work required for Information Science and Cultural Heritage exam;</li>
                                 <li><a href="#website-development">Website Development</a>, describing the work required for Information Modelling and Web Technologies exam.</li>
                             </ul>
@@ -776,14 +828,182 @@
                     </div>
 
                     <div id="exhibition-items">
-                        <h3 class="subsection-title">Items in the Exhibition (JOHN)</h3>
+                        <h3 class="subsection-title">Items in the Exhibition</h3>
                         <p class="content-text">
                             The exhibition features a carefully curated collection of items that represent the cultural richness and historical significance of Vallecupola and its surrounding ecosystem. Each item has been selected to tell a part of the story that connects this small mountain village to broader cultural and artistic networks.
-                        <p>
-                            CARDS:
-                            https://getbootstrap.com/docs/4.0/components/card/
                         </p>
-                        </p>
+                        <div class="card-gallery">
+                            <p class="content-text">
+                                The exhibition features a carefully curated collection of items that represent the
+                                cultural
+                                richness and historical significance of Vallecupola and its surrounding ecosystem. Each
+                                item
+                                has been selected to tell a part of the story that connects this small mountain village
+                                to
+                                broader cultural and artistic networks.
+
+                            </p>
+                            <div class="card-gallery">
+                                <a class="card" href="./items_descriptions/video.html">
+                                    <img src="https://img.youtube.com/vi/l7hyC9NNZhE/maxresdefault.jpg"
+                                        alt="Vallecupola Innevata">
+                                    <div class="type">Video</div>
+                                    <h3>Vallecupola Innevata</h3>
+                                    <p>A video of the village in snow that opened a music event in Rocca Sinibalda.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/vallecupola_story.html">
+                                    <img src="https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg"
+                                        alt="Vallecupola Story">
+                                    <div class="type">Short Story</div>
+                                    <h3>Vallecupola</h3>
+                                    <p>Story inspired to Vallecupola and set in the village, finalist at Campiello Giovani 2024 Prize.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/vallecupola_performance.html">
+                                    <img src="./images/performance.JPEG" alt="Vallecupola Performance">
+                                    <div class="type">Music/Performance</div>
+                                    <h3>Vallecupola</h3>
+                                    <p>Theatrical event capturing the spirit of the village.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/ballerini.html">
+                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608720856191.jpg"
+                                        alt="Ballerini">
+                                    <div class="type">Sculpture</div>
+                                    <h3>Ballerini</h3>
+                                    <p>Energetic dancers in motion, representing a cultural snapshot.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/quadriglia.html">
+                                    <img src="https://static.wixstatic.com/media/d436be_ef537e45e2294bd59cbfbf6ccb23016c~mv2.jpeg"
+                                        alt="Quadriglia">
+                                    <div class="type">Music</div>
+                                    <h3>Quadriglia</h3>
+                                    <p>Traditional dance formation evoking rural festivities.</p>
+
+                                <a class="card" href="./items_descriptions/brillantina.html">
+                                    <img src="https://sigecweb.beniculturali.it/images/fullsize/ICCD50007117/ICCD5548709_IMG_2283.jpg"
+                                        alt="Vasetto per Brillantina">
+                                    <div class="type">Object</div>
+                                    <h3>Vasetto per Brillantina</h3>
+                                    <p>Glass jar used for hair cream, symbol of personal care history.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/conca.html">
+                                    <img src="https://static.wixstatic.com/media/d436be_0f16d94c9a444f93863b3b39c8f6096b~mv2.jpeg"
+                                        alt="Conca">
+                                    <div class="type">Object</div>
+                                    <h3>Conca</h3>
+                                    <p>A traditional basin used for washing or carrying water.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/donna.html">
+                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608675504350.jpg"
+                                        alt="Donna">
+                                    <div class="type">Sculpture</div>
+                                    <h3>Donna</h3>
+                                    <p>Portrait of a woman, revealing grace and dignity.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/pres_de_la_fontaine.html">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg?20140215154906"
+                                        alt="Pres de La Fontaine">
+                                    <div class="type">Painting</div>
+                                    <h3>Près de La Fontaine</h3>
+                                    <p>Romantic 19th-century painting near a fountain by Van Bree.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/cemetry_gates.html">
+                                    <img src="https://static.wixstatic.com/media/d436be_2435568a372b4d35833eb22cc34b42ec~mv2.png"
+                                        alt="Cemetery Gates">
+                                    <div class="type">Music</div>
+                                    <h3>Cemetry Gates</h3>
+                                    <p>Atmospheric image of a symbolic song, entrance to remembrance and silence.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/catinella.html">
+                                    <img src="https://www.sigecweb.beniculturali.it/images/fullsize/ICCD1070358/ICCD15474117_341450.jpg"
+                                        alt="Catinella">
+                                    <div class="type">Object</div>
+                                    <h3>Catinella</h3>
+                                    <p>A small domestic basin, typical of Italian daily life.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/poesie.html">
+                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1607708096909.jpg"
+                                        alt="Poesie">
+                                    <div class="type">Book</div>
+                                    <h3>Poesie</h3>
+                                    <p>A collection of poems reflecting the emotions and landscapes of rural life.</p>
+                                </a>
+                                
+                                <a class="card" href="./items_descriptions/feudo_di_rocca_sinibalda_.html">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Bril%2C_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"
+                                        alt="Feudo di Rocca Sinibalda">
+                                    <div class="type">Painting</div>
+                                    <h3>Feudo di Rocca Sinibalda</h3>
+                                    <p>Historic landscape painting of Rocca Sinibalda castle by Paul Bril.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/usil.html">
+                                    <img src="https://www.umbriacultura.it/samira/data/caos_010.jpg" alt="Usil">
+                                    <div class="type">Installation</div>
+                                    <h3>Usil</h3>
+                                    <p>Modern reinterpretation of the Etruscan solar deity, blending myth and
+                                        performance.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/stamp.html">
+                                    <img src="https://i.ebayimg.com/images/g/qHgAAOSw4bZkkymP/s-l400.png" alt="Stamp">
+                                    <div class="type">Stamp</div>
+                                    <h3>550 Lire – Castello di Rocca Sinibalda</h3>
+                                    <p>A vintage postage stamp, marking time and memory.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/ten_lire.html">
+                                    <img src="https://en.numista.com/catalogue/photos/italie/5f79c73e0a06f9.73627146-original.jpg"
+                                        alt="10 Lire">
+                                    <div class="type">Coin</div>
+                                    <h3>10 Lire</h3>
+                                    <p>Historical Italian coin, emblem of past national currency.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/nonno_e_nipote.html">
+                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1609772375103.jpg"
+                                        alt="Nonno e Nipote">
+                                    <div class="type">Sculpture</div>
+                                    <h3>Nonno e Nipote</h3>
+                                    <p>A tender family moment between grandfather and grandchild, capturing generational
+                                        warmth.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/croce.html">
+                                    <img src="https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg"
+                                        alt="Croce Astile">
+                                    <div class="type">Artifact</div>
+                                    <h3>Croce Astile</h3>
+                                    <p>A processional cross with intricate detail, symbolic of local religious heritage.
+                                    </p>
+                                </a>
+                                
+                                <a class="card" href="./items_descriptions/lampada.html">
+                                    <img src="https://beniculturali.regione.veneto.it/xway-front/application/crv/engine/crv.jsp?verbo=attach&db=crv_back&id=82XZAgaV0l0%3D.jpg"
+                                        alt="Lampada a Carburo">
+                                    <div class="type">Object</div>
+                                    <h3>Lampada a Carburo</h3>
+                                    <p>Carbide lamp, once a staple source of portable light.</p>
+                                </a>
+
+                                <a class="card" href="./items_descriptions/quel_mazzolin_di_fiori.html">
+                                    <img src="https://static.wixstatic.com/media/d436be_a3f60900b6cb40ad87ad2103fb0b29ba~mv2.jpeg"
+                                        alt="Quel Mazzolin di Fiori">
+                                    <div class="type">Music</div>
+                                    <h3>Quel Mazzolin di Fiori</h3>
+                                    <p>Symbolic bouquet tied to Italian folk heritage and songs.</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

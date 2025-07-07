@@ -13,7 +13,7 @@ The project creates both a comprehensive knowledge base and an interactive virtu
 - 📚 **Knowledge Base**: Comprehensive cultural data organization
 - 🎨 **Virtual Exhibition**: Interactive digital experience
 - 🔗 **Linked Open Data**: Semantic web integration
-- 🌐 **Multi-audience Design**: Accessible to researchers, tourists, and locals
+- 🌐 **Multi-audience Design**: Accessible to children, researchers, tourists, and locals
 - 📱 **Responsive Interface**: Optimized for all devices
 
 ## Getting Started

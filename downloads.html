@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - Vallecupola Ecosystem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 0;
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .header-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .download-section {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .download-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a5568;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .download-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .download-item:last-child {
+            border-bottom: none;
+        }
+
+        .download-item:hover {
+            background: rgba(102,126,234,0.05);
+            margin: 0 -15px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .download-info {
+            flex: 1;
+        }
+
+        .download-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .download-description {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102,126,234,0.4);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .stats-section {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            padding: 20px;
+            background: rgba(102,126,234,0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: rgba(102,126,234,0.15);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2.5rem;
+            }
+            
+            .downloads-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .download-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header-title">Downloads</h1>
+            <p class="header-subtitle">Vallecupola Ecosystem - Digital Resources</p>
+        </header>
+
+        <div class="downloads-grid">
+            <!-- Dataset Section -->
+            <div class="download-section">
+                <h2 class="section-title">
+                    <div class="section-icon">📊</div>
+                    Dataset
+                </h2>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">Comprehensive Excel File</div>
+                        <div class="download-description">Complete dataset in Excel format with all domain data</div>
+                    </div>
+                    <a href="https://github.com/Vallecupola-Ecosystem/Exhibition/blob/main/items_metadata/all_items_metadata_excel.xlsx" class="download-btn">
+                        <span>📥</span>
+                        Download
+                    </a>
+                </div>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">Bulk Download 22 CSV Files</div>
+                        <div class="download-description">Individual CSV files for granular data access</div>
+                    </div>
+                    <a href="#" class="download-btn">
+                        <span>📦</span>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Story Text Encoding Section -->
+            <div class="download-section">
+                <h2 class="section-title">
+                    <div class="section-icon">📝</div>
+                    Story Text Encoding
+                </h2>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">XML File</div>
+                        <div class="download-description">Structured XML encoding of <strong>Vallecupola</strong> Short Story</div>
+                    </div>
+                    <a href="#" class="download-btn">
+                        <span>🔗</span>
+                        Download
+                    </a>
+                </div>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">XSLT Conversion</div>
+                        <div class="download-description">XSLT stylesheet for XML transformation to HTML</div>
+                    </div>
+                    <a href="#" class="download-btn">
+                        <span>🔄</span>
+                        Download
+                    </a>
+                </div>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">HTML File</div>
+                        <div class="download-description">HTML version of the story text</div>
+                    </div>
+                    <a href="#" class="download-btn">
+                        <span>🌐</span>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Python Scripts Section -->
+            <div class="download-section">
+                <h2 class="section-title">
+                    <div class="section-icon">🐍</div>
+                    Python Scripts
+                </h2>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">CSV to RDF</div>
+                        <div class="download-description">Script for converting CSV data to RDF format</div>
+                    </div>
+                    <a href="#" class="download-btn">
+                        <span>⚡</span>
+                        Download
+                    </a>
+                </div>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">XML to RDF</div>
+                        <div class="download-description">Script for converting XML data to RDF format</div>
+                    </div>
+                    <a href="#" class="download-btn">
+                        <span>🔧</span>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Final Knowledge Base Section -->
+            <div class="download-section">
+                <h2 class="section-title">
+                    <div class="section-icon">🎯</div>
+                    Final Knowledge Base
+                </h2>
+                <div class="download-item">
+                    <div class="download-info">
+                        <div class="download-name">Merged RDF Result</div>
+                        <div class="download-description">Complete RDF knowledge base describing <strong>Vallecupola Ecosystem</strong> domain</div>
+                    </div>
+                    <a href="#" class="download-btn">
+                        <span>🚀</span>
+                        Download
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Vallecupola Ecosystem.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling and enhanced interactions
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255,255,255,0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = (e.offsetX - 10) + 'px';
+                ripple.style.top = (e.offsetY - 10) + 'px';
+                ripple.style.width = '20px';
+                ripple.style.height = '20px';
+                
+                this.style.position = 'relative';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+                
+                // Here you would typically trigger the actual download
+                console.log('Download triggered for:', this.parentElement.querySelector('.download-name').textContent);
+            });
+        });
+
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

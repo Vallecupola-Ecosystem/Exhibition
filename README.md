@@ -6,7 +6,7 @@
 
 **Vallecupola Ecosystem** is a project developed by students from the **Digital Humanities and Digital Knowledge** Master's program at the University of Bologna. Our goal is to unveil the village's hidden cultural value and its connections to diverse artistic content, demonstrating how even a small village can become the center of an extensive cultural network.
 
-The project creates both a comprehensive knowledge base and an interactive virtual exhibition, leveraging Linked Open Data principles to offer users a complete experience. Designed for various target audiences, it invites everyone to explore and discover the rich cultural ecosystem surrounding Vallecupola.
+The project creates both a comprehensive knowledge base and an interactive virtual exhibition. It leverages Linked Open Data principles and offers users a complete experience. Designed for various target audiences, it invites everyone to explore and discover the rich cultural ecosystem surrounding Vallecupola.
 
 ## Features
 

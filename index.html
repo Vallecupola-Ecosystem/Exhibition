@@ -1559,9 +1559,22 @@
                         <div id="xml-tei-encoding">
                             <h4 class="subsubsection-title">XML-TEI Encoding of the Story</h4>
                             <p class="content-text">
-                                The Text Encoding Initiative (TEI) standard has been employed to encode the narrative elements of the Vallecupola story. This approach ensures scholarly rigor and enables sophisticated textual analysis and presentation options.
+                                The Text Encoding Initiative (TEI) standard has been employed to encode the narrative elements of the Vallecupola story (one of our <a href="#exhibition-items">exhibition items</a>). This approach ensures scholarly rigor and enables sophisticated textual analysis and presentation options.
                             </p>
-                            
+                            <p class="content-text">
+                                After a minimal <code>teiHeader</code>, the content of the story has been encoded only with TEI elements that were functional both for:
+                                <ul class="content-text">
+                                    <li>the following <strong>conversion from XML to HTML</strong>, because we used <code>ref</code> to link some text portions to the exhibition webpages describing the items. This HTML version serves as a <a href="#story">narrative guide</a> for visitors, letting them read the story while exploring collection items in the order they appear in the narrative;</li>
+                                    <li>the following <strong>conversion from XML to RDF</strong>, because we used <code>xml:id</code> global attribute to uniquely identify entities connected to the story node (shown in the <a href="#theoretical-model">theoretical model</a>).</li>
+                                </ul>
+                            </p>
+                            <p class="content-text">Other meaningful TEI elements we used are the following:</p>
+                                <ul class="content-text">
+                                    <li><code>div1</code>, marking the structural division of the text in six main <strong>blocks</strong> (using indeed the attribute <code>type="block"</code>);</li>
+                                    <li><code>div2</code>, marking the <strong>relevant scenes</strong> shown in the <a href="#theoretical-model">theoretical model</a>. Since XML's tree structure required us to also mark other content with <code>div2</code>, we added <code>type="scene"</code> only to actual scenes to distinguish them from other content;</li>
+                                    <li><code>rs</code>, marking the strings referring to some <strong>mentioned objects</strong> (that are items of our exhibition);</li>
+                                    <li><code>quote</code>, marking the citation of <strong>music verses</strong>.</li>
+                                </ul>
                         </div>
                         
                         <div id="html-conversion">

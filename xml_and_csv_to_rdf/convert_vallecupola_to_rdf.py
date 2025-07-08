@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-convert_vallecupola_to_sample_ttl.py
+convert_vallecupola_to_rdf.py
 
 """
 

@@ -1498,53 +1498,53 @@
                             <h4 class="subsubsection-title">CSV Descriptions of Items </h4>
                             <p class="content-text">
                                 Structured tabular data representations provide a straightforward and accessible format for describing exhibition items. The CSV format ensures compatibility with spreadsheet applications and database systems while maintaining human readability.
-<p>
+<p class="content-text">
   The project knowledge representation strategy is built around 
   <strong>accessibility</strong>, <strong>reusability</strong>, and 
   <strong>interoperability</strong> within the context of a 
   <strong>Linked Open Data (LOD)</strong> project.
 </p>
 
-<p>
+<p class="content-text">
   We adopted a <strong>multi-format approach</strong> to ensure that the cultural data can serve diverse audiences and technical environments.
 </p>
 
-<p>
+<p class="content-text">
   To model the cultural heritage objects and their related entities, we created a comprehensive 
   <strong>Excel file</strong> containing <strong>multiple sheets</strong>. Each sheet corresponds to a distinct conceptual table in the data model. 
   The format of the tables follows a <strong>Subject–Predicate–Object</strong> structure, combining both:
 </p>
 
-<ul>
+<ul class="content-text">
   <li><strong>Human-readable descriptions</strong> (in natural language), and</li>
   <li><strong>Machine-readable URIs</strong> (for semantic web compatibility).</li>
 </ul>
 
-<p>
+<p class="content-text">
   This approach ensures that the metadata can be easily understood by non-experts while remaining fully compatible with 
   <strong>LOD principles</strong>.
 </p>
 
-<p>
+<p class="content-text">
   Given that Excel is a <strong>proprietary format</strong>, we exported each sheet into individual 
   <strong>CSV files</strong> to enhance long-term accessibility and machine processing. 
   CSV was chosen for its wide support across platforms, readability, and compatibility with both relational databases and 
   <strong>RDF transformation workflows</strong>.
 </p>
 
-<p>
+<p class="content-text">
   In total, we produced <strong>22 CSV files</strong>:
 </p>
-<ul>
+<ul class="content-text">
   <li><strong>20 CSVs</strong> describe the core <strong>exhibition objects</strong>.</li>
   <li><strong>1 CSV</strong> contains metadata for <strong>additional entities</strong> (those referenced but not primary objects — often displayed in grey in our conceptual map).</li>
   <li><strong>1 CSV</strong> provides a <strong>prefix–namespace mapping table</strong>, listing all ontological prefixes used in the dataset alongside their corresponding full URIs.</li>
 </ul>
 
-<p>
+<p class="content-text">
   All the files produced for the project are:
 </p>
-<ul>
+<ul class="content-text">
   <li>Stored in the <strong>GitHub repository</strong>, serving as both a version-controlled archival platform and a public access point.</li>
   <li>Downloadable in the <strong>Download Section</strong> of this website.</li>
 </ul>
@@ -1569,15 +1569,15 @@
                             <p class="content-text">
                                 Web-ready HTML versions of the encoded texts provide immediate accessibility for online audiences. The conversion process maintains the structural integrity of the original TEI encoding while optimizing for web presentation.
                             </p>
-                            <p>
+<p class="content-text">
   For this stage, the goal was the development of the <strong>XSLT stylesheet</strong> and the generation of the final 
   <strong>HTML output</strong> from the <strong>TEI-encoded short story</strong>. The primary objective was to ensure that the 
   <strong>semantically marked-up XML</strong> could be rendered as a clean, accessible HTML document, while preserving the 
   narrative structure and interpretive elements encoded in TEI.
 </p>
 
-<p>
-  The <strong>TEI file</strong>—produced by another teammate—was formed based on the 
+<p class="content-text">
+  The <strong>TEI file</strong> was based on the 
   <strong>TEI P5 guidelines</strong> and included a variety of structural and semantic elements, such as 
   <code>&lt;teiHeader&gt;</code>, <code>&lt;div1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ref&gt;</code>, 
   <code>&lt;lg&gt;</code>, and <code>&lt;milestone&gt;</code>. As the 
@@ -1585,11 +1585,11 @@
   (<code>tei</code>) had to be declared and applied within all <strong>XPath expressions</strong> in the XSLT.
 </p>
 
-<p>
+<p class="content-text">
   In the transformation process, the following tasks were carried out:
 </p>
 
-<ul>
+<ul class="content-text">
   <li>
     The <strong>title</strong> and <strong>author information</strong> were extracted from the 
     <code>&lt;teiHeader&gt;</code> and inserted into the <code>&lt;head&gt;</code> and 
@@ -1610,7 +1610,7 @@
   </li>
 </ul>
 
-<p>
+<p class="content-text">
   The transformation was done using the online tool <strong>FreeFormatter.com</strong>, which allowed the 
   <strong>TEI XML</strong> and <strong>XSLT files</strong> to be processed together and the resulting HTML to be previewed and downloaded. 
   This approach was chosen for its <strong>accessibility</strong> and <strong>convenience</strong>, 
@@ -1733,7 +1733,7 @@
                         <!-- Card Membro 1 -->
                         <div class="team-card">
                             <div class="card-image">
-                                <img src="./images/dani.jpg" alt="Daniele Camagna">
+                                <img src="./images/dani.png" alt="Daniele Camagna">
                             </div>
                             <div class="card-content">
                                 <h3>Daniele Camagna</h3>

@@ -109,10 +109,6 @@ def convert(xml_input_path: str, output_path: str = "ttl sample.ttl"):
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 2:
-        print("用法: python convert_vallecupola_to_sample_ttl.py <Vallecupola.xml>")
+        print("Usage: python convert_vallecupola_to_sample_ttl.py <Vallecupola.xml>")
         sys.exit(1)
     convert(sys.argv[1])
-
-# Example：
-# cd /Users/yangtianchi/Downloads
-# python3 convert_vallecupola_to_sample_ttl.py Vallecupola.xml

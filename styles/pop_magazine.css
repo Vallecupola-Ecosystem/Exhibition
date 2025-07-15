@@ -1,0 +1,103 @@
+/* Pop Magazine Style [Late XX Century - start of XXI Century (print)]*/
+
+@font-face {
+  font-family: 'ss';
+  src: url('../fonts/Shooting Star.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'md';
+  src: url('../fonts/Moldie Demo.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'omg';
+  src: url('../fonts/OhMyGodStars.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url('https://img.baba-blog.com/2024/09/Gamepad-controller-wallpaper-on-violet-background.jpg?x-oss-process=style%2Ffull');
+  color: #111;
+  font-family: 'Arial', sans-serif;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1000px;
+}
+
+h1 {
+  font-family: 'omg', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #e6007e;
+  background: linear-gradient(to right, #ffcc00, #e6007e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem 0;
+}
+
+.accordion-label {
+  font-weight: bold;
+  background-color: #e6007e;
+  color: #fff;
+  padding: 0.8rem;
+  border-left: 5px solid #ffcc00;
+  font-family: 'ss', 'Verdana', sans-serif;
+  text-transform: uppercase;
+}
+
+.accordion-content {
+  font-family: "md", sans-serif;
+  background-color: #f9f9f9;
+  border-left: 5px solid #e6007e;
+  padding: 1rem;
+  overflow: scroll;
+}
+
+blockquote {
+  background-color: #ffe6f0;
+  padding: 1rem;
+  border-left: 5px solid #ff3399;
+  font-style: italic;
+  color: #444;
+}
+
+.top-icons a,
+.nav-button {
+  background-color: #ffcc00;
+  color: #111;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  font-family: 'Impact', sans-serif;
+}
+
+img {
+  border: 10px solid #e6007e;
+  transform: rotate(-1.5deg);
+  margin: 1.5rem 0;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
+
+em {
+  color: #e6007e;
+}
+
+strong {
+  color: #e6007e;
+}
+
+td {
+      background-color: #8e3877ff;
+      border: 1px solid #4a5a6a;
+}
+
+tr:nth-child(even) td {
+      background-color: #c93fa4ff;
+}

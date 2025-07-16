@@ -85,6 +85,18 @@ img {
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 }
 
+iframe {
+  border: 10px solid #e6007e;
+  transform: rotate(-1.5deg);
+  margin: 1.5rem auto;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 480px;
+  background-color: #fff;
+}
+
 em {
   color: #e6007e;
 }

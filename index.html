@@ -3,22 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vallecupola Ecosystem Exhibition - Documentation</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Vallecupola Ecosystem - Virtual Exhibition</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-            --border-color: #e9ecef;
-            --hover-color: #ecf0f1;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -26,1752 +14,502 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #fff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: float 12s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         .container {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            width: 350px;
-            background: var(--gradient-1);
-            color: white;
-            padding: 0;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            box-shadow: var(--shadow);
-            z-index: 1000;
-        }
-
-        .sidebar::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .sidebar::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .sidebar::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 3px;
-        }
-
-        .sidebar-header {
-            padding: 2rem 1.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar-header h1 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar-header .subtitle {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-weight: 300;
-        }
-
-        .nav-section {
-            padding: 1rem 0;
-        }
-
-        .nav-section-title {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.7;
-            margin-bottom: 0.5rem;
-        }
-
-        .nav-item {
-            margin-bottom: 0.25rem;
-        }
-
-        .nav-link {
-            display: block;
-            padding: 0.75rem 1.5rem;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
             position: relative;
-        }
-
-        .nav-link:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-left-color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            color: white;
-        }
-
-        .nav-link.active {
-            background: rgba(255, 255, 255, 0.15);
-            border-left-color: white;
-            font-weight: 500;
-        }
-
-        .nav-link i {
-            margin-right: 0.75rem;
-            width: 16px;
-            text-align: center;
-        }
-
-        /* Chapter styles */
-        .nav-chapter {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .nav-chapter i {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Section styles */
-        .nav-section-item {
-            padding-left: 3rem;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .nav-section-item i {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Subsection styles */
-        .nav-subsection {
-            padding-left: 4.5rem;
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-
-        .nav-subsection i {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .sidebar-footer {
-            padding: 2rem 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(0, 0, 0, 0.1);
-            margin-top: auto;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-link {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-link:hover {
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer-link i {
-            margin-right: 0.5rem;
-        }
-
-        .copyright {
-            font-size: 0.8rem;
-            opacity: 0.6;
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        /* Main Content */
-        .main-content {
-            flex: 1;
-            margin-left: 350px;
-            padding: 0;
-        }
-
-        .hero-section {
-            background: var(--gradient-2);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-
-        .content-section {
-            padding: 3rem 0;
-        }
-
-        .content-section:nth-child(even) {
-            background: var(--light-bg);
-        }
-
-        .section-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--accent-color);
-            border-radius: 2px;
-        }
-
-        .subsection-title {
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 2rem 0 1rem 0;
-            color: var(--secondary-color);
-        }
-
-        .subsubsection-title {
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin: 1.5rem 0 1rem 0;
-            color: var(--text-color);
-        }
-
-        .content-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-
-        .content-text strong {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .divider {
-            height: 2px;
-            background: linear-gradient(to right, var(--accent-color), transparent);
-            margin: 3rem 0;
-        }
-
-        .footer-section {
-            background: var(--primary-color);
-            color: white;
-            padding: 3rem 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .footer-column h3 {
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .footer-column p, .footer-column li {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-column a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 2rem;
-        }
-
-        .footer-bottom p {
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 280px;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-            }
-
-            .sidebar.active {
-                transform: translateX(0);
-            }
-
-            .main-content {
-                margin-left: 0;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        /* Mobile menu button */
-        .menu-toggle {
-            display: none;
-            position: fixed;
-            top: 1rem;
-            left: 1rem;
-            z-index: 1001;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.75rem;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-        }
-
-        code { 
-            color:#9753db;      
-        }
-
-        code.relation {
-            color: #f9dd4f;
-        }
-
-        .ontologies-container {
+            z-index: 2;
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .ontologies-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .ontologies-header h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-        
-        .ontologies-header p {
-            font-size: 1.1em;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .ontologies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .ontology-card {
-            background: #fff;
-            border: 1px solid #e8e8e8;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .ontology-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-        }
-        
-        .ontology-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #3498db, #2ecc71);
-        }
-        
-        .ontology-prefix {
-            font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 0.9em;
-            color: #e74c3c;
-            background: #f8f9fa;
-            padding: 4px 8px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        
-        .ontology-name {
-            font-size: 1.3em;
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 10px 0;
-        }
-        
-        .ontology-url {
-            font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 0.85em;
-            color: #7f8c8d;
-            background: #f8f9fa;
-            padding: 8px 12px;
-            border-radius: 4px;
-            margin: 10px 0;
-            word-break: break-all;
-            border-left: 3px solid #3498db;
-        }
-        
-        .ontology-description {
-            color: #555;
-            font-size: 0.95em;
-            margin-top: 15px;
-            line-height: 1.5;
-        }
-        
-        .note {
-            background: #f8f9fa;
-            border-left: 4px solid #2ecc71;
-            padding: 20px;
-            margin: 40px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .note p {
-            margin: 0;
-            color: #555;
-            font-style: italic;
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .ontologies-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .ontologies-header h1 {
-                font-size: 2em;
-            }
-            
-            .ontology-card {
-                padding: 20px;
-            }
-        }
-
-        .card-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
-            background-color: #f5f5f5;
-            font-family: 'Georgia', serif;
-        }
-
-        .card-gallery .card {
-            width: 220px;
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            transition: transform 0.2s ease;
-        }
-
-        .card-gallery .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card-gallery .card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
-
-        .card-gallery .card .type {
-            margin-top: 10px;
-            color: #1e90ff;
-            font-weight: bold;
-            font-size: 0.85em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .card-gallery .card h3 {
-            margin: 5px 0 5px;
-            font-size: 1.1em;
-        }
-
-        .card-gallery .card p {
-            font-size: 0.9em;
-            padding: 0 10px 10px;
-            color: #555;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            justify-items: center;
-        }
-
-        .team-card {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: all 0.3s ease;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .team-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .text-section {
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 2px 4px rgba(44, 62, 80, 0.1);
+            }
+            to {
+                text-shadow: 0 2px 4px rgba(44, 62, 80, 0.1), 0 0 20px rgba(44, 62, 80, 0.1);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 30px;
+            font-weight: 400;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .description p {
+            margin-bottom: 1rem;
+        }
+
+        .description p:last-child {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            animation: fadeIn 1s ease-out 1.2s both;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .team-card:hover .card-image img {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: 30px;
+            min-width: 180px;
             text-align: center;
         }
 
-        .card-content h3 {
-            font-size: 1.4rem;
-            color: #2c3e50;
-            font-weight: 500;
-            margin: 0;
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
         }
 
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button.primary {
+            background: #e74c3c;
+            color: white;
+            border: 2px solid #e74c3c;
+        }
+
+        .cta-button.primary:hover {
+            background: #c0392b;
+            border-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+
+        .cta-button.secondary:hover {
+            background: #2c3e50;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2);
+        }
+
+        .image-section {
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .village-image {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .village-image:hover {
+            transform: scale(1.02);
+        }
+
+        .network-visualization {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            opacity: 0.3;
+        }
+
+        .network-node {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #e74c3c;
+            border-radius: 50%;
+            animation: networkPulse 3s ease-in-out infinite;
+        }
+
+        .network-node:nth-child(1) { top: 10px; left: 10px; animation-delay: 0s; }
+        .network-node:nth-child(2) { top: 30px; right: 20px; animation-delay: 0.6s; }
+        .network-node:nth-child(3) { bottom: 40px; left: 30px; animation-delay: 1.2s; }
+        .network-node:nth-child(4) { bottom: 20px; right: 15px; animation-delay: 1.8s; }
+        .network-node:nth-child(5) { top: 50px; left: 50px; animation-delay: 2.4s; }
+
+        @keyframes networkPulse {
+            0%, 100% { 
+                transform: scale(1); 
+                opacity: 0.3; 
+            }
+            50% { 
+                transform: scale(1.8); 
+                opacity: 0.8; 
+            }
+        }
+
+        .decorative-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(231, 76, 60, 0.1);
+            animation: float-circle 8s ease-in-out infinite;
+        }
+
+        .decorative-circle:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .decorative-circle:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .decorative-circle:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float-circle {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px;
+                text-align: center;
+            }
+            
+            .village-image {
+                height: 300px;
+            }
+            
+            .cta-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .description {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <button class="menu-toggle" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-    </button>
-
+    <div class="floating-particles" id="particles"></div>
+    
+    <div class="decorative-elements">
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
+    </div>
+    
     <div class="container">
-        <!-- Sidebar -->
-        <nav class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h1>Vallecupola Ecosystem</h1>
-                <div class="subtitle">Exhibition Documentation</div>
+        <div class="main-content">
+            <div class="network-visualization">
+                <div class="network-node"></div>
+                <div class="network-node"></div>
+                <div class="network-node"></div>
+                <div class="network-node"></div>
+                <div class="network-node"></div>
             </div>
-
-            <div class="nav-section">
-                <div class="nav-section-title">Table of Contents</div>
+            
+            <div class="text-section">
+                <h1 class="title">Vallecupola Ecosystem</h1>
+                <p class="subtitle">Unveiling the Hidden Cultural Network of a Mountain Village</p>
                 
-                <!-- Chapter 1: Introduction -->
-                <div class="nav-item">
-                    <a href="#introduction" class="nav-link nav-chapter active">
-                        <i class="fas fa-home"></i>
-                        Introduction
-                    </a>
+                <div class="description">
+                    <p>Vallecupola is a small mountain village in the centre of Italy. Hamlet of Rocca Sinibalda (RI), it is set in a geographical region called Sabina. Full of art and history, it hosts a library house museum devoted to the poet, writer, sculptor and etruscologist Angelo Di Mario. Moreover, it inspired and became the main setting of a short story named after it and finalist at Premio Campiello Giovani 2024, one of the most important Italian literary prizes.</p>
+                    
+                    <p>Vallecupola Ecosystem is a project by a group of students at Digital Humanities and Digital Knowledge Master Degree at the University of Bologna, aiming to unveil its hidden value and its connections with a variety of artistic contents, showing how also a small village can become a centre of a big cultural framework. The project, which gives birth both to a small "knowledge base" and a simple "virtual exhibition", leverages the principles of Linked Open Data and offers to the user a full experience, carefully thought for various target audiences to allow anyone to get inside the network around Vallecupola.</p>
+                    
+                    <p>To get inside <strong>Vallecupola Ecosystem</strong>.</p>
                 </div>
-                <div class="nav-item">
-                    <a href="#project-idea" class="nav-link nav-section-item">
-                        <i class="fas fa-lightbulb"></i>
-                        Project Idea
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#exhibition-items" class="nav-link nav-section-item">
-                        <i class="fas fa-th-large"></i>
-                        Items in the Exhibition
-                    </a>
-                </div>
-
-                <!-- Chapter 2: Knowledge Management -->
-                <div class="nav-item">
-                    <a href="#knowledge-management" class="nav-link nav-chapter">
-                        <i class="fas fa-brain"></i>
-                        Knowledge Management
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#knowledge-organization" class="nav-link nav-section-item">
-                        <i class="fas fa-sitemap"></i>
-                        Knowledge Organization
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#metadata-analysis" class="nav-link nav-subsection">
-                        <i class="fas fa-search"></i>
-                        Metadata Analysis
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#theoretical-model" class="nav-link nav-subsection">
-                        <i class="fas fa-project-diagram"></i>
-                        Theoretical Model
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#conceptual-model" class="nav-link nav-subsection">
-                        <i class="fas fa-cubes"></i>
-                        Conceptual Model
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#knowledge-representation" class="nav-link nav-section-item">
-                        <i class="fas fa-code"></i>
-                        Knowledge Representation
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#csv-descriptions" class="nav-link nav-subsection">
-                        <i class="fas fa-table"></i>
-                        CSV Descriptions of Items
-
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#xml-tei-encoding" class="nav-link nav-subsection">
-                        <i class="fas fa-file-code"></i>
-                        XML-TEI Encoding of the Story
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#html-conversion" class="nav-link nav-subsection">
-                        <i class="fas fa-code"></i>
-                        HTML Conversion of the Story
-
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#rdf-conversion" class="nav-link nav-subsection">
-                        <i class="fas fa-share-alt"></i>
-                        RDF Conversion from CSV and XML
-                    </a>
-                </div>
-
-                <!-- Chapter 3: Website Development -->
-                <div class="nav-item">
-                    <a href="#website-development" class="nav-link nav-chapter">
-                        <i class="fas fa-globe"></i>
-                        Website Development
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#items-descriptions" class="nav-link nav-section-item">
-                        <i class="fas fa-list"></i>
-                        Items Descriptions
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#target-audiences" class="nav-link nav-subsection">
-                        <i class="fas fa-users"></i>
-                        Target Audiences
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#html-structure" class="nav-link nav-subsection">
-                        <i class="fas fa-code"></i>
-                        HTML Structure
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#themes" class="nav-link nav-section-item">
-                        <i class="fas fa-palette"></i>
-                        Themes
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#css-theme-1" class="nav-link nav-subsection">
-                        <i class="fas fa-paint-brush"></i>
-                        CSS Theme 1
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#css-theme-2" class="nav-link nav-subsection">
-                        <i class="fas fa-paint-brush"></i>
-                        CSS Theme 2
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#css-theme-3" class="nav-link nav-subsection">
-                        <i class="fas fa-paint-brush"></i>
-                        CSS Theme 3
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#css-theme-4" class="nav-link nav-subsection">
-                        <i class="fas fa-paint-brush"></i>
-                        CSS Theme 4
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#narratives" class="nav-link nav-section-item">
-                        <i class="fas fa-book"></i>
-                        Narratives
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#chronological-order" class="nav-link nav-subsection">
-                        <i class="fas fa-clock"></i>
-                        Chronological Order
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#story" class="nav-link nav-subsection">
-                        <i class="fas fa-book-open"></i>
-                        Story
-                    </a>
-                </div>
-                <div class="nav-item">
-                    <a href="#guided-tour" class="nav-link nav-subsection">
-                        <i class="fas fa-route"></i>
-                        Guided Tour
-                    </a>
-                </div>
-
-                <!-- Chapter 4: About -->
-                <div class="nav-item">
-                    <a href="#about" class="nav-link nav-chapter">
-                        <i class="fas fa-info-circle"></i>
-                        About
-                    </a>
+                
+                <div class="cta-container">
+                    <a href="homepage.html" class="cta-button primary">Explore the Exhibition</a>
+                    <a href="documentation.html" class="cta-button secondary" target="_blank">Documentation</a>
                 </div>
             </div>
-
-            <div class="sidebar-footer">
-                <div class="footer-links">
-                    <a href="https://github.com/Vallecupola-Ecosystem/Exhibition" class="footer-link">
-                        <i class="fab fa-github"></i>
-                        GitHub Repository
-                    </a>
-                    <a href="downloads.html" class="footer-link">
-                        <i class="fas fa-download"></i>
-                        Downloads
-                    </a>
-                </div>
-                <div class="copyright">
-                    © 2025 Vallecupola Ecosystem
-                </div>
+            
+            <div class="image-section">
+                <img src="https://www.camminonaturaledeiparchi.it/wp-content/uploads/2017/06/vallecupola1-1.jpg" alt="Vallecupola Village" class="village-image">
             </div>
-        </nav>
+        </div>
+    </div>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Hero Section -->
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Vallecupola Ecosystem</h1>
-                    <p class="hero-subtitle">Unveiling the Hidden Cultural Network of a Mountain Village</p>
-                </div>
-            </section>
+    <script>
+        // Crea particelle fluttuanti
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 12 + 's';
+                particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
 
-            <!-- Introduction Section -->
-            <section id="introduction" class="content-section">
-                <div class="section-container">
-                    <h2 class="section-title">Introduction</h2>
-                    
-                    <div id="project-idea">
-                        <h3 class="subsection-title">Project Idea</h3>
-                        <p class="content-text">
-                            <strong>Vallecupola</strong> is a small mountain village in the centre of Italy. Hamlet of <strong>Rocca Sinibalda (RI)</strong>, it is set in a geographical region called <strong>Sabina</strong>. Full of art and history, it hosts a library house museum devoted to the poet, writer, sculptor and etruscologist <strong>Angelo Di Mario</strong>. Moreover, it inspired and became the main setting of a short story named after it and finalist at <strong>Premio Campiello Giovani 2024</strong>, one of the most important Italian literary prizes.
-                        </p>
-                        <p class="content-text">
-                            <strong>Vallecupola Ecosystem</strong> is a project by a group of students at <strong>Digital Humanities and Digital Knowledge</strong> Master Degree at the University of Bologna, aiming to unveil its hidden value and its connections with a variety of artistic contents, showing how also a small village can become a centre of a big cultural framework. The project, which gives birth both to a small "knowledge base" and a simple "virtual exhibition", leverages the principles of Linked Open Data and offers to the user a full experience, carefully thought for various target audiences to allow anyone to get inside the network around Vallecupola.
-                        </p>
-                        <p class="content-text">
-                            To get inside <strong>Vallecupola Ecosystem</strong>.
-                        </p>
-                        <p class="content-text">
-                            After a quick presentation of the items contained in the exhibition, the documentation is divided as follows:
-                            <ul class="content-text">
-                                <li><a href="#knowledge-management">Knowledge Management</a>, describing the work required for Information Science and Cultural Heritage exam;</li>
-                                <li><a href="#website-development">Website Development</a>, describing the work required for Information Modelling and Web Technologies exam.</li>
-                            </ul>
-                        </p>
-                    </div>
+        // Effetto mouse movement
+        document.addEventListener('mousemove', (e) => {
+            const decorativeElements = document.querySelectorAll('.decorative-circle');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            decorativeElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.3;
+                const x = (mouseX - 0.5) * speed * 30;
+                const y = (mouseY - 0.5) * speed * 30;
+                element.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
 
-                    <div id="exhibition-items">
-                        <h3 class="subsection-title">Items in the Exhibition</h3>
-                        <p class="content-text">
-                            The exhibition features a carefully curated collection of items that represent the cultural richness and historical significance of Vallecupola and its surrounding ecosystem. Each item has been selected to tell a part of the story that connects this small mountain village to broader cultural and artistic networks.
-                        </p>
-                        <div class="card-gallery">
-                            
-                            <div class="card-gallery">
-                                <a class="card" href="./items_descriptions/video.html">
-                                    <img src="https://img.youtube.com/vi/l7hyC9NNZhE/maxresdefault.jpg"
-                                        alt="Vallecupola Innevata">
-                                    <div class="type">Video</div>
-                                    <h3>Vallecupola Innevata</h3>
-                                    <p>A video of the village in snow that opened a music event in Rocca Sinibalda.</p>
-                                </a>
+        // Effetto hover sui bottoni
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-2px)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translateY(0)';
+            });
+        });
 
-                                <a class="card" href="./items_descriptions/vallecupola_story.html">
-                                    <img src="https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg"
-                                        alt="Vallecupola Story">
-                                    <div class="type">Short Story</div>
-                                    <h3>Vallecupola</h3>
-                                    <p>Story inspired to Vallecupola and set in the village, finalist at Campiello Giovani 2024 Prize.</p>
-                                </a>
+        // Effetto click sui bottoni
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Crea effetto ripple
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                
+                const rippleContainer = document.createElement('div');
+                rippleContainer.style.position = 'absolute';
+                rippleContainer.style.top = '0';
+                rippleContainer.style.left = '0';
+                rippleContainer.style.width = '100%';
+                rippleContainer.style.height = '100%';
+                rippleContainer.style.overflow = 'hidden';
+                rippleContainer.style.borderRadius = '8px';
+                rippleContainer.appendChild(ripple);
+                
+                button.appendChild(rippleContainer);
+                
+                setTimeout(() => {
+                    rippleContainer.remove();
+                }, 600);
+            });
+        });
 
-                                <a class="card" href="./items_descriptions/vallecupola_performance.html">
-                                    <img src="./images/performance.JPEG" alt="Vallecupola Performance">
-                                    <div class="type">Music/Performance</div>
-                                    <h3>Vallecupola</h3>
-                                    <p>Theatrical event capturing the spirit of the village.</p>
-                                </a>
+        // Animazione scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const decorativeElements = document.querySelectorAll('.decorative-circle');
+            
+            decorativeElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.5;
+                element.style.transform = `translateY(${scrolled * speed * 0.1}px)`;
+            });
+        });
 
-                                <a class="card" href="./items_descriptions/ballerini.html">
-                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608720856191.jpg"
-                                        alt="Ballerini">
-                                    <div class="type">Sculpture</div>
-                                    <h3>Ballerini</h3>
-                                    <p>Energetic dancers in motion, representing a cultural snapshot.</p>
-                                </a>
+        // Inizializza particelle
+        createParticles();
 
-                                <a class="card" href="./items_descriptions/quadriglia.html">
-                                    <img src="https://static.wixstatic.com/media/d436be_ef537e45e2294bd59cbfbf6ccb23016c~mv2.jpeg"
-                                        alt="Quadriglia">
-                                    <div class="type">Music</div>
-                                    <h3>Quadriglia</h3>
-                                    <p>Traditional dance formation evoking rural festivities.</p>
-
-                                <a class="card" href="./items_descriptions/brillantina.html">
-                                    <img src="https://sigecweb.beniculturali.it/images/fullsize/ICCD50007117/ICCD5548709_IMG_2283.jpg"
-                                        alt="Vasetto per Brillantina">
-                                    <div class="type">Object</div>
-                                    <h3>Vasetto per Brillantina</h3>
-                                    <p>Glass jar used for hair cream, symbol of personal care history.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/conca.html">
-                                    <img src="https://static.wixstatic.com/media/d436be_0f16d94c9a444f93863b3b39c8f6096b~mv2.jpeg"
-                                        alt="Conca">
-                                    <div class="type">Object</div>
-                                    <h3>Conca</h3>
-                                    <p>A traditional basin used for washing or carrying water.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/donna.html">
-                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608675504350.jpg"
-                                        alt="Donna">
-                                    <div class="type">Sculpture</div>
-                                    <h3>Donna</h3>
-                                    <p>Portrait of a woman, revealing grace and dignity.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/pres_de_la_fontaine.html">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg?20140215154906"
-                                        alt="Pres de La Fontaine">
-                                    <div class="type">Painting</div>
-                                    <h3>Près de La Fontaine</h3>
-                                    <p>Romantic 19th-century painting near a fountain by Van Bree.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/cemetry_gates.html">
-                                    <img src="https://static.wixstatic.com/media/d436be_2435568a372b4d35833eb22cc34b42ec~mv2.png"
-                                        alt="Cemetery Gates">
-                                    <div class="type">Music</div>
-                                    <h3>Cemetry Gates</h3>
-                                    <p>Atmospheric image of a symbolic song, entrance to remembrance and silence.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/catinella.html">
-                                    <img src="https://www.sigecweb.beniculturali.it/images/fullsize/ICCD1070358/ICCD15474117_341450.jpg"
-                                        alt="Catinella">
-                                    <div class="type">Object</div>
-                                    <h3>Catinella</h3>
-                                    <p>A small domestic basin, typical of Italian daily life.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/poesie.html">
-                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1607708096909.jpg"
-                                        alt="Poesie">
-                                    <div class="type">Book</div>
-                                    <h3>Poesie</h3>
-                                    <p>A collection of poems reflecting the emotions and landscapes of rural life.</p>
-                                </a>
-                                
-                                <a class="card" href="./items_descriptions/feudo_di_rocca_sinibalda_.html">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Bril%2C_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"
-                                        alt="Feudo di Rocca Sinibalda">
-                                    <div class="type">Painting</div>
-                                    <h3>Feudo di Rocca Sinibalda</h3>
-                                    <p>Historic landscape painting of Rocca Sinibalda castle by Paul Bril.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/usil.html">
-                                    <img src="https://www.umbriacultura.it/samira/data/caos_010.jpg" alt="Usil">
-                                    <div class="type">Installation</div>
-                                    <h3>Usil</h3>
-                                    <p>Modern reinterpretation of the Etruscan solar deity, blending myth and
-                                        performance.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/stamp.html">
-                                    <img src="https://i.ebayimg.com/images/g/qHgAAOSw4bZkkymP/s-l400.png" alt="Stamp">
-                                    <div class="type">Stamp</div>
-                                    <h3>550 Lire – Castello di Rocca Sinibalda</h3>
-                                    <p>A vintage postage stamp, marking time and memory.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/ten_lire.html">
-                                    <img src="https://en.numista.com/catalogue/photos/italie/5f79c73e0a06f9.73627146-original.jpg"
-                                        alt="10 Lire">
-                                    <div class="type">Coin</div>
-                                    <h3>10 Lire</h3>
-                                    <p>Historical Italian coin, emblem of past national currency.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/nonno_e_nipote.html">
-                                    <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1609772375103.jpg"
-                                        alt="Nonno e Nipote">
-                                    <div class="type">Sculpture</div>
-                                    <h3>Nonno e Nipote</h3>
-                                    <p>A tender family moment between grandfather and grandchild, capturing generational
-                                        warmth.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/croce.html">
-                                    <img src="https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg"
-                                        alt="Croce Astile">
-                                    <div class="type">Artifact</div>
-                                    <h3>Croce Astile</h3>
-                                    <p>A processional cross with intricate detail, symbolic of local religious heritage.
-                                    </p>
-                                </a>
-                                
-                                <a class="card" href="./items_descriptions/lampada.html">
-                                    <img src="https://beniculturali.regione.veneto.it/xway-front/application/crv/engine/crv.jsp?verbo=attach&db=crv_back&id=82XZAgaV0l0%3D.jpg"
-                                        alt="Lampada a Carburo">
-                                    <div class="type">Object</div>
-                                    <h3>Lampada a Carburo</h3>
-                                    <p>Carbide lamp, once a staple source of portable light.</p>
-                                </a>
-
-                                <a class="card" href="./items_descriptions/quel_mazzolin_di_fiori.html">
-                                    <img src="https://static.wixstatic.com/media/d436be_a3f60900b6cb40ad87ad2103fb0b29ba~mv2.jpeg"
-                                        alt="Quel Mazzolin di Fiori">
-                                    <div class="type">Music</div>
-                                    <h3>Quel Mazzolin di Fiori</h3>
-                                    <p>Symbolic bouquet tied to Italian folk heritage and songs.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="divider"></div>
-
-            <!-- Knowledge Management Section -->
-            <section id="knowledge-management" class="content-section">
-                <div class="section-container">
-                    <h2 class="section-title">Knowledge Management</h2>
-                    
-                    <div id="knowledge-organization">
-                        <h3 class="subsection-title">Knowledge Organization</h3>
-                        <p class="content-text">
-                            The knowledge management strategy for the Vallecupola Ecosystem project is built upon a comprehensive framework that ensures systematic organization, representation, and accessibility of cultural data. Our approach combines traditional archival methods with modern digital humanities techniques.
-                        </p>
-                        
-                        <div id="metadata-analysis">
-                            <h4 class="subsubsection-title">Metadata Analysis</h4>
-                            <div class="table-iframe-wrapper" style="margin-top:1rem;">
-                            <iframe src="table.html"
-                                    style="width:100%; height:600px; border:1px solid var(--border-color);"
-                                    title="Metadata Tables">
-                            </iframe>
-                          </div>
-                        </div>
-                        
-                        <div id="theoretical-model">
-                            <h4 class="subsubsection-title">Theoretical Model</h4>
-                            <p class="content-text">
-                                As a first step, it was necessary to shape the knowledge domain, connecting the selected items.
-                                In order to show the interconnections between the objects, it was created a graph made of nodes and edges labelled in natural language, 
-                                explicitly describing the important links between the items. Of course, only the most meaningful features and relations were chosen.
-                                The graph resembles a spider web, making it a small dense "knowledge graph", representing real instances and their meaningful bonds.
-                            </p>
-                            <p class="content-text">
-                                For the reader, it will be sufficiently easy to follow the various paths that bring from one object to the other, understanding the density
-                                and relevance of the cultural framework built all around Vallecupola.
-                            </p> 
-                            <p class="content-text">   
-                                In this theoretical model, not only can we see the items themselves, but also some extra entities necessary to
-                                connect them (they are basically intermediate nodes). 
-                            </p>
-                            <p class="content-text">
-                                In the following reproduction of the theoretical model:
-                            </p> 
-
-                                <ul class="content-text">
-                                    <li>the <strong>green</strong> circle represents the main concept of the domain;</li>
-                                    <li>the <strong>yellow</strong> circles represent the twenty chosen items composing the exhibition;</li>
-                                    <li>the <strong>grey</strong> circles represent the extra entities (intermediate nodes).</li>
-                                </ul>
-                            </p>
-                            <br/>
-                            <p>
-                                <img width="100%" src="./images/theoretical_model.svg" alt="Conceptual Model"/>
-                            </p>
-                            
-                            
-                        </div>
-                        
-                        <div id="conceptual-model">
-                            <h4 class="subsubsection-title">Conceptual Model</h4>
-                            <p class="content-text">
-                                Our conceptual model provides a structured approach to representing the complex relationships between people, places, objects, and events within the Vallecupola ecosystem. It serves as the foundation for all subsequent data modeling and representation efforts.
-                            </p>
-                            <p class="content-text">
-                                Starting from the theoretical model, containing the individuals of the knowledge domain, put in relation between each other,
-                                it was possibile to elaborate a "conceptual model" by converting the previous into a more abstract level of representation. 
-                                We collapsed the various individuals in classes, grouping similar ones, also based on their common features.
-                            </p>
-                            <p class="content-text">
-                            The result is a schema made of 11 classes, of which:
-                                <ul class="content-text">
-                                    <li>7 representing the museum items:</li>
-                                    <ul class="content-text">
-                                        <li><code>dcmitype:Text</code> for collections, poems, stories;</li>
-                                        <li><code>crm:E24_Physical_Human_Made_Thing</code> for various objects and artifacts;</li>
-                                        <li><code>schema:VisualArtwork</code> for paintings and stamps;</li>
-                                        <li><code>fabio:MovingImage</code> for videos;</li>
-                                        <li><code>schema:Sculpture</code> for sculptures and installations;</li>
-                                        <li><code>fabio:MusicalComposition</code> for songs and musics;</li>
-                                        <li><code>frbroo:F31_Performance</code> for stage performances;</li>
-                                    </ul>
-                                    <li>4 representing only the extra entities:</li>
-                                    <ul class="content-text">
-                                        <li><code>crm:E53_Place</code> for villages, hamlets and locations in them;</li>
-                                        <li><code>crm:E21_Person</code> for people, artists;</li>
-                                        <li><code>schema:Museum</code> for museums holding some items;</li>
-                                        <li><code>skos:Concept</code> for subjects represented or topics conveyed by the cultural items.</li>
-                                    </ul>
-                                </ul>
-                            </p>
-                            <p class="content-text">
-                            Actually, also some extra entities have classes <code>dcmitype:Text</code> (scenes of the story), <code>crm:E24_Physical_Human_Made_Thing</code> (objects mentioned in the story) and <code>fabio:MovingImage</code>, 
-                            because they were useful to better express the connections.
-                            </p>
-                            <br/>
-                            <p>
-                                <img width="100%" src="./images/conceptual_model.png" alt="Conceptual Model"/>
-                            </p>
-                            <br/>
-                            <p class="content-text">
-                                This is a model on a really high level of abstraction. It resembles an ontology. Here - as in the previous theoretical model - only the most meaningful
-                                part of the knowledge domain has been shown. Indeed, we can only see classes and relations, not all the attributes associated to the classes.
-                            </p>
-                            <p class="content-text">
-                                In the following list, we recap all the predicates that we used for each class when describing their instances in detail during the 
-                                <a href="#csv-descriptions">CSV creation phase</a> (in <code class="relation">yellow</code> the actual relations that you can see as edges in the conceptual model above):
-                            </p>    
-                                <ul class="content-text">
-                                    <li><code>dcmitype:Text</code>:</li>
-                                        dcterms:type,
-                                        dcterms:title,
-                                        <code class="relation">dcterms:creator</code>,
-                                        dcterms:publisher,
-                                        dcterms:spatial,
-                                        dcterms:issued,
-                                        dcterms:isPartOf,
-                                        dcterms:language,
-                                        dcterms:coverage,
-                                        dcterms:description,
-                                        dcterms:identifier,
-                                        dcterms:source,
-                                        <code class="relation">frbr:part</code>,
-                                        schema:award,
-                                        foaf:page,
-                                        <code class="relation">schema:contentLocation</code>,
-                                        <code class="relation">schema:mentions</code>,
-                                        <code class="relation">schema:citation</code>,
-                                        <code class="relation">prov:influenced</code>;
-                                    
-                                    <li><code>crm:E24_Physical_Human_Made_Thing</code>:</li>
-                                        crm:P2_has_type,
-                                        dc:subject,
-                                        dc:title,
-                                        dc:description,
-                                        dcterms:issued,
-                                        dcterms:valid,
-                                        dc:source,
-                                        nmo:hasWeight,
-                                        nmo:hasDiameter,
-                                        nmo:hasThickness,
-                                        nmo:hasShape,
-                                        <code class="relation">crm:P50_has_current_keeper</code>,
-                                        dc:rights,
-                                        dcterms:isReferencedBy,
-                                        dc:coverage,
-                                        pico:materialAndTechnique,
-                                        a-cd:hasDating,
-                                        a-cd:hasUse,
-                                        a-dd:hasTechnicalStatus,
-                                        a-cd:hasDocumentation,
-                                        dcterms:created,
-                                        a-dd:hasDesignationInTime,
-                                        a-dd:hasTechnique,
-                                        dc:format,
-                                        dc:temporal,
-                                        <code class="relation">dcterms:provenance</code>,
-                                        dc:creator,
-                                        schema:material,
-                                        schema:locationCreated,
-                                        schema:artMedium,
-                                        schema:image,
-                                        schema:weight,
-                                        <code class="relation">schema:isSimilarTo</code>;
-                                    
-                                    <li><code>schema:VisualArtwork</code>:</li>
-                                        rdf:type,
-                                        <code class="relation">crm:P129_is_about</code>,
-                                        crm:P102_has_title,
-                                        crm:P14_carried_out_by, 
-                                        crm:P4_has_time-span,
-                                        <code class="relation">crm:P138_shows</code>,
-                                        crm:P45_consists_of,
-                                        crm:P70_documents,
-                                        crm:P104_is_subject_to,
-                                        crm:P43_has_dimension,
-                                        crm:P50_has_current_keeper,
-                                        crm:P55_has_current_location,
-                                        crm:P53_has_former_location;
-
-                                    <li><code>fabio:MovingImage</code>:</li>
-                                        rdf:type,
-                                        dcterms:title,
-                                        dcterms:creator,
-                                        dcterms:date,
-                                        dcterms:publisher,
-                                        crm:P50_has_current_keeper,
-                                        dcterms:description,
-                                        dcterms:extent,
-                                        <code class="relation">crm:P138_shows</code>,
-                                        foaf:page;
-
-                                    <li><code>schema:Sculpture</code>:</li>
-                                        crm:P2_has_type, 
-                                        crm:P102_has_title, 
-                                        <code class="relation">crm:P14_carried_out_by</code>, 
-                                        <code class="relation">crm:P50_has_current_keeper</code>, 
-                                        <code class="relation">crm:P129_is_about</code>, 
-                                        crm:P3_has_note, 
-                                        crm:P4_has_time-span, 
-                                        crm:P70_documents, 
-                                        crm:P55_has_current_location, 
-                                        crm:P45_consists_of, 
-                                        crm:P43_has_dimension;
-
-                                    <li><code>fabio:MusicalComposition</code>:</li>
-                                        rdf:type,
-                                        mo:title,
-                                        mo:iswc,
-                                        mo:performer,
-                                        mo:duration,
-                                        mo:record,
-                                        mo:release_date,
-                                        mo:instrument,
-                                        mo:recorded_in,
-                                        dcterms:language,
-                                        mo:genre,
-                                        mo:publisher,
-                                        dcterms:coverage,
-                                        mo:producer,
-                                        mo:lyricist,
-                                        mo:composer,
-                                        dcterms:contributor,
-                                        dcterms:subject,
-                                        <code class="relation">frbr:part</code>,
-                                        <code class="relation">fabio:hasManifestation</code>;
-
-                                    <li><code>frbroo:F31_Performance</code>:</li>
-                                        rdf:type,
-                                        event:place,
-                                        dcterms:date,
-                                        mo:performer,
-                                        dcterms:contributor,
-                                        <code class="relation">frbr:exemplar</code>;
-                                    
-                                    <li><code>crm:E53_Place</code>:</li>
-                                        rdf:type,
-                                        owl:sameAs,
-                                        rdfs:label,
-                                        <code class="relation">schema:containedInPlace</code>,
-                                        <code class="relation">prov:influenced</code>,
-                                        <code class="relation">frbr:part</code>;
-
-                                    <li><code>crm:E21_Person</code>:</li>
-                                        rdf:type,
-                                        owl:sameAs,
-                                        rdfs:label,
-                                        <code class="relation">schema:birthPlace</code>;
-
-                                    <li><code>schema:Museum</code>:</li>
-                                        rdf:type,
-                                        owl:sameAs,
-                                        rdfs:label,
-                                        <code class="relation">dbpedia:namedAfter</code>,
-                                        <code class="relation">schema:location</code>;
-
-                                    <li><code>skos:Concept</code>:</li>
-                                        rdf:type,
-                                        rdfs:label.
-                                </ul>
-                            </p>
-
-                            <p class="content-text">As shown, in order to describe cultural objects in a standard-compliant and interoperable way, Vallecupola Ecosystem uses many classes 
-                                and predicates taken from already existing ontologies. Models cover simple to complex metadata, enabling rich, integrable knowledge.</p>
-                            <p class="content-text">Here, we list all the selected ontologies with prefix, full name, namespace and short description:</p>
-
-                            <div class="ontologies-container">
-                                <div class="ontologies-grid">
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">crm</div>
-                                <div class="ontology-name">CIDOC Conceptual Reference Model</div>
-                                <div class="ontology-url">http://www.cidoc-crm.org/cidoc-crm/</div>
-                                <div class="ontology-description">A standard for integrating heritage data.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">schema</div>
-                                <div class="ontology-name">Schema.org</div>
-                                <div class="ontology-url">https://schema.org/</div>
-                                <div class="ontology-description">A web data schema backed by search engines.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">dc</div>
-                                <div class="ontology-name">Dublin Core Elements</div>
-                                <div class="ontology-url">http://purl.org/dc/elements/1.1/</div>
-                                <div class="ontology-description">Basic metadata for digital and physical items.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">dcterms</div>
-                                <div class="ontology-name">Dublin Core Terms</div>
-                                <div class="ontology-url">http://purl.org/dc/terms/</div>
-                                <div class="ontology-description">Detailed terms for describing resources.</div>
-                                </div>
-                                <div class="ontology-card">
-                                    <div class="ontology-prefix">dcmitype</div>
-                                    <div class="ontology-name">DCMI Type Vocabulary</div>
-                                    <div class="ontology-url">http://purl.org/dc/dcmitype/</div>
-                                    <div class="ontology-description">Defines a standard set of resource types used in Dublin Core metadata.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">pico</div>
-                                <div class="ontology-name">PICO Ontology</div>
-                                <div class="ontology-url">http://data.cochrane.org/ontologies/pico/</div>
-                                <div class="ontology-description">Describes materials and techniques of artifacts.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">a-cd</div>
-                                <div class="ontology-name">ArCo Context Description</div>
-                                <div class="ontology-url">https://w3id.org/arco/ontology/context-description/</div>
-                                <div class="ontology-description">Describes heritage context and provenance.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">a-dd</div>
-                                <div class="ontology-name">ArCo Denotative Description</div>
-                                <div class="ontology-url">https://w3id.org/arco/ontology/denotative-description/</div>
-                                <div class="ontology-description">Describes physical and technical features.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">frbr</div>
-                                <div class="ontology-name">Functional Requirements for Bibliographic Records</div>
-                                <div class="ontology-url">http://purl.org/vocab/frbr/core#</div>
-                                <div class="ontology-description">Model of bibliographic abstraction levels.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">rdf</div>
-                                <div class="ontology-name">Resource Description Framework</div>
-                                <div class="ontology-url">http://www.w3.org/1999/02/22-rdf-syntax-ns#</div>
-                                <div class="ontology-description">Basic structure for web-based knowledge.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">rdfs</div>
-                                <div class="ontology-name">RDF Schema</div>
-                                <div class="ontology-url">http://www.w3.org/2000/01/rdf-schema#</div>
-                                <div class="ontology-description">Adds classes and properties to RDF.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">foaf</div>
-                                <div class="ontology-name">Friend of a Friend</div>
-                                <div class="ontology-url">http://xmlns.com/foaf/0.1/</div>
-                                <div class="ontology-description">Describes people and their relationships.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">frbroo</div>
-                                <div class="ontology-name">FRBR Object Oriented</div>
-                                <div class="ontology-url">http://iflastandards.info/ns/fr/frbr/frbroo/</div>
-                                <div class="ontology-description">Connects library and museum data models.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">fabio</div>
-                                <div class="ontology-name">FRBR-aligned Bibliographic Ontology</div>
-                                <div class="ontology-url">http://purl.org/spar/fabio/</div>
-                                <div class="ontology-description">Describes scholarly and bibliographic works.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">mo</div>
-                                <div class="ontology-name">Music Ontology</div>
-                                <div class="ontology-url">http://purl.org/ontology/mo/</div>
-                                <div class="ontology-description">Describes music works, artists, and recordings.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">event</div>
-                                <div class="ontology-name">Event Ontology</div>
-                                <div class="ontology-url">http://purl.org/NET/c4dm/event.owl#</div>
-                                <div class="ontology-description">Describes events in time and space.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">nmo</div>
-                                <div class="ontology-name">Nomisma Ontology</div>
-                                <div class="ontology-url">http://nomisma.org/ontology#</div>
-                                <div class="ontology-description">Models numismatic and monetary data.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">skos</div>
-                                <div class="ontology-name">Simple Knowledge Organization System</div>
-                                <div class="ontology-url">http://www.w3.org/2004/02/skos/core#</div>
-                                <div class="ontology-description">Framework for thesauri and taxonomies.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">prov</div>
-                                <div class="ontology-name">PROV Ontology</div>
-                                <div class="ontology-url">http://www.w3.org/ns/prov#</div>
-                                <div class="ontology-description">Captures data origin and transformation.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">owl</div>
-                                <div class="ontology-name">Web Ontology Language</div>
-                                <div class="ontology-url">http://www.w3.org/2002/07/owl#</div>
-                                <div class="ontology-description">Defines rich web ontologies with logic.</div>
-                                </div>
-                                <div class="ontology-card">
-                                <div class="ontology-prefix">dbpedia</div>
-                                <div class="ontology-name">DBpedia Ontology</div>
-                                <div class="ontology-url">http://dbpedia.org/ontology/</div>
-                                <div class="ontology-description">Structures Wikipedia knowledge semantically.</div>
-                                </div>
-                                </div>
-                            </div> 
-
-                            <p class="content-text">When possible, entities have been aligned with authority controls. In particular, the controlled vocabularies used by the project are:</p>
-                            <div class="ontologies-grid">
-
-                                <div class="ontology-card">
-                                    <div class="ontology-prefix">gn</div>
-                                    <div class="ontology-name">GeoNames</div>
-                                    <div class="ontology-url">http://sws.geonames.org/</div>
-                                    <div class="ontology-description">A geographical database that provides unique identifiers for place names worldwide.</div>
-                                </div>
-
-                                <div class="ontology-card">
-                                    <div class="ontology-prefix">aat</div>
-                                    <div class="ontology-name">Art & Architecture Thesaurus (AAT)</div>
-                                    <div class="ontology-url">http://vocab.getty.edu/aat/</div>
-                                    <div class="ontology-description">A structured vocabulary for describing objects, materials, and activities related to art and architecture.</div>
-                                </div>
-
-                                <div class="ontology-card">
-                                    <div class="ontology-prefix">iso639</div>
-                                    <div class="ontology-name">ISO 639-2 Language Codes</div>
-                                    <div class="ontology-url">http://id.loc.gov/vocabulary/iso639-2/</div>
-                                    <div class="ontology-description">A controlled vocabulary of three-letter codes representing languages.</div>
-                                </div>
-
-                                <div class="ontology-card">
-                                    <div class="ontology-prefix">wd</div>
-                                    <div class="ontology-name">Wikidata</div>
-                                    <div class="ontology-url">https://www.wikidata.org/wiki/</div>
-                                    <div class="ontology-description">A collaborative knowledge base that provides structured identifiers for concepts and entities.</div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div id="knowledge-representation">
-                        <h3 class="subsection-title">Knowledge Representation</h3>
-                        <p class="content-text">
-                            The knowledge representation strategy encompasses multiple formats and standards to ensure maximum accessibility and reusability of the cultural data. Our multi-format approach allows for different use cases and technical requirements.
-                        </p>
-                        
-                        <div id="csv-descriptions">
-                            <h4 class="subsubsection-title">CSV Descriptions of Items </h4>
-                            <p class="content-text">
-                                Structured tabular data representations provide a straightforward and accessible format for describing exhibition items. The CSV format ensures compatibility with spreadsheet applications and database systems while maintaining human readability.
-<p class="content-text">
-  The project knowledge representation strategy is built around 
-  <strong>accessibility</strong>, <strong>reusability</strong>, and 
-  <strong>interoperability</strong> within the context of a 
-  <strong>Linked Open Data (LOD)</strong> project.
-</p>
-
-<p class="content-text">
-  We adopted a <strong>multi-format approach</strong> to ensure that the cultural data can serve diverse audiences and technical environments.
-</p>
-
-<p class="content-text">
-  To model the cultural heritage objects and their related entities, we created a comprehensive 
-  <strong>Excel file</strong> containing <strong>multiple sheets</strong>. Each sheet corresponds to a distinct conceptual table in the data model. 
-  The format of the tables follows a <strong>Subject–Predicate–Object</strong> structure, combining both:
-</p>
-
-<ul class="content-text">
-  <li><strong>Human-readable descriptions</strong> (in natural language), and</li>
-  <li><strong>Machine-readable URIs</strong> (for semantic web compatibility).</li>
-</ul>
-
-<p class="content-text">
-  This approach ensures that the metadata can be easily understood by non-experts while remaining fully compatible with 
-  <strong>LOD principles</strong>.
-</p>
-
-<p class="content-text">
-  Given that Excel is a <strong>proprietary format</strong>, we exported each sheet into individual 
-  <strong>CSV files</strong> to enhance long-term accessibility and machine processing. 
-  CSV was chosen for its wide support across platforms, readability, and compatibility with both relational databases and 
-  <strong>RDF transformation workflows</strong>.
-</p>
-
-<p class="content-text">
-  In total, we produced <strong>22 CSV files</strong>:
-</p>
-<ul class="content-text">
-  <li><strong>20 CSVs</strong> describe the core <strong>exhibition objects</strong>.</li>
-  <li><strong>1 CSV</strong> contains metadata for <strong>additional entities</strong> (those referenced but not primary objects — often displayed in grey in our conceptual map).</li>
-  <li><strong>1 CSV</strong> provides a <strong>prefix–namespace mapping table</strong>, listing all ontological prefixes used in the dataset alongside their corresponding full URIs.</li>
-</ul>
-
-<p class="content-text">
-  All the files produced for the project are:
-</p>
-<ul class="content-text">
-  <li>Stored in the <strong>GitHub repository</strong>, serving as both a version-controlled archival platform and a public access point.</li>
-  <li>Downloadable in the <strong>Download Section</strong> of this website.</li>
-</ul>
-
-
-                           
-                                
-
-                            
-                        </div>
-                        
-                        <div id="xml-tei-encoding">
-                            <h4 class="subsubsection-title">XML-TEI Encoding of the Story</h4>
-                            <p class="content-text">
-                                The Text Encoding Initiative (TEI) standard has been employed to encode the narrative elements of the Vallecupola story (one of our <a href="#exhibition-items">exhibition items</a>). This approach ensures scholarly rigor and enables sophisticated textual analysis and presentation options.
-                            </p>
-                            <p class="content-text">
-                                After a minimal <code>teiHeader</code>, the content of the story has been encoded only with TEI elements that were functional both for:
-                                <ul class="content-text">
-                                    <li>the following <strong>conversion from XML to HTML</strong>, because we used <code>ref</code> to link some text portions to the exhibition webpages describing the items. This HTML version serves as a <a href="#story">narrative guide</a> for visitors, letting them read the story while exploring collection items in the order they appear in the narrative;</li>
-                                    <li>the following <strong>conversion from XML to RDF</strong>, because we used <code>xml:id</code> global attribute to uniquely identify entities connected to the story node (shown in the <a href="#theoretical-model">theoretical model</a>).</li>
-                                </ul>
-                            </p>
-                            <p class="content-text">Other meaningful TEI elements we used are the following:</p>
-                                <ul class="content-text">
-                                    <li><code>div1</code>, marking the structural division of the text in six main <strong>blocks</strong> (using indeed the attribute <code>type="block"</code>);</li>
-                                    <li><code>div2</code>, marking the <strong>relevant scenes</strong> shown in the <a href="#theoretical-model">theoretical model</a>. Since XML's tree structure required us to also mark other content with <code>div2</code>, we added <code>type="scene"</code> only to actual scenes to distinguish them from other content;</li>
-                                    <li><code>rs</code>, marking the strings referring to some <strong>mentioned objects</strong> (that are items of our exhibition);</li>
-                                    <li><code>quote</code>, marking the citation of <strong>music verses</strong>.</li>
-                                </ul>
-                        </div>
-                        
-                        <div id="html-conversion">
-                            <h4 class="subsubsection-title">HTML Conversion of the Story </h4>
-                            <p class="content-text">
-                                Web-ready HTML versions of the encoded texts provide immediate accessibility for online audiences. The conversion process maintains the structural integrity of the original TEI encoding while optimizing for web presentation.
-                            </p>
-<p class="content-text">
-  For this stage, the goal was the development of the <strong>XSLT stylesheet</strong> and the generation of the final 
-  <strong>HTML output</strong> from the <strong>TEI-encoded short story</strong>. The primary objective was to ensure that the 
-  <strong>semantically marked-up XML</strong> could be rendered as a clean, accessible HTML document, while preserving the 
-  narrative structure and interpretive elements encoded in TEI.
-</p>
-
-<p class="content-text">
-  The <strong>TEI file</strong> was based on the 
-  <strong>TEI P5 guidelines</strong> and included a variety of structural and semantic elements, such as 
-  <code>&lt;teiHeader&gt;</code>, <code>&lt;div1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ref&gt;</code>, 
-  <code>&lt;lg&gt;</code>, and <code>&lt;milestone&gt;</code>. As the 
-  <strong>TEI namespace</strong> (<code>http://www.tei-c.org/ns/1.0</code>) was used as the default, a prefix 
-  (<code>tei</code>) had to be declared and applied within all <strong>XPath expressions</strong> in the XSLT.
-</p>
-
-<p class="content-text">
-  In the transformation process, the following tasks were carried out:
-</p>
-
-<ul class="content-text">
-  <li>
-    The <strong>title</strong> and <strong>author information</strong> were extracted from the 
-    <code>&lt;teiHeader&gt;</code> and inserted into the <code>&lt;head&gt;</code> and 
-    <code>&lt;body&gt;</code> sections of the HTML using <strong>XPath</strong>.
-  </li>
-  <li>
-    Elements such as <code>&lt;div1&gt;</code>, <code>&lt;div2&gt;</code>, and <code>&lt;p&gt;</code> were converted into corresponding 
-    HTML <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code> tags to maintain <strong>semantic and structural clarity</strong>.
-  </li>
-  <li>
-    Tags used for quotations, hyperlinks, and poetic or lyrical formatting—including 
-    <code>&lt;quote&gt;</code>, <code>&lt;ref&gt;</code>, <code>&lt;lg&gt;</code>, and <code>&lt;l&gt;</code>—were matched to semantic 
-    HTML equivalents: <code>&lt;blockquote&gt;</code>, <code>&lt;a&gt;</code>, and styled <code>&lt;div&gt;</code> elements.
-  </li>
-  <li>
-    Special handling was done for <strong>visual breaks</strong>, with 
-    <code>&lt;milestone rend="*" /&gt;</code> being transformed into <code>&lt;hr /&gt;</code> elements.
-  </li>
-</ul>
-
-<p class="content-text">
-  The transformation was done using the online tool <strong>FreeFormatter.com</strong>, which allowed the 
-  <strong>TEI XML</strong> and <strong>XSLT files</strong> to be processed together and the resulting HTML to be previewed and downloaded. 
-  This approach was chosen for its <strong>accessibility</strong> and <strong>convenience</strong>, 
-  as a local XML/XSLT processing environment is <em>not available</em>.
-</p>
-
-
-
-
-                        </div>
-                        
-                        <div id="rdf-conversion">
-                            <h4 class="subsubsection-title">RDF Conversion from CSV and XML</h4>
-                            <div class="table-iframe-wrapper" style="margin-top:1rem;">
-                            <iframe src="Conversion.html"
-                                    style="width:100%; height:600px; border:1px solid var(--border-color);"
-                                    title="RDF conversion">
-                            </iframe>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="divider"></div>
-
-            <!-- Website Development Section -->
-            <section id="website-development" class="content-section">
-                <div class="section-container">
-                    <h2 class="section-title">Website Development</h2>
-<p class="content-text">Work in progress for Vitali's Exam... Stay tuned! 😉</p>                    
-<!--                    
-                    <div id="items-descriptions">
-                        <h3 class="subsection-title">Items Descriptions</h3>
-                        <p class="content-text">
-                            The website development process focuses on creating an engaging and accessible platform for presenting the Vallecupola Ecosystem exhibition. Our approach emphasizes user experience, accessibility, and responsive design principles.
-                        </p>
-                        
-                        <div id="target-audiences">
-                            <h4 class="subsubsection-title">Target Audiences</h4>
-                            <p class="content-text">
-                                The website is designed to serve multiple target audiences, including academic researchers, cultural heritage professionals, tourists, and local community members. Each audience has specific needs and expectations that inform the design and functionality decisions.
-                            </p>
-                        </div>
-                        
-                        <div id="html-structure">
-                            <h4 class="subsubsection-title">HTML Structure</h4>
-                            <p class="content-text">
-                                The HTML structure follows semantic markup principles and web accessibility guidelines. The markup provides a solid foundation for styling and interactive functionality while ensuring compatibility across different browsers and assistive technologies.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="themes">
-                        <h3 class="subsection-title">Themes</h3>
-                        <p class="content-text">
-                            Multiple visual themes have been developed to accommodate different preferences and use cases. Each theme maintains consistency with the overall brand identity while offering unique visual experiences.
-                        </p>
-                        
-                        <div id="css-theme-1">
-                            <h4 class="subsubsection-title">CSS Theme 1</h4>
-                            <p class="content-text">
-                                The first theme emphasizes clean, minimal design with a focus on readability and accessibility. It uses a neutral color palette and traditional typography to create a professional, scholarly appearance.
-                            </p>
-                        </div>
-                        
-                        <div id="css-theme-2">
-                            <h4 class="subsubsection-title">CSS Theme 2</h4>
-                            <p class="content-text">
-                                The second theme incorporates warmer colors and more dynamic visual elements to create a more engaging and inviting experience. It balances visual appeal with functional requirements.
-                            </p>
-                        </div>
-                        
-                        <div id="css-theme-3">
-                            <h4 class="subsubsection-title">CSS Theme 3</h4>
-                            <p class="content-text">
-                                The third theme explores contemporary design trends with bold typography and vibrant colors. It aims to attract younger audiences while maintaining professional standards.
-                            </p>
-                        </div>
-                        
-                        <div id="css-theme-4">
-                            <h4 class="subsubsection-title">CSS Theme 4</h4>
-                            <p class="content-text">
-                                The fourth theme focuses on high contrast and accessibility features, ensuring that the content is accessible to users with various visual needs and preferences.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="narratives">
-                        <h3 class="subsection-title">Narratives</h3>
-                        <p class="content-text">
-                            The narrative structure of the website supports multiple ways of exploring the Vallecupola Ecosystem, allowing users to choose their preferred approach to discovering the content.
-                        </p>
-                        
-                        <div id="chronological-order">
-                            <h4 class="subsubsection-title">Chronological Order</h4>
-                            <p class="content-text">
-                                The chronological narrative presents the story of Vallecupola through time, allowing users to understand the historical development of the village and its cultural significance.
-                            </p>
-                        </div>
-                        
-                        <div id="story">
-                            <h4 class="subsubsection-title">Story</h4>
-                            <p class="content-text">
-                                The story-based narrative provides a more literary approach to exploring the content, weaving together historical facts, cultural insights, and personal experiences into a cohesive narrative.
-                            </p>
-                        </div>
-                    </div>
- -->                  
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="content-section">
-                <div class="section-container">
-                    <h2 class="section-title">About</h2>
-                    <p class="content-text">From a small mountain village to a vast cultural network – this is the story we wanted to tell.
-                        Three digital humanities students from different countries exploring together how technology can reveal the hidden richness of italian cultural heritage.</p>
-                    <div class="team-grid">
-                        <!-- Card Membro 1 -->
-                        <div class="team-card">
-                            <div class="card-image">
-                                <img src="./images/dani.png" alt="Daniele Camagna">
-                            </div>
-                            <div class="card-content">
-                                <h3>Daniele Camagna</h3>
-                            </div>
-                        </div>
-
-                        <!-- Card Membro 2 -->
-                        <div class="team-card">
-                            <div class="card-image">
-                                <img src="./images/john.jpg" alt="Muhammad Reza Jahanian">
-                            </div>
-                            <div class="card-content">
-                                <h3>Muhammad Reza Jahanian</h3>
-                            </div>
-                        </div>
-
-                        <!-- Card Membro 3 -->
-                        <div class="team-card">
-                            <div class="card-image">
-                                <img src="./images/yang.jpg" alt="Tianchi Yang">
-                            </div>
-                            <div class="card-content">
-                                <h3>Tianchi Yang</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        // Aggiungi stile CSS per ripple
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

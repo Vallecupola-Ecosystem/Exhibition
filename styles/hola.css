@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    background:
+        url('https://cdn.mos.cms.futurecdn.net/24uvrT4bydPzJ2gXKiXB3M-970-80.jpg.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0eafc;
+    padding: 40px 20px;
+    min-height: 100vh;
+    letter-spacing: 0.03em;
+    box-shadow: inset 0 0 120px #a259ffa0;
+}
+
+.top-icons {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    display: flex;
+    gap: 18px;
+    z-index: 999;
+}
+
+.icon-button {
+    background: linear-gradient(90deg, #3a2566 60%, #a259ff 100%);
+    border: 1.5px solid #a259ff;
+    color: #a259ff;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.08em;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 2px 16px #a259ff55, 0 0 0 2px #3a2566;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    text-shadow: 0 0 8px #a259ffcc;
+}
+.icon-button:hover {
+    background: #a259ff;
+    color: #3a2566;
+    box-shadow: 0 0 24px #a259ffcc, 0 0 0 2px #a259ff;
+}
+
+.container {
+    max-width: 950px;
+    margin: 100px auto 40px;
+    background: rgba(58, 37, 102, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 40px #a259ff22, 0 0 0 2px #a259ff;
+    padding: 32px 24px 40px 24px;
+    border: 1.5px solid #a259ff;
+}
+
+.image-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.object-image {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #a259ff44, 0 0 0 3px #a259ff;
+    border: 2px solid #a259ff;
+    background: #2a174e;
+    transition: box-shadow 0.2s;
+}
+.object-image:hover {
+    box-shadow: 0 0 48px #a259ffcc, 0 0 0 3px #a259ff;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #3a2566 60%, #a259ff 100%);
+    border: 2px solid #a259ff;
+    color: #a259ff;
+    font-size: 2em;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 0 18px #a259ffcc;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    z-index: 2;
+    cursor: pointer;
+}
+.nav-button:hover {
+    background: #a259ff;
+    color: #3a2566;
+    box-shadow: 0 0 32px #a259ffcc;
+}
+.nav-left { left: -32px; }
+.nav-right { right: -32px; }
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.1em;
+    color: #a259ff;
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 18px #a259ffcc, 0 2px 0 #2a174e;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+}
+
+.accordion-container {
+    background: rgba(58, 37, 102, 0.98);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px #a259ff44, 0 0 0 2px #a259ff;
+    padding: 24px 18px;
+    border: 1.5px solid #a259ff;
+}
+
+.accordion-item {
+    margin-bottom: 14px;
+    border: 1.5px solid #a259ff;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #2a174e;
+    box-shadow: 0 2px 16px #a259ff22;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.accordion-label {
+    display: block;
+    background: linear-gradient(90deg, #3a2566 60%, #a259ff 100%);
+    padding: 18px 24px;
+    font-size: 1.13em;
+    cursor: pointer;
+    position: relative;
+    color: #a259ff;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s;
+    text-shadow: 0 0 8px #a259ffcc;
+}
+.accordion-label:hover {
+    background: #a259ff;
+    color: #3a2566;
+    text-shadow: 0 0 16px #a259ffcc;
+}
+
+.accordion-label::after {
+    content: '▾';
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #a259ff;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), color 0.2s;
+    text-shadow: 0 0 8px #a259ffcc;
+}
+input[type="checkbox"]:checked + .accordion-label::after {
+    transform: translateY(-50%) rotate(180deg);
+    color: #3a2566;
+}
+
+.note {
+    display: inline-block;
+    font-size: 0.92em;
+    font-style: italic;
+    color: #e0b0ff;
+    margin-left: 16px;
+    text-shadow: 0 0 6px #a259ffcc;
+}
+
+.accordion-content {
+    background: #2a174e;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(.4,2,.6,1), padding 0.3s;
+    padding: 0 24px;
+    color: #e0eafc;
+    border-top: 1.5px solid #a259ff;
+    box-shadow: 0 2px 12px #a259ff22 inset;
+    text-shadow: 0 0 8px #a259ffcc, 0 0 2px #a259ff, 0 0 18px #a259ff66;
+}
+input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 1200px;
+    padding: 18px 24px 24px 24px;
+}
+
+table.metadata-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    background: #2a174e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 16px #a259ff22;
+    border: 1.5px solid #a259ff;
+}
+
+.metadata-table td {
+    padding: 13px 18px;
+    text-align: left;
+    min-width: 180px;
+    color: #a259ff;
+    background: #3a2566;
+    border-bottom: 1px solid #a259ff;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 6px #a259ffcc;
+}
+.metadata-table tr:nth-child(even) td {
+    background: #2a174e;
+}
+.metadata-table tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 10px 2vw 24px 2vw;
+    }
+    .object-image {
+        max-width: 98vw;
+    }
+    .nav-left, .nav-right {
+        left: 0 !important;
+        right: 0 !important;
+        top: 100%;
+        transform: translateY(0);
+        margin: 8px 10px;
+        position: static;
+        display: inline-block;
+    }
+    .image-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

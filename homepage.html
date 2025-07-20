@@ -633,7 +633,9 @@
             z-index: 1000;
         }
     </style>
+    <link href="styles/narratives_panel.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -669,6 +671,19 @@
                     <span>Individual Objects</span>
                 </div>
             </div>
+        </div>
+        <div class="instructions">
+            <h3>✨ Multiple kinds of experience</h3>
+            <p><strong>Enjoy the virtual museum</strong> through:</p>
+            <ul>
+                <li><strong><i class="fas fa-map-marked"></i> Map</strong> exploration</li>
+                <li><strong><i class="fas fa-route"></i> Guided Tour</strong> help underlying</li>
+            </ul>
+            <p><strong>Select other narratives</strong> to explore the collection in alternative ways:</p>
+            <ul>
+                <li><strong><i class="fas fa-clock"></i> Chronological order</strong> of the items</li>
+                <li><strong><i class="fas fa-book-open"></i> Story narrative</strong> reading the short story <em>Vallecupola</em></li>
+            </ul>
         </div>
 
         <div class="main-content">
@@ -778,6 +793,58 @@
                 </div>
             </div>
         </div>
+
+        <!-- Other Narratives Panel -->
+        <div class="main-content" id="other-narratives">
+            <h2 class="section-title">Other Narratives</h2>
+             
+            <div class="narratives-grid">
+                <!-- Chronological Order -->
+                <div class="narrative-card">
+                    <div class="narrative-icon">
+                        <div class="icon-circle">
+                            <span class="icon-content">⏰</span>
+                        </div>
+                    </div>
+                    <div class="narrative-info">
+                        <h3>Chronology</h3>
+                        <p>Navigate through the collection following the chronological order of creation or publication of the items</p>
+                        <a href="chronological-order.html" class="narrative-link">Enter →</a>
+                    </div>
+                </div>
+
+                <!-- Story Narrative -->
+                <div class="narrative-card">
+                    <div class="narrative-icon">
+                        <div class="icon-circle">
+                            <img class="icon-content" src="https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg" width="50%"/>
+                            <!--<span class="icon-content">📖</span>-->
+                        </div>
+                    </div>
+                    <div class="narrative-info">
+                        <h3>Story</h3>
+                        <p>Read the interactive online version of <em>Vallecupola</em> short story and discover the items whenever a connection appears</p>
+                        <a href="story.html" class="narrative-link">Enter →</a>
+                    </div>
+                </div>
+                
+                <!-- Graph -->
+                <div class="narrative-card">
+                    <div class="narrative-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-share-alt icon-content"></i>
+                        </div>
+                    </div>
+                    <div class="narrative-info">
+                        <h3>Graph</h3>
+                        <p>Explore the complete graph describing all the meaningful connections in the Vallecupola Ecosystem Knowledge Base</p>
+                        <a href="graph.html" class="narrative-link">Enter →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <div class="footer">

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallecupola Ecosystem</title>
+    <link rel="icon" type="image/png" href="./images/icons8-snow-capped-mountain-96.png">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Bella+Roma&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-size: 1.15rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: float 12s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .text-section {
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: glow 2s ease-in-out infinite alternate;
+            text-align: center;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 2px 4px rgba(44, 62, 80, 0.1);
+            }
+
+            to {
+                text-shadow: 0 2px 4px rgba(44, 62, 80, 0.1), 0 0 20px rgba(44, 62, 80, 0.1);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 30px;
+            font-weight: 400;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .description p {
+            margin-bottom: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            animation: fadeIn 1s ease-out 1.2s both;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button.primary {
+            background: #e74c3c;
+            color: white;
+            border: 2px solid #e74c3c;
+        }
+
+        .cta-button.primary:hover {
+            background: #c0392b;
+            border-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+
+        .cta-button.secondary:hover {
+            background: #2c3e50;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2);
+        }
+
+        .image-section {
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .village-image {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .village-image:hover {
+            transform: scale(1.02);
+        }
+
+        .network-visualization {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            opacity: 0.3;
+        }
+
+        .network-node {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #e74c3c;
+            border-radius: 50%;
+            animation: networkPulse 3s ease-in-out infinite;
+        }
+
+        .network-node:nth-child(1) {
+            top: 10px;
+            left: 10px;
+            animation-delay: 0s;
+        }
+
+        .network-node:nth-child(2) {
+            top: 30px;
+            right: 20px;
+            animation-delay: 0.6s;
+        }
+
+        .network-node:nth-child(3) {
+            bottom: 40px;
+            left: 30px;
+            animation-delay: 1.2s;
+        }
+
+        .network-node:nth-child(4) {
+            bottom: 20px;
+            right: 15px;
+            animation-delay: 1.8s;
+        }
+
+        .network-node:nth-child(5) {
+            top: 50px;
+            left: 50px;
+            animation-delay: 2.4s;
+        }
+
+        @keyframes networkPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.8);
+                opacity: 0.8;
+            }
+        }
+
+        .decorative-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(231, 76, 60, 0.1);
+            animation: float-circle 8s ease-in-out infinite;
+        }
+
+        .decorative-circle:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .decorative-circle:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .decorative-circle:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float-circle {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                padding: 40px;
+            }
+
+            .village-image {
+                height: 300px;
+            }
+
+            .cta-container {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            a {
+                font-family: 'Bella Roma', cursive !important;
+                font-size: 1.5rem !important;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .description {
+                font-size: 0.95rem;
+            }
+        }
+    
+        h2 {
+            text-align: center;
+        }
+
+        
+
+        .subsection p {
+            font-family: 'Georgia', serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+    
+        
+
+        a {
+            font-family: 'Bella Roma', cursive;
+            font-weight: 700;
+            color: #00bfa6; /* Light blue-emerald */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #00a28b;
+        }
+
+        a:visited {
+            color: #6a0dad; /* Purple for visited links */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="floating-particles" id="particles"></div>
+
+    <div class="decorative-elements">
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
+        <div class="decorative-circle"></div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="network-visualization">
+                <div class="network-node"></div>
+                <div class="network-node"></div>
+                <div class="network-node"></div>
+                <div class="network-node"></div>
+                <div class="network-node"></div>
+            </div>
+
+            <div class="story-container">
+                <h1><a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/vallecupola_story.html"
+                        target="_blank">Vallecupola</a></h1>
+
+                <div class="section">
+                    <div class="subsection">
+                        <p>La cenere vorticava nel callaro e affondava colorando l’acqua. Lucrezia, con degli stracci
+                            bagnati in
+                            mano, si piegò per spiccare il recipiente e riporlo
+                            all’esterno, sul bordo del camino; schermendo il volto dal bollore, riattizzò il fuoco.
+                            Asciugò le
+                            braccia sudate e pensò ansando che più tardi avrebbe aggiunto
+                            un soletto di rame. Già immaginava diffondersi per lo stanzone l’odore di pollo, rosmarino e
+                            patate.</p>
+                        <p>«Come in una reggia», disse tra sé e sé.</p>
+                        <p>Quella mattina, appena alzata, era scesa alla Madonnella per riempire la conca d’acqua e
+                            aveva incontrato
+                            Mafalda che, fatte le sue scorte prima di lei, tornava
+                            verso casa trascinando una gamba a fatica.</p>
+                        <p>«Che è successo, Mafà? Che hai fatto?», le aveva chiesto con apprensione.</p>
+                        <p>«Eh niente, ieri sera sono andata nel fienile, era buio… e sò scivolata sulla paglia», aveva
+                            continuato a
+                            strascicarsi come un’anima in pena. Lucrezia era corsa
+                            a strapparle di mano il secchio traboccante che si ostinava a trasportare e l’aveva aiutata
+                            a rincasare.
+                        </p>
+                        <p>«Ma quindi dopo non ci vieni a Messa?», le aveva chiesto storcendo la bocca prima di
+                            richiudere l’uscio.
+                        </p>
+                        <p>«E come faccio, figlia mia. Se penso che me tocca salì tutti ‘sti scaloni, me se fa scuro»
+                        </p>
+                        <p>«Non ci sta nessuno a casa per accompagnarti, darti una mano?», aveva insistito Lucrezia con
+                            un pugno sul
+                            fianco.</p>
+                        <p>«Sì, tra poco torna Dino, ma non ce la faccio, sento troppo dolore. Salutami Don Tomasso e
+                            digli che sarà
+                            per la prossima, ahah», si era cacciata le mani nelle
+                            saccocce e aveva scosso il capo. Aveva estratto una
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/10_lire.html"
+                                target="_blank">
+                                moneta da dieci lire
+                            </a>
+                            : porgendola a Lucrezia, si era raccomandata di riporla nella bussola per conto suo,
+                            affinché il Signore le guarisse quanto prima la gamba difettosa.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h2>***</h2>
+                        <p>
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/pres_de_la_fontaine.html"
+                                target="_blank">La ragazza aveva poi finito di riempire l’acqua alla fontana
+                                gorgogliante;</a>
+                            acciambellata la sparra sul capo, si era diretta verso casa con la
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/conca.html"
+                                target="_blank">
+                                conca
+                            </a>
+                            sulla testa, le braccia in alto per tenerla in equilibrio.
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/donna.html"
+                                target="_blank">Aveva inceduto con l’eleganza di una funambola, l’orlo della gonna che
+                                svolazzava
+                                attorno alle caviglie.</a>
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <p>Adesso, dalla grata di ferro della finestra la raggiungevano le voci concitate delle vicine:
+                        </p>
+                        <p>«Marì, sbrigate a fà tutte ‘ste cose eh, che sennò qua a Messa non ci arriviamo manco quando
+                            fa li
+                            intocchitti»</p>
+                        <p>«Essome, essome, arrivo!»</p>
+                        <p>Nel callaro che riposava sui mattoni, la cenere si era depositata sul fondo. Brandendo un
+                            mestolo freddo,
+                            Lucrezia riempì una
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/catinella.html"
+                                target="_blank">
+                                catinella
+                            </a>
+                            con la lisciva che si era formata.
+                        </p>
+                        <p>Mentre si chinava con la testa, avvertì un metallico rumore di passi. Il din din, prodotto
+                            dalle bollette
+                            di scarponi che battevano sulla pietra, si insinuò tra
+                            le case svoltando per i vicoli fino a raggiungere la soglia. Il portone di legno cigolò e si
+                            infilarono
+                            due agili figure: la prima, bassa e saltellante, avvolta in
+                            uno scialle nero da zingarella; l’altra, più lunga e composta, aveva una camicia che
+                            fasciava le spalle
+                            larghe e le braccia nerborute.</p>
+                        <p>«Adesso ti fai mettere un po’ di brillantina», cinguettò Aurora al fratello mentre
+                            riaccostavano, poi si
+                            precipitò sulle scale.</p>
+                        <p>Il giovane, rimasto solo, riempì di azzurri cardi fioriti il vaso sul davanzale.</p>
+                        <p>«Stai usando la lisciva per i capelli?», chiese grattando i baffi.</p>
+                        <p>«Per forza, non c’era altro», rispose Lucrezia intenta a massaggiare la cute con vigore.
+                            Risciacquò
+                            accuratamente, il fratello ne seguiva i movimenti appoggiato al
+                            tavolo, le braccia conserte. I capelli di lei risplendevano come miele d’acacia, quel rito
+                            di
+                            purificazione li indorava. Strofinò un asciugamano sul capo alla bell’e
+                            meglio e poi si spostò, seguita da lui, all’esterno per farli asciugare al sole. Sedette
+                            sullo scalino
+                            di una cantina alla fine del vicolo, là dove avevano sistemato
+                            un lungo fil di ferro per appendere i panni. In quel momento la vicina si affacciò alla
+                            soglia per
+                            svuotare un secchio d’acqua e schiuma sul bordo della viuzza.</p>
+                        <p>«Buongiorno Assunta» le fecero in coro.</p>
+                        <p>«Ragazzi! Che belli che siete, vi state preparando?», se li rimirò qualche secondo appesa
+                            alla scopa.
+                            «Siete proprio identici spiccicati ai vostri genitori, Dio li
+                            abbia in gloria», spazzò un po’. Vedendoli assorti continuò: «‘sti capelli, Lucrè, mi
+                            sembrano angelici…
+                            sì, sì, del Paradiso, capito? Tipo i ricami di certi paramenti
+                            del prete…» e scuoteva la mano: «Ah, che meraviglia, ce li avessi avuti io, capelli così»,
+                            buttò uno
+                            sguardo verso un punto sconosciuto oltre le mura degli abituri,
+                            oltre le tegole, oltre il cielo. Puntellò il mento sul manico della scopa e sospirò.</p>
+                        <p>«E Antonio? Si è svegliato?», chiese il ragazzo a un certo punto, interrompendo le sue
+                            fantasticherie.
+                            Trasalì come ridestata, lo fissò, poi scosse la testa e
+                            riprese a spazzare. La sera prima, con gli altri uomini del paese avevano giocato a briscola
+                            e a morra e
+                            si erano scolati fiaschi di vino. Avevano passato il tempo
+                            così, a ridere e zinzinare aspettando il sonno. Evidentemente Antonio era ancora rintronato
+                            tra le
+                            lenzuola.</p>
+                        <p>Aurora corse nella loro direzione con il
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/brillantina.html"
+                                target="_blank">
+                                barattolo di brillantina
+                            </a>
+                            nuovo. Lo svitò:
+                        </p>
+                        <p>«Adesso ti fai impomatare». Allo sbuffo di lui aggiunse: «Dai, da bravo»</p>
+                        <p>Lui, che teneva le mani in tasca e la schiena aderente al muro, abbassò la testa per la
+                            tortura. Prima di
+                            iniziare l’opera, la bimba porse alla sorella un foglietto.</p>
+                        <p>«Questo me lo ha dato Edoardo… se vuoi te lo leggo io… visto che ho fatto la seconda e leggo
+                            molto bene»,
+                            si esibì in tronfie moine, «me lo dice anche Settimio quando
+                            vado a casa sua a leggergli le poesie»</p>
+                        <p>«Io sò arrivata alla terza e quindi so leggere da me, sciò», Lucrezia agitò la mano per
+                            allontanare la
+                            peste curiosa. La bimba, di tutta risposta, ruotò il capo
+                            impassibile e tornò a impomatare il fratello con indifferenza, come a dire Queste storielle
+                            infantili
+                            non mi interessano.</p>
+                        <p>Lucrezia spiegò il biglietto stropicciato. In un tremolante corsivo, c’era scritto:</p>
+                        <p>Incontriamoci al lavatoio questo pomeriggio alle quattro
+                            Devo dirti una cosa importante</p>
+                    </div>
+                </div>
+
+
+
+                <div class="section">
+                    <div class="subsection">
+                        <h2>***</h2>
+                        <p>Zia fa capolino fra gli scuri incrociati delle imposte:</p>
+                        <p>«Oh, sei già qua?», si ritrae assonnata, «Arrivo». Dalla finestra aperta proviene il tenue
+                            vociare di una
+                            televisione accesa. Si sente uno scalpiccìo di ciabatte
+                            al piano di sopra, poi una sorta di trotto sul marmo delle scale. La chiave mormora nella
+                            toppa.</p>
+                        <p>«Buongiorno», sorrido porgendo la bottiglia di bianco che le avevo promesso, «ti sei ripresa
+                            dalla
+                            festa?»</p>
+                        <p>Inclina la testa e la batte con il polso:</p>
+                        <p>«Ce l’ho ancora in capoccia, la musica», si blocca un istante, poi prende ad annuire
+                            trasognata verso i
+                            tigli nella strada, «Però quant’è stato bello vedere la
+                            piazza di Rocca così piena di gente che ballava… zompettavano come li daini! E i bambini,
+                            poi… ripenso
+                            al povero Alvaro, te lo ricordi, no? Mi insegnò lui a ballare
+                            quando vivevo a Vallecupola. Tutte le volte che suonavano l’organetto alle feste eravamo
+                            coppia fissa,
+                            anche se lui era più grande. E poi si cantava, sempre, anche
+                            quando si lavorava. Si cantava…», porta il dorso rugoso della mano a coprire le labbra
+                            tremanti,
+                            stropiccia gli occhi lucidi. «Dai, entra»</p>
+                        <p>Quando l’ho incontrata qualche sera fa, alla festa organizzata per i Santi Agapito e
+                            Giustino, mi sono
+                            quasi commosso, non la vedevo da tanto. Raggomitolata sulla
+                            sedia di plastica e avvolta nel suo scialle nero, mi è sembrata piccolissima. Mi sono
+                            chinato per
+                            baciarla sulle guance e l’ho vista pallida, secca. Il tempo passa
+                            e non ci voglio credere, non voglio farmene una ragione. Nella mia mente rimarrà sempre
+                            intrappolata nel
+                            ricordo delle nostre passeggiate alla ricerca di more,
+                            quando rideva gioconda e rubizza nei suoi abiti leggeri. Con i cestini di vimini, in estate,
+                            camminare
+                            insieme per le strade attorno a Vallecupola, e cercare tra i
+                            rovi le perle più nere e splendenti. Leggera. Nella mia mente camminerà sempre così, come se
+                            non
+                            mettesse piede sull’asfalto, sempre una spanna sopra i sentieri
+                            battuti dai mortali. L’altra sera, però, ha persino fatto fatica ad alzarsi dalla sedia. Mi
+                            sono sentito
+                            senza forze anch’io. «Funziona così», mi sono ripetuto,
+                            cercando di ricacciare le lacrime negli occhi.</p>
+                        <p>Su Piazza della Vittoria le luminarie verdi, rosse e blu si accendevano a intermittenza; i
+                            piccoli aceri
+                            attorno alla fontana, fasciati da lucine a led, come
+                            cespugli di stelle. Il complesso si scatenava in un fragore multicolore, i fari dal palco
+                            proiettavano
+                            sui sanpietrini allegre geometrie danzanti. Il sassofonista,
+                            sceso tra la gente, si fletteva atletico in mezzo ai ballerini in una confusione armonica.
+                            Si
+                            distribuivano tutti in quella pista da ballo come pinoli pestati in un
+                            mortaio. A un certo punto la cantante, una sirena dalle treccine nerissime, aveva annunciato
+                            una
+                            mazurca: tutti avevano iniziato ad aggirarsi in coppie, impettiti.
+                            E poi era arrivato il momento della quadriglia e del tacco e punta e i ballerini – disposti
+                            in un
+                            immenso cerchio, meccanismo d’orologeria – si erano abbandonati
+                            alla corrente. Tra i performer la mia preferita era Patrizia, la parrucchiera: nella mischia
+                            saltava
+                            gioiosa, ancheggiava portandosi talvolta le mani sui fianchi.
+                            Luccicava, regina della festa.</p>
+                        <p>«Come va il lavoro?», chiede zia versando del succo alla pera in un bicchiere di vetro.</p>
+                        <p>«Bene, bene, abbiamo un sacco da fare, forse pure troppo», tiro su le sopracciglia carezzando
+                            la barba.
+                        </p>
+                        <p>«E Roma, com’è?», spinge nella mia direzione un piattino di coccio con dei pezzi di crostata.
+                        </p>
+                        <p>«È quello che è… piena…», raccolgo nel palmo alcune briciole cadute sul tavolo e le rovescio
+                            nel piatto.
+                        </p>
+                        <p>Zia si alza e puntellandosi ai mobili che ha intorno raggiunge la credenza, dalle cui ante
+                            estrae un
+                            sacchetto di carta:</p>
+                        <p>«Ti ho preparato dei panini, almeno non devi pensare al pranzo». Dal cassetto tira fuori
+                            anche una
+                            fotografia in bianco e nero logorata dal tempo, me la porge:
+                            «Così lo ritrovi più facilmente». Tira un enorme sospiro.</p>
+                        <p>Nella foto, un ragazzetto – potrà aver avuto attorno ai vent’anni – ammicca verso qualcosa al
+                            di là
+                            dell’obbiettivo. Gli occhi scavati, un ciuffo fluente. In tutta
+                            la sua floridezza, lo infilo nello zaino.</p>
+                        <p>«Eh… erano altri tempi. Poi ce ne siamo andati tutti, io qua a Rocca, tua nonna a Roma, e
+                            Vallecupola s’è
+                            svuotata», si siede di nuovo, «Quand’è che sei tornato?»</p>
+                        <p>«Per la sagra dei maccheroni a fezze. Penso di rimanere un paio di settimane», rispondo
+                            pensieroso. «Mi
+                            sa che vado, altrimenti si fa tardi»</p>
+                        <p>Stando a Google Maps, la distanza da percorrere da
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/usil.html"
+                                target="_blank">
+                                Rocca Sinibalda
+                            </a>
+                            a Vallecupola consta di 18,3 km, per un totale di 27 minuti di viaggio in macchina.
+                        </p>
+                        <p>Spengo il telefono e do un bacio alla zia.</p>
+                        <p>«Ah, i fiori!», mi aiuta a sistemare l’involucro nel portabagagli.</p>
+                        <p>Prima di partire faccio due passi. Il
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/stamp.html"
+                                target="_blank">
+                                castello
+                            </a>
+                            , che dal bar si vede oltre le poste e la farmacia, si erge in un gioco di merli e cipressi.
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/feudo_di_rocca_sinibalda.html"
+                                target="_blank">Composto, elegante come un cervo, impera sull’intera valle.</a>
+                            Riattraverso la piazza per raggiungere la macchina. La fontana, come una coppa, rovescia
+                            acqua con un
+                            sussurrìo. Fontana di rustico amore.
+                        </p>
+                    </div>
+                </div>
+
+                
+
+                <div class="section">
+                    <div class="subsection">
+                        <p>Lucrezia calava lungo la mulattiera, tra i sassi e gli spini, verso Fonte Sambuco. Alla Messa
+                            Edoardo non
+                            c’era stato, le aveva fatto uno strano effetto, brutto.
+                            Fino a prima si conoscevano solo di vista, come tutti in paese. Avevano iniziato a notarsi
+                            lì, durante
+                            la funzione. Le donne di solito sedevano sulle panche, mentre
+                            gli uomini rimanevano in piedi in fondo, vicino al portale, dai cui battenti aperti
+                            penetravano gli
+                            schiamazzi dei bimbi che correvano per la piazza. Da tempo
+                            avevano preso a guardarsi, tra i canti e le letture. Si voltava verso di lui che ricambiava
+                            e sorrideva,
+                            la camicia azzurra nei calzoni. Allora lei arrossiva e
+                            tornava a fissare l’altare, dove Don Tommaso armeggiava con il calice e la patena. Prendeva
+                            l’ostia:</p>
+                        <p>«Accipite et manducate ex hoc omnes: hoc est enim Corpus meum, quod pro vobis tradetur»</p>
+                        <p>Così avevano chiacchierato qualche volta sul sagrato. E avevano anche passeggiato assieme.
+                            Quel giorno
+                            però lui non si era visto e la curiosità – non priva di
+                            timore – di conoscere quale ne fosse il motivo era cresciuta, soprattutto per via di quel
+                            biglietto che
+                            teneva tra le dita e le sembrava troppo misterioso.</p>
+                        <p>Raggiunse un piazzale circondato dalle stalle e da un orto ribassato rispetto alla via.
+                            Davanti a lei, il
+                            fontanile invaso da un nugolo di donne. Strofinavano i
+                            tessuti con dei pezzi di sapone mentre intonavano come fringuelli
+                        </p>
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/quel_mazzolin_di_fiori.html"
+                                target="_blank">
+                                <blockquote>«Quel maaazzolìììn di fioriii, che vien dalla montaaagna»</blockquote>
+                            </a>
+                        <p>
+                            Dal coro si levò una voce che esclamò:
+                        </p>
+                        <p>«Caterì, l’hai visti che belli ‘sti cococcióli che hanno piantato qua?» fece cenno con la
+                            testa, per poi
+                            grattarsi dietro l’orecchio con la spalla, «Sarebbe da
+                            fregassene un paio, giusto pe prende i semi e ripiantalli n’altr’anno»</p>
+                        <p>«Eh già» l’assecondò Caterina, che si staccò dal gruppo per stendere le lenzuola in cima alla
+                            macera.</p>
+                        <p>Lucrezia superò il lavatoio, sul retro del quale una strada proseguiva fino alla Forca.
+                            Proprio da quel
+                            percorso ridiscendeva Edoardo, la zappa sulla spalla e il
+                            tascapane a tracolla. Quando fu sufficientemente vicino, le porse una manciata di piccoli
+                            frutti:</p>
+                        <p>«Ho colto un cico d’agorali e moriche pe Aurora», travasò le perle nere e giallognole dal
+                            palmo della sua
+                            mano richiusa a coppa a quello di Lucrezia, che le fece
+                            rotolare nella tasca dell’abito di cotone. «Ho trovato anche un po’ di crugnali ma mi avevi
+                            detto che
+                            non le piacevano, quindi li ho lasciati stare»</p>
+                        <p>«Sì, sì, quelli li sputa subito, sono troppo agri», rispose sgualcendo il tessuto per
+                            l’attesa. Si
+                            inchiodò al posto, pendendo dalle labbra di lui.</p>
+                        <p>«Allora.» fece, per sciogliere la tensione. Le cinse il fianco con un braccio, «Ho parlato
+                            con Manolo e
+                            s’è deciso d’anticipà la partenza, c’è la siccità, quindi
+                            è meglio se le pecore le portiamo via subito, hanno bisogno d’erba»</p>
+                        <p>«Quando?» chiese Lucrezia con una fitta allo stomaco.</p>
+                        <p>«Eh… domani mattina.»</p>
+                        <p>La ragazza sgranò gli occhi e si liberò dalla presa, le dita sulle tempie.</p>
+                        <p>«No, non fà così però, non me guardà co ‘sta faccia… s’è deciso così… siamo in tre pe ‘sta
+                            transumanza,
+                            non dipende da me…»</p>
+                        <p>«Io pensavo di avere più tempo», protestò la ragazza soffocando i singulti.</p>
+                        <p>Lui allargò le braccia scuotendo il capo:</p>
+                        <p>«Non ci posso fare niente, dispiace anche a me…»</p>
+                        <p>Disse che, una volta tornato, avrebbero potuto sposarsi, fare tutto. Era deciso.</p>
+                        <p>Lei guardò intorno per la via deserta. Solo li raggiungeva il canto delle lavandaie con lo
+                            sbattere degli
+                            stracci.</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="section">
+                    <div class="subsection">
+                        <p>Imbocco la salita che conduce alla piazza principale di Vallecupola, su cui affaccia la
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/croce.html"
+                                target="_blank">
+                                Chiesa di Santa Maria della Neve
+                            </a>
+                            , ma poi torno in retromarcia in direzione dei giardini pubblici e parcheggio accanto al
+                            marciapiede. «È
+                            più comodo», mi dico.
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <h2>***</h2>
+                        <p>Mi incammino in direzione di Varco Sabino con il mazzo di semprevivi incartati sottobraccio.
+                            Da piccolo,
+                            durante le estati in cui tornavamo a Vallecupola, ho
+                            percorso questa strada decine di volte con le ali ai piedi, abbandonando le voci lontane di
+                            nonna e zia
+                            che parlottavano dietro di me. Fino ad arrivare lì, in quel
+                            camposanto sperduto, di rado visitato da qualcuno. Supero la cinta muraria e mi immergo in
+                            un altro
+                            mondo, fatto di ricordi che sbiadiscono. Ripenso a una canzone
+                            che fa
+                        </p>
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/cemetry_gates.html"
+                                target="_blank">
+                                <blockquote>They were born and then they lived and then they died.</blockquote>
+                            </a>
+                        <p>
+                            I miei passi rimbombano tra le pietre. Tutte queste persone dove sono adesso? Dove i loro
+                            amori, gli
+                            odi, le passioni? Il vuoto che ho attorno mi fa pensare a un Partenone che crolla, il
+                            frontone – con
+                            tutta la sua mitologia – si sbriciola, le colonne rotolano a
+                            valle.
+                        </p>
+                        <p>Ritrovo la lapide dei nonni, effigiati in pose austere. A terra spacchetto i semprevivi.
+                            Compongo
+                            mazzetti variopinti che distribuisco nei loro vasi e in quelli
+                            di altri parenti, destreggiandomi tra le pareti di nomi e inerpicandomi sulla pesante scala
+                            a castello
+                            che cigola non appena la trascino.</p>
+                        <p>Mi inoltro in un’altra zona dove riposano anime che non conosco. Con la nonna e la zia
+                            passavamo lì per
+                            visitare una persona soltanto. Eccolo, proprio di fronte a
+                            me. Accanto alla sua foto, la stessa che mi ha dato la zia, stazionano secchi crisantemi.
+                            Faccio un
+                            segno della croce, abbasso lo sguardo.</p>
+                        <p>Ci hai lasciati da soli nel fiore dei tuoi anni, vivrai sempre nei nostri ricordi.</p>
+                        <p>Ogni volta che, bambino, leggevo questa frase scolpita nel marmo, mi improntavo a gravità,
+                            forse anche
+                            perché nonna rimaneva lì, composta, nervi solenni e cuore
+                            irrigidito. Portava un bacio con le dita secche sulla sua immagine:</p>
+                        <p>«L’hai visto, eh, che sono tornata a salutarti?», abbozzava un sorriso con gli occhi rossi.
+                            «Vivi sempre
+                            intensamente tutto quello che puoi, non sai mai quanto
+                            tempo ti è dato», mi diceva lisciandomi i capelli, la voce roca.</p>
+                        <p>Dopo aver passato uno straccio per rimuovere la polvere e il terriccio dalla lapide, depongo
+                            un mazzetto
+                            di semprevivi anche nel suo vaso.</p>
+                    </div>
+                    <div class="subsection">
+                        <p>Fuori dal cimitero provo a comporre il numero della zia, ma il segnale va e viene e non
+                            arriva a più di
+                            due tacche. Non riesco a inoltrare la chiamata, il display
+                            mi avverte che non c’è campo. Ci sono abituato, qui è sempre stato così, però in certi posti
+                            strategici
+                            si riesce a far prendere il cellulare, anche solo per qualche
+                            minuto. Di solito in questo punto funzionava perché ci si aggancia al ripetitore di Varco,
+                            il quale ora
+                            sembra ostinarsi a non concedermi mezza conversazione.
+                            Scorrazzo per il prato e mi isso su un masso come una capra, il braccio teso in alto alla
+                            ricerca del
+                            segnale perduto con l’aria che rinfresca le mascelle. Rinuncio
+                            maledicendo il gestore telefonico.</p>
+                        <p>Sghignazzo al ricordo di quando, da ragazzi, gironzolavamo peregrini per tutti i sentieri
+                            alla ricerca
+                            del segnale per esclamare, poi, alla prima timida lineetta
+                            che si fosse mostrata sullo schermo: «Qui prende! Anche qui prende!» a imitare il trionfante
+                            accento di
+                            Bruce Willis nella pubblicità.</p>
+                        <p>Quando torno ai giardinetti pubblici, da dove si scorge la Torre, proseguo oltre la fontana e
+                            mi infilo
+                            in un viale alberato che costeggia delle case. Raggiungo
+                            l’entrata più bassa del borgo. Da qui si diparte un serie di scaloni distribuiti su vicoli a
+                            zigzag
+                            attraverso cui si può risalire il paese. I vicoli sono
+                            fiancheggiati da muraglioni. Poco più su, la Madonnella.</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="section">
+                    <div class="subsection">
+
+                        <p>Il mucchio di pannocchie troneggiava al centro del cucinone. Tutt’attorno le ragazze,
+                            accomodate su
+                            seggiole di paglia, le scartocciavano per poi passarle ai fidanzati,
+                            che intrecciavano le fiette. Lucrezia, con quegli aurei tesori tra le mani, pensava alla
+                            sorellina che a
+                            pranzo aveva recitato una filastrocca. L’aveva fissata per un po’,
+                            aveva spalancato la bocca in un muto gridolino e poi era saltata dalla sedia.</p>
+                        <p>«Senti questa», aveva schiarito la voce:</p>
+                        <p>
+                            «
+                        <div class="poem">
+                            <div>“Chiccolino, dove stai?”</div>
+                            <div>“Sotto terra, non lo sai?”</div>
+                            <div>“E laggiù che cosa fai?”</div>
+                            <div>“Gonfio e cresco, non lo sai?”</div>
+                            <div>“Spunterai per questa sera?”</div>
+                            <div>“Spunterò per primavera!”</div>
+                            <div>“Mi darai un fiorellino,</div>
+                            <div>come il pesco del giardino?”</div>
+                            <div>“Non un fiore, ma un tesoro,</div>
+                            <div>ti darò una spiga d’oro.”</div>
+                        </div>
+                        »
+                        </p>
+                        <p>«Ma è bellissima!», aveva esclamato Lucrezia, mentre il fratello aveva accompagnato con un
+                            piccolo
+                            applauso i profondi inchini di Aurora.</p>
+                        <p>«L’ho imparata a scuola, ci ho ripensato solo ora perché stavo guardando i tuoi capelli, mi
+                            sono sembrati
+                            un campo di grano. Allora ho pensato: tu immagina se ogni
+                            capello fosse nato da un chiccolino piantato e cresciuto sulla tua testa, sarebbe
+                            incredibile! Ce la
+                            scriverò io, una poesia», ed era corsa a cercare carta, penna e
+                            calamaio, le trecce che saltellavano sulla schiena.</p>
+                        <p>Aurora si accingeva a frequentare la terza elementare e tanto sperava di poter continuare
+                            fino in quinta.
+                            In pochi avevano potuto permetterselo, ma lei amava leggere
+                            e studiare, li aveva pregati. Certo, rimuginava Lucrezia, questo avrebbe significato lavoro
+                            in più, quei
+                            pochi tacchini e qualche saltuario rammendo retribuito non
+                            avrebbero potuto essere sufficienti. Ne avevano discusso tutti e tre a tavola e il fratello
+                            le aveva
+                            ricordato che gli ultimi due anni di scuola non si sarebbero
+                            svolti a Vallecupola ma a Varco, a quattro chilometri di distanza.
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/video.html"
+                                target="_blank">Avrebbe dovuto camminare a lungo ogni giorno e, d’inverno, sulla
+                                neve.</a>
+                            Aurora si dichiarava pronta a tutto, irremovibile guerriera.
+                        </p>
+                        <p>«Che schifo!», una larva si contorceva dentro a uno scartoccio come un nobile signorotto
+                            nella sua
+                            poltrona.</p>
+                        <p>Entrò Antonio sbattendo la porta, una sigaretta in bocca. Maledisse il vento che ululava tra
+                            i vicoli e
+                            spegneva le
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/lampada.html"
+                                target="_blank">
+                                lampade a carburo
+                            </a>
+                            dei lampioni. Si sfregò le mani:
+                        </p>
+                        <p>«Fa freschetto, stasera». Buttò la cicca nel camino, «Scusate il ritardo… avete ancora
+                            bisogno di una
+                            mano?»</p>
+                        <p>«No, qui abbiamo finito» rispose Edoardo a cui Lucrezia passava l’ultima pannocchia, «aiutaci
+                            a spicciare
+                            e poi inizi con l’organetto»</p>
+                        <p>La stanza si trasformò in un formicaio, per qualche minuto tutti furono indaffarati a
+                            ripulire la polvere
+                            piovuta sulle mattonelle durante il lavoro e a mettere a
+                            posto, accatastare i sacchi, agganciare le fiette alle travi.</p>
+                        <p>Antonio s’assettò in un angolo e suonò una polka, poi un valzer. I giovani turbinavano nella
+                            stanza
+                            flessuosi. Lo pregarono di eseguire anche una
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/quadriglia.html"
+                                target="_blank">quadriglia</a>
+                            . Avevano poco spazio ma si divertirono, con Alvaro che amava comandare il ballo
+                            burlescamente: i suoi
+                            ordini confondevano le dame e i cavalieri fino a farli incespicare.
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/ballerini.html"
+                                target="_blank">«Contré!» urlava salterellando tra i ballerini allegri. «Zighete
+                                zaghete!», e
+                                intanto si infilava tra di loro roteando come una pantasima.</a>
+                        </p>
+                        <p>Antonio continuava a far soffiare lo strumento, inebriato dalle giravolte di suoni. Maria gli
+                            offrì un
+                            bicchiere di vino e lui suonò con più foga, piegato
+                            sull’organetto, molleggiando la testa e battendo il tacco a tempo.</p>
+                        <p>Avrebbero continuato all’infinito, ma verso mezzanotte la musica si spense, i ballerini si
+                            quietarono:
+                            Edoardo e i suoi due soci dovevano riposare per alzarsi
+                            presto il giorno dopo.</p>
+                        <p>«Così… ve ne partite?», fece Maria con una voce delusa, sconsolata «… sai che noia adesso…» e
+                            li
+                            abbracciò uno ad uno.</p>
+                        <p>Lucrezia salutò l’amato l’indomani mattina. Gli accarezzò la mano, disse:</p>
+                        <p>«Ti aspetto»</p>
+                        <p>Poi raggiunse il muraglione vicino alla Madonnella, da cui si scorgevano tutte le valli e i
+                            campi attorno
+                            al paese, per seguire dall’alto la carovana di pecore che
+                            se ne andava lungo la mulattiera. La marcia era guidata dai campanacci dei viarelli. Gli
+                            asini
+                            chiudevano la fila, carichi di reti, coperte, cupelle.</p>
+                        <p>
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/vallecupola_performance.html"
+                                target="_blank">«Ti aspetto», ripeté.</a>
+                        </p>
+                    </div>
+                </div>
+
+                
+
+                <div class="section">
+                    <div class="subsection">
+                        <p>Inizio la risalita. Cammino a rilento, mi fermo all’altezza del muricciolo prima del Palazzo
+                            Iacobuzzi.
+                            C’eri tu, qui, Attilio. Ogni volta che passavo. Con il tuo
+                            bastone e i tuoi baffetti candidi. Al ritorno dalle passeggiate ti mostravamo le more che
+                            avevamo colto,
+                            e qualche nocchia.</p>
+                        <p>«E bravi, bravi», sorridevi soddisfatto.</p>
+                        <p>Talvolta ti incontravamo per strada a scorrazzare in sella al tuo motorino, con cui andavi a
+                            governare le
+                            galline nell’aia.</p>
+                        <p>Ti immagino seduto qui come una statua a dominare il vento, vegliare su queste valli,
+                            proteggerne le
+                            storie: si salveranno dal tempo?</p>
+                    </div>
+                    <div class="subsection">
+
+                        <p>Risalgo gli scaloni e non riesco a darmi una risposta, procedo tra le vie a zigzag fino a
+                            raggiungere la
+                            Madonnella incastonata nella parete: ha una corona,
+                            dalle mani fuoriescono dei raggi. Sotto di lei si dipana il lungo
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/poesie.html"
+                                target="_blank">
+                                muraglione.
+                            </a>
+                        </p>
+                        <p>Lucrezia è ancora lì. È sempre rimasta lì. Asciuga le guance con le maniche:</p>
+                        <p>«Lucrè, ma che hai? Perché piangi così?», si dice da sola, «Mi sembri una bambina!».
+                            Stropiccia gli occhi
+                            con le nocche: «Da quando sei così frignona? Tornerà… come
+                            tutti, come sempre… tornerà tra qualche mese e allora potrai passare l’intero giorno con
+                            lui, devi
+                            aspettare», tiene il pugno tra il mento e il collo, le iridi
+                            rilucono.</p>
+                        <p>Sussulto, gli zigomi pesanti.</p>
+                        <p>Non tornerà. Me lo ha raccontato zia Aurora. Ad Aprilia, una mattina di novembre, in un campo
+                            inciamperà
+                            su un ordigno bellico inesploso. I compagni, allarmati
+                            dal boato, ritroveranno il corpo straziato. La notizia rimbomberà fino a Vallecupola, le
+                            urla di sua
+                            madre in ginocchio trapasseranno i muri.</p>
+                        <p>La guerra non l’aveva sfiorato, l’aveva sofferta come gli altri, con gli aerei che passavano
+                            e tutti si
+                            rifugiavano nelle cantine; ma poi avevano suonato le
+                            campane per annunciarne la fine. E allora era parsa a tutti una benedizione, si erano
+                            rovesciati nella
+                            piazza giulivi con un macigno in meno sul cuore. «Ero una
+                            monelletta, me lo ricordo come fosse un sogno», mi diceva sempre la zia commossa. Ma la
+                            guerra semina
+                            morte anche a distanza di anni. Rimane sepolta, silenziosa,
+                            pronta a riaffiorare dall’erba. Si era portata via anche lui, luminoso come un dente di
+                            leone.</p>
+                        <p>Tra un po’ andrò a salutare Angelino e Maria Pia, che ancora vivono qui e custodiscono i
+                            ricordi del
+                            borgo. Sicuramente li abbraccerò. Per il momento rimango
+                            fermo a immaginare questa ragazza bionda davanti a me, al cospetto della Madonnella che
+                            veglia
+                            silenziosa.</p>
+                        <p>Con la mia mano racchiudo, come in uno scrigno, quella di Lucrezia che tremola convulsamente
+                            sul muro
+                            ruvido. «Addio… a presto» sussurra all’amato lontano che
+                            procede, cappello e bastone, tra le macchie bianche in marcia. Socchiudo gli occhi – due
+                            pozze – e
+                            adagio la testa accanto alla sua. Mi esce un gemito accorato:</p>
+                        <p>«Nonna…», con le mani bagnate di lacrime le accarezzo i capelli d’oro, che io ho visto solo
+                            quando erano
+                            diventati ormai candidi.</p>
+                        <p>
+                            <a href="https://vallecupola-ecosystem.github.io/Exhibition/items_descriptions/nonno_e_nipote.html"
+                                target="_blank">In silenzio, osserviamo la mulattiera. Il gregge non si vede più.</a>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script>
+            // Crea particelle fluttuanti
+            function createParticles() {
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 30;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 12 + 's';
+                    particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+                    particlesContainer.appendChild(particle);
+                }
+            }
+
+            // Effetto mouse movement
+            document.addEventListener('mousemove', (e) => {
+                const decorativeElements = document.querySelectorAll('.decorative-circle');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+
+                decorativeElements.forEach((element, index) => {
+                    const speed = (index + 1) * 0.3;
+                    const x = (mouseX - 0.5) * speed * 30;
+                    const y = (mouseY - 0.5) * speed * 30;
+                    element.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+
+            // Effetto hover sui bottoni
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'translateY(-2px)';
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Effetto click sui bottoni
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    // Crea effetto ripple
+                    const ripple = document.createElement('span');
+                    const rect = button.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.pointerEvents = 'none';
+
+                    const rippleContainer = document.createElement('div');
+                    rippleContainer.style.position = 'absolute';
+                    rippleContainer.style.top = '0';
+                    rippleContainer.style.left = '0';
+                    rippleContainer.style.width = '100%';
+                    rippleContainer.style.height = '100%';
+                    rippleContainer.style.overflow = 'hidden';
+                    rippleContainer.style.borderRadius = '8px';
+                    rippleContainer.appendChild(ripple);
+
+                    button.appendChild(rippleContainer);
+
+                    setTimeout(() => {
+                        rippleContainer.remove();
+                    }, 600);
+                });
+            });
+
+            // Animazione scroll
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const decorativeElements = document.querySelectorAll('.decorative-circle');
+
+                decorativeElements.forEach((element, index) => {
+                    const speed = (index + 1) * 0.5;
+                    element.style.transform = `translateY(${scrolled * speed * 0.1}px)`;
+                });
+            });
+
+            // Inizializza particelle
+            createParticles();
+
+            // Aggiungi stile CSS per ripple
+            const style = document.createElement('style');
+            style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+            document.head.appendChild(style);
+        </script>
+</body>
+
+</html>

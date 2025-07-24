@@ -10,6 +10,12 @@ body {
     overflow-y: auto;
 }
 
+.container {
+    max-width: 900px;
+    margin: 80px auto 40px;
+}
+
+
 body {
     text-align: center;
     font-family: "Open Sans", sans-serif;
@@ -294,11 +300,11 @@ body {
 
 
 .nav-left {
-    left: 400px;
+    left: 80px;
 }
 
 .nav-right {
-    right: 400px;
+    right: 80px;
 }
 
 h1 {

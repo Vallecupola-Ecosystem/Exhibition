@@ -22,6 +22,8 @@
 }
 
 body {
+  height: auto;
+  overflow-y: auto;
   background-image: url('https://img.baba-blog.com/2024/09/Gamepad-controller-wallpaper-on-violet-background.jpg?x-oss-process=style%2Ffull');
   color: #111;
   font-family: 'Arial', sans-serif;
@@ -67,6 +69,12 @@ blockquote {
   color: #444;
 }
 
+.top-icons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
 .top-icons a,
 .nav-button {
   background-color: #ffcc00;
@@ -82,7 +90,7 @@ img {
   border: 10px solid #e6007e;
   transform: rotate(-1.5deg);
   margin: 1.5rem 0;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 iframe {
@@ -106,10 +114,73 @@ strong {
 }
 
 td {
-      background-color: #8e3877ff;
-      border: 1px solid #4a5a6a;
+  background-color: #8e3877ff;
+  border: 1px solid #4a5a6a;
 }
 
 tr:nth-child(even) td {
-      background-color: #c93fa4ff;
+  background-color: #c93fa4ff;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.nav-left {
+  left: 5px;
+}
+
+.nav-right {
+  right: 5px;
+}
+
+@media (max-width:700px) {
+
+  .nav-left,
+  .nav-right {
+    position: static;
+    transform: none;
+    margin: 12px 8px 0;
+  }
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease, padding .3s ease;
+  padding: 0 1rem;
+}
+
+.accordion-item input:checked~.accordion-content {
+  max-height: 1200px;
+  padding: 1rem;
+}
+
+.object-image {
+  pointer-events: none;
+}
+
+
+.image-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 70px;
+}
+
+.accordion-container {
+  position: relative;
+  z-index: 2;
+}
+
+.accordion-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

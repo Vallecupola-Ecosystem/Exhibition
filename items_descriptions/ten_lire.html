@@ -1,304 +1,214 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ten Lire Coins</title>
-<style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      color: #f0f0f0;
-      padding: 40px 20px;
-      min-height: 100vh;
-    }
-
-    .top-icons {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 12px;
-      z-index: 999;
-    }
-
-    .icon-button {
-      background: #1e2a38;
-      border: 1px solid #4b6b88;
-      color: #f0f0f0;
-      font-size: 1.1em;
-      padding: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 80px auto 40px;
-    }
-
-    .image-wrapper {
-      position: relative;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .object-image {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    }
-
-    .nav-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #1e2a38;
-      border: 1px solid #4b6b88;
-      color: #f0f0f0;
-      font-size: 1.5em;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .nav-left { left: -20px; }
-    .nav-right { right: -20px; }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 1.8em;
-    }
-
-    .accordion-container {
-      background-color: #1e2a38;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-      padding: 20px;
-    }
-
-    .accordion-item {
-      margin-bottom: 10px;
-      border: 1px solid #34495e;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    input[type="checkbox"] {
-      display: none;
-    }
-
-    .accordion-label {
-      display: block;
-      background-color: #2c3e50;
-      padding: 16px 20px;
-      font-size: 1.05em;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .accordion-label:hover {
-      background-color: #3a536d;
-    }
-
-    .accordion-label::after {
-      content: '▾';
-      position: absolute;
-      right: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    input[type="checkbox"]:checked + .accordion-label::after {
-      transform: rotate(180deg);
-    }
-
-    .note {
-      display: block;
-      font-size: 0.85em;
-      font-style: italic;
-      color: #b0c4de;
-      margin-top: 5px;
-    }
-
-    .accordion-content {
-      background-color: #263645;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      padding: 0 20px;
-    }
-
-    input[type="checkbox"]:checked ~ .accordion-content {
-      max-height: 10000px;
-      padding: 15px 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-
-    td {
-      padding: 12px 16px;
-      text-align: left;
-      min-width: 200px;
-      color: #f0f0f0;
-      background-color: #1f2d3c;
-      border: 1px solid #4a5a6a;
-    }
-
-    tr:nth-child(even) td {
-      background-color: #223344;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Ten Lire Coins</title>
+  <link rel="stylesheet" href="base.css">
+  <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
+
+<script src="style-changer.js" defer></script>
+
 <body>
-<!-- Top Buttons -->
-<div class="top-icons">
-<a class="icon-button" href="#">🌐 Translate</a>
-<a class="icon-button" href="#">📤 Share</a>
-</div>
-<div class="container">
-<!-- Image and Navigation -->
-<div class="image-wrapper">
-<a class="nav-button nav-left" href="object20.html" title="Previous Object">←</a>
-<img alt="10 Lire Coins" class="object-image" src="https://en.numista.com/catalogue/photos/italie/5f79c73e0a06f9.73627146-original.jpg" style="width:80%; heigth:auto;"
-/>
-<a class="nav-button nav-right" href="object2.html" title="Next Object">→</a>
-</div>
-<div class="accordion-container">
-<h1>🪙 Ten Lire Coins – Descriptions for Everyone</h1>
-<div class="accordion-item">
-<input id="acc1" type="checkbox"/>
-<label class="accordion-label" for="acc1">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
-<div class="accordion-content">
-   <p>
-              Imagine jingling coins in your pocket half a century ago in Rome. Among them is the light, silvery-grey 10-lire piece, only 1.6 grams yet worth enough for a fresh espresso. Minted from aluminium between 1951 and 2001, this tiny disc shows two proud symbols of Italy’s post-war hopes.
+
+  <div class="style-switcher">
+    <button id="style-toggle">Change Style ▾</button>
+    <ul id="style-menu">
+      <li data-style="nrw">New Retro Wave</li>
+      <li data-style="artdeco">Art Deco</li>
+      <li data-style="future">Furturistic</li>
+      <li data-style="memories">19ᵗʰ‑Century Memories</li>
+      <li data-style="popmag">Pop Magazine</li>
+      <li data-style="renaissance">Renaissance</li>
+    </ul>
+
+  </div>
+
+  <!-- Top Buttons -->
+  <div class="top-icons">
+    <a class="icon-button" href="#">
+      🌐 Translate
+    </a>
+    <a class="icon-button" href="#">
+      📤 Share
+    </a>
+  </div>
+
+  <div class="container">
+
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <div class="landscape"></div>
+      </div>
+
+      <div class="image-wrapper">
+        <a class="nav-button nav-left" title="Previous Object">←</a>
+        <img alt="10 Lire Coins" class="object-image image-neon"
+          src="https://en.numista.com/catalogue/photos/italie/5f79c73e0a06f9.73627146-original.jpg" />
+        <a class="nav-button nav-right" title="Next Object">→</a>
+      </div>
+      <div class="accordion-container">
+        <h1>🪙 Ten Lire Coins – Descriptions for Everyone</h1>
+        <div class="accordion-item">
+          <input id="acc1" type="checkbox" />
+          <label class="accordion-label" for="acc1">🧩 Let’s Discover! <span class="note">for young
+              adventurers</span></label>
+          <div class="accordion-content">
+            <p>
+              Imagine jingling coins in your pocket half a century ago in Rome. Among them is the light, silvery-grey
+              10-lire piece, only 1.6 grams yet worth enough for a fresh espresso. Minted from aluminium between 1951
+              and
+              2001, this tiny disc shows two proud symbols of Italy’s post-war hopes.
             </p>
             <p>
-              On the front (obverse) a farmer’s plough cuts through soil under the words “REPVBBLICA ITALIANA”. Flip it and you find twin wheat ears framing the number 10, celebrating food and growth. Designers Giuseppe Romagnoli and Pietro Giampaoli wanted every Italian to feel the nation’s rebirth in their hands.
+              On the front (obverse) a farmer’s plough cuts through soil under the words “REPVBBLICA ITALIANA”. Flip it
+              and you find twin wheat ears framing the number 10, celebrating food and growth. Designers Giuseppe
+              Romagnoli and Pietro Giampaoli wanted every Italian to feel the nation’s rebirth in their hands.
             </p>
             <p>
               Because the coin is so light, children used to skip it across fountains like a pebble.
             </p>
             <p>
-              Today forty billion examples survive, making it one of the most common European coins ever struck, yet collectors still search early dates like 1956 or the low-mintage 1965 proof. Next time you spot the tiny olive branch and plough, remember the big dreams they once financed.
+              Today forty billion examples survive, making it one of the most common European coins ever struck, yet
+              collectors still search early dates like 1956 or the low-mintage 1965 proof. Next time you spot the tiny
+              olive branch and plough, remember the big dreams they once financed.
             </p>
-</div>
-</div>
-<div class="accordion-item">
-<input id="acc2" type="checkbox"/>
-<label class="accordion-label" for="acc2">⌛ In a Minute <span class="note">for those in a rush</span></label>
-<div class="accordion-content">
-  <p>
-              Light as a movie ticket yet loaded with symbolism, Italy’s aluminium 10-lire coin became the pocket soundtrack of the post-war economic miracle. Issued first in 1951, the round disc measured 23.3 mm, weighed only 1.6 g, and cost the mint less than its face value to strike.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <input id="acc2" type="checkbox" />
+          <label class="accordion-label" for="acc2">⌛ In a Minute <span class="note">for those in a rush</span></label>
+          <div class="accordion-content">
+            <p>
+              Light as a movie ticket yet loaded with symbolism, Italy’s aluminium 10-lire coin became the pocket
+              soundtrack of the post-war economic miracle. Issued first in 1951, the round disc measured 23.3 mm,
+              weighed
+              only 1.6 g, and cost the mint less than its face value to strike.
             </p>
             <p>
-              On the obverse sculptor Giuseppe Romagnoli placed a forward-leaning plough, engraved by Pietro Giampaoli, under the legend “REPVBBLICA ITALIANA”. The reverse balances two ears of wheat around the big number 10, with a hidden olive twig nodding to peace.
+              On the obverse sculptor Giuseppe Romagnoli placed a forward-leaning plough, engraved by Pietro Giampaoli,
+              under the legend “REPVBBLICA ITALIANA”. The reverse balances two ears of wheat around the big number 10,
+              with a hidden olive twig nodding to peace.
             </p>
             <p>
-              During the boom years the coin bought tram rides, espresso shots, or morning newspapers; more than four billion pieces rolled from the Rome presses. Yet rarity exists: only 1.05 million pieces bear the 1965 date, making that year the key collector target. By the 1990s, vending machines ignored the denomination and schoolchildren used it as a tiddlywink.
+              During the boom years the coin bought tram rides, espresso shots, or morning newspapers; more than four
+              billion pieces rolled from the Rome presses. Yet rarity exists: only 1.05 million pieces bear the 1965
+              date,
+              making that year the key collector target. By the 1990s, vending machines ignored the denomination and
+              schoolchildren used it as a tiddlywink.
             </p>
-</div>
-</div>
-<div class="accordion-item">
-<input id="acc3" type="checkbox"/>
-<label class="accordion-label" for="acc3">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
-<div class="accordion-content">
-<p><strong>Designing Recovery</strong><br/>
-Mint director Giuseppe Romagnoli chose rural motifs—plough, wheat, olive twig—to celebrate food security and peace in 1951. Aluminium, surplus from war industries, fit the need for billions of low‑value coins.</p>
-<p><strong>Production &amp; Circulation</strong><br/>
-Schuler presses in Rome struck up to 650 pieces/minute. A tram ride cost ten lire; by 1980 the coin bought little, but vending machines loved its weight and magnetic neutrality.</p>
-<p><strong>Social Soundtrack</strong><br/>
-Street vendors rattled rolls; children played tiddlywinks; students tossed handfuls during 1968 protests—“silver rain” despite the dull metal.</p>
-<p><strong>Numismatic Nuances</strong><br/>
-Collectors examine rim width, digit shape, and micro‑mintmarks. Aluminium bruises easily; mint‑state coins live in inert flips with silica gel.</p>
-<p><strong>End of an Era</strong><br/>
-Euro conversion priced one coin at 0.52 euro‑cent. Most ended in charity boxes; some became key‑rings. Yet the plough and wheat still whisper stories of work, growth, and light‑hearted hope.</p>
-</div>
-</div>
-<div class="accordion-item">
-<input id="acc4" type="checkbox"/>
-<label class="accordion-label" for="acc4">📱 #ShareIt! <span class="note">for modern influencers</span></label>
-<div class="accordion-content">
-<p>💿✨ Flip a coin, time-travel to pre-euro Italy! Meet the feather-light 10-lire: 23 mm of recycled aluminium, minted 1951–2001, plough on one side, wheat on the other. Farmers and baristas, punks and priests—all felt its jingle.</p>
-            <p>Fast facts: weighs 1.6 g (lighter than one gummy bear), alloy descended from WW2 aircraft, legal tender until February 2002. Hardest date? 1965—only one million struck. Commonest? 1955, 275 million. Value today: pocket lint, unless pristine—then coffee money.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <input id="acc3" type="checkbox" />
+          <label class="accordion-label" for="acc3">🎓 Deep Dive <span class="note">for great seekers, studying in
+              detail</span></label>
+          <div class="accordion-content">
+            <p><strong>Designing Recovery</strong><br />
+              Mint director Giuseppe Romagnoli chose rural motifs—plough, wheat, olive twig—to celebrate food security
+              and
+              peace in 1951. Aluminium, surplus from war industries, fit the need for billions of low‑value coins.</p>
+            <p><strong>Production &amp; Circulation</strong><br />
+              Schuler presses in Rome struck up to 650 pieces/minute. A tram ride cost ten lire; by 1980 the coin bought
+              little, but vending machines loved its weight and magnetic neutrality.</p>
+            <p><strong>Social Soundtrack</strong><br />
+              Street vendors rattled rolls; children played tiddlywinks; students tossed handfuls during 1968
+              protests—“silver rain” despite the dull metal.</p>
+            <p><strong>Numismatic Nuances</strong><br />
+              Collectors examine rim width, digit shape, and micro‑mintmarks. Aluminium bruises easily; mint‑state coins
+              live in inert flips with silica gel.</p>
+            <p><strong>End of an Era</strong><br />
+              Euro conversion priced one coin at 0.52 euro‑cent. Most ended in charity boxes; some became key‑rings. Yet
+              the plough and wheat still whisper stories of work, growth, and light‑hearted hope.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <input id="acc4" type="checkbox" />
+          <label class="accordion-label" for="acc4">📱 #ShareIt! <span class="note">for modern
+              influencers</span></label>
+          <div class="accordion-content">
+            <p>💿✨ Flip a coin, time-travel to pre-euro Italy! Meet the feather-light 10-lire: 23 mm of recycled
+              aluminium, minted 1951–2001, plough on one side, wheat on the other. Farmers and baristas, punks and
+              priests—all felt its jingle.</p>
+            <p>Fast facts: weighs 1.6 g (lighter than one gummy bear), alloy descended from WW2 aircraft, legal tender
+              until February 2002. Hardest date? 1965—only one million struck. Commonest? 1955, 275 million. Value
+              today:
+              pocket lint, unless pristine—then coffee money.</p>
             <p>🎥 Content ideas:<br>
-            • Macro photo: coin on fresh wheat, reverse up.<br>
-            • Reel: balance five 10-lire on a gelato cone 🍦<br>
-            • Stitch the plough emoji 🚜 with vintage FIAT tractors.</p>
+              • Macro photo: coin on fresh wheat, reverse up.<br>
+              • Reel: balance five 10-lire on a gelato cone 🍦<br>
+              • Stitch the plough emoji 🚜 with vintage FIAT tractors.</p>
             <p>💡 “Before plumbing, there was posture.” “My grandma did this daily—so I could just turn a tap.”<br>
-            #10Lire #Numista728 #RetroCurrency</p></div>
-</div>
-<div class="accordion-item">
-<input id="acc5" type="checkbox"/>
-<label class="accordion-label" for="acc5">📊 Metadata <span class="note">for those who need structured information</span></label>
-<div class="accordion-content">
-<table class="metadata-table">
-<thead>
-<tr>
-<th>Predicate (Natural Language)</th>
-<th>Object (Natural Language)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Subject</td>
-<td>10 Lire</td>
-</tr>
-<tr>
-<td>Title</td>
-<td>10 Lire</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>Italian aluminum coin minted between 1951 and 2001. Features an olive branch on the obverse and a plough on the reverse. Very common in circulation.</td>
-</tr>
-<tr>
-<td>Issued</td>
-<td>1951</td>
-</tr>
-<tr>
-<td>Valid</td>
-<td>2001</td>
-</tr>
-<tr>
-<td>Source</td>
-<td><a href="https://en.numista.com/catalogue/pieces728.html" target="_blank">Numista Entry</a></td>
-</tr>
-<tr>
-<td>Weight</td>
-<td>1.6 gram</td>
-</tr>
-<tr>
-<td>Diameter</td>
-<td>23.3 mm</td>
-</tr>
-<tr>
-<td>Thickness</td>
-<td>1.6</td>
-</tr>
-<tr>
-<td>Shape</td>
-<td>Round</td>
-</tr>
-<tr>
-<td>Keeper</td>
-<td>Museo numismatico della Zecca Italiana</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
+              #10Lire #Numista728 #RetroCurrency</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <input id="acc5" type="checkbox" />
+          <label class="accordion-label" for="acc5">📊 Metadata <span class="note">for those who need structured
+              information</span></label>
+          <div class="accordion-content">
+            <table class="metadata-table">
+              <thead>
+                <tr>
+                  <th>Predicate (Natural Language)</th>
+                  <th>Object (Natural Language)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Subject</td>
+                  <td>10 Lire</td>
+                </tr>
+                <tr>
+                  <td>Title</td>
+                  <td>10 Lire</td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td>Italian aluminum coin minted between 1951 and 2001. Features an olive branch on the obverse and a
+                    plough on the reverse. Very common in circulation.</td>
+                </tr>
+                <tr>
+                  <td>Issued</td>
+                  <td>1951</td>
+                </tr>
+                <tr>
+                  <td>Valid</td>
+                  <td>2001</td>
+                </tr>
+                <tr>
+                  <td>Source</td>
+                  <td><a href="https://en.numista.com/catalogue/pieces728.html" target="_blank">Numista Entry</a></td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>1.6 gram</td>
+                </tr>
+                <tr>
+                  <td>Diameter</td>
+                  <td>23.3 mm</td>
+                </tr>
+                <tr>
+                  <td>Thickness</td>
+                  <td>1.6</td>
+                </tr>
+                <tr>
+                  <td>Shape</td>
+                  <td>Round</td>
+                </tr>
+                <tr>
+                  <td>Keeper</td>
+                  <td>Museo numismatico della Zecca Italiana</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
+
 </html>

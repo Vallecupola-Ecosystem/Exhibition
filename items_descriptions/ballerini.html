@@ -1,173 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ballerini</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      color: #f0f0f0;
-      padding: 40px 20px;
-      min-height: 100vh;
-    }
-
-    .top-icons {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 12px;
-      z-index: 999;
-    }
-
-    .icon-button {
-      background: #1e2a38;
-      border: 1px solid #4b6b88;
-      color: #f0f0f0;
-      font-size: 1.1em;
-      padding: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 80px auto 40px;
-    }
-
-    .image-wrapper {
-      position: relative;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .object-image {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    }
-
-    .nav-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #1e2a38;
-      border: 1px solid #4b6b88;
-      color: #f0f0f0;
-      font-size: 1.5em;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .nav-left { left: -20px; }
-    .nav-right { right: -20px; }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 1.8em;
-    }
-
-    .accordion-container {
-      background-color: #1e2a38;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-      padding: 20px;
-    }
-
-    .accordion-item {
-      margin-bottom: 10px;
-      border: 1px solid #34495e;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    input[type="checkbox"] {
-      display: none;
-    }
-
-    .accordion-label {
-      display: block;
-      background-color: #2c3e50;
-      padding: 16px 20px;
-      font-size: 1.05em;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .accordion-label:hover {
-      background-color: #3a536d;
-    }
-
-    .accordion-label::after {
-      content: '▾';
-      position: absolute;
-      right: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    input[type="checkbox"]:checked + .accordion-label::after {
-      transform: rotate(180deg);
-    }
-
-    .note {
-      display: block;
-      font-size: 0.85em;
-      font-style: italic;
-      color: #b0c4de;
-      margin-top: 5px;
-    }
-
-    .accordion-content {
-      background-color: #263645;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      padding: 0 20px;
-    }
-
-    input[type="checkbox"]:checked ~ .accordion-content {
-      max-height: 1000px;
-      padding: 15px 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-
-    td {
-      padding: 12px 16px;
-      text-align: left;
-      min-width: 200px;
-      color: #f0f0f0;
-      background-color: #1f2d3c;
-      border: 1px solid #4a5a6a;
-    }
-
-    tr:nth-child(even) td {
-      background-color: #223344;
-    }
-
-    blockquote {
-      font-style: italic;
-      margin: 1em 2em;
-      padding-left: 1em;
-      border-left: 4px solid #ccc;
-    }
-  </style>
-  <link href="../styles/pop_magazine.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="base.css">
+  <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
+
+<script src="style-changer.js" defer></script>
+
 <body>
+
+  <div class="style-switcher">
+    <button id="style-toggle">Change Style ▾</button>
+    <ul id="style-menu">
+      <li data-style="nrw">New Retro Wave</li>
+      <li data-style="artdeco">Art Deco</li>
+      <li data-style="future">Furturistic</li>
+      <li data-style="memories">19ᵗʰ‑Century Memories</li>
+      <li data-style="popmag">Pop Magazine</li>
+      <li data-style="renaissance">Renaissance</li>
+    </ul>
+  </div>
 
   <!-- Top Buttons -->
   <div class="top-icons">
@@ -176,129 +32,194 @@
   </div>
 
   <div class="container">
-    <!-- Image and Navigation -->
-    <div class="image-wrapper">
-      <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
-      <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608720856191.jpg" title="Ballerini" alt="Ballerini" style="height: 480px; width:auto;" ></img>
-      <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
-    </div>
-
-    <div class="accordion-container">
-      <h1>💃🕺 Ballerini</h1>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc1">
-        <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
-        <div class="accordion-content">
-          <p>🩰 Look how beautiful these two dancers are! They almost look as if they are about to move, don't they? The sculpture is called <em>Dancers</em> and is made of bronze. It was sculpted by Angelo Di Mario in 1986 and is now in his House Museum in Vallecupola. This small mountain village is just bursting with art! </p>
-          <p>This statue is made to look light and moving, as if the graceful dance was meant to last forever. And just like in fairy tales or dreams, every shape here tells a story. Want to see it up close? There are many more in the House Museum! And each sculpture is accompanied... by a poem! ✨</p>        </div>
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <div class="landscape"></div>
       </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc2">
-        <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
-        <div class="accordion-content">
-          <p>The sculpture <em>Ballerini</em> (Angelo Di Mario, 1986) is a bronze work measuring 35×32 cm kept at the Angelo Di Mario House Museum Library in Vallecupola. It depicts two figures dancing, stylised and united in a fluid gesture. The material seems to defy its heaviness, tending towards a compositional lightness that recalls harmony, rhythm and grace.</p>
-          <p>The work is one of approximately 300 sculptures created by the artist, many of which are now on display in a gallery set up in the Casa Museo thanks to the support of the Lazio Region (Annual Plan 2023). The gallery - designed by Jacopo Eusepi and Massimo Lauricella - hosts around 30 small works in an installation reminiscent of the shape of a beehive, enhancing the dialogue between art, poetry and territory.</p>        
+      <!-- Image and Navigation -->
+      <div class="image-wrapper">
+        <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
+        <img class="object-image image-neon"
+          src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608720856191.jpg" title="Ballerini"
+          alt="Ballerini"></img>
+        <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
+      </div>
+
+      <div class="accordion-container">
+        <h1>💃🕺 Ballerini</h1>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc1">
+          <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+              adventurers</span></label>
+          <div class="accordion-content">
+            <p>🩰 Look how beautiful these two dancers are! They almost look as if they are about to move, don't they?
+              The
+              sculpture is called <em>Dancers</em> and is made of bronze. It was sculpted by Angelo Di Mario in 1986
+              and
+              is now in his House Museum in Vallecupola. This small mountain village is just bursting with art! </p>
+            <p>This statue is made to look light and moving, as if the graceful dance was meant to last forever. And
+              just
+              like in fairy tales or dreams, every shape here tells a story. Want to see it up close? There are many
+              more
+              in the House Museum! And each sculpture is accompanied... by a poem! ✨</p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc3">
-        <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
-        <div class="accordion-content">
-          <p>Created in 1986, the sculpture <em>Dancers</em> is a bronze work by Angelo Di Mario (1925-2013), exhibited at the Library House Museum in Vallecupola. The composition depicts two dancers wrapped in an ascending, fluid gesture, where the bronze loses its staticity to assume an internal dynamism. It is not just a representation of dance: it is the tension between body and space, between gesture and form.</p>
-          <p>Di Mario, a self-taught and deeply cultured artist, integrates references to classicism, the Etruscan world, but also influences from the second half of the 20th century into his production. His works move between the raw material and the polished symbol, in a sculpture capable of accommodating light, emptiness and meaning.</p>
-          <p>Stone - or bronze, in this case - for Di Mario is not just support, but memory: “mute witness” that speaks to those who know how to listen. Even <em>Ballerini</em> seems to sculpt time itself, transforming a fleeting moment into an eternal form.</p>
-          <p>The sculpture can now be seen in the Art Gallery of the Library House Museum, created thanks to the contribution of the Lazio Region. Each work is accompanied by a poem, testifying to Di Mario's multifaceted vocation: poet, sculptor, etruscologist.</p>          
-          <p>Andrea Alessi (critic and head of the Acquapendente Museum) writes about his sculpture, praised by critics such as Luigi Tallarico:</p>
-          <blockquote>
-            Hard, strong, immortal like stone, and yet at the same time fragile, delicate and flexible
-            like the plastic forms that slide fast, fluctuate and conquer their autonomy
-            in space. This is the feeling that emerges when viewing the entire sculptural production
-            of Angelo di Mario (1925-2013). Of a multi-purpose work, i.e. one that resists
-            the inexorable passage of time, that is eternal and maintains its qualities
-            unaltered over the centuries, but that similarly is also the carrier of a poetic message,
-            the artistic expression of an authentic and transparent soul.
-          </blockquote>          
-          <img src="../images/gallery.JPG" width="500" alt="gallery"/>
-          <h3>📚 References:</h3>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc2">
+          <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
+              rush</span></label>
+          <div class="accordion-content">
+            <p>The sculpture <em>Ballerini</em> (Angelo Di Mario, 1986) is a bronze work measuring 35×32 cm kept at
+              the
+              Angelo Di Mario House Museum Library in Vallecupola. It depicts two figures dancing, stylised and united
+              in
+              a fluid gesture. The material seems to defy its heaviness, tending towards a compositional lightness
+              that
+              recalls harmony, rhythm and grace.</p>
+            <p>The work is one of approximately 300 sculptures created by the artist, many of which are now on display
+              in
+              a gallery set up in the Casa Museo thanks to the support of the Lazio Region (Annual Plan 2023). The
+              gallery
+              - designed by Jacopo Eusepi and Massimo Lauricella - hosts around 30 small works in an installation
+              reminiscent of the shape of a beehive, enhancing the dialogue between art, poetry and territory.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc3">
+          <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
+              detail</span></label>
+          <div class="accordion-content">
+            <p>Created in 1986, the sculpture <em>Dancers</em> is a bronze work by Angelo Di Mario (1925-2013),
+              exhibited
+              at the Library House Museum in Vallecupola. The composition depicts two dancers wrapped in an ascending,
+              fluid gesture, where the bronze loses its staticity to assume an internal dynamism. It is not just a
+              representation of dance: it is the tension between body and space, between gesture and form.</p>
+            <p>Di Mario, a self-taught and deeply cultured artist, integrates references to classicism, the Etruscan
+              world, but also influences from the second half of the 20th century into his production. His works move
+              between the raw material and the polished symbol, in a sculpture capable of accommodating light,
+              emptiness
+              and meaning.</p>
+            <p>Stone - or bronze, in this case - for Di Mario is not just support, but memory: “mute witness” that
+              speaks
+              to those who know how to listen. Even <em>Ballerini</em> seems to sculpt time itself, transforming a
+              fleeting moment into an eternal form.</p>
+            <p>The sculpture can now be seen in the Art Gallery of the Library House Museum, created thanks to the
+              contribution of the Lazio Region. Each work is accompanied by a poem, testifying to Di Mario's
+              multifaceted
+              vocation: poet, sculptor, etruscologist.</p>
+            <p>Andrea Alessi (critic and head of the Acquapendente Museum) writes about his sculpture, praised by
+              critics
+              such as Luigi Tallarico:</p>
+            <blockquote>
+              Hard, strong, immortal like stone, and yet at the same time fragile, delicate and flexible
+              like the plastic forms that slide fast, fluctuate and conquer their autonomy
+              in space. This is the feeling that emerges when viewing the entire sculptural production
+              of Angelo di Mario (1925-2013). Of a multi-purpose work, i.e. one that resists
+              the inexorable passage of time, that is eternal and maintains its qualities
+              unaltered over the centuries, but that similarly is also the carrier of a poetic message,
+              the artistic expression of an authentic and transparent soul.
+            </blockquote>
+            <img src="../images/gallery.JPG" width="500" alt="gallery" />
+            <h3>📚 References:</h3>
             <ul>
-              <li><a href="https://www.bibliotecasamuseoangelodimario.com/index.html">Homepage Library Angelo Di Mario</a></li>
-              <li>Alessi, Andrea. <em>La scultura di Angelo Di Mario per Andrea Alessi</em>, in Di Mario, Maria Grazia. <em>Angelo Di Mario (Catalogo)</em>. Angelo Di Mario Aps, p.22</li>
-              <li><a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?db_search=Sculture%20Angelo%20Di%20Mario&sort_on=5&display=columns&search_for=Aa1599931929168&search_field=all">Online Mediagallery of the Sculptures</a></li>
-              <li><a href="https://www.facebook.com/bibliotecaangelodimario">Facebook Page of Angelo Di Mario Library</a></li>
+              <li><a href="https://www.bibliotecasamuseoangelodimario.com/index.html">Homepage Library Angelo Di
+                  Mario</a>
+              </li>
+              <li>Alessi, Andrea. <em>La scultura di Angelo Di Mario per Andrea Alessi</em>, in Di Mario, Maria
+                Grazia.
+                <em>Angelo Di Mario (Catalogo)</em>. Angelo Di Mario Aps, p.22
+              </li>
+              <li><a
+                  href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?db_search=Sculture%20Angelo%20Di%20Mario&sort_on=5&display=columns&search_for=Aa1599931929168&search_field=all">Online
+                  Mediagallery of the Sculptures</a></li>
+              <li><a href="https://www.facebook.com/bibliotecaangelodimario">Facebook Page of Angelo Di Mario
+                  Library</a>
+              </li>
             </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc4">
-        <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern influencers</span></label>
-        <div class="accordion-content">
-          <p>💃 Two bodies, one gesture.<br>
-          This 1986 sculpture is made of bronze, but seems to dance in the air. It was sculpted by Angelo Di Mario, a poet and artist from Vallecupola, and now lives in his House Museum.</p>
-          <p>📍You really want to see it? It is in a unique gallery, hidden in the mountains of Lazio. 30 sculptures, 30 poems. A beehive of art and light, built to excite.</p>
-          <p>🗿Bronze becomes light, space vibrates.<br>
-            #DancingSculpture #VallecupolaVibes #ArteViva #CasaMuseo #BronzeDancers #AngeloDiMario</p>        
+        <div class="accordion-item">
+          <input type="checkbox" id="acc4">
+          <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+              influencers</span></label>
+          <div class="accordion-content">
+            <p>💃 Two bodies, one gesture.<br>
+              This 1986 sculpture is made of bronze, but seems to dance in the air. It was sculpted by Angelo Di
+              Mario,
+              a
+              poet and artist from Vallecupola, and now lives in his House Museum.</p>
+            <p>📍You really want to see it? It is in a unique gallery, hidden in the mountains of Lazio. 30
+              sculptures,
+              30
+              poems. A beehive of art and light, built to excite.</p>
+            <p>🗿Bronze becomes light, space vibrates.<br>
+              #DancingSculpture #VallecupolaVibes #ArteViva #CasaMuseo #BronzeDancers #AngeloDiMario</p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc5">
-        <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured information</span></label>
-        <div class="accordion-content">
-          <table>
-            <tbody>
-              <tr>
-                <td>Type</td>
-                <td>Sculpture</td>
-              </tr>
-              <tr>
-                <td>Title</td>
-                <td>Ballerini</td>
-              </tr>
-              <tr>
-                <td>Sculptor</td>
-                <td>Angelo Di Mario</td>
-              </tr>
-              <tr>
-                <td>Holding Institution</td>
-                <td>Biblioteca casa museo Angelo Di Mario</td>
-              </tr>
-              <tr>
-                <td>Subject</td>
-                <td>dancers</td>
-              </tr>
-              <tr>
-                <td>Description</td>
-                <td>bronze sculpture representing two dancers</td>
-              </tr>
-              <tr>
-                <td>Period</td>
-                <td>1986</td>
-              </tr>
-              <tr>
-                <td>Source</td>
-                <td><a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608720877&dettagli=media" target="_blank">Link</a></td>
-              </tr>
-              <tr>
-                <td>Location</td>
-                <td>Vallecupola (Rocca Sinibalda, RI)</td>
-              </tr>
-              <tr>
-                <td>Material</td>
-                <td>Bronze</td>
-              </tr>
-              <tr>
-                <td>Measures</td>
-                <td>35×32 cm</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc5">
+          <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
+              information</span></label>
+          <div class="accordion-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Type</td>
+                  <td>Sculpture</td>
+                </tr>
+                <tr>
+                  <td>Title</td>
+                  <td>Ballerini</td>
+                </tr>
+                <tr>
+                  <td>Sculptor</td>
+                  <td>Angelo Di Mario</td>
+                </tr>
+                <tr>
+                  <td>Holding Institution</td>
+                  <td>Biblioteca casa museo Angelo Di Mario</td>
+                </tr>
+                <tr>
+                  <td>Subject</td>
+                  <td>dancers</td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td>bronze sculpture representing two dancers</td>
+                </tr>
+                <tr>
+                  <td>Period</td>
+                  <td>1986</td>
+                </tr>
+                <tr>
+                  <td>Source</td>
+                  <td><a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608720877&dettagli=media"
+                      target="_blank">Link</a></td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>Vallecupola (Rocca Sinibalda, RI)</td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td>Bronze</td>
+                </tr>
+                <tr>
+                  <td>Measures</td>
+                  <td>35×32 cm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
+
 </html>

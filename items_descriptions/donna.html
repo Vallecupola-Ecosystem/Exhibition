@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donna</title>
-  <style>
+  <!-- <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -164,9 +165,26 @@
       padding-left: 1em;
       border-left: 4px solid #ccc;
     }
-  </style>
+  </style> -->
+  <link rel="stylesheet" href="base.css">
+  <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
+
+<script src="style-changer.js" defer></script>
+
 <body>
+  <div class="style-switcher">
+    <button id="style-toggle">Change Style ▾</button>
+    <ul id="style-menu">
+      <li data-style="nrw">New Retro Wave</li>
+      <li data-style="artdeco">Art Deco</li>
+      <li data-style="future">Furturistic</li>
+      <li data-style="memories">19ᵗʰ‑Century Memories</li>
+      <li data-style="popmag">Pop Magazine</li>
+      <li data-style="renaissance">Renaissance</li>
+    </ul>
+
+  </div>
 
   <!-- Top Buttons -->
   <div class="top-icons">
@@ -175,156 +193,241 @@
   </div>
 
   <div class="container">
-    <!-- Image and Navigation -->
-    <div class="image-wrapper">
-      <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
-      <a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608675561&dettagli=media"> <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608675504350.jpg" title="Donna" alt="Donna" style="width:80%; heigth:auto;" ></img></a>
-      <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
-    </div>
-
-    <div class="accordion-container">
-      <h1>👩‍🌾 Donna</h1>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc1">
-        <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
-        <div class="accordion-content">
-          <p>Look at this statue! It is a woman carrying a large container on her head, as was once done to transport food and various objects. It was made in 1966 with coloured 
-          clay by Angelo Di Mario, an artist born in Vallecupola! It is now on display in the <em>House Museum Angelo Di Mario</em>, a special place full of art and memories.</p>
-          <p>Also in the story <em>Vallecupola</em>, the protagonists make these everyday gestures, typical of a bygone era, very different from our own. It is precisely the women of his village that
-          inspired the artist to create some of his works! </p>
-          <p>Angelo Di Mario, just like Aurora (the little girl in the story), went to school as a child walking in the snow for kilometres! He studied a lot, read 
-          everything. He dreamed that one day his house could become a museum: that dream came true thanks 
-          to his daughters. Today his story teaches us that passion can become beauty. 🌟</p>
-        </div>
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <div class="landscape"></div>
+      </div>
+      <!-- Image and Navigation -->
+      <div class="image-wrapper">
+        <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
+        <a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608675561&dettagli=media"> <img
+            src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608675504350.jpg" title="Donna" alt="Donna"
+            style="width:80%; heigth:auto;" class="object-image image-neon"></img></a>
+        <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
       </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc2">
-        <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
-        <div class="accordion-content">
-          <p>Donna is a coloured clay sculpture (37×17 cm), created by Angelo Di Mario in 1966 and now kept at the <em>Library House Museum Angelo Di Mario</em> in Vallecupola. The figure depicts a naked woman carrying a container (conca, tina, basket?) on her head, in a pose that evokes the daily gestures typical of rural life in the last century. The body emerges from a material base reminiscent of earth and roots.</p>
-          <p>This simple yet essential gesture is also central to the Vallecupola story, where the young Lucrezia and her sister Aurora face their daily labours with strength and grace. The connection between sculpture and text reveals how the popular and feminine experience of Vallecupola is always a source of artistic inspiration.</p>
-          <p>Born in Vallecupola in 1925, Di Mario was a teacher, poet, linguist and self-taught. He studied ancient languages, glottology and poetry and produced over 300 artistic works. As a child, like Aurora, he tackled daily kilometres of walking in the snow to go to school in Varco, a village about four kilometres away from Vallecupola.</p> 
-          <p>The House Museum, founded in 2015 thanks to the work of his daughters, is recognised by the <strong>MIBAC</strong> and the <strong>Lazio Region</strong>, and is part of the <strong>SIMBAS</strong> circuit. Today it houses his works, his books and his dreams.</p>
+      <div class="accordion-container">
+        <h1>👩‍🌾 Donna</h1>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc1">
+          <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+              adventurers</span></label>
+          <div class="accordion-content">
+            <p>Look at this statue! It is a woman carrying a large container on her head, as was once done to transport
+              food and various objects. It was made in 1966 with coloured
+              clay by Angelo Di Mario, an artist born in Vallecupola! It is now on display in the <em>House Museum
+                Angelo
+                Di Mario</em>, a special place full of art and memories.</p>
+            <p>Also in the story <em>Vallecupola</em>, the protagonists make these everyday gestures, typical of a
+              bygone
+              era, very different from our own. It is precisely the women of his village that
+              inspired the artist to create some of his works! </p>
+            <p>Angelo Di Mario, just like Aurora (the little girl in the story), went to school as a child walking in
+              the
+              snow for kilometres! He studied a lot, read
+              everything. He dreamed that one day his house could become a museum: that dream came true thanks
+              to his daughters. Today his story teaches us that passion can become beauty. 🌟</p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc3">
-        <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
-        <div class="accordion-content">
-          <p>
-            The sculpture <em>Woman</em> (Angelo Di Mario, 1966; coloured clay, 37×17 cm), housed in the Museum House Library in Vallecupola, depicts with essentiality and symbolic power a female figure carrying a container (conca, tina, basket?) on her head. The gesture, full of memory, recalls the daily work of women in the small Apennine villages of the last century. The work is stylistically suspended between realistic observation and abstraction: the material - modelled as if emerging from the earth - emphasises the link between body, toil and landscape.
-          </p>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc2">
+          <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
+          <div class="accordion-content">
+            <p>Donna is a coloured clay sculpture (37×17 cm), created by Angelo Di Mario in 1966 and now kept at the
+              <em>Library House Museum Angelo Di Mario</em> in Vallecupola. The figure depicts a naked woman carrying a
+              container (conca, tina, basket?) on her head, in a pose that evokes the daily gestures typical of rural
+              life
+              in the last century. The body emerges from a material base reminiscent of earth and roots.
+            </p>
+            <p>This simple yet essential gesture is also central to the Vallecupola story, where the young Lucrezia and
+              her sister Aurora face their daily labours with strength and grace. The connection between sculpture and
+              text reveals how the popular and feminine experience of Vallecupola is always a source of artistic
+              inspiration.</p>
+            <p>Born in Vallecupola in 1925, Di Mario was a teacher, poet, linguist and self-taught. He studied ancient
+              languages, glottology and poetry and produced over 300 artistic works. As a child, like Aurora, he tackled
+              daily kilometres of walking in the snow to go to school in Varco, a village about four kilometres away
+              from
+              Vallecupola.</p>
+            <p>The House Museum, founded in 2015 thanks to the work of his daughters, is recognised by the
+              <strong>MIBAC</strong> and the <strong>Lazio Region</strong>, and is part of the <strong>SIMBAS</strong>
+              circuit. Today it houses his works, his books and his dreams.
+            </p>
+          </div>
+        </div>
 
-          <p>
-            The scene evokes the same imagery as the story <em>Vallecupola</em>, where Lucrezia embodies the rituality of peasant life: doing the laundry, cooking, filling the basin at the fountain and then carrying it on her head. This feminine gesture, common to generations and territories, here becomes form and narrative.
-          </p>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc3">
+          <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
+              detail</span></label>
+          <div class="accordion-content">
+            <p>
+              The sculpture <em>Woman</em> (Angelo Di Mario, 1966; coloured clay, 37×17 cm), housed in the Museum House
+              Library in Vallecupola, depicts with essentiality and symbolic power a female figure carrying a container
+              (conca, tina, basket?) on her head. The gesture, full of memory, recalls the daily work of women in the
+              small Apennine villages of the last century. The work is stylistically suspended between realistic
+              observation and abstraction: the material - modelled as if emerging from the earth - emphasises the link
+              between body, toil and landscape.
+            </p>
 
-          <h3>The Sculptor and the House Museum</h3>
-          <p>
-            Angelo Di Mario (1925-2013), who was born in Vallecupola and lived there until his thirties, was a poet, sculptor and scholar of linguistics and Etruscology. Intellectually tireless, he left more than 300 sculptures, 13 poetry collections and 5 volumes dedicated to the language of the Etruscans, reviewed and appreciated by critics such as Barberi Squarotti and Vicari, and recognised by institutions such as the Accademia dei Lincei and the Ministry of Culture. He studied ancient and modern languages, glottology and phonetics as a self-taught artist, developing a linguistic research parallel to his artistic production.
-          </p>
+            <p>
+              The scene evokes the same imagery as the story <em>Vallecupola</em>, where Lucrezia embodies the rituality
+              of peasant life: doing the laundry, cooking, filling the basin at the fountain and then carrying it on her
+              head. This feminine gesture, common to generations and territories, here becomes form and narrative.
+            </p>
 
-          <p>
-            In 2015, as he wished, the <strong>Library House Museum Angelo Di Mario</strong> was born, founded by his daughters, today part of the Lazio Region Library System (SBN, code RI0179) and recognised by the MIBAC. Some 9,000 publications are preserved inside, with a rare and specialised section on Etruscology. Visitors can also access the manuscript archive and the sculptural heritage, distributed in the original rooms of the house.
-          </p>
-          
-          <p>
-            The House Museum is managed by the <strong>Associazione Angelo Di Mario APS</strong>, which is dedicated to the promotion and study of his work, with the aim of also enhancing the territory of the Salto and Turano Valleys. The Association promotes cultural, educational, artistic and environmental activities, with a broad and inclusive vision that ranges from the protection of the rural landscape to the promotion of cultural and social tourism.
-          </p>
+            <h3>The Sculptor and the House Museum</h3>
+            <p>
+              Angelo Di Mario (1925-2013), who was born in Vallecupola and lived there until his thirties, was a poet,
+              sculptor and scholar of linguistics and Etruscology. Intellectually tireless, he left more than 300
+              sculptures, 13 poetry collections and 5 volumes dedicated to the language of the Etruscans, reviewed and
+              appreciated by critics such as Barberi Squarotti and Vicari, and recognised by institutions such as the
+              Accademia dei Lincei and the Ministry of Culture. He studied ancient and modern languages, glottology and
+              phonetics as a self-taught artist, developing a linguistic research parallel to his artistic production.
+            </p>
 
-          <h3>The artistic principle:</h3>
+            <p>
+              In 2015, as he wished, the <strong>Library House Museum Angelo Di Mario</strong> was born, founded by his
+              daughters, today part of the Lazio Region Library System (SBN, code RI0179) and recognised by the MIBAC.
+              Some 9,000 publications are preserved inside, with a rare and specialised section on Etruscology. Visitors
+              can also access the manuscript archive and the sculptural heritage, distributed in the original rooms of
+              the
+              house.
+            </p>
+
+            <p>
+              The House Museum is managed by the <strong>Associazione Angelo Di Mario APS</strong>, which is dedicated
+              to
+              the promotion and study of his work, with the aim of also enhancing the territory of the Salto and Turano
+              Valleys. The Association promotes cultural, educational, artistic and environmental activities, with a
+              broad
+              and inclusive vision that ranges from the protection of the rural landscape to the promotion of cultural
+              and
+              social tourism.
+            </p>
+
+            <h3>The artistic principle:</h3>
             <blockquote>
-            <p>Beauty is in every spot. To find it, one must discover the points in harmony, both with regard to the existing and the imaginary.</p>
+              <p>Beauty is in every spot. To find it, one must discover the points in harmony, both with regard to the
+                existing and the imaginary.</p>
             </blockquote>
 
-          <p>
-            The sculpture <em>Woman</em> is thus more than a figurative work: it is a node between art, history and community. A concrete example of how an everyday gesture can cross time and become a universal sign, a living memory, a cultural identity.
-          </p>        
+            <p>
+              The sculpture <em>Woman</em> is thus more than a figurative work: it is a node between art, history and
+              community. A concrete example of how an everyday gesture can cross time and become a universal sign, a
+              living memory, a cultural identity.
+            </p>
 
-          <h3>📚 References:</h3>
+            <h3>📚 References:</h3>
             <ul>
-              <li>Polia, Mario. <em>Vallecupola, la memoria e la storia. Tradizioni millenarie di un borgo sabino</em>. Angelo Di Mario Aps.
-                  (if you want to study in depth cultural traditions of the village)</li>
-              <li><a href="https://www.bibliotecasamuseoangelodimario.com/index.html">Homepage Library Angelo Di Mario</a></li>
-              <li><a href="https://www.bibliotecasamuseoangelodimario.com/pageIT.do?key=1607631434&dettagli=storia%20e%20finalit%C3%A0">History and goals of the House Museum Angelo Di Mario</a></li>
-              <li>Di Mario, Maria Grazia. <em>Angelo Di Mario (Catalogo)</em>. Angelo Di Mario Aps. (for a complete italian overview about the author and all its works)</li>
-              <li><a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?db_search=Sculture%20Angelo%20Di%20Mario&sort_on=5&display=columns&search_for=Aa1599931929168&search_field=all">Online Mediagallery of the Sculptures</a></li>
-              <li><a href="https://www.facebook.com/bibliotecaangelodimario">Facebook Page of Angelo Di Mario Library</a></li>
+              <li>Polia, Mario. <em>Vallecupola, la memoria e la storia. Tradizioni millenarie di un borgo sabino</em>.
+                Angelo Di Mario Aps.
+                (if you want to study in depth cultural traditions of the village)</li>
+              <li><a href="https://www.bibliotecasamuseoangelodimario.com/index.html">Homepage Library Angelo Di
+                  Mario</a>
+              </li>
+              <li><a
+                  href="https://www.bibliotecasamuseoangelodimario.com/pageIT.do?key=1607631434&dettagli=storia%20e%20finalit%C3%A0">History
+                  and goals of the House Museum Angelo Di Mario</a></li>
+              <li>Di Mario, Maria Grazia. <em>Angelo Di Mario (Catalogo)</em>. Angelo Di Mario Aps. (for a complete
+                italian overview about the author and all its works)</li>
+              <li><a
+                  href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?db_search=Sculture%20Angelo%20Di%20Mario&sort_on=5&display=columns&search_for=Aa1599931929168&search_field=all">Online
+                  Mediagallery of the Sculptures</a></li>
+              <li><a href="https://www.facebook.com/bibliotecaangelodimario">Facebook Page of Angelo Di Mario
+                  Library</a>
+              </li>
             </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc4">
-        <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern influencers</span></label>
-        <div class="accordion-content">
-          <p>📸 <strong>A woman with a container on her head.</strong> A simple gesture that becomes a sculpted memory.<br>
-          This sculpture from <strong>1966</strong>, in <em>coloured clay</em>, tells us about the life of women in small Italian villages in the last century: <em>fatigue, grace, balance</em>. Themes that are also present in the story <strong>Vallecupola</strong>, and in a painting, <strong>Près de la fontaine</strong>: three different ways of recounting the daily chores of the past.</p>
-          <p>🎨 <strong>The artist</strong> Angelo Di Mario. A scholar who used to walk in the snow to go to school as a child. He worked on <em>glottology, poetry, sculpture, ancient languages</em>. He turned his house into a museum (literally), thanks to the love of his daughters.</p>
-          <p>📍 <strong>Today</strong> you can enter that house in <strong>Vallecupola</strong>. You will find more than <strong>300 works</strong>, many books and the echo of a thought: <em>beauty hides everywhere, you just have to look for harmony between the real and the imagined</em>. </p>
-          <p>✨ <strong>This statue is not just art.</strong> It is a living history.<br>
-          <span class="hashtags">#ArteContadina #CasaMuseo #StrongWomen #VallecupolaVibes #MemoriaScolpita #StoriaVera</span></p>        
+        <div class="accordion-item">
+          <input type="checkbox" id="acc4">
+          <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+              influencers</span></label>
+          <div class="accordion-content">
+            <p>📸 <strong>A woman with a container on her head.</strong> A simple gesture that becomes a sculpted
+              memory.<br>
+              This sculpture from <strong>1966</strong>, in <em>coloured clay</em>, tells us about the life of women in
+              small Italian villages in the last century: <em>fatigue, grace, balance</em>. Themes that are also present
+              in the story <strong>Vallecupola</strong>, and in a painting, <strong>Près de la fontaine</strong>: three
+              different ways of recounting the daily chores of the past.</p>
+            <p>🎨 <strong>The artist</strong> Angelo Di Mario. A scholar who used to walk in the snow to go to school as
+              a
+              child. He worked on <em>glottology, poetry, sculpture, ancient languages</em>. He turned his house into a
+              museum (literally), thanks to the love of his daughters.</p>
+            <p>📍 <strong>Today</strong> you can enter that house in <strong>Vallecupola</strong>. You will find more
+              than
+              <strong>300 works</strong>, many books and the echo of a thought: <em>beauty hides everywhere, you just
+                have
+                to look for harmony between the real and the imagined</em>.
+            </p>
+            <p>✨ <strong>This statue is not just art.</strong> It is a living history.<br>
+              <span class="hashtags">#ArteContadina #CasaMuseo #StrongWomen #VallecupolaVibes #MemoriaScolpita
+                #StoriaVera</span>
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc5">
-        <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured information</span></label>
-        <div class="accordion-content">
-          <table>
-            <tbody>
-              <tr>
-                <td>Type</td>
-                <td>Sculpture</td>
-              </tr>
-              <tr>
-                <td>Title</td>
-                <td>Donna</td>
-              </tr>
-              <tr>
-                <td>Sculptor</td>
-                <td>Angelo Di Mario</td>
-              </tr>
-              <tr>
-                <td>Holding Institution</td>
-                <td>Biblioteca casa museo Angelo Di Mario</td>
-              </tr>
-              <tr>
-                <td>Subject</td>
-                <td>woman daily life</td>
-              </tr>
-              <tr>
-                <td>Description</td>
-                <td>sculpture representing a woman during her daily works</td>
-              </tr>
-              <tr>
-                <td>Period</td>
-                <td>1966</td>
-              </tr>
-              <tr>
-                <td>Source</td>
-                <td><a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608675561&dettagli=media" target="_blank">Link</a></td>
-              </tr>
-              <tr>
-                <td>Location</td>
-                <td>Vallecupola (Rocca Sinibalda, RI)</td>
-              </tr>
-              <tr>
-                <td>Material</td>
-                <td>Coloured clay</td>
-              </tr>
-              <tr>
-                <td>Measures</td>
-                <td>37×17 cm</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc5">
+          <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
+              information</span></label>
+          <div class="accordion-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Type</td>
+                  <td>Sculpture</td>
+                </tr>
+                <tr>
+                  <td>Title</td>
+                  <td>Donna</td>
+                </tr>
+                <tr>
+                  <td>Sculptor</td>
+                  <td>Angelo Di Mario</td>
+                </tr>
+                <tr>
+                  <td>Holding Institution</td>
+                  <td>Biblioteca casa museo Angelo Di Mario</td>
+                </tr>
+                <tr>
+                  <td>Subject</td>
+                  <td>woman daily life</td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td>sculpture representing a woman during her daily works</td>
+                </tr>
+                <tr>
+                  <td>Period</td>
+                  <td>1966</td>
+                </tr>
+                <tr>
+                  <td>Source</td>
+                  <td><a href="https://www.bibliotecasamuseoangelodimario.com/mediaIT.do?key=1608675561&dettagli=media"
+                      target="_blank">Link</a></td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>Vallecupola (Rocca Sinibalda, RI)</td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td>Coloured clay</td>
+                </tr>
+                <tr>
+                  <td>Measures</td>
+                  <td>37×17 cm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
+
 </html>

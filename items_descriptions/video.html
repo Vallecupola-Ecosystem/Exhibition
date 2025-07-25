@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vallecupola Innevata Video</title>
-  <style>
+  <!-- <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -157,9 +158,26 @@
     tr:nth-child(even) td {
       background-color: #223344;
     }
-  </style>
+  </style> -->
+  <link rel="stylesheet" href="base.css">
+  <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
+
+<script src="style-changer.js" defer></script>
+
 <body>
+  <div class="style-switcher">
+    <button id="style-toggle">Change Style ▾</button>
+    <ul id="style-menu">
+      <li data-style="nrw">New Retro Wave</li>
+      <li data-style="artdeco">Art Deco</li>
+      <li data-style="future">Furturistic</li>
+      <li data-style="memories">19ᵗʰ‑Century Memories</li>
+      <li data-style="popmag">Pop Magazine</li>
+      <li data-style="renaissance">Renaissance</li>
+    </ul>
+
+  </div>
 
   <!-- Top Buttons -->
   <div class="top-icons">
@@ -168,125 +186,195 @@
   </div>
 
   <div class="container">
-    <!-- Image and Navigation -->
-    <div class="image-wrapper">
-      <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
-      <iframe width="100%" height="480" src="https://www.youtube.com/embed/l7hyC9NNZhE" title="Vallecupola innevata" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
-    </div>
-
-    <div class="accordion-container">
-      <h1>❄️ Vallecupola Innevata Video</h1>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc1">
-        <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
-        <div class="accordion-content">
-          <p>Hi there! 👋 Today I want to show you a really special place: <strong>Vallecupola</strong>, a little mountain village all covered in snow! In the video <em>“Vallecupola Innevata”</em>, you'll see ancient houses blanketed in fluffy snow, trees as white as whipped cream, and quiet streets where the silence seems to tell stories.</p>
-          <p>This beautiful video was used as official opening for a music festival called <strong>“Rocca in Musica”</strong> in 2020. It's an event with live music, organized by a passionate group called <strong>“Arte del Suono”</strong>.</p>
-          <p><strong>Vallecupola</strong> is really tiny! Fewer than 20 people live there now, and it's hidden among the mountains of Lazio, near Lake Turano. It's an ancient place with narrow streets, stone walls, and lots of history.</p>
-          <p>Watching the video feels like stepping into a winter fairy tale, where everything is calm and white. And if you close your eyes, you can almost hear the music blending with the falling snow! 🎶❄️</p>
-        </div>
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <div class="landscape"></div>
+      </div>
+      <!-- Image and Navigation -->
+      <div class="image-wrapper">
+        <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
+        <iframe width="80%" height="430" src="https://www.youtube.com/embed/l7hyC9NNZhE" title="Vallecupola innevata"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
       </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc2">
-        <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
-        <div class="accordion-content">
-          <p>The video <em>“Vallecupola Innevata”</em> is a brief yet evocative visual tribute to the mountain village of <strong>Vallecupola</strong> in Lazio. Covered in snow, the landscape becomes a quiet poetic scene, where rooftops, alleys, and trees appear frozen in time.</p>
-          <p>This video had an honorable role: it was selected as the official opening for the 2020 edition of the festival <strong>“Rocca in Musica”</strong>, organized by the association <strong>“Arte del Suono”</strong>, which promotes live music events in natural and historical settings.</p>
-          <p><strong>Vallecupola</strong> is a hamlet of Rocca Sinibalda, Rieti, with less than 20 residents. It's part of the <em>Monte Navegna and Monte Cervia Natural Reserve</em> and dates back to the 13th century.</p>
-          <p>The video features aerial and ground footage, highlighting the beauty of winter through slow camera movements and still frames. It’s a tribute to resilience, silence, and the poetry of remote places.</p>
-        </div>
-      </div>
+      <div class="accordion-container">
+        <h1>❄️ Vallecupola Innevata Video</h1>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc3">
-        <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
-        <div class="accordion-content">
-            <p><strong>Vallecupola Innevata</strong> is a visual short film documenting the snowy landscape of the mountain village of Vallecupola (RI), a hamlet of Rocca Sinibalda within the Monte Navegna and Monte Cervia Nature Reserve in central Italy. The video was used as the official opening of the 2020 edition of the festival <em>“Rocca in Musica”</em>, organized by the <strong>“Arte del Suono” Association</strong>, which is dedicated to bringing music and culture to small towns and rural areas across Lazio.</p>
-            <p>The film features slow-paced aerial and ground shots with cold tones and a contemplative atmosphere. The absence of human figures, the snow-covered landscape, and the traditional architecture create a suspended narrative between historical time and seasonal stillness. The visuals — snowy rooftops, bare branches, deserted alleys — evoke an almost painterly iconography, open to both aesthetic and anthropological readings.</p>
-            <p><strong>Vallecupola</strong>, with few actual residents and situated at an elevation of 1007 meters, is first recorded in the 13th century as <em>“Vallis Cupula”</em>, once part of the Abbey of San Salvatore Maggiore's lands. It is a rare and intact example of a medieval rural settlement, now largely depopulated.</p>
-            <p>In the festival’s context, the video takes on a symbolic role: the winter setting serves as a poetic space and a sensorial prelude to music — the core theme of the event. The snow becomes a visual metaphor for silence and expectation, aligning with the immersive and regenerative nature of live concerts in remote landscapes.</p>
-            <p>Culturally, <em>Vallecupola Innevata</em> reflects a renewed interest in peripheral areas and slow-paced narratives. It exemplifies how landscape imagery can reactivate identity discourses and enhance the visual memory of micro-communities.</p>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc1">
+          <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+              adventurers</span></label>
+          <div class="accordion-content">
+            <p>Hi there! 👋 Today I want to show you a really special place: <strong>Vallecupola</strong>, a little
+              mountain village all covered in snow! In the video <em>“Vallecupola Innevata”</em>, you'll see ancient
+              houses blanketed in fluffy snow, trees as white as whipped cream, and quiet streets where the silence
+              seems
+              to tell stories.</p>
+            <p>This beautiful video was used as official opening for a music festival called <strong>“Rocca in
+                Musica”</strong> in 2020. It's an event with live music, organized by a passionate group called
+              <strong>“Arte del Suono”</strong>.
+            </p>
+            <p><strong>Vallecupola</strong> is really tiny! Fewer than 20 people live there now, and it's hidden among
+              the
+              mountains of Lazio, near Lake Turano. It's an ancient place with narrow streets, stone walls, and lots of
+              history.</p>
+            <p>Watching the video feels like stepping into a winter fairy tale, where everything is calm and white. And
+              if
+              you close your eyes, you can almost hear the music blending with the falling snow! 🎶❄️</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc2">
+          <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
+          <div class="accordion-content">
+            <p>The video <em>“Vallecupola Innevata”</em> is a brief yet evocative visual tribute to the mountain village
+              of <strong>Vallecupola</strong> in Lazio. Covered in snow, the landscape becomes a quiet poetic scene,
+              where
+              rooftops, alleys, and trees appear frozen in time.</p>
+            <p>This video had an honorable role: it was selected as the official opening for the 2020 edition of the
+              festival <strong>“Rocca in Musica”</strong>, organized by the association <strong>“Arte del
+                Suono”</strong>,
+              which promotes live music events in natural and historical settings.</p>
+            <p><strong>Vallecupola</strong> is a hamlet of Rocca Sinibalda, Rieti, with less than 20 residents. It's
+              part
+              of the <em>Monte Navegna and Monte Cervia Natural Reserve</em> and dates back to the 13th century.</p>
+            <p>The video features aerial and ground footage, highlighting the beauty of winter through slow camera
+              movements and still frames. It’s a tribute to resilience, silence, and the poetry of remote places.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc3">
+          <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
+              detail</span></label>
+          <div class="accordion-content">
+            <p><strong>Vallecupola Innevata</strong> is a visual short film documenting the snowy landscape of the
+              mountain village of Vallecupola (RI), a hamlet of Rocca Sinibalda within the Monte Navegna and Monte
+              Cervia
+              Nature Reserve in central Italy. The video was used as the official opening of the 2020 edition of the
+              festival <em>“Rocca in Musica”</em>, organized by the <strong>“Arte del Suono” Association</strong>, which
+              is dedicated to bringing music and culture to small towns and rural areas across Lazio.</p>
+            <p>The film features slow-paced aerial and ground shots with cold tones and a contemplative atmosphere. The
+              absence of human figures, the snow-covered landscape, and the traditional architecture create a suspended
+              narrative between historical time and seasonal stillness. The visuals — snowy rooftops, bare branches,
+              deserted alleys — evoke an almost painterly iconography, open to both aesthetic and anthropological
+              readings.</p>
+            <p><strong>Vallecupola</strong>, with few actual residents and situated at an elevation of 1007 meters, is
+              first recorded in the 13th century as <em>“Vallis Cupula”</em>, once part of the Abbey of San Salvatore
+              Maggiore's lands. It is a rare and intact example of a medieval rural settlement, now largely depopulated.
+            </p>
+            <p>In the festival’s context, the video takes on a symbolic role: the winter setting serves as a poetic
+              space
+              and a sensorial prelude to music — the core theme of the event. The snow becomes a visual metaphor for
+              silence and expectation, aligning with the immersive and regenerative nature of live concerts in remote
+              landscapes.</p>
+            <p>Culturally, <em>Vallecupola Innevata</em> reflects a renewed interest in peripheral areas and slow-paced
+              narratives. It exemplifies how landscape imagery can reactivate identity discourses and enhance the visual
+              memory of micro-communities.</p>
             <h3>📚 References:</h3>
             <ul>
-              <a href="https://www.associazioneartedelsuono.it/"><li>Arte del Suono Association Webpage</li></a>
-              <a href="https://vallecupola.wordpress.com/"><li>Vallis Cupulae Webpage</li></a>
+              <a href="https://www.associazioneartedelsuono.it/">
+                <li>Arte del Suono Association Webpage</li>
+              </a>
+              <a href="https://vallecupola.wordpress.com/">
+                <li>Vallis Cupulae Webpage</li>
+              </a>
             </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc4">
-        <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern influencers</span></label>
-        <div class="accordion-content">
-          <p>❄️✨ <strong>Vallecupola Innevata</strong> is the video you didn’t know you needed in your feed: a tiny mountain village covered in snow and wrapped in silence. A scene so perfect it looks like it came out of a Nordic series — but it’s real, and right in the heart of Italy! 🇮🇹</p>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc4">
+          <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+              influencers</span></label>
+          <div class="accordion-content">
+            <p>❄️✨ <strong>Vallecupola Innevata</strong> is the video you didn’t know you needed in your feed: a tiny
+              mountain village covered in snow and wrapped in silence. A scene so perfect it looks like it came out of a
+              Nordic series — but it’s real, and right in the heart of Italy! 🇮🇹</p>
 
-          <p>This video isn't just beautiful: it was chosen as the official opening of the 2020 edition of the music festival <em>“Rocca in Musica”</em>, organized by the <strong>“Arte del Suono” Association</strong>, which promotes concerts and performances in remote villages and natural landscapes. Art, music, and nature = perfect combo!</p>
+            <p>This video isn't just beautiful: it was chosen as the official opening of the 2020 edition of the music
+              festival <em>“Rocca in Musica”</em>, organized by the <strong>“Arte del Suono” Association</strong>, which
+              promotes concerts and performances in remote villages and natural landscapes. Art, music, and nature =
+              perfect combo!</p>
 
-          <h3>🎥 What will you see?</h3>
-          <ul>
-            <li>Rooftops dusted with powdered sugar snow</li>
-            <li>Empty, quiet streets</li>
-            <li>Still nature and magical vibes</li>
-          </ul>
-
-          <p>📍<strong>Vallecupola</strong> is a tiny village (less than 20 people!) sitting 1000 meters above sea level near Lake Turano. It feels like time stands still there — but amazing things happen, like forest music festivals.</p>
-
-          <p>💡 Cool fact: Even though it's short, this video gives off a strong slow-life vibe. Perfect to watch with a hot drink when it’s raining out, or when you need a break from the noise of social media.</p>
-
-          <p>🎶 Love the aesthetic? Share it. It might be your next travel inspo! <br>
-          #Vallecupola #WinterMood #FestivalVibes #SlowItaly</p>
-
-          <h3>📎 Instagram profiles to follow:</h3>
+            <h3>🎥 What will you see?</h3>
             <ul>
-              <a href="https://www.instagram.com/artedelsuono_associazione/"><li>Arte del Suono Association</li></a>
-              <a href="https://www.instagram.com/vallecupola_a.p.s/"><li>Vallecupola Aps</li></a>
+              <li>Rooftops dusted with powdered sugar snow</li>
+              <li>Empty, quiet streets</li>
+              <li>Still nature and magical vibes</li>
             </ul>
-        </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc5">
-        <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured information</span></label>
-        <div class="accordion-content">
-          <table>
-            <tbody>
-              <tr>
-                <td><strong>Title</strong></td>
-                <td>Vallecupola innevata</td>
-              </tr>
-              <tr>
-                <td><strong>Video Maker</strong></td>
-                <td>Michael Braha</td>
-              </tr>
-              <tr>
-                <td><strong>Period</strong></td>
-                <td>2020</td>
-              </tr>
-              <tr>
-                <td><strong>Holding Institution</strong></td>
-                <td>Associazione Arte del Suono</td>
-              </tr>
-              <tr>
-                <td><strong>Publisher</strong></td>
-                <td>Comune di Rocca Sinibalda</td>
-              </tr>
-              <tr>
-                <td><strong>Description</strong></td>
-                <td>Video showing Vallecupola village in snow. Displayed at the beginning of 2020 Edition of "Rocca in Musica" festival</td>
-              </tr>
-              <tr>
-                <td><strong>Duration</strong></td>
-                <td>0:01:40</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+            <p>📍<strong>Vallecupola</strong> is a tiny village (less than 20 people!) sitting 1000 meters above sea
+              level
+              near Lake Turano. It feels like time stands still there — but amazing things happen, like forest music
+              festivals.</p>
 
+            <p>💡 Cool fact: Even though it's short, this video gives off a strong slow-life vibe. Perfect to watch with
+              a
+              hot drink when it’s raining out, or when you need a break from the noise of social media.</p>
+
+            <p>🎶 Love the aesthetic? Share it. It might be your next travel inspo! <br>
+              #Vallecupola #WinterMood #FestivalVibes #SlowItaly</p>
+
+            <h3>📎 Instagram profiles to follow:</h3>
+            <ul>
+              <a href="https://www.instagram.com/artedelsuono_associazione/">
+                <li>Arte del Suono Association</li>
+              </a>
+              <a href="https://www.instagram.com/vallecupola_a.p.s/">
+                <li>Vallecupola Aps</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc5">
+          <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
+              information</span></label>
+          <div class="accordion-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Title</strong></td>
+                  <td>Vallecupola innevata</td>
+                </tr>
+                <tr>
+                  <td><strong>Video Maker</strong></td>
+                  <td>Michael Braha</td>
+                </tr>
+                <tr>
+                  <td><strong>Period</strong></td>
+                  <td>2020</td>
+                </tr>
+                <tr>
+                  <td><strong>Holding Institution</strong></td>
+                  <td>Associazione Arte del Suono</td>
+                </tr>
+                <tr>
+                  <td><strong>Publisher</strong></td>
+                  <td>Comune di Rocca Sinibalda</td>
+                </tr>
+                <tr>
+                  <td><strong>Description</strong></td>
+                  <td>Video showing Vallecupola village in snow. Displayed at the beginning of 2020 Edition of "Rocca in
+                    Musica" festival</td>
+                </tr>
+                <tr>
+                  <td><strong>Duration</strong></td>
+                  <td>0:01:40</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
 </body>
+
 </html>

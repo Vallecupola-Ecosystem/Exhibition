@@ -67,6 +67,7 @@ body {
     border-width: 50px;
     display: block;
     width: 40%;
+    max-width: 450px;
     height: auto;
     background-color: #0B1319;
     margin: 0 auto;

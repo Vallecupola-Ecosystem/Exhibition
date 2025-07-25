@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quel mazzolin di fiori – Coro della SAT</title>
-    <style>
+    <!-- <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
@@ -163,10 +163,27 @@
         tr:nth-child(even) td {
             background-color: #223344;
         }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="base.css">
+    <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
 
+<script src="style-changer.js" defer></script>
+
 <body>
+
+    <div class="style-switcher">
+        <button id="style-toggle">Change Style ▾</button>
+        <ul id="style-menu">
+            <li data-style="nrw">New Retro Wave</li>
+            <li data-style="artdeco">Art Deco</li>
+            <li data-style="future">Furturistic</li>
+            <li data-style="memories">19ᵗʰ‑Century Memories</li>
+            <li data-style="popmag">Pop Magazine</li>
+            <li data-style="renaissance">Renaissance</li>
+        </ul>
+
+    </div>
 
     <div class="top-icons">
         <a href="#" class="icon-button">🌐 Translate</a>
@@ -174,160 +191,184 @@
     </div>
 
     <div class="container">
-        <div class="image-wrapper">
-            <a href="object24.html" class="nav-button nav-left" title="Previous Object">←</a>
+        <div class="wrapper">
+            <div class="inner-wrapper">
+                <div class="landscape"></div>
+            </div>
+            <div class="image-wrapper">
+                <a href="object24.html" class="nav-button nav-left" title="Previous Object">←</a>
 
-            <video class="object-image" controls
-                poster="https://i.ytimg.com/vi/HBm5kL2Xb_A/mqdefault.jpg">
-                <source
-                    src="https://video.wixstatic.com/video/d436be_133adade7f6f480c84e68fe55924d6e0/720p/mp4/file.mp4"
-                    type="video/mp4">
-                
-            </video>
+                <video class="object-image image-neon" controls
+                    poster="https://i.ytimg.com/vi/HBm5kL2Xb_A/mqdefault.jpg">
+                    <source
+                        src="https://video.wixstatic.com/video/d436be_133adade7f6f480c84e68fe55924d6e0/720p/mp4/file.mp4"
+                        type="video/mp4">
 
-            <a href="object26.html" class="nav-button nav-right" title="Next Object">→</a>
+                </video>
+
+                <a href="object26.html" class="nav-button nav-right" title="Next Object">→</a>
+            </div>
+
+            <div class="accordion-container">
+                <h1>💐 Quel mazzolin di fiori</h1>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1">
+                    <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+                            adventurers</span></label>
+                    <div class="accordion-content">
+                        <p>Hello singing star! 🎶 Ready to hear a beautiful song from the mountains? “Quel mazzolin di
+                            fiori” means “That Little Bunch of Flowers,” and it’s a song that people in Italy have sung
+                            for
+                            many, many years. Imagine climbing up a high mountain, where the air is crisp and fresh. You
+                            see
+                            colorful flowers everywhere—and this song tells a story about picking some of them and
+                            giving
+                            them to someone special. 💐</p>
+                        <p>It’s sung by a group called Coro della SAT, a famous choir from a mountain area in Italy
+                            called
+                            Trentino. When they sing, their voices come together like a team—soft, strong, and full of
+                            feeling. You can almost hear the wind in the trees and bells from sheep nearby.</p>
+                        <p>This song is about love, nature, and little gifts that come from the heart. Even if you don’t
+                            understand all the words, you’ll feel the meaning through the music. So close your eyes,
+                            take a
+                            deep breath, and imagine yourself on a mountain path with flowers in your hand and a song in
+                            your heart. 🌸🗻🎵</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc2">
+                    <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
+                            rush</span></label>
+                    <div class="accordion-content">
+                        <p>“Quel mazzolin di fiori” is a traditional Italian folk song that evokes the pastoral
+                            simplicity
+                            and emotional richness of Alpine life. Literally translating to “That Little Bunch of
+                            Flowers,”
+                            the song is both a symbol and a story—often understood as a tale of love expressed through a
+                            humble floral gesture.</p>
+                        <p>The version performed by Coro della SAT, a celebrated male choir from Trentino-Alto Adige, is
+                            among the most cherished renditions. Known for their robust yet nuanced vocal harmonies, the
+                            SAT
+                            Choir interprets the piece with a blend of formality and warmth that reflects both musical
+                            discipline and cultural authenticity. Their performance, featured on the 2015 album <i>Canti
+                                della montagna</i>, captures the song’s romantic core while preserving its folk roots.
+                        </p>
+                        <p>Musically, the piece is structured with melodic lines that rise and fall gently, much like
+                            the
+                            slopes of the mountains it comes from. The harmonies echo the natural surroundings:
+                            expansive,
+                            layered, and resonant. Listeners are transported to alpine meadows, where tradition and
+                            emotion
+                            meet in the form of simple, powerful music.</p>
+                        <p>Whether sung around a fire or in a concert hall, “Quel mazzolin di fiori” continues to bloom
+                            with
+                            meaning. It’s more than a folk song—it’s a shared memory passed from voice to voice.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc3">
+                    <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers,
+                            studying in
+                            detail</span></label>
+                    <div class="accordion-content">
+                        <p>“Quel mazzolin di fiori” stands as a luminous artifact within the Italian choral folk
+                            tradition,
+                            encapsulating a complex interplay of melody, memory, and cultural geography. At first
+                            glance,
+                            the song may appear to be a simple pastoral tune—a boy picking flowers for a girl. However,
+                            within the folds of its melodic phrasing and textual modesty lies a deeply rooted expression
+                            of
+                            community, emotion, and identity.</p>
+                        <p>The piece originates from Northern Italy and is widely known across various Alpine regions.
+                            Though the authorship remains anonymous—typical for folk music—its lyrics have endured
+                            through
+                            oral transmission, often with minor regional variations. The Coro della SAT, or “Società
+                            Alpinisti Tridentini,” has become the canonical voice of this song, particularly through
+                            their
+                            disciplined choral arrangements that were popularized throughout the 20th century.</p>
+                        <p>... [remaining content unchanged, same as in original file]</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc4">
+                    <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+                            influencers</span></label>
+                    <div class="accordion-content">
+                        <p>You know that song that feels like a warm hug from the past? This is it. 🌸 “Quel mazzolin di
+                            fiori” is a classic Italian folk tune that brings love, nature, and nostalgia into one
+                            unforgettable chorus...</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc5">
+                    <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need
+                            structured
+                            information</span></label>
+                    <div class="accordion-content">
+                        <table>
+                            <tr>
+                                <td>Title</td>
+                                <td>Quel mazzolin di fiori</td>
+                            </tr>
+                            <tr>
+                                <td>Artist</td>
+                                <td>Coro della SAT</td>
+                            </tr>
+                            <tr>
+                                <td>Duration</td>
+                                <td>~2:45</td>
+                            </tr>
+                            <tr>
+                                <td>Album</td>
+                                <td>Canti della montagna</td>
+                            </tr>
+                            <tr>
+                                <td>Release Date</td>
+                                <td>2015</td>
+                            </tr>
+                            <tr>
+                                <td>Instrumentation</td>
+                                <td>choral</td>
+                            </tr>
+                            <tr>
+                                <td>Recording Location</td>
+                                <td>Trentino-Alto Adige, Italy</td>
+                            </tr>
+                            <tr>
+                                <td>Language</td>
+                                <td>Italian</td>
+                            </tr>
+                            <tr>
+                                <td>Genre</td>
+                                <td>Folk</td>
+                            </tr>
+                            <tr>
+                                <td>Publisher</td>
+                                <td>Fratelli Pedrotti</td>
+                            </tr>
+                            <tr>
+                                <td>Coverage</td>
+                                <td>Italy</td>
+                            </tr>
+                            <tr>
+                                <td>Producer</td>
+                                <td>RCA SpA</td>
+                            </tr>
+                            <tr>
+                                <td>Subject</td>
+                                <td>bouquet</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="accordion-container">
-            <h1>💐 Quel mazzolin di fiori</h1>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc1">
-                <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
-                        adventurers</span></label>
-                <div class="accordion-content">
-                    <p>Hello singing star! 🎶 Ready to hear a beautiful song from the mountains? “Quel mazzolin di
-                        fiori” means “That Little Bunch of Flowers,” and it’s a song that people in Italy have sung for
-                        many, many years. Imagine climbing up a high mountain, where the air is crisp and fresh. You see
-                        colorful flowers everywhere—and this song tells a story about picking some of them and giving
-                        them to someone special. 💐</p>
-                    <p>It’s sung by a group called Coro della SAT, a famous choir from a mountain area in Italy called
-                        Trentino. When they sing, their voices come together like a team—soft, strong, and full of
-                        feeling. You can almost hear the wind in the trees and bells from sheep nearby.</p>
-                    <p>This song is about love, nature, and little gifts that come from the heart. Even if you don’t
-                        understand all the words, you’ll feel the meaning through the music. So close your eyes, take a
-                        deep breath, and imagine yourself on a mountain path with flowers in your hand and a song in
-                        your heart. 🌸🗻🎵</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc2">
-                <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
-                        rush</span></label>
-                <div class="accordion-content">
-                    <p>“Quel mazzolin di fiori” is a traditional Italian folk song that evokes the pastoral simplicity
-                        and emotional richness of Alpine life. Literally translating to “That Little Bunch of Flowers,”
-                        the song is both a symbol and a story—often understood as a tale of love expressed through a
-                        humble floral gesture.</p>
-                    <p>The version performed by Coro della SAT, a celebrated male choir from Trentino-Alto Adige, is
-                        among the most cherished renditions. Known for their robust yet nuanced vocal harmonies, the SAT
-                        Choir interprets the piece with a blend of formality and warmth that reflects both musical
-                        discipline and cultural authenticity. Their performance, featured on the 2015 album <i>Canti
-                            della montagna</i>, captures the song’s romantic core while preserving its folk roots.</p>
-                    <p>Musically, the piece is structured with melodic lines that rise and fall gently, much like the
-                        slopes of the mountains it comes from. The harmonies echo the natural surroundings: expansive,
-                        layered, and resonant. Listeners are transported to alpine meadows, where tradition and emotion
-                        meet in the form of simple, powerful music.</p>
-                    <p>Whether sung around a fire or in a concert hall, “Quel mazzolin di fiori” continues to bloom with
-                        meaning. It’s more than a folk song—it’s a shared memory passed from voice to voice.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc3">
-                <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
-                        detail</span></label>
-                <div class="accordion-content">
-                    <p>“Quel mazzolin di fiori” stands as a luminous artifact within the Italian choral folk tradition,
-                        encapsulating a complex interplay of melody, memory, and cultural geography. At first glance,
-                        the song may appear to be a simple pastoral tune—a boy picking flowers for a girl. However,
-                        within the folds of its melodic phrasing and textual modesty lies a deeply rooted expression of
-                        community, emotion, and identity.</p>
-                    <p>The piece originates from Northern Italy and is widely known across various Alpine regions.
-                        Though the authorship remains anonymous—typical for folk music—its lyrics have endured through
-                        oral transmission, often with minor regional variations. The Coro della SAT, or “Società
-                        Alpinisti Tridentini,” has become the canonical voice of this song, particularly through their
-                        disciplined choral arrangements that were popularized throughout the 20th century.</p>
-                    <p>... [remaining content unchanged, same as in original file]</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc4">
-                <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
-                        influencers</span></label>
-                <div class="accordion-content">
-                    <p>You know that song that feels like a warm hug from the past? This is it. 🌸 “Quel mazzolin di
-                        fiori” is a classic Italian folk tune that brings love, nature, and nostalgia into one
-                        unforgettable chorus...</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc5">
-                <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
-                        information</span></label>
-                <div class="accordion-content">
-                    <table>
-                        <tr>
-                            <td>Title</td>
-                            <td>Quel mazzolin di fiori</td>
-                        </tr>
-                        <tr>
-                            <td>Artist</td>
-                            <td>Coro della SAT</td>
-                        </tr>
-                        <tr>
-                            <td>Duration</td>
-                            <td>~2:45</td>
-                        </tr>
-                        <tr>
-                            <td>Album</td>
-                            <td>Canti della montagna</td>
-                        </tr>
-                        <tr>
-                            <td>Release Date</td>
-                            <td>2015</td>
-                        </tr>
-                        <tr>
-                            <td>Instrumentation</td>
-                            <td>choral</td>
-                        </tr>
-                        <tr>
-                            <td>Recording Location</td>
-                            <td>Trentino-Alto Adige, Italy</td>
-                        </tr>
-                        <tr>
-                            <td>Language</td>
-                            <td>Italian</td>
-                        </tr>
-                        <tr>
-                            <td>Genre</td>
-                            <td>Folk</td>
-                        </tr>
-                        <tr>
-                            <td>Publisher</td>
-                            <td>Fratelli Pedrotti</td>
-                        </tr>
-                        <tr>
-                            <td>Coverage</td>
-                            <td>Italy</td>
-                        </tr>
-                        <tr>
-                            <td>Producer</td>
-                            <td>RCA SpA</td>
-                        </tr>
-                        <tr>
-                            <td>Subject</td>
-                            <td>bouquet</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-        </div>
-    </div>
 </body>
 
 </html>

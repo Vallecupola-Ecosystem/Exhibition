@@ -317,3 +317,29 @@ table tr:nth-child(even) {
         align-items: center;
     }
 }
+
+
+.image-wrapper {
+    display: block !important;
+    padding: 0 !important;
+    position: relative;
+    margin: 40px auto 60px;
+
+}
+
+
+.object-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    margin: 0 auto;
+}
+
+.nav-left {
+    left: -70px !important;
+}
+
+.nav-right {
+    right: -70px !important;
+}

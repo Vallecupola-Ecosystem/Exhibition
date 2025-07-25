@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vallecupola Story</title>
-  <style>
+  <!-- <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -164,9 +165,27 @@
       padding-left: 1em;
       border-left: 4px solid #ccc;
     }
-  </style>
+  </style> -->
+  <link rel="stylesheet" href="base.css">
+  <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
+
+<script src="style-changer.js" defer></script>
+
 <body>
+
+  <div class="style-switcher">
+    <button id="style-toggle">Change Style ▾</button>
+    <ul id="style-menu">
+      <li data-style="nrw">New Retro Wave</li>
+      <li data-style="artdeco">Art Deco</li>
+      <li data-style="future">Furturistic</li>
+      <li data-style="memories">19ᵗʰ‑Century Memories</li>
+      <li data-style="popmag">Pop Magazine</li>
+      <li data-style="renaissance">Renaissance</li>
+    </ul>
+
+  </div>
 
   <!-- Top Buttons -->
   <div class="top-icons">
@@ -175,139 +194,195 @@
   </div>
 
   <div class="container">
-    <!-- Image and Navigation -->
-    <div class="image-wrapper">
-      <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
-      <a href="https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx"><img height="480" src="https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg" title="Vallecupola Story" frameborder="0" allowfullscreen alt="Vallecupola Story Cover"></iframe></a>
-      <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
-    </div>
-
-    <div class="accordion-container">
-      <h1>📜 Vallecupola Story</h1>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc1">
-        <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
-        <div class="accordion-content">
-          <p>Hi there! 👋 Today we’re reading a story about a girl named <strong>Lucrezia</strong>, who lived long ago in a mountain village called <strong>Vallecupola</strong>. We follow her as she fetches water, washes her hair, prepares food, and waits for her loved <strong>Edoardo</strong>. Together they share moments of celebration and dancing — but also one of departure, when he leaves with the sheep.</p>
-          <p>The story continues in the present, as a young man returns to his hometown and recalls his childhood and family memories. He finds out that something left behind from the war caused a terrible event in the past — and that Edoardo never came back.</p>
-          <p><strong>This short story was one of the five finalists for the Campiello Giovani Prize 2024 🎖️</strong>, praised by the jury for its emotional clarity and sense of place.</p>
-          <p>It reflects on <strong>family, friendship, memory, and rural life</strong>, showing how even a small place like Vallecupola can contain stories worth remembering. 📖✨</p>
-        </div>
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <div class="landscape"></div>
+      </div>
+      <!-- Image and Navigation -->
+      <div class="image-wrapper">
+        <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
+        <a href="https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx"><img
+            src="https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg"
+            title="Vallecupola Story" frameborder="0" allowfullscreen alt="Vallecupola Story Cover"
+            class="object-image image-neon"></iframe></a>
+        <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
       </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc2">
-        <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
-        <div class="accordion-content">
-          <p><em>Vallecupola</em>, finalist for the Campiello Giovani Prize 2024, is a short narrative that moves between <strong>Rome and a remote mountain village</strong>.</p>
-          <p>Two narrative voices alternate: one belongs to <strong>Lucrezia</strong>, a young woman living through everyday village life in the postwar period; the other is a contemporary narrator, returning for a local festival, flooded by memories of his grandmother and childhood, and a long-past tragedy.</p>
-          <p>The story centers on the bond between Lucrezia and Edoardo, cut short by his departure for the transhumance—and ultimately by his tragic death from a wartime explosive.</p>
-          <p>The jury appreciated its <em>rhythmic language, balanced use of dialect, and sense of historical atmosphere</em>. A concise yet meaningful reflection on how time and place shape memory.</p>
-        </div>
-      </div>
+      <div class="accordion-container">
+        <h1>📜 Vallecupola Story</h1>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc3">
-        <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
-        <div class="accordion-content">
-            <p><em>Vallecupola</em> is a literary work selected among the five finalists of the <strong>2024 Campiello Giovani Prize</strong>. Across two timelines, it combines the childhood memories of a contemporary narrator and the postwar life of Lucrezia, a young woman in Vallecupola.</p>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc1">
+          <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+              adventurers</span></label>
+          <div class="accordion-content">
+            <p>Hi there! 👋 Today we’re reading a story about a girl named <strong>Lucrezia</strong>, who lived long ago
+              in a mountain village called <strong>Vallecupola</strong>. We follow her as she fetches water, washes her
+              hair, prepares food, and waits for her loved <strong>Edoardo</strong>. Together they share moments of
+              celebration and dancing — but also one of departure, when he leaves with the sheep.</p>
+            <p>The story continues in the present, as a young man returns to his hometown and recalls his childhood and
+              family memories. He finds out that something left behind from the war caused a terrible event in the past
+              —
+              and that Edoardo never came back.</p>
+            <p><strong>This short story was one of the five finalists for the Campiello Giovani Prize 2024 🎖️</strong>,
+              praised by the jury for its emotional clarity and sense of place.</p>
+            <p>It reflects on <strong>family, friendship, memory, and rural life</strong>, showing how even a small
+              place
+              like Vallecupola can contain stories worth remembering. 📖✨</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc2">
+          <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
+          <div class="accordion-content">
+            <p><em>Vallecupola</em>, finalist for the Campiello Giovani Prize 2024, is a short narrative that moves
+              between <strong>Rome and a remote mountain village</strong>.</p>
+            <p>Two narrative voices alternate: one belongs to <strong>Lucrezia</strong>, a young woman living through
+              everyday village life in the postwar period; the other is a contemporary narrator, returning for a local
+              festival, flooded by memories of his grandmother and childhood, and a long-past tragedy.</p>
+            <p>The story centers on the bond between Lucrezia and Edoardo, cut short by his departure for the
+              transhumance—and ultimately by his tragic death from a wartime explosive.</p>
+            <p>The jury appreciated its <em>rhythmic language, balanced use of dialect, and sense of historical
+                atmosphere</em>. A concise yet meaningful reflection on how time and place shape memory.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc3">
+          <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
+              detail</span></label>
+          <div class="accordion-content">
+            <p><em>Vallecupola</em> is a literary work selected among the five finalists of the <strong>2024 Campiello
+                Giovani Prize</strong>. Across two timelines, it combines the childhood memories of a contemporary
+              narrator and the postwar life of Lucrezia, a young woman in Vallecupola.</p>
             <p>It is an attempt to reconstruct a small part of a huge collective rural history.</p>
             <h3>Structure and themes</h3>
-            <p>The opening is centered on <strong>daily rural gestures</strong> — preparing lye, cooking, domestic rituals. The emotional core lies in Lucrezia’s relationship with <strong>Edoardo</strong>, a shepherd. Their closeness is traced with moments of lightness and unspoken emotion.</p>
-            <p>The present-day narrator returns to Vallecupola and uncovers layers of memory — including the revelation of Edoardo’s death due to an unexploded wartime device, years after peace had been declared.</p>
+            <p>The opening is centered on <strong>daily rural gestures</strong> — preparing lye, cooking, domestic
+              rituals. The emotional core lies in Lucrezia’s relationship with <strong>Edoardo</strong>, a shepherd.
+              Their
+              closeness is traced with moments of lightness and unspoken emotion.</p>
+            <p>The present-day narrator returns to Vallecupola and uncovers layers of memory — including the revelation
+              of
+              Edoardo’s death due to an unexploded wartime device, years after peace had been declared.</p>
             <h3>Jury’s motivation</h3>
-            <blockquote cite="https://www.premiocampiello.org/confindustria/campiello/istituzionale.nsf/($linkacross)/B7D1BDF548EB9DD2C1258AFD004C0FE4?opendocument">A return home, from Rome to a small mountain village in Sabina, both physically and with the memory of childhood. To relive a season of games, but also the 
-              experience of pain: of an atrocious fate that, after having spared from war, destroyed with those same instruments of war. An atmosphere reconstructed with the 
-              most proper tools of literature: language, rhythm, suspension, skilful rendering of the atmospheres of the time (the immediate post-war period) also with measured 
+            <blockquote
+              cite="https://www.premiocampiello.org/confindustria/campiello/istituzionale.nsf/($linkacross)/B7D1BDF548EB9DD2C1258AFD004C0FE4?opendocument">
+              A return home, from Rome to a small mountain village in Sabina, both physically and with the memory of
+              childhood. To relive a season of games, but also the
+              experience of pain: of an atrocious fate that, after having spared from war, destroyed with those same
+              instruments of war. An atmosphere reconstructed with the
+              most proper tools of literature: language, rhythm, suspension, skilful rendering of the atmospheres of the
+              time (the immediate post-war period) also with measured
               use of the vernacular; in other words, everything that contributes to conveying emotion.</blockquote>
             <h3>Stylistic elements</h3>
-            <p>The story handles <strong>narrative rhythm</strong>, with past and present alternating smoothly. <em>The use of vernacular</em> aims to add authenticity, while 
+            <p>The story handles <strong>narrative rhythm</strong>, with past and present alternating smoothly. <em>The
+                use of vernacular</em> aims to add authenticity, while
               scenes of songs, dances, and village life are meant to convey both realism and symbolism.</p>
-            <p><h3>Conclusion</h3>
-            <p>This is a little example of rural memory literature: it portrays the postwar world through personal and collective trauma, with language that aims to be both 
-              poetic and grounded. A suggested read for those studying Vallecupola geographical area and historical fiction, place-based writing and are interested in Italian regional identity.</p></p>  
+            <p>
+            <h3>Conclusion</h3>
+            <p>This is a little example of rural memory literature: it portrays the postwar world through personal and
+              collective trauma, with language that aims to be both
+              poetic and grounded. A suggested read for those studying Vallecupola geographical area and historical
+              fiction, place-based writing and are interested in Italian regional identity.</p>
+            </p>
             <h3>📚 References:</h3>
             <ul>
-              <a href="https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx"><li>Vallecupola (Story)</li></a>
-              <li>Polia, Mario. <em>Vallecupola, la memoria e la storia. Tradizioni millenarie di un borgo sabino</em>. Angelo Di Mario Aps.
-                  (if you want to study in depth cultural traditions of the village)</li>
-              <li>Zenobio, Jamila. <em>Il dialetto di Vallecupola, nel quadro linguistico mediano</em>. Thesis, Tor Vergata University. 
-                  (if you are interested in the dialect of Vallecupola)</li>
+              <a href="https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx">
+                <li>Vallecupola (Story)</li>
+              </a>
+              <li>Polia, Mario. <em>Vallecupola, la memoria e la storia. Tradizioni millenarie di un borgo sabino</em>.
+                Angelo Di Mario Aps.
+                (if you want to study in depth cultural traditions of the village)</li>
+              <li>Zenobio, Jamila. <em>Il dialetto di Vallecupola, nel quadro linguistico mediano</em>. Thesis, Tor
+                Vergata University.
+                (if you are interested in the dialect of Vallecupola)</li>
             </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc4">
-        <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern influencers</span></label>
-        <div class="accordion-content">
-          <p>🧠💔 This is a story you’ll want to read. It’s called <strong>Vallecupola</strong>, and it’s about returning — from the rush of Rome to a quiet mountain village full of old joys and deeper wounds.</p>
-          <p>✨ Finalist for the <strong>Campiello Giovani Prize 2024</strong>, the story explores themes of love, loss, and memory with poetic language and rural detail.</p>
-          <p>📜 Past and present intertwine. Lucrezia shares her days and dances with Edoardo… until war’s legacy leaves its mark. The twist (💣😢) <em>will break you, in the most beautiful way</em>.</p>
-          <h3>📌 Why it’s worth your time:</h3>
-          <ul>
-            <li>Real village: Vallecupola - alleys, stone houses, sheep bells</li>
-            <li>Aesthetic but grounded</li>
-            <li>Fast read, deep impact</li>
-            <li>Feels like a movie short 🎬</li>
-          </ul>
-          <p>🎯 Read it if you love compact stories that linger long after. Share it if you believe literature still has power to speak from forgotten places.
-          <br><em>#CampielloGiovani #SabinaFeels #MemoryMatters</em></p>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc4">
+          <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+              influencers</span></label>
+          <div class="accordion-content">
+            <p>🧠💔 This is a story you’ll want to read. It’s called <strong>Vallecupola</strong>, and it’s about
+              returning — from the rush of Rome to a quiet mountain village full of old joys and deeper wounds.</p>
+            <p>✨ Finalist for the <strong>Campiello Giovani Prize 2024</strong>, the story explores themes of love,
+              loss,
+              and memory with poetic language and rural detail.</p>
+            <p>📜 Past and present intertwine. Lucrezia shares her days and dances with Edoardo… until war’s legacy
+              leaves
+              its mark. The twist (💣😢) <em>will break you, in the most beautiful way</em>.</p>
+            <h3>📌 Why it’s worth your time:</h3>
+            <ul>
+              <li>Real village: Vallecupola - alleys, stone houses, sheep bells</li>
+              <li>Aesthetic but grounded</li>
+              <li>Fast read, deep impact</li>
+              <li>Feels like a movie short 🎬</li>
+            </ul>
+            <p>🎯 Read it if you love compact stories that linger long after. Share it if you believe literature still
+              has
+              power to speak from forgotten places.
+              <br><em>#CampielloGiovani #SabinaFeels #MemoryMatters</em>
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <input type="checkbox" id="acc5">
-        <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured information</span></label>
-        <div class="accordion-content">
-          <table>
-            <tbody>
-              <tr>
-                <td><strong>Type</strong></td>
-                <td>Text</td>
-              </tr>
-              <tr>
-                <td><strong>Title</strong></td>
-                <td>Vallecupola</td>
-              </tr>
-              <tr>
-                <td><strong>Author</strong></td>
-                <td>Daniele Camagna</td>
-              </tr>
-              <tr>
-                <td><strong>Publisher</strong></td>
-                <td>Fondazione Il Campiello</td>
-              </tr>
-              <tr>
-                <td><strong>Publication Date</strong></td>
-                <td>2024</td>
-              </tr>
-              <tr>
-                <td><strong>Language</strong></td>
-                <td>Italian</td>
-              </tr>
-              <tr>
-                <td><strong>Object Description</strong></td>
-                <td>Digital Publication</td>
-              </tr>
-              <tr>
-                <td><strong>Subject</strong></td>
-                <td>Vallecupola</td>
-              </tr>
-              <tr>
-                <td><strong>Award</strong></td>
-                <td>Finalist at Campiello Giovani Prize</td>
-              </tr>
-              <tr>
-                <td><strong>URL</strong></td>
-                <td><a href="https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx" target="_blank">View publication</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="accordion-item">
+          <input type="checkbox" id="acc5">
+          <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
+              information</span></label>
+          <div class="accordion-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Type</strong></td>
+                  <td>Text</td>
+                </tr>
+                <tr>
+                  <td><strong>Title</strong></td>
+                  <td>Vallecupola</td>
+                </tr>
+                <tr>
+                  <td><strong>Author</strong></td>
+                  <td>Daniele Camagna</td>
+                </tr>
+                <tr>
+                  <td><strong>Publisher</strong></td>
+                  <td>Fondazione Il Campiello</td>
+                </tr>
+                <tr>
+                  <td><strong>Publication Date</strong></td>
+                  <td>2024</td>
+                </tr>
+                <tr>
+                  <td><strong>Language</strong></td>
+                  <td>Italian</td>
+                </tr>
+                <tr>
+                  <td><strong>Object Description</strong></td>
+                  <td>Digital Publication</td>
+                </tr>
+                <tr>
+                  <td><strong>Subject</strong></td>
+                  <td>Vallecupola</td>
+                </tr>
+                <tr>
+                  <td><strong>Award</strong></td>
+                  <td>Finalist at Campiello Giovani Prize</td>
+                </tr>
+                <tr>
+                  <td><strong>URL</strong></td>
+                  <td><a href="https://www.sfogliami.it/fl/299671/t1khxc8n3u5x2xzx19tf2fygp3p57dx" target="_blank">View
+                      publication</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
+
 </html>

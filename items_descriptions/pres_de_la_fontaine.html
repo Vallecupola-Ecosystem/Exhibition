@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pres de la Fontaine</title>
-  <style>
+  <!-- <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -163,11 +163,27 @@
     tr:nth-child(even) td {
       background-color: #223344;
     }
-  </style>
+  </style> -->
+  <link rel="stylesheet" href="base.css">
+  <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
 
-<body>
+<script src="style-changer.js" defer></script>
 
+
+<body>
+  <div class="style-switcher">
+    <button id="style-toggle">Change Style ▾</button>
+    <ul id="style-menu">
+      <li data-style="nrw">New Retro Wave</li>
+      <li data-style="artdeco">Art Deco</li>
+      <li data-style="future">Furturistic</li>
+      <li data-style="memories">19ᵗʰ‑Century Memories</li>
+      <li data-style="popmag">Pop Magazine</li>
+      <li data-style="renaissance">Renaissance</li>
+    </ul>
+
+  </div>
   <!-- Top Buttons -->
   <div class="top-icons">
     <a href="#" class="icon-button">🌐 Translate</a>
@@ -175,160 +191,232 @@
   </div>
 
   <div class="container">
-    <!-- Image and Navigation -->
-    <div class="image-wrapper">
-      <a href="object20.html" class="nav-button nav-left" title="Previous Object">←</a>
-      <img class="object-image"
-        src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg?20140215154906"
-        alt="Près de la Fontaine" style="width:80%; heigth:auto;">
-      <a href="object2.html" class="nav-button nav-right" title="Next Object">→</a>
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <div class="landscape"></div>
+      </div>
+      <!-- Image and Navigation -->
+      <div class="image-wrapper">
+        <a href="object20.html" class="nav-button nav-left" title="Previous Object">←</a>
+        <img class="object-image image-neon"
+          src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg?20140215154906"
+          alt="Près de la Fontaine" style="width:80%; heigth:auto;">
+        <a href="object2.html" class="nav-button nav-right" title="Next Object">→</a>
+      </div>
+
+      <div class="accordion-container">
+        <h1>🎨 Près de la Fontaine</h1>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc1">
+          <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+              adventurers</span></label>
+          <div class="accordion-content">
+            <p>
+              Hi there, little explorer! 👋 Today we’re stepping into a painting that looks like a storybook page. It’s
+              called “Près de la Fontaine,” which means “Near the Fountain.” Imagine a warm afternoon in a quiet garden.
+              There’s a lady sitting next to a pretty fountain, surrounded by trees and flowers. Can you hear the birds
+              singing? Maybe a frog is hopping near the water, or a butterfly just passed by!
+
+              This painting was made a long, long time ago—almost 200 years! That’s way before electricity or phones.
+              People wore big fancy clothes, read lots of books, and spent time walking through gardens like this one.
+              It
+              was painted by an artist named Philippe-Jacques van Bree, who loved painting peaceful places.
+
+              If you look closely, you’ll see columns and old stone statues in the background, like parts of a castle or
+              a
+              palace garden. The woman might be dreaming, waiting, or just resting. What do you think her story is?
+
+              Next time you're near a fountain, think of this painting and imagine what it would be like to step inside.
+              You could have a picnic, play hide and seek with squirrels, or listen to stories whispered by the breeze.
+              🌳🦋✨
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc2">
+          <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
+          <div class="accordion-content">
+            <p>
+              “Près de la Fontaine” (1832), created by Belgian artist Philippe-Jacques van Bree, offers a serene,
+              idealized glimpse into early 19th-century leisure and aesthetic values. The scene presents a lone female
+              figure beside a refined stone fountain, nestled in a garden adorned with classical architectural elements
+              such as fluted columns and carved sculptures. The setting evokes tranquility and contemplation, a staple
+              of
+              Romanticism’s softer edge during this period.
+
+              Measuring an undefined size and preserved in a private collection, the artwork remains a lesser-known but
+              remarkable study in harmony between human form and structured landscape. Van Bree uses warm, diffused
+              light
+              and balanced composition to create a spatial dialogue between the woman, nature, and ancient ruins. His
+              color palette is restrained—earthy greens, soft beiges, and the occasional touch of red or gold—enhancing
+              the sense of a gentle, unspoken narrative.
+
+              While “Près de la Fontaine” is primarily valued for its aesthetic resonance, it also serves as a subtle
+              commentary on the cultural aspirations of its time: peace, solitude, reflection, and alignment with
+              classical ideals. Its enduring appeal lies in its ability to communicate these values in a quiet, visual
+              language that remains accessible and relevant even today.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc3">
+          <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
+              detail</span></label>
+          <div class="accordion-content">
+            <p>
+              Philippe-Jacques van Bree’s 1832 painting “Près de la Fontaine” is a nuanced exploration of Romantic
+              aesthetics within a classical framework. Painted during a period of significant political and cultural
+              transition in post-Napoleonic Europe, the work reflects shifting attitudes toward nature, solitude, and
+              the
+              cultivated garden as spaces of introspection and moral reflection.
+
+              Van Bree, a Belgian academic painter trained in Paris and Rome, was influenced heavily by neoclassical
+              traditions, but “Près de la Fontaine” demonstrates an emerging Romantic sensitivity. The painting’s
+              central
+              figure—a solitary woman in modest attire—is positioned beside a fountain that functions symbolically as
+              both
+              a literal and metaphorical wellspring of memory and emotion. The scene is meticulously structured:
+              colonnades and sculptural ruins frame the figure, suggesting a decay of ancient values but also their
+              lingering beauty.
+
+              The integration of natural foliage with architectural remnants exemplifies the Romantic preoccupation with
+              ruin as a site of contemplation. The visual rhythm is slow and deliberate. The composition leads the eye
+              from stone to leaf to water to figure, creating a meditative spatial experience. Light plays softly across
+              surfaces, as if time itself has slowed to accommodate thought.
+
+              Moreover, van Bree’s choice of subject—a woman alone and seemingly caught in a reflective moment—was
+              unusual
+              for its time. While many contemporaneous works featured mythological or religious scenes, “Près de la
+              Fontaine” appears secular, almost anecdotal. It invites the viewer to ask: who is she? Why is she alone?
+              The
+              absence of action becomes the subject itself, emphasizing quietude and mental presence over narrative.
+
+              Contextually, the early 1830s were a time when artists began to rebel against rigid academic conventions,
+              embracing the personal and emotional. “Près de la Fontaine” does not offer spectacle. Instead, it offers
+              depth. The fountain, a recurring motif in art history, becomes here not just a decorative centerpiece but
+              a
+              symbol of introspective flow—perhaps a nod to the inner life of the subject, or even the artist.
+
+              Philosophically, this work aligns with Enlightenment ideals carried into the Romantic ethos: a reverence
+              for
+              the individual, a respect for nature’s tempering power, and an awareness of history’s persistent shadows.
+              In
+              doing so, van Bree bridges the rational past with the emotive present.
+
+              In contemporary terms, “Près de la Fontaine” could be interpreted as a visual meditation. In a world
+              filled
+              with distraction, its stillness is startling. It does not ask for attention—it rewards it. That makes it
+              not
+              only a product of its time, but a timeless invitation to slow down, look closely, and consider the
+              invisible
+              threads between beauty, solitude, and memory.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc4">
+          <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+              influencers</span></label>
+          <div class="accordion-content">
+            <p>
+              Imagine if your favorite peaceful retreat had its own aesthetic painting—this would be it. 🌿🖼 “Près de
+              la
+              Fontaine” is more than an artwork; it’s a vibe. A lone figure sits near a quiet fountain, classical ruins
+              all around, sunlight catching the edge of worn marble. No chaos, no notifications—just a moment of perfect
+              stillness from 1832.
+
+              If you’ve ever daydreamed of reading a book in a historical garden or dressing like a character from a
+              period drama, this painting captures that exact fantasy. It’s what #SlowLife looked like two centuries
+              ago,
+              with a side of #TimelessDesign.
+
+              What makes it truly special is the mood: romantic, nostalgic, and quiet—but not empty. It invites you in,
+              without saying a word. It’s what we all wish our Sunday afternoons felt like.
+
+              Tag a friend who loves moody art, classical ruins, or just good garden vibes. Because this isn’t just a
+              painting—it’s a gentle reminder that beauty lives in the quiet. #PresDeLaFontaine #GardenVibes
+              #VintageInspo
+              #RomanticRealness
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc5">
+          <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
+              information</span></label>
+          <div class="accordion-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Predicate (Natural Language)</td>
+                  <td>Object (Natural Language)</td>
+                </tr>
+                <tr>
+                  <td>Title</td>
+                  <td>Pres de la Fontaine</td>
+                </tr>
+                <tr>
+                  <td>Artist</td>
+                  <td>Philippe-Jacques van Bree</td>
+                </tr>
+                <tr>
+                  <td>Date</td>
+                  <td>1832</td>
+                </tr>
+                <tr>
+                  <td>Technique</td>
+                  <td>Oil on canvas</td>
+                </tr>
+                <tr>
+                  <td>Source</td>
+                  <td><a
+                      href="https://commons.wikimedia.org/wiki/File:Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg"
+                      target="_blank">Link</a></td>
+                </tr>
+                <tr>
+                  <td>Rights</td>
+                  <td>Public domain</td>
+                </tr>
+                <tr>
+                  <td>Topic</td>
+                  <td>conca</td>
+                </tr>
+                <tr>
+                  <td>Subject</td>
+                  <td>woman daily life</td>
+                </tr>
+                <tr>
+                  <td>Dimensions</td>
+                  <td>Unknown</td>
+                </tr>
+                <tr>
+                  <td>Holding Institution</td>
+                  <td>Private collection</td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>Unknown</td>
+                </tr>
+                <tr>
+                  <td>spatial topic</td>
+                  <td>Belgium, 19th century</td>
+                </tr>
+                <tr>
+                  <td>Work Type</td>
+                  <td>Painting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="accordion-container">
-      <h1>🎨 Près de la Fontaine</h1>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc1">
-        <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
-            adventurers</span></label>
-        <div class="accordion-content">
-          <p>
-Hi there, little explorer! 👋 Today we’re stepping into a painting that looks like a storybook page. It’s called “Près de la Fontaine,” which means “Near the Fountain.” Imagine a warm afternoon in a quiet garden. There’s a lady sitting next to a pretty fountain, surrounded by trees and flowers. Can you hear the birds singing? Maybe a frog is hopping near the water, or a butterfly just passed by!
-
-This painting was made a long, long time ago—almost 200 years! That’s way before electricity or phones. People wore big fancy clothes, read lots of books, and spent time walking through gardens like this one. It was painted by an artist named Philippe-Jacques van Bree, who loved painting peaceful places.
-
-If you look closely, you’ll see columns and old stone statues in the background, like parts of a castle or a palace garden. The woman might be dreaming, waiting, or just resting. What do you think her story is?
-
-Next time you're near a fountain, think of this painting and imagine what it would be like to step inside. You could have a picnic, play hide and seek with squirrels, or listen to stories whispered by the breeze. 🌳🦋✨
-</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc2">
-        <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
-        <div class="accordion-content">
-          <p>
-“Près de la Fontaine” (1832), created by Belgian artist Philippe-Jacques van Bree, offers a serene, idealized glimpse into early 19th-century leisure and aesthetic values. The scene presents a lone female figure beside a refined stone fountain, nestled in a garden adorned with classical architectural elements such as fluted columns and carved sculptures. The setting evokes tranquility and contemplation, a staple of Romanticism’s softer edge during this period.
-
-Measuring an undefined size and preserved in a private collection, the artwork remains a lesser-known but remarkable study in harmony between human form and structured landscape. Van Bree uses warm, diffused light and balanced composition to create a spatial dialogue between the woman, nature, and ancient ruins. His color palette is restrained—earthy greens, soft beiges, and the occasional touch of red or gold—enhancing the sense of a gentle, unspoken narrative.
-
-While “Près de la Fontaine” is primarily valued for its aesthetic resonance, it also serves as a subtle commentary on the cultural aspirations of its time: peace, solitude, reflection, and alignment with classical ideals. Its enduring appeal lies in its ability to communicate these values in a quiet, visual language that remains accessible and relevant even today.
-</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc3">
-        <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
-            detail</span></label>
-        <div class="accordion-content">
-          <p>
-Philippe-Jacques van Bree’s 1832 painting “Près de la Fontaine” is a nuanced exploration of Romantic aesthetics within a classical framework. Painted during a period of significant political and cultural transition in post-Napoleonic Europe, the work reflects shifting attitudes toward nature, solitude, and the cultivated garden as spaces of introspection and moral reflection.
-
-Van Bree, a Belgian academic painter trained in Paris and Rome, was influenced heavily by neoclassical traditions, but “Près de la Fontaine” demonstrates an emerging Romantic sensitivity. The painting’s central figure—a solitary woman in modest attire—is positioned beside a fountain that functions symbolically as both a literal and metaphorical wellspring of memory and emotion. The scene is meticulously structured: colonnades and sculptural ruins frame the figure, suggesting a decay of ancient values but also their lingering beauty.
-
-The integration of natural foliage with architectural remnants exemplifies the Romantic preoccupation with ruin as a site of contemplation. The visual rhythm is slow and deliberate. The composition leads the eye from stone to leaf to water to figure, creating a meditative spatial experience. Light plays softly across surfaces, as if time itself has slowed to accommodate thought.
-
-Moreover, van Bree’s choice of subject—a woman alone and seemingly caught in a reflective moment—was unusual for its time. While many contemporaneous works featured mythological or religious scenes, “Près de la Fontaine” appears secular, almost anecdotal. It invites the viewer to ask: who is she? Why is she alone? The absence of action becomes the subject itself, emphasizing quietude and mental presence over narrative.
-
-Contextually, the early 1830s were a time when artists began to rebel against rigid academic conventions, embracing the personal and emotional. “Près de la Fontaine” does not offer spectacle. Instead, it offers depth. The fountain, a recurring motif in art history, becomes here not just a decorative centerpiece but a symbol of introspective flow—perhaps a nod to the inner life of the subject, or even the artist.
-
-Philosophically, this work aligns with Enlightenment ideals carried into the Romantic ethos: a reverence for the individual, a respect for nature’s tempering power, and an awareness of history’s persistent shadows. In doing so, van Bree bridges the rational past with the emotive present.
-
-In contemporary terms, “Près de la Fontaine” could be interpreted as a visual meditation. In a world filled with distraction, its stillness is startling. It does not ask for attention—it rewards it. That makes it not only a product of its time, but a timeless invitation to slow down, look closely, and consider the invisible threads between beauty, solitude, and memory.
-</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc4">
-        <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern influencers</span></label>
-        <div class="accordion-content">
-          <p>
-Imagine if your favorite peaceful retreat had its own aesthetic painting—this would be it. 🌿🖼 “Près de la Fontaine” is more than an artwork; it’s a vibe. A lone figure sits near a quiet fountain, classical ruins all around, sunlight catching the edge of worn marble. No chaos, no notifications—just a moment of perfect stillness from 1832.
-
-If you’ve ever daydreamed of reading a book in a historical garden or dressing like a character from a period drama, this painting captures that exact fantasy. It’s what #SlowLife looked like two centuries ago, with a side of #TimelessDesign.
-
-What makes it truly special is the mood: romantic, nostalgic, and quiet—but not empty. It invites you in, without saying a word. It’s what we all wish our Sunday afternoons felt like.
-
-Tag a friend who loves moody art, classical ruins, or just good garden vibes. Because this isn’t just a painting—it’s a gentle reminder that beauty lives in the quiet. #PresDeLaFontaine #GardenVibes #VintageInspo #RomanticRealness
-</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <input type="checkbox" id="acc5">
-        <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
-            information</span></label>
-        <div class="accordion-content">
-          <table>
-            <tbody>
-              <tr>
-                <td>Predicate (Natural Language)</td>
-                <td>Object (Natural Language)</td>
-              </tr>
-              <tr>
-                <td>Title</td>
-                <td>Pres de la Fontaine</td>
-              </tr>
-              <tr>
-                <td>Artist</td>
-                <td>Philippe-Jacques van Bree</td>
-              </tr>
-              <tr>
-                <td>Date</td>
-                <td>1832</td>
-              </tr>
-              <tr>
-                <td>Technique</td>
-                <td>Oil on canvas</td>
-              </tr>
-              <tr>
-                <td>Source</td>
-                <td><a
-                    href="https://commons.wikimedia.org/wiki/File:Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg"
-                    target="_blank">Link</a></td>
-              </tr>
-              <tr>
-                <td>Rights</td>
-                <td>Public domain</td>
-              </tr>
-              <tr>
-                <td>Topic</td>
-                <td>conca</td>
-              </tr>
-              <tr>
-                <td>Subject</td>
-                <td>woman daily life</td>
-              </tr>
-              <tr>
-                <td>Dimensions</td>
-                <td>Unknown</td>
-              </tr>
-              <tr>
-                <td>Holding Institution</td>
-                <td>Private collection</td>
-              </tr>
-              <tr>
-                <td>Location</td>
-                <td>Unknown</td>
-              </tr>
-              <tr>
-                <td>spatial topic</td>
-                <td>Belgium, 19th century</td>
-              </tr>
-              <tr>
-                <td>Work Type</td>
-                <td>Painting</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </body>
 
 </html>

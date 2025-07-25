@@ -5,403 +5,361 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usil</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-            color: #f0f0f0;
-            padding: 40px 20px;
-            min-height: 100vh;
-        }
-
-        .top-icons {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 12px;
-            z-index: 999;
-        }
-
-        .icon-button {
-            background: #1e2a38;
-            border: 1px solid #4b6b88;
-            color: #f0f0f0;
-            font-size: 1.1em;
-            padding: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 80px auto 40px;
-        }
-
-        .image-wrapper {
-            position: relative;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .object-image {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #1e2a38;
-            border: 1px solid #4b6b88;
-            color: #f0f0f0;
-            font-size: 1.5em;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .nav-left {
-            left: -20px;
-        }
-
-        .nav-right {
-            right: -20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 1.8em;
-        }
-
-        .accordion-container {
-            background-color: #1e2a38;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-        }
-
-        .accordion-item {
-            margin-bottom: 10px;
-            border: 1px solid #34495e;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        .accordion-label {
-            display: block;
-            background-color: #2c3e50;
-            padding: 16px 20px;
-            font-size: 1.05em;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .accordion-label:hover {
-            background-color: #3a536d;
-        }
-
-        .accordion-label::after {
-            content: '▾';
-            position: absolute;
-            right: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        input[type="checkbox"]:checked+.accordion-label::after {
-            transform: rotate(180deg);
-        }
-
-        .note {
-            display: block;
-            font-size: 0.85em;
-            font-style: italic;
-            color: #b0c4de;
-            margin-top: 5px;
-        }
-
-        .accordion-content {
-            background-color: #263645;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-            padding: 0 20px;
-        }
-
-        input[type="checkbox"]:checked~.accordion-content {
-            max-height: 1000px;
-            padding: 15px 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        td {
-            padding: 12px 16px;
-            text-align: left;
-            min-width: 200px;
-            color: #f0f0f0;
-            background-color: #1f2d3c;
-            border: 1px solid #4a5a6a;
-        }
-
-        tr:nth-child(even) td {
-            background-color: #223344;
-        }
-    </style>
+    <link rel="stylesheet" href="base.css">
+    <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
 
-<body>
+<script src="style-changer.js" defer></script>
 
-    <!-- Top Buttons -->
+<body>
+    <!-- <script src="style-changer.js"></script> -->
+
+    <div class="style-switcher">
+        <button id="style-toggle">Change Style ▾</button>
+        <ul id="style-menu">
+            <li data-style="nrw">New Retro Wave</li>
+            <li data-style="artdeco">Art Deco</li>
+            <li data-style="future">Furturistic</li>
+            <li data-style="memories">19ᵗʰ‑Century Memories</li>
+            <li data-style="popmag">Pop Magazine</li>
+            <li data-style="renaissance">Renaissance</li>
+        </ul>
+
+    </div>
+
     <div class="top-icons">
         <a href="#" class="icon-button">🌐 Translate</a>
         <a href="#" class="icon-button">📤 Share</a>
     </div>
 
     <div class="container">
-        <!-- Image and Navigation -->
-        <div class="image-wrapper">
-            <a href="object20.html" class="nav-button nav-left" title="Previous Object">←</a>
-            <img class="object-image" src="https://www.umbriacultura.it/samira/data/caos_010.jpg" alt="Usil" style="height: 480px; width:auto;">
-            <a href="object2.html" class="nav-button nav-right" title="Next Object">→</a>
-        </div>
-
-        <div class="accordion-container">
-            <h1>🌄 Usil</h1>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc1">
-                <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
-                        adventurers</span></label>
-                <div class="accordion-content">
-                    <p>
-                        <strong>Usil</strong> is a site-specific installation created in 2019 by contemporary Italian
-                        artist Agapito Miniucchi, exhibited at the Aurelio De Felice – CAOS Museum in Terni. The work
-                        takes its title and inspiration from the Etruscan sun-deity Usil, reinterpreting ancient myth
-                        through modern materials and form. Composed primarily of carved and assembled wood
-                        panels—measuring 166 cm high, 50 cm wide, and 75 cm deep—the installation combines sculptural
-                        relief with painted surfaces to evoke the sun’s radiance and the mythic aura of its divine
-                        bearer.
-                    </p>
-                    <p>
-                        Miniucchi’s <em>Usil</em> fuses minimalist geometry with rich symbolic motifs: stylized rays,
-                        angular wings, and circular apertures recall both archaic depictions of the god and solar
-                        iconography across cultures. The warm, honeyed tones of the wood are enhanced by subtle washes
-                        of gold and ochre paint, producing a luminescent effect under gallery lighting. In commissioning
-                        the piece, the Comune di Terni sought to bridge local heritage with contemporary art—Miniucchi’s
-                        installation thus stands as a dialog between past and present, ritual and display.
-                    </p>
-                </div>
+        <div class="wrapper">
+            <div class="inner-wrapper">
+                <div class="landscape"></div>
             </div>
 
-            <div class="accordion-item">
-                <input type="checkbox" id="acc2">
-                <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
-                        rush</span></label>
-                <div class="accordion-content">
-                    <p>
-                        Step into the CAOS Museum’s gallery and you’ll be met by <em>Usil</em>, a soaring wooden
-                        structure that channels the power of the Etruscan sun-god. At eye level, the central figure—an
-                        abstracted, winged silhouette—appears to emerge from the plane of the wall, its carved contours
-                        catching light and shadow with every degree of your turn.
-                    </p>
-                    <p>
-                        Reach out and brush your fingertips over the smooth, sanded panels. You’ll feel the gentle
-                        undulations where the rays extend—each a precise bevel that radiates outward like a compass
-                        rose. The warm wood grain underpins a wash of translucent gold: not an opaque veneer, but a
-                        whisper of pigment that glimmers as you pass.
-                    </p>
-                    <p>
-                        Step back a pace. The installation fills your peripheral vision, its verticality (166 cm tall)
-                        dominating the space without overwhelming it. The broader wingspan (50 cm each side) and the 75
-                        cm projection create a subtle relief, so that from certain angles you see only the silhouette;
-                        from others, the full depth of layered panels and interlocking shapes.
-                    </p>
-                    <p>
-                        In sixty seconds, you’ve sensed the dialogue between ancient myth and modern craft: the Etruscan
-                        deity reborn in a language of clean lines and natural materials. You’ve felt the tactile warmth
-                        of wood, observed the play of light on carved geometry, and experienced how Miniucchi’s minimal
-                        palette can evoke the sun’s brilliance without a single electric bulb.
-                    </p>
-                </div>
+            <!-- <div class="top-icons">
+            <a href="#" class="icon-button">🌐 Translate</a>
+            <a href="#" class="icon-button">📤 Share</a>
+            </div> -->
+
+            <div class="image-wrapper">
+                <a href="object20.html" class="nav-button nav-left" title="Previous Object">←</a>
+                <img class="object-image image-neon" src="https://www.umbriacultura.it/samira/data/caos_010.jpg"
+                    alt="Usil">
+                <a href="object2.html" class="nav-button nav-right" title="Next Object">→</a>
             </div>
 
-            <div class="accordion-item">
-                <input type="checkbox" id="acc3">
-                <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
-                        detail</span></label>
-                <div class="accordion-content">
-                    <h3>Mythic Origins and Concept</h3>
-                    <p>
-                        The figure of <strong>Usil</strong> occupies a central place in the Etruscan pantheon as the
-                        personification of the sun—akin to the Greek Helios and the Roman Sol. In the fragmented texts
-                        of Etruscan religion, Usil is depicted both rising from the sea at dawn and riding a chariot
-                        across the sky. Agapito Miniucchi’s installation does not attempt a literal re-creation; rather,
-                        it abstracts the deity into elemental forms—rays, wings, circular apertures—that speak of
-                        illumination, passage, and cyclical renewal.
-                    </p>
-                    <p>
-                        Commissioned by the Comune di Terni for its CAOS Museum collection, Miniucchi was challenged to
-                        produce a work that would resonate with local history—Terni lies on the ancient border of
-                        Etruria—and yet speak to universal themes of light and transformation. His choice of wood as
-                        primary medium alludes to both the organic (the living world bathed in sunlight) and the
-                        artisanal traditions of Umbrian craftsmen.
-                    </p>
+            <div class="accordion-container">
 
-                    <h3>Materials and Fabrication</h3>
-                    <p>
-                        <strong>Format:</strong> Carved and painted wood panels (legno)<br>
-                        <strong>Dimensions:</strong> H 166 cm × W 50 cm × D 75 cm
-                    </p>
-                    <p>
-                        Miniucchi selects sustainably sourced poplar and birch plywood—materials prized for their fine
-                        grain and stability. Each panel is cut with CNC precision, then hand-filed to soften edges and
-                        transitions. The layered construction consists of a backing plane anchored to the wall, over
-                        which successive relief panels are applied, creating the 75 cm projection in staggered steps.
-                    </p>
-                    <p>
-                        Surface treatment involves a two-stage process: first, a sealant to protect the wood; then a
-                        series of thin washes of acrylic mixed with metallic gold and ochre pigments. These washes allow
-                        the wood’s natural striations to show through, generating subtle iridescence under changing
-                        gallery lights. Finally, a matte varnish unifies the finish and guards against UV fading.
-                    </p>
+                <h1>🎨 Usil – Descriptions for Everyone</h1>
 
-                    <h3>Iconography and Visual Language</h3>
-                    <p>
-                        The installation’s central silhouette is crowned with a halo of triangular rays—twelve in
-                        number, echoing solar cycles and months of the year. Below the halo, a pair of stylized wings
-                        spread laterally, each wing panel carved with geometric line patterns that reference both
-                        Etruscan textile motifs and contemporary abstraction.
-                    </p>
-                    <p>
-                        Circular cut-outs—ranging from 5 to 15 cm in diameter—are strategically placed to align with
-                        gallery spotlights, transforming overhead lighting into “sunbeams” that pierce the wood and cast
-                        dappled patterns onto the surrounding walls. In this way, the viewer becomes part of the work,
-                        moving through shafts of refracted light.
-                    </p>
-
-                    <h3>Spatial Experience and Installation</h3>
-                    <p>
-                        Installed at eye level, the piece’s base sits 50 cm off the floor, encouraging viewers to look
-                        up—an intentional gesture that mimics gazing toward the sky at sunrise. The 166 cm height
-                        approximates a human figure, further anthropomorphizing the abstract form. At 75 cm depth, the
-                        work intrudes comfortably into the gallery space without obstructing circulation.
-                    </p>
-                    <p>
-                        Miniucchi worked closely with CAOS’s curatorial team to calibrate lighting angles and sight
-                        lines. Through mock-ups and on-site tests, he determined the ideal positioning of each circular
-                        aperture so that midday gallery light would align with the piece’s geometry, reinforcing its
-                        solar narrative.
-                    </p>
-
-                    <h3>Cultural Significance and Reception</h3>
-                    <p>
-                        Since its unveiling in 2019, <em>Usil</em> has become a focal point for discussions of
-                        contemporary archaeological dialogue—how modern art can reinterpret ancient symbols without
-                        resorting to pastiche. Critics have praised Miniucchi’s restraint: by stripping Usil’s
-                        iconography to its barest essentials, he creates a work that is at once immediately legible and
-                        continually open to interpretation.
-                    </p>
-                    <p>
-                        Visitors often pause beneath the piece to experience the play of light and shadow, likening the
-                        effect to standing in a grove of sun-dappled trees. Educational programs at CAOS have
-                        incorporated the installation into workshops on geometry in art, solar symbolism, and
-                        sustainable craft.
-                    </p>
-
-                    <h3>Conservation and Care</h3>
-                    <p>
-                        <strong>Conservation:</strong> Buono<br>
-                        <strong>Keeper:</strong> Comune di Terni (Aurelio De Felice – CAOS Museum)
-                    </p>
-                    <p>
-                        Wood-based installations require stable environmental conditions: CAOS maintains gallery
-                        temperatures between 18–22 °C and relative humidity at 45–55 % to prevent warping or splitting.
-                        The layered construction allows for disassembly: each relief panel is keyed into slots on the
-                        backing plane and can be removed for individual inspection.
-                    </p>
-
-                    <h3>Legacy and Ongoing Dialogue</h3>
-                    <p>
-                        Miniucchi’s <em>Usil</em> continues to inspire reinterpretations of Etruscan myth in
-                        contemporary media—from digital animations to public murals. It stands as a model for how
-                        museums can commission new works that both honor regional heritage and expand the boundaries of
-                        exhibition practice.
-                    </p>
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1">
+                    <label for="acc1" class="accordion-label">👧 Let’s Learn!<span class="note">for young
+                            adventurers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            <strong>Usil</strong> is a site-specific installation created in 2019 by contemporary
+                            Italian
+                            artist Agapito Miniucchi, exhibited at the Aurelio De Felice – CAOS Museum in Terni. The
+                            work
+                            takes its title and inspiration from the Etruscan sun-deity Usil, reinterpreting ancient
+                            myth
+                            through modern materials and form. Composed primarily of carved and assembled wood
+                            panels—measuring 166 cm high, 50 cm wide, and 75 cm deep—the installation combines
+                            sculptural
+                            relief with painted surfaces to evoke the sun’s radiance and the mythic aura of its divine
+                            bearer.
+                        </p>
+                        <p>
+                            Miniucchi’s <em>Usil</em> fuses minimalist geometry with rich symbolic motifs: stylized
+                            rays,
+                            angular wings, and circular apertures recall both archaic depictions of the god and solar
+                            iconography across cultures. The warm, honeyed tones of the wood are enhanced by subtle
+                            washes
+                            of gold and ochre paint, producing a luminescent effect under gallery lighting. In
+                            commissioning
+                            the piece, the Comune di Terni sought to bridge local heritage with contemporary
+                            art—Miniucchi’s
+                            installation thus stands as a dialog between past and present, ritual and display.
+                        </p>
+                    </div>
                 </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc2">
+                    <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
+                            rush</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Step into the CAOS Museum’s gallery and you’ll be met by <em>Usil</em>, a soaring wooden
+                            structure that channels the power of the Etruscan sun-god. At eye level, the central
+                            figure—an
+                            abstracted, winged silhouette—appears to emerge from the plane of the wall, its carved
+                            contours
+                            catching light and shadow with every degree of your turn.
+                        </p>
+                        <p>
+                            Reach out and brush your fingertips over the smooth, sanded panels. You’ll feel the gentle
+                            undulations where the rays extend—each a precise bevel that radiates outward like a compass
+                            rose. The warm wood grain underpins a wash of translucent gold: not an opaque veneer, but a
+                            whisper of pigment that glimmers as you pass.
+                        </p>
+                        <p>
+                            Step back a pace. The installation fills your peripheral vision, its verticality (166 cm
+                            tall)
+                            dominating the space without overwhelming it. The broader wingspan (50 cm each side) and the
+                            75
+                            cm projection create a subtle relief, so that from certain angles you see only the
+                            silhouette;
+                            from others, the full depth of layered panels and interlocking shapes.
+                        </p>
+                        <p>
+                            In sixty seconds, you’ve sensed the dialogue between ancient myth and modern craft: the
+                            Etruscan
+                            deity reborn in a language of clean lines and natural materials. You’ve felt the tactile
+                            warmth
+                            of wood, observed the play of light on carved geometry, and experienced how Miniucchi’s
+                            minimal
+                            palette can evoke the sun’s brilliance without a single electric bulb.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc3">
+                    <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers,
+                            studying in
+                            detail</span></label>
+                    <div class="accordion-content">
+                        <h3>Mythic Origins and Concept</h3>
+                        <p>
+                            The figure of <strong>Usil</strong> occupies a central place in the Etruscan pantheon as the
+                            personification of the sun—akin to the Greek Helios and the Roman Sol. In the fragmented
+                            texts
+                            of Etruscan religion, Usil is depicted both rising from the sea at dawn and riding a chariot
+                            across the sky. Agapito Miniucchi’s installation does not attempt a literal re-creation;
+                            rather,
+                            it abstracts the deity into elemental forms—rays, wings, circular apertures—that speak of
+                            illumination, passage, and cyclical renewal.
+                        </p>
+                        <p>
+                            Commissioned by the Comune di Terni for its CAOS Museum collection, Miniucchi was challenged
+                            to
+                            produce a work that would resonate with local history—Terni lies on the ancient border of
+                            Etruria—and yet speak to universal themes of light and transformation. His choice of wood as
+                            primary medium alludes to both the organic (the living world bathed in sunlight) and the
+                            artisanal traditions of Umbrian craftsmen.
+                        </p>
+
+                        <h3>Materials and Fabrication</h3>
+                        <p>
+                            <strong>Format:</strong> Carved and painted wood panels (legno)<br>
+                            <strong>Dimensions:</strong> H 166 cm × W 50 cm × D 75 cm
+                        </p>
+                        <p>
+                            Miniucchi selects sustainably sourced poplar and birch plywood—materials prized for their
+                            fine
+                            grain and stability. Each panel is cut with CNC precision, then hand-filed to soften edges
+                            and
+                            transitions. The layered construction consists of a backing plane anchored to the wall, over
+                            which successive relief panels are applied, creating the 75 cm projection in staggered
+                            steps.
+                        </p>
+                        <p>
+                            Surface treatment involves a two-stage process: first, a sealant to protect the wood; then a
+                            series of thin washes of acrylic mixed with metallic gold and ochre pigments. These washes
+                            allow
+                            the wood’s natural striations to show through, generating subtle iridescence under changing
+                            gallery lights. Finally, a matte varnish unifies the finish and guards against UV fading.
+                        </p>
+
+                        <h3>Iconography and Visual Language</h3>
+                        <p>
+                            The installation’s central silhouette is crowned with a halo of triangular rays—twelve in
+                            number, echoing solar cycles and months of the year. Below the halo, a pair of stylized
+                            wings
+                            spread laterally, each wing panel carved with geometric line patterns that reference both
+                            Etruscan textile motifs and contemporary abstraction.
+                        </p>
+                        <p>
+                            Circular cut-outs—ranging from 5 to 15 cm in diameter—are strategically placed to align with
+                            gallery spotlights, transforming overhead lighting into “sunbeams” that pierce the wood and
+                            cast
+                            dappled patterns onto the surrounding walls. In this way, the viewer becomes part of the
+                            work,
+                            moving through shafts of refracted light.
+                        </p>
+
+                        <h3>Spatial Experience and Installation</h3>
+                        <p>
+                            Installed at eye level, the piece’s base sits 50 cm off the floor, encouraging viewers to
+                            look
+                            up—an intentional gesture that mimics gazing toward the sky at sunrise. The 166 cm height
+                            approximates a human figure, further anthropomorphizing the abstract form. At 75 cm depth,
+                            the
+                            work intrudes comfortably into the gallery space without obstructing circulation.
+                        </p>
+                        <p>
+                            Miniucchi worked closely with CAOS’s curatorial team to calibrate lighting angles and sight
+                            lines. Through mock-ups and on-site tests, he determined the ideal positioning of each
+                            circular
+                            aperture so that midday gallery light would align with the piece’s geometry, reinforcing its
+                            solar narrative.
+                        </p>
+
+                        <h3>Cultural Significance and Reception</h3>
+                        <p>
+                            Since its unveiling in 2019, <em>Usil</em> has become a focal point for discussions of
+                            contemporary archaeological dialogue—how modern art can reinterpret ancient symbols without
+                            resorting to pastiche. Critics have praised Miniucchi’s restraint: by stripping Usil’s
+                            iconography to its barest essentials, he creates a work that is at once immediately legible
+                            and
+                            continually open to interpretation.
+                        </p>
+                        <p>
+                            Visitors often pause beneath the piece to experience the play of light and shadow, likening
+                            the
+                            effect to standing in a grove of sun-dappled trees. Educational programs at CAOS have
+                            incorporated the installation into workshops on geometry in art, solar symbolism, and
+                            sustainable craft.
+                        </p>
+
+                        <h3>Conservation and Care</h3>
+                        <p>
+                            <strong>Conservation:</strong> Buono<br>
+                            <strong>Keeper:</strong> Comune di Terni (Aurelio De Felice – CAOS Museum)
+                        </p>
+                        <p>
+                            Wood-based installations require stable environmental conditions: CAOS maintains gallery
+                            temperatures between 18–22 °C and relative humidity at 45–55 % to prevent warping or
+                            splitting.
+                            The layered construction allows for disassembly: each relief panel is keyed into slots on
+                            the
+                            backing plane and can be removed for individual inspection.
+                        </p>
+
+                        <h3>Legacy and Ongoing Dialogue</h3>
+                        <p>
+                            Miniucchi’s <em>Usil</em> continues to inspire reinterpretations of Etruscan myth in
+                            contemporary media—from digital animations to public murals. It stands as a model for how
+                            museums can commission new works that both honor regional heritage and expand the boundaries
+                            of
+                            exhibition practice.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc4">
+                    <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+                            influencers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            ✨ <strong>Encountered Agapito Miniucchi’s <em>Usil</em> at CAOS Museum?</strong> Show your
+                            perspective with <strong>#UsilAtCAOS</strong>! Whether you captured the halo of rays or the
+                            sunlit shadows through its apertures, we want to see how you experienced this modern take on
+                            an
+                            Etruscan god.
+                        </p>
+
+                        <h3>🔎 Quick facts:</h3>
+                        <ul>
+                            <li><strong>Artist:</strong> Agapito Miniucchi</li>
+                            <li><strong>Year:</strong> 2019</li>
+                            <li><strong>Medium:</strong> Carved & painted wood (legno)</li>
+                            <li><strong>Dimensions:</strong> H 166 cm × W 50 cm × D 75 cm</li>
+                            <li><strong>Location:</strong> Aurelio De Felice – CAOS Museum, Terni</li>
+                        </ul>
+
+                        <h3>📸 Photo tips:</h3>
+                        <ul>
+                            <li>Frame the piece from below to emphasize its soaring height.</li>
+                            <li>Capture the beams of light passing through the circular cut-outs.</li>
+                            <li>Include contextual shots with museum architecture or viewers for scale.</li>
+                        </ul>
+
+                        <p>
+                            🗣️ Tag your creations with <strong>#ContemporaryEtruria</strong>,
+                            <strong>#MiniucchiArt</strong>, and <strong>@CAOS_Museum</strong> for a chance to be
+                            featured in
+                            our social feed!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc5">
+                    <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need
+                            structured
+                            information</span></label>
+                    <div class="accordion-content">
+                        <table class="metadata-table">
+                            <thead>
+                                <tr>
+                                    <th>Predicate (Natural Language)</th>
+                                    <th>Object (Natural Language)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Subject</td>
+                                    <td>Usil</td>
+                                </tr>
+                                <tr>
+                                    <td>Title</td>
+                                    <td>Usil</td>
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td>A painting by Agapito Miniucchi, thematically connected to the Etruscan deity
+                                        Usil
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Time-span</td>
+                                    <td>2019</td>
+                                </tr>
+                                <tr>
+                                    <td>Format</td>
+                                    <td>Legno</td>
+                                </tr>
+                                <tr>
+                                    <td>Source</td>
+                                    <td><a href="https://museodefelice.comune.terni.it/le-opere/scheda-oa/?idScheda=165932"
+                                            target="_blank">Museo de Felice
+                                            Entry</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>166 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Width</td>
+                                    <td>50 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Thickness</td>
+                                    <td>75 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Conservation</td>
+                                    <td>Buono</td>
+                                </tr>
+                                <tr>
+                                    <td>Keeper</td>
+                                    <td>Comune di Terni</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="accordion-item">
-                <input type="checkbox" id="acc4">
-                <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
-                        influencers</span></label>
-                <div class="accordion-content">
-                    <p>
-                        ✨ <strong>Encountered Agapito Miniucchi’s <em>Usil</em> at CAOS Museum?</strong> Show your
-                        perspective with <strong>#UsilAtCAOS</strong>! Whether you captured the halo of rays or the
-                        sunlit shadows through its apertures, we want to see how you experienced this modern take on an
-                        Etruscan god.
-                    </p>
 
-                    <h3>🔎 Quick facts:</h3>
-                    <ul>
-                        <li><strong>Artist:</strong> Agapito Miniucchi</li>
-                        <li><strong>Year:</strong> 2019</li>
-                        <li><strong>Medium:</strong> Carved & painted wood (legno)</li>
-                        <li><strong>Dimensions:</strong> H 166 cm × W 50 cm × D 75 cm</li>
-                        <li><strong>Location:</strong> Aurelio De Felice – CAOS Museum, Terni</li>
-                    </ul>
-
-                    <h3>📸 Photo tips:</h3>
-                    <ul>
-                        <li>Frame the piece from below to emphasize its soaring height.</li>
-                        <li>Capture the beams of light passing through the circular cut-outs.</li>
-                        <li>Include contextual shots with museum architecture or viewers for scale.</li>
-                    </ul>
-
-                    <p>
-                        🗣️ Tag your creations with <strong>#ContemporaryEtruria</strong>,
-                        <strong>#MiniucchiArt</strong>, and <strong>@CAOS_Museum</strong> for a chance to be featured in
-                        our social feed!
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc5">
-                <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
-                        information</span></label>
-                <div class="accordion-content">
-                    <table>
-                        <tbody>
-                            <!-- 13 empty rows -->
-                            ${Array(13).fill('<tr>
-                                <td></td>
-                                <td></td>
-                            </tr>').join('\n')}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
 
         </div>
     </div>
 </body>
-
-</html>

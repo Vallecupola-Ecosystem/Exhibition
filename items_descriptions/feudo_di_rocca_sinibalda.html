@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feudo di Rocca Sinibalda</title>
-    <style>
+    <!-- <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
@@ -163,11 +163,26 @@
         tr:nth-child(even) td {
             background-color: #223344;
         }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="base.css">
+    <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
 
-<body>
+<script src="style-changer.js" defer></script>
 
+<body>
+    <div class="style-switcher">
+        <button id="style-toggle">Change Style ▾</button>
+        <ul id="style-menu">
+            <li data-style="nrw">New Retro Wave</li>
+            <li data-style="artdeco">Art Deco</li>
+            <li data-style="future">Furturistic</li>
+            <li data-style="memories">19ᵗʰ‑Century Memories</li>
+            <li data-style="popmag">Pop Magazine</li>
+            <li data-style="renaissance">Renaissance</li>
+        </ul>
+
+    </div>
     <!-- Top Buttons -->
     <div class="top-icons">
         <a href="#" class="icon-button">🌐 Translate</a>
@@ -175,161 +190,267 @@
     </div>
 
     <div class="container">
-        <!-- Image and Navigation -->
-        <div class="image-wrapper">
-            <a href="object21.html" class="nav-button nav-left" title="Previous Object">←</a>
-            <img class="object-image"
-                src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Bril%2C_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg" style="width:80%; heigth:auto;"
-                alt="Feudo di Rocca Sinibalda">
-            <a href="object23.html" class="nav-button nav-right" title="Next Object">→</a>
+        <div class="wrapper">
+            <div class="inner-wrapper">
+                <div class="landscape"></div>
+            </div>
+            <!-- Image and Navigation -->
+            <div class="image-wrapper">
+                <a href="object21.html" class="nav-button nav-left" title="Previous Object">←</a>
+                <img class="object-image image-neon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Bril%2C_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"
+                    style="width:80%; heigth:auto;" alt="Feudo di Rocca Sinibalda">
+                <a href="object23.html" class="nav-button nav-right" title="Next Object">→</a>
+            </div>
+
+            <div class="accordion-container">
+                <h1>🏰 Feudo di Rocca Sinibalda</h1>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1">
+                    <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+                            adventurers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Hey curious traveler! 🌍 Today we’re flying back over 400 years into the past! Imagine
+                            standing
+                            on a hill, looking down at a castle called Rocca Sinibalda. In this painting by Paul Bril
+                            from
+                            the year 1601, you get a bird’s-eye view of a huge stone fortress with towers, surrounded by
+                            forests and tiny little houses. There might be knights riding on horses, or cooks preparing
+                            feasts inside the castle. What do you think they’re doing?
+
+                            Paul Bril painted this beautiful scene a long time ago using oil paints. He wanted to show
+                            how
+                            big and powerful the castle looked from far away. There are winding roads, dark green trees,
+                            and
+                            maybe even a few people walking near the river. It’s like looking at a treasure map!
+
+                            Back then, people didn’t have drones or cameras. Artists painted what they saw—and
+                            sometimes,
+                            what they imagined. This painting is both real and magical. If you look closely, you might
+                            start
+                            to make up your own stories about the people living there. Maybe there’s a princess in the
+                            tower
+                            or a blacksmith in the village. What story would YOU tell about this place? 🏰✨
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc2">
+                    <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
+                            rush</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            “Feudo di Rocca Sinibalda” (1601) is an oil painting by Flemish landscape artist Paul Bril,
+                            depicting the historic castle and surrounding territory of Rocca Sinibalda, a fortified
+                            hilltop
+                            town in central Italy. The work reflects both the artist’s technical mastery in landscape
+                            composition and the early Baroque fascination with topographical accuracy and noble estates.
+
+                            The painting showcases the castle in a commanding aerial view, with a focus on elevation and
+                            architectural form. The castle sits atop a winding ridge, flanked by deep green woods,
+                            cultivated fields, and a scattering of buildings that suggest a functioning feudal economy.
+                            Small figures and animals can be spotted along roads and pastures, adding life and realism
+                            to
+                            the rural setting.
+
+                            Paul Bril, who spent much of his career in Rome, was renowned for his ability to blend
+                            classical
+                            harmony with observational detail. His landscapes were often commissioned by aristocrats and
+                            clergy to depict their lands and holdings, and Rocca Sinibalda was likely no exception.
+
+                            This painting doesn’t just record geography—it reflects status and control. Through
+                            carefully
+                            layered brushwork and naturalistic lighting, Bril turns the landscape into both a work of
+                            art
+                            and a symbol of early modern territorial pride. It’s a beautiful reminder of how art once
+                            served
+                            power, memory, and place.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc3">
+                    <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers,
+                            studying in
+                            detail</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Paul Bril’s “Feudo di Rocca Sinibalda” (1601) represents a significant fusion of
+                            topographical
+                            documentation and artistic idealization, emblematic of landscape painting’s evolving role in
+                            early 17th-century Europe. Created during a time when the visual arts began to shift from
+                            purely
+                            religious and mythological themes to include secular patronage, this painting embodies the
+                            growing power of noble families to use art for territorial assertion and symbolic
+                            representation.
+
+                            Bril, a Flemish artist who established his career in Rome, was deeply influenced by both
+                            Northern Renaissance precision and the Italianate sense of composition and spatial harmony.
+                            In
+                            “Feudo di Rocca Sinibalda,” he captures not only the architectural essence of the eponymous
+                            fortress, but also its strategic placement within a dramatic natural environment. Situated
+                            atop
+                            a craggy outcrop in the Sabina region of Lazio, Rocca Sinibalda Castle dominates the
+                            surrounding
+                            valley. Bril’s aerial perspective heightens this dominance, offering a God-like view that
+                            was
+                            both artistic flourish and political messaging.
+
+                            The structure itself is rendered with meticulous clarity: we can discern fortified walls,
+                            ramparts, inner courtyards, and even hints of the surrounding feudal village. Roads snake
+                            down
+                            from the castle into the valley below, where cultivated fields and scattered habitations
+                            suggest
+                            a prosperous and orderly domain. These compositional decisions align with contemporary
+                            theories
+                            about landscape as an expression of moral and civic order.
+
+                            Art historian Ann Bermingham has argued that early landscape painting often reflected
+                            “social
+                            values projected onto nature.” In this case, Bril's painting can be read as a visual
+                            articulation of ownership, dominion, and cultivated refinement. The castle is not merely a
+                            military bastion—it is the crown of a managed land, and thus a metaphor for governance and
+                            stewardship.
+
+                            Bril’s technique contributes significantly to the effect. He combines luminous atmospheric
+                            perspective with detailed foregrounding, guiding the eye from macro to micro scales within a
+                            single frame. His brushwork varies—from broad, suggestive fields of green in the forests, to
+                            intricate architectural lines of the castle’s turrets and windows. The tonal palette,
+                            dominated
+                            by earthy greens, ochres, and slate blues, echoes the harmony between human construction and
+                            the
+                            natural world.
+
+                            Importantly, the painting also reflects the influence of cartographic thought. In an age
+                            when
+                            maps were becoming tools of statecraft and identity, Bril’s aerial landscapes perform a
+                            similar
+                            function: they delineate land, define borders, and assert narrative. In this way, “Feudo di
+                            Rocca Sinibalda” is not simply decorative—it is territorial propaganda.
+
+                            In the broader context of 17th-century painting, Bril’s work stands as a transitional
+                            moment.
+                            While Italian contemporaries like Annibale Carracci were moving toward classicizing and
+                            idealized landscapes, Bril’s hybrid approach grounded his compositions in both experience
+                            and
+                            aspiration. “Feudo di Rocca Sinibalda” anticipates the later “vedute” traditions of
+                            Canaletto
+                            and Piranesi, where specificity and spectacle blend to serve both memory and monument.
+
+                            Today, the painting is not just a record of a place, but a rare and invaluable insight into
+                            the
+                            political imagination of early modern Italy. It visualizes not only a structure, but an
+                            entire
+                            worldview—one where land, legacy, and artistry converge on a single canvas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc4">
+                    <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+                            influencers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Would you live in a castle perched above a valley, surrounded by forests and mystery?
+                            Because
+                            that’s exactly what this 1601 painting is giving. 🏰✨ “Feudo di Rocca Sinibalda” by Paul
+                            Bril is
+                            like the original Google Earth—only with oil paint and major drama.
+
+                            This bird’s-eye masterpiece shows the medieval fortress of Rocca Sinibalda in all its glory:
+                            stone towers, winding paths, and an epic landscape that feels both real and mythic. You can
+                            almost hear the clatter of hooves on cobblestones and the rustle of trees in the breeze. And
+                            yes, this place *still exists* in Italy’s Lazio region.
+
+                            Back in the day, paintings like this weren’t just pretty—they were powerful. This was the
+                            medieval version of flexing your domain. Look at my land. Look at my castle. Look at my
+                            status.
+
+                            Zoom in on the details and you’ll find tiny people, carts, cottages, and farms. It’s a whole
+                            world in one image.
+
+                            Tag your history-loving friend or that person who always dreams of a countryside escape.
+                            This
+                            one’s for the medieval romantics and daydream architects. #CastleCrush #HistoricGlowUp
+                            #PaulBril
+                            #OldSchoolMapVibes
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc5">
+                    <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need
+                            structured
+                            information</span></label>
+                    <div class="accordion-content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Title</td>
+                                    <td>Feudo di Rocca Sinibalda</td>
+                                </tr>
+                                <tr>
+                                    <td>Artist</td>
+                                    <td>Paul Bril</td>
+                                </tr>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>1601</td>
+                                </tr>
+                                <tr>
+                                    <td>Technique</td>
+                                    <td>Oil on canvas</td>
+                                </tr>
+                                <tr>
+                                    <td>Source</td>
+                                    <td><a href="https://commons.wikimedia.org/wiki/File:Bril,_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"
+                                            target="_blank">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Rights</td>
+                                    <td>Public domain</td>
+                                </tr>
+                                <tr>
+                                    <td>Topic</td>
+                                    <td>Castle</td>
+                                </tr>
+                                <tr>
+                                    <td>Subject</td>
+                                    <td>Rocca Sinibalda feud</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensions</td>
+                                    <td>155 × 220 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Holding Institution</td>
+                                    <td>Galleria Nazionale d'Arte Antica, Palazzo Barberini</td>
+                                </tr>
+                                <tr>
+                                    <td>Location</td>
+                                    <td>Rome, Italy</td>
+                                </tr>
+                                <tr>
+                                    <td>spatial topic</td>
+                                    <td>Italy, 17th century</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Type</td>
+                                    <td>Painting</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="accordion-container">
-            <h1>🏰 Feudo di Rocca Sinibalda</h1>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc1">
-                <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
-                        adventurers</span></label>
-                <div class="accordion-content">
-                    <p>
-Hey curious traveler! 🌍 Today we’re flying back over 400 years into the past! Imagine standing on a hill, looking down at a castle called Rocca Sinibalda. In this painting by Paul Bril from the year 1601, you get a bird’s-eye view of a huge stone fortress with towers, surrounded by forests and tiny little houses. There might be knights riding on horses, or cooks preparing feasts inside the castle. What do you think they’re doing?
-
-Paul Bril painted this beautiful scene a long time ago using oil paints. He wanted to show how big and powerful the castle looked from far away. There are winding roads, dark green trees, and maybe even a few people walking near the river. It’s like looking at a treasure map!
-
-Back then, people didn’t have drones or cameras. Artists painted what they saw—and sometimes, what they imagined. This painting is both real and magical. If you look closely, you might start to make up your own stories about the people living there. Maybe there’s a princess in the tower or a blacksmith in the village. What story would YOU tell about this place? 🏰✨
-</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc2">
-                <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
-                        rush</span></label>
-                <div class="accordion-content">
-                    <p>
-“Feudo di Rocca Sinibalda” (1601) is an oil painting by Flemish landscape artist Paul Bril, depicting the historic castle and surrounding territory of Rocca Sinibalda, a fortified hilltop town in central Italy. The work reflects both the artist’s technical mastery in landscape composition and the early Baroque fascination with topographical accuracy and noble estates.
-
-The painting showcases the castle in a commanding aerial view, with a focus on elevation and architectural form. The castle sits atop a winding ridge, flanked by deep green woods, cultivated fields, and a scattering of buildings that suggest a functioning feudal economy. Small figures and animals can be spotted along roads and pastures, adding life and realism to the rural setting.
-
-Paul Bril, who spent much of his career in Rome, was renowned for his ability to blend classical harmony with observational detail. His landscapes were often commissioned by aristocrats and clergy to depict their lands and holdings, and Rocca Sinibalda was likely no exception.
-
-This painting doesn’t just record geography—it reflects status and control. Through carefully layered brushwork and naturalistic lighting, Bril turns the landscape into both a work of art and a symbol of early modern territorial pride. It’s a beautiful reminder of how art once served power, memory, and place.
-</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc3">
-                <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
-                        detail</span></label>
-                <div class="accordion-content">
-                    <p>
-Paul Bril’s “Feudo di Rocca Sinibalda” (1601) represents a significant fusion of topographical documentation and artistic idealization, emblematic of landscape painting’s evolving role in early 17th-century Europe. Created during a time when the visual arts began to shift from purely religious and mythological themes to include secular patronage, this painting embodies the growing power of noble families to use art for territorial assertion and symbolic representation.
-
-Bril, a Flemish artist who established his career in Rome, was deeply influenced by both Northern Renaissance precision and the Italianate sense of composition and spatial harmony. In “Feudo di Rocca Sinibalda,” he captures not only the architectural essence of the eponymous fortress, but also its strategic placement within a dramatic natural environment. Situated atop a craggy outcrop in the Sabina region of Lazio, Rocca Sinibalda Castle dominates the surrounding valley. Bril’s aerial perspective heightens this dominance, offering a God-like view that was both artistic flourish and political messaging.
-
-The structure itself is rendered with meticulous clarity: we can discern fortified walls, ramparts, inner courtyards, and even hints of the surrounding feudal village. Roads snake down from the castle into the valley below, where cultivated fields and scattered habitations suggest a prosperous and orderly domain. These compositional decisions align with contemporary theories about landscape as an expression of moral and civic order.
-
-Art historian Ann Bermingham has argued that early landscape painting often reflected “social values projected onto nature.” In this case, Bril's painting can be read as a visual articulation of ownership, dominion, and cultivated refinement. The castle is not merely a military bastion—it is the crown of a managed land, and thus a metaphor for governance and stewardship.
-
-Bril’s technique contributes significantly to the effect. He combines luminous atmospheric perspective with detailed foregrounding, guiding the eye from macro to micro scales within a single frame. His brushwork varies—from broad, suggestive fields of green in the forests, to intricate architectural lines of the castle’s turrets and windows. The tonal palette, dominated by earthy greens, ochres, and slate blues, echoes the harmony between human construction and the natural world.
-
-Importantly, the painting also reflects the influence of cartographic thought. In an age when maps were becoming tools of statecraft and identity, Bril’s aerial landscapes perform a similar function: they delineate land, define borders, and assert narrative. In this way, “Feudo di Rocca Sinibalda” is not simply decorative—it is territorial propaganda.
-
-In the broader context of 17th-century painting, Bril’s work stands as a transitional moment. While Italian contemporaries like Annibale Carracci were moving toward classicizing and idealized landscapes, Bril’s hybrid approach grounded his compositions in both experience and aspiration. “Feudo di Rocca Sinibalda” anticipates the later “vedute” traditions of Canaletto and Piranesi, where specificity and spectacle blend to serve both memory and monument.
-
-Today, the painting is not just a record of a place, but a rare and invaluable insight into the political imagination of early modern Italy. It visualizes not only a structure, but an entire worldview—one where land, legacy, and artistry converge on a single canvas.
-</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc4">
-                <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
-                        influencers</span></label>
-                <div class="accordion-content">
-                    <p>
-Would you live in a castle perched above a valley, surrounded by forests and mystery? Because that’s exactly what this 1601 painting is giving. 🏰✨ “Feudo di Rocca Sinibalda” by Paul Bril is like the original Google Earth—only with oil paint and major drama.
-
-This bird’s-eye masterpiece shows the medieval fortress of Rocca Sinibalda in all its glory: stone towers, winding paths, and an epic landscape that feels both real and mythic. You can almost hear the clatter of hooves on cobblestones and the rustle of trees in the breeze. And yes, this place *still exists* in Italy’s Lazio region.
-
-Back in the day, paintings like this weren’t just pretty—they were powerful. This was the medieval version of flexing your domain. Look at my land. Look at my castle. Look at my status.
-
-Zoom in on the details and you’ll find tiny people, carts, cottages, and farms. It’s a whole world in one image.
-
-Tag your history-loving friend or that person who always dreams of a countryside escape. This one’s for the medieval romantics and daydream architects. #CastleCrush #HistoricGlowUp #PaulBril #OldSchoolMapVibes
-</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc5">
-                <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
-                        information</span></label>
-                <div class="accordion-content">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Title</td>
-                                <td>Feudo di Rocca Sinibalda</td>
-                            </tr>
-                            <tr>
-                                <td>Artist</td>
-                                <td>Paul Bril</td>
-                            </tr>
-                            <tr>
-                                <td>Date</td>
-                                <td>1601</td>
-                            </tr>
-                            <tr>
-                                <td>Technique</td>
-                                <td>Oil on canvas</td>
-                            </tr>
-                            <tr>
-                                <td>Source</td>
-                                <td><a href="https://commons.wikimedia.org/wiki/File:Bril,_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"
-                                        target="_blank">Link</a></td>
-                            </tr>
-                            <tr>
-                                <td>Rights</td>
-                                <td>Public domain</td>
-                            </tr>
-                            <tr>
-                                <td>Topic</td>
-                                <td>Castle</td>
-                            </tr>
-                            <tr>
-                                <td>Subject</td>
-                                <td>Rocca Sinibalda feud</td>
-                            </tr>
-                            <tr>
-                                <td>Dimensions</td>
-                                <td>155 × 220 cm</td>
-                            </tr>
-                            <tr>
-                                <td>Holding Institution</td>
-                                <td>Galleria Nazionale d'Arte Antica, Palazzo Barberini</td>
-                            </tr>
-                            <tr>
-                                <td>Location</td>
-                                <td>Rome, Italy</td>
-                            </tr>
-                            <tr>
-                                <td>spatial topic</td>
-                                <td>Italy, 17th century</td>
-                            </tr>
-                            <tr>
-                                <td>Work Type</td>
-                                <td>Painting</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </div>
-    </div>
 </body>
 
 </html>

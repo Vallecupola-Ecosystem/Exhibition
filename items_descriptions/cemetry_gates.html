@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cemetry Gates – The Smiths</title>
-    <style>
+    <!-- <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
@@ -157,11 +157,27 @@
         tr:nth-child(even) td {
             background-color: #223344;
         }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="base.css">
+    <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
+
+<script src="style-changer.js" defer></script>
 
 <body>
 
+    <div class="style-switcher">
+        <button id="style-toggle">Change Style ▾</button>
+        <ul id="style-menu">
+            <li data-style="nrw">New Retro Wave</li>
+            <li data-style="artdeco">Art Deco</li>
+            <li data-style="future">Furturistic</li>
+            <li data-style="memories">19ᵗʰ‑Century Memories</li>
+            <li data-style="popmag">Pop Magazine</li>
+            <li data-style="renaissance">Renaissance</li>
+        </ul>
+
+    </div>
     <!-- Top Buttons -->
     <div class="top-icons">
         <a href="#" class="icon-button">🌐 Translate</a>
@@ -169,197 +185,221 @@
     </div>
 
     <div class="container">
-        <!-- Image and Navigation -->
-        <div class="image-wrapper">
-            <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
-            <div class="container">
-                <div class="image-wrapper">
-                    <a href="object24.html" class="nav-button nav-left" title="Previous Object">←</a>
-
-                    <!-- Video Embed -->
-                    <video class="video-controls" controls
-                        style="max-width:100%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); margin-bottom: 20px;">
-                        <source
-                            src="https://video.wixstatic.com/video/d436be_c30dedf5638343cc9669e637dea3c580/1080p/mp4/file.mp4"
-                            type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-
-                    <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
-                </div>
-
-                <div class="accordion-container">
-                    <h1>🎶 Cemetry Gates – The Smiths</h1>
-
-                    <div class="accordion-item">
-                        <input type="checkbox" id="acc1">
-                        <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
-                                adventurers</span></label>
-                        <div class="accordion-content">
-                            <p>
-                                Hey music explorer! 🎧 Ready to walk through a mysterious gate into a world of music,
-                                words, and imagination? “Cemetry Gates” is a song by a band called The Smiths, and it’s
-                                full of curiosity. Imagine strolling through a quiet graveyard, reading the names on the
-                                stones, and suddenly—poetry pops into your head! That’s kind of what this song feels
-                                like.
-                                <br><br>
-                                The Smiths were a famous British band in the 1980s, and they made songs that sound happy
-                                but sometimes talk about serious things. This one mixes pretty guitar music with lyrics
-                                about books, old writers, and even a funny argument between two friends about who copied
-                                whom. 😂
-                                <br><br>
-                                It’s short—just under three minutes—but full of clever words. The singer even mentions
-                                people like Oscar Wilde and Keats! It’s like taking a walk and having a deep chat with
-                                your brain at the same time. 🧠✨
-                                <br><br>
-                                So next time you're on a walk, think about this song. What would you say to a poet from
-                                the past? Would you laugh, think, or write your own poem? 🎶🪦📖
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <input type="checkbox" id="acc2">
-                        <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
-                                rush</span></label>
-                        <div class="accordion-content">
-                            <p>
-                                “Cemetry Gates” (1986) is a standout track by the English rock band The Smiths, featured
-                                on their seminal album *The Queen Is Dead*. Clocking in at 2 minutes and 39 seconds, the
-                                song is known for its jangly, upbeat guitar riffs juxtaposed against lyrics filled with
-                                wit, literary references, and dry humor.
-                                <br><br>
-                                Written by vocalist Morrissey and guitarist Johnny Marr, “Cemetry Gates” explores themes
-                                of originality, plagiarism, and the blurred lines between homage and imitation. The
-                                lyrics describe a casual walk through a cemetery where the narrator reflects on death,
-                                authorship, and an intellectual spat with a friend. Names like Keats and Wilde make
-                                appearances, evoking a literary world that Morrissey often draws upon for inspiration.
-                                <br><br>
-                                Musically, the song is characterized by Marr’s signature melodic guitar style, which
-                                gives it a light and breezy feel despite the graveyard setting. The contrast between the
-                                playful music and Morrissey’s ironic commentary creates a track that is both catchy and
-                                clever—a hallmark of The Smiths’ style.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <input type="checkbox" id="acc3">
-                        <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers,
-                                studying in detail</span></label>
-                        <div class="accordion-content">
-                            <p>
-                                “Cemetry Gates,” a track from The Smiths’ 1986 album *The Queen Is Dead*, stands as a
-                                masterclass in lyrical irony and musical understatement. Though short in length (2:39),
-                                the song encapsulates the band’s characteristic blend of jangly guitar melodies and
-                                Morrissey’s literary-minded lyricism.
-                                <br><br>
-                                At the heart of the song lies a conversation, or perhaps an inner monologue, that deals
-                                with accusations of plagiarism. Morrissey references poets like John Keats and Oscar
-                                Wilde not merely as name-drops, but as thematic anchors. Wilde, in particular, serves as
-                                a mirror for Morrissey’s own intellectual flamboyance and cultural critique.
-                                <br><br>
-                                The setting—a cemetery—acts as a metaphorical landscape where dead authors speak louder
-                                than the living. This evokes postmodern concerns about originality and the recycling of
-                                ideas. Yet Morrissey does so with humor: “There’s always someone, somewhere / With a big
-                                nose, who knows.” The snark masks a serious cultural inquiry.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <input type="checkbox" id="acc4">
-                        <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
-                                influencers</span></label>
-                        <div class="accordion-content">
-                            <p>
-                                Graveyards never sounded so clever. 💀🎸 If you’ve got a taste for brainy lyrics,
-                                British charm, and that perfect combo of melancholy and melody, “Cemetry Gates” by The
-                                Smiths is your jam.
-                                <br><br>
-                                It’s got everything: poetic shoutouts (hello Oscar Wilde & Keats!), a walk through a
-                                cemetery, and a cheeky argument about who stole whose words. 😂 The song is short but
-                                rich—like a bite-sized book with a killer soundtrack.
-                                <br><br>
-                                Tag your English Lit major friend, your goth ex, or anyone who still writes in journals.
-                                This song *is* the moment. #TheSmiths #CemetryGates #SadIsSmart #GothPopGenius
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <input type="checkbox" id="acc5">
-                        <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need
-                                structured information</span></label>
-                        <div class="accordion-content">
-                            <table>
-                                <tr>
-                                    <td>Title</td>
-                                    <td>Cemetry Gates</td>
-                                </tr>
-                                <tr>
-                                    <td>Artist</td>
-                                    <td>The Smiths</td>
-                                </tr>
-                                <tr>
-                                    <td>Duration</td>
-                                    <td>2:39</td>
-                                </tr>
-                                <tr>
-                                    <td>Album</td>
-                                    <td>The Queen Is Dead</td>
-                                </tr>
-                                <tr>
-                                    <td>Release Date</td>
-                                    <td>1986-06-16</td>
-                                </tr>
-                                <tr>
-                                    <td>Instrumentation</td>
-                                    <td>Guitar, Bass Guitar, Drums, Vocals</td>
-                                </tr>
-                                <tr>
-                                    <td>Recording Location</td>
-                                    <td>Farnham</td>
-                                </tr>
-                                <tr>
-                                    <td>Language</td>
-                                    <td>English</td>
-                                </tr>
-                                <tr>
-                                    <td>Genre</td>
-                                    <td>Alternative Rock</td>
-                                </tr>
-                                <tr>
-                                    <td>Publisher</td>
-                                    <td>Rough Trade Records</td>
-                                </tr>
-                                <tr>
-                                    <td>Coverage</td>
-                                    <td>United Kingdom</td>
-                                </tr>
-                                <tr>
-                                    <td>Producer</td>
-                                    <td>Stephen Street</td>
-                                </tr>
-                                <tr>
-                                    <td>Subject</td>
-                                    <td>Graveyard</td>
-                                </tr>
-                                <tr>
-                                    <td>Lyricist</td>
-                                    <td>Morrissey</td>
-                                </tr>
-                                <tr>
-                                    <td>Composer</td>
-                                    <td>Johnny Marr</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
+        <div class="wrapper">
+            <div class="inner-wrapper">
+                <div class="landscape"></div>
             </div>
+            <!-- Image and Navigation -->
+            <div class="image-wrapper">
+                <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
+                <video class="video-controls object-image image-neon" controls
+                    style="max-width:100%; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); margin-bottom: 20px;">
+                    <source
+                        src="https://video.wixstatic.com/video/d436be_c30dedf5638343cc9669e637dea3c580/1080p/mp4/file.mp4"
+                        type="video/mp4">
+                </video>
+                <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
+            </div>
+
+            <div class="accordion-container">
+                <h1>🎶 Cemetry Gates – The Smiths</h1>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1">
+                    <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+                            adventurers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Hey music explorer! 🎧 Ready to walk through a mysterious gate into a world of
+                            music,
+                            words, and imagination? “Cemetry Gates” is a song by a band called The Smiths, and
+                            it’s
+                            full of curiosity. Imagine strolling through a quiet graveyard, reading the names on
+                            the
+                            stones, and suddenly—poetry pops into your head! That’s kind of what this song feels
+                            like.
+                            <br><br>
+                            The Smiths were a famous British band in the 1980s, and they made songs that sound
+                            happy
+                            but sometimes talk about serious things. This one mixes pretty guitar music with
+                            lyrics
+                            about books, old writers, and even a funny argument between two friends about who
+                            copied
+                            whom. 😂
+                            <br><br>
+                            It’s short—just under three minutes—but full of clever words. The singer even
+                            mentions
+                            people like Oscar Wilde and Keats! It’s like taking a walk and having a deep chat
+                            with
+                            your brain at the same time. 🧠✨
+                            <br><br>
+                            So next time you're on a walk, think about this song. What would you say to a poet
+                            from
+                            the past? Would you laugh, think, or write your own poem? 🎶🪦📖
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc2">
+                    <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
+                            rush</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            “Cemetry Gates” (1986) is a standout track by the English rock band The Smiths,
+                            featured
+                            on their seminal album *The Queen Is Dead*. Clocking in at 2 minutes and 39 seconds,
+                            the
+                            song is known for its jangly, upbeat guitar riffs juxtaposed against lyrics filled
+                            with
+                            wit, literary references, and dry humor.
+                            <br><br>
+                            Written by vocalist Morrissey and guitarist Johnny Marr, “Cemetry Gates” explores
+                            themes
+                            of originality, plagiarism, and the blurred lines between homage and imitation. The
+                            lyrics describe a casual walk through a cemetery where the narrator reflects on
+                            death,
+                            authorship, and an intellectual spat with a friend. Names like Keats and Wilde make
+                            appearances, evoking a literary world that Morrissey often draws upon for
+                            inspiration.
+                            <br><br>
+                            Musically, the song is characterized by Marr’s signature melodic guitar style, which
+                            gives it a light and breezy feel despite the graveyard setting. The contrast between
+                            the
+                            playful music and Morrissey’s ironic commentary creates a track that is both catchy
+                            and
+                            clever—a hallmark of The Smiths’ style.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc3">
+                    <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers,
+                            studying in detail</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            “Cemetry Gates,” a track from The Smiths’ 1986 album *The Queen Is Dead*, stands as
+                            a
+                            masterclass in lyrical irony and musical understatement. Though short in length
+                            (2:39),
+                            the song encapsulates the band’s characteristic blend of jangly guitar melodies and
+                            Morrissey’s literary-minded lyricism.
+                            <br><br>
+                            At the heart of the song lies a conversation, or perhaps an inner monologue, that
+                            deals
+                            with accusations of plagiarism. Morrissey references poets like John Keats and Oscar
+                            Wilde not merely as name-drops, but as thematic anchors. Wilde, in particular,
+                            serves as
+                            a mirror for Morrissey’s own intellectual flamboyance and cultural critique.
+                            <br><br>
+                            The setting—a cemetery—acts as a metaphorical landscape where dead authors speak
+                            louder
+                            than the living. This evokes postmodern concerns about originality and the recycling
+                            of
+                            ideas. Yet Morrissey does so with humor: “There’s always someone, somewhere / With a
+                            big
+                            nose, who knows.” The snark masks a serious cultural inquiry.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc4">
+                    <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+                            influencers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Graveyards never sounded so clever. 💀🎸 If you’ve got a taste for brainy lyrics,
+                            British charm, and that perfect combo of melancholy and melody, “Cemetry Gates” by
+                            The
+                            Smiths is your jam.
+                            <br><br>
+                            It’s got everything: poetic shoutouts (hello Oscar Wilde & Keats!), a walk through a
+                            cemetery, and a cheeky argument about who stole whose words. 😂 The song is short
+                            but
+                            rich—like a bite-sized book with a killer soundtrack.
+                            <br><br>
+                            Tag your English Lit major friend, your goth ex, or anyone who still writes in
+                            journals.
+                            This song *is* the moment. #TheSmiths #CemetryGates #SadIsSmart #GothPopGenius
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc5">
+                    <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need
+                            structured information</span></label>
+                    <div class="accordion-content">
+                        <table>
+                            <tr>
+                                <td>Title</td>
+                                <td>Cemetry Gates</td>
+                            </tr>
+                            <tr>
+                                <td>Artist</td>
+                                <td>The Smiths</td>
+                            </tr>
+                            <tr>
+                                <td>Duration</td>
+                                <td>2:39</td>
+                            </tr>
+                            <tr>
+                                <td>Album</td>
+                                <td>The Queen Is Dead</td>
+                            </tr>
+                            <tr>
+                                <td>Release Date</td>
+                                <td>1986-06-16</td>
+                            </tr>
+                            <tr>
+                                <td>Instrumentation</td>
+                                <td>Guitar, Bass Guitar, Drums, Vocals</td>
+                            </tr>
+                            <tr>
+                                <td>Recording Location</td>
+                                <td>Farnham</td>
+                            </tr>
+                            <tr>
+                                <td>Language</td>
+                                <td>English</td>
+                            </tr>
+                            <tr>
+                                <td>Genre</td>
+                                <td>Alternative Rock</td>
+                            </tr>
+                            <tr>
+                                <td>Publisher</td>
+                                <td>Rough Trade Records</td>
+                            </tr>
+                            <tr>
+                                <td>Coverage</td>
+                                <td>United Kingdom</td>
+                            </tr>
+                            <tr>
+                                <td>Producer</td>
+                                <td>Stephen Street</td>
+                            </tr>
+                            <tr>
+                                <td>Subject</td>
+                                <td>Graveyard</td>
+                            </tr>
+                            <tr>
+                                <td>Lyricist</td>
+                                <td>Morrissey</td>
+                            </tr>
+                            <tr>
+                                <td>Composer</td>
+                                <td>Johnny Marr</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
     </div>
 </body>
 

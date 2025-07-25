@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quadriglia – Traditional Folk</title>
-    <style>
+    <!-- <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
@@ -163,11 +163,26 @@
         tr:nth-child(even) td {
             background-color: #223344;
         }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="base.css">
+    <link id="theme-style" rel="stylesheet" href="new_wave.css">
 </head>
 
-<body>
+<script src="style-changer.js" defer></script>
 
+<body>
+    <div class="style-switcher">
+        <button id="style-toggle">Change Style ▾</button>
+        <ul id="style-menu">
+            <li data-style="nrw">New Retro Wave</li>
+            <li data-style="artdeco">Art Deco</li>
+            <li data-style="future">Furturistic</li>
+            <li data-style="memories">19ᵗʰ‑Century Memories</li>
+            <li data-style="popmag">Pop Magazine</li>
+            <li data-style="renaissance">Renaissance</li>
+        </ul>
+
+    </div>
     <!-- Top Buttons -->
     <div class="top-icons">
         <a href="#" class="icon-button">🌐 Translate</a>
@@ -175,227 +190,271 @@
     </div>
 
     <div class="container">
-        <!-- Image and Navigation -->
-        <div class="image-wrapper">
-            <a href="object23.html" class="nav-button nav-left" title="Previous Object">←</a>
-            <iframe width="879" height="535" src="https://www.youtube.com/embed/LVVQw9wgcSw" title="Quadriglia 1"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="object25.html" class="nav-button nav-right" title="Next Object">→</a>
+        <div class="wrapper">
+            <div class="inner-wrapper">
+                <div class="landscape"></div>
+            </div>
+            <!-- Image and Navigation -->
+            <div class="image-wrapper">
+                <a href="object23.html" class="nav-button nav-left" title="Previous Object">←</a>
+                <iframe width="600" height="400" src="https://www.youtube.com/embed/LVVQw9wgcSw" title="Quadriglia 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a href="object25.html" class="nav-button nav-right" title="Next Object">→</a>
+            </div>
+
+            <div class="accordion-container">
+                <h1>🕺 Quadriglia – Traditional Folk</h1>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1">
+                    <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+                            adventurers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Hi there, music adventurer! 🎻 Today we’re going to listen to a really fun and bouncy tune
+                            called the “Quadriglia.” That’s a fancy word for a type of dance! It’s full of skipping,
+                            hopping, and spinning around with friends. Imagine being at a party in a village a long time
+                            ago, where everyone is dressed in colorful clothes and dancing in a circle. 💃🕺
+
+                            The Quadriglia was super popular in old times, especially in Italy. It’s a group dance,
+                            where
+                            people follow steps together in patterns—like a happy puzzle made of music! There’s
+                            clapping,
+                            stomping, and lots of smiling. Sometimes, there's even someone calling out the next move,
+                            like a
+                            dance coach!
+
+                            This song is played with special instruments like violins, accordions, and tambourines. Can
+                            you
+                            hear the rhythm? Try to clap along or spin like the dancers would.
+
+                            Folk music like this is a way to remember stories, people, and good times from long ago. And
+                            guess what? Even today, some people still dance the Quadriglia at festivals. Maybe you’ll
+                            try it
+                            too one day! 🥳🌻🎶
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc2">
+                    <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
+                            rush</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            The Quadriglia is a traditional group dance that originated in 18th-century Europe and
+                            became
+                            especially popular in Italy during the 19th and early 20th centuries. As a folk tradition,
+                            it
+                            evolved into various regional styles, blending formal ballroom patterns with rural festive
+                            energy. The word "quadriglia" refers to the quadrille—a dance originally designed for four
+                            couples arranged in a square formation, performing choreographed sequences.
+
+                            This Italian version, known simply as “Quadriglia” in folk contexts, is typically performed
+                            at
+                            community celebrations, weddings, and village festivals. It’s characterized by quick tempos,
+                            structured changes in formation, and a joyful, collaborative spirit. Musically, the
+                            Quadriglia
+                            is played with instruments such as the accordion, violin, tamburello (a type of tambourine),
+                            and
+                            sometimes folk clarinets or flutes. The rhythm is lively and repetitive, supporting the
+                            dance’s
+                            interactive nature.
+
+                            Although rooted in formal dance forms, the folk Quadriglia emphasizes fun over formality.
+                            Callers or musicians often shout cues, helping dancers stay in sync as they switch partners
+                            or
+                            change direction. The music drives this communal joy, echoing traditions of improvisation
+                            and
+                            oral instruction.
+
+                            Today, the Quadriglia is part of many folkloric repertoires across Italy. Its continued
+                            presence
+                            signals a vibrant cultural memory—dancing not just for art, but for connection.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc3">
+                    <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers,
+                            studying in
+                            detail</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            The Italian folk Quadriglia is a rich cultural artifact that reflects both the diffusion and
+                            localization of European dance forms. Derived from the French “quadrille,” a fashionable
+                            ballroom dance of the 18th century, the Quadriglia was adapted in Italy to suit regional
+                            tastes,
+                            rural community values, and the evolving musical practices of the 19th century. What emerged
+                            is
+                            a dynamic, multiform dance genre that bridges elite and vernacular traditions.
+
+                            At its core, the Quadriglia is performed by multiple couples (usually four or more) arranged
+                            in
+                            symmetrical formations. The structure invites both order and spontaneity: dancers follow
+                            predetermined patterns—advancing, retreating, exchanging partners—while responding to
+                            musical
+                            cues and live instructions from a “caller” or band leader. This interactivity distinguishes
+                            it
+                            from fixed-form ballroom traditions and underscores its social function: a public display of
+                            coordination, inclusion, and local identity.
+
+                            Musically, Italian folk Quadriglie are performed in compound or duple meter, with tempos
+                            ranging
+                            from moderate to brisk depending on the region. Instrumentation varies, but often includes
+                            accordion (central to Italian folk), violin, tamburello, guitar, and occasionally wind
+                            instruments. In mountain regions, the zampogna (bagpipe) might also be featured. The music’s
+                            repetitive phrasing and rhythmic clarity serve to anchor the dance’s energetic flow.
+
+                            The Quadriglia’s proliferation coincided with key socio-economic shifts: the decline of
+                            feudalism, the growth of nationalist movements, and the slow urbanization of rural
+                            populations.
+                            These dances often accompanied harvest festivals, saint days, and other communal rites,
+                            becoming
+                            moments of cultural affirmation. They symbolized unity, fertility, and seasonal rhythm—a
+                            living
+                            choreography of agrarian life.
+
+                            Importantly, the Quadriglia also became a vehicle for musical transmission. In oral
+                            cultures,
+                            the repetition of tunes and dance forms served pedagogical purposes. Young dancers learned
+                            by
+                            doing, inheriting a tradition through embodied practice rather than formal training. In this
+                            way, the Quadriglia was a form of “kinetic folklore”—knowledge passed through movement,
+                            sound,
+                            and memory.
+
+                            With the rise of Italian folklore studies in the 20th century, ethnomusicologists began
+                            documenting regional variants of the Quadriglia. These ranged from the elegant and subdued
+                            versions in central Italy to the vibrant, almost theatrical renditions in the south.
+                            Scholars
+                            such as Roberto Leydi emphasized how dances like the Quadriglia reflected not just
+                            entertainment, but worldview—community values, gender roles, and historical continuity.
+
+                            Today, performances of the Quadriglia are part of cultural festivals and educational
+                            programs.
+                            Though modernized in some cases, traditional versions remain essential to the identity of
+                            folk
+                            ensembles across Italy. Their preservation signals an ongoing negotiation between heritage
+                            and
+                            innovation—proof that even communal dances from centuries ago can continue to move us, quite
+                            literally.
+
+                            Ultimately, the Quadriglia invites us to reconsider the boundaries between folk and formal,
+                            past
+                            and present. It is choreography as cultural narrative, and music as memory made visible.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc4">
+                    <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+                            influencers</span></label>
+                    <div class="accordion-content">
+                        <p>
+                            Spinning through time with a smile 💃🎻 The “Quadriglia” isn’t just a dance—it’s a full-on
+                            folk
+                            festival packed into a few joyful minutes. If you’ve never seen people twirl, clap, and
+                            switch
+                            partners like a human kaleidoscope, now’s your chance.
+
+                            This traditional Italian group dance is all about rhythm, community, and good vibes. The
+                            music?
+                            Bright accordion riffs, playful violin loops, and tambourine beats that get your toes
+                            tapping
+                            before you even realize it. It’s coordinated chaos—in the best way possible.
+
+                            Imagine you're at a village festa, the sun’s setting, and someone shouts “Cambio!”—and
+                            suddenly
+                            everyone’s laughing and swapping partners. That’s the Quadriglia vibe.
+
+                            Still danced today at local festivals and folk shows, this isn’t just a throwback. It’s
+                            living,
+                            breathing culture. No ballroom shoes required—just enthusiasm and maybe a little rhythm.
+
+                            Tag your dance buddy, your favorite musician, or someone who loves vintage party energy.
+                            Because
+                            the best moves never go out of style. #QuadrigliaVibes #FolkDanceJoy #ItalianRoots
+                            #SpinningWithStyle
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc5">
+                    <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need
+                            structured
+                            information</span></label>
+                    <div class="accordion-content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Title</td>
+                                    <td>Quadriglia</td>
+                                </tr>
+                                <tr>
+                                    <td>Artist</td>
+                                    <td>Anonymous / Traditional</td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td>~2:30</td>
+                                </tr>
+                                <tr>
+                                    <td>Album</td>
+                                    <td>La saltarella dell'Alta Sabina</td>
+                                </tr>
+                                <tr>
+                                    <td>Release Date</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr>
+                                    <td>Instrumentation</td>
+                                    <td>Organetto, tamburello</td>
+                                </tr>
+                                <tr>
+                                    <td>Recording Location</td>
+                                    <td>Italy</td>
+                                </tr>
+                                <tr>
+                                    <td>Language</td>
+                                    <td>Italian</td>
+                                </tr>
+                                <tr>
+                                    <td>Genre</td>
+                                    <td>Folk</td>
+                                </tr>
+                                <tr>
+                                    <td>Publisher</td>
+                                    <td>Taranta Cultural Association</td>
+                                </tr>
+                                <tr>
+                                    <td>coverage</td>
+                                    <td>Lazio</td>
+                                </tr>
+                                <tr>
+                                    <td>Producer</td>
+                                    <td>Taranta Cultural Association</td>
+                                </tr>
+                                <tr>
+                                    <td>subject</td>
+                                    <td>dance</td>
+                                </tr>
+                                <tr>
+                                    <td>Lyricist</td>
+                                    <td>Giuseppe Michele Gala</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="accordion-container">
-            <h1>🕺 Quadriglia – Traditional Folk</h1>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc1">
-                <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
-                        adventurers</span></label>
-                <div class="accordion-content">
-                    <p>
-                        Hi there, music adventurer! 🎻 Today we’re going to listen to a really fun and bouncy tune
-                        called the “Quadriglia.” That’s a fancy word for a type of dance! It’s full of skipping,
-                        hopping, and spinning around with friends. Imagine being at a party in a village a long time
-                        ago, where everyone is dressed in colorful clothes and dancing in a circle. 💃🕺
-
-                        The Quadriglia was super popular in old times, especially in Italy. It’s a group dance, where
-                        people follow steps together in patterns—like a happy puzzle made of music! There’s clapping,
-                        stomping, and lots of smiling. Sometimes, there's even someone calling out the next move, like a
-                        dance coach!
-
-                        This song is played with special instruments like violins, accordions, and tambourines. Can you
-                        hear the rhythm? Try to clap along or spin like the dancers would.
-
-                        Folk music like this is a way to remember stories, people, and good times from long ago. And
-                        guess what? Even today, some people still dance the Quadriglia at festivals. Maybe you’ll try it
-                        too one day! 🥳🌻🎶
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc2">
-                <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a
-                        rush</span></label>
-                <div class="accordion-content">
-                    <p>
-                        The Quadriglia is a traditional group dance that originated in 18th-century Europe and became
-                        especially popular in Italy during the 19th and early 20th centuries. As a folk tradition, it
-                        evolved into various regional styles, blending formal ballroom patterns with rural festive
-                        energy. The word "quadriglia" refers to the quadrille—a dance originally designed for four
-                        couples arranged in a square formation, performing choreographed sequences.
-
-                        This Italian version, known simply as “Quadriglia” in folk contexts, is typically performed at
-                        community celebrations, weddings, and village festivals. It’s characterized by quick tempos,
-                        structured changes in formation, and a joyful, collaborative spirit. Musically, the Quadriglia
-                        is played with instruments such as the accordion, violin, tamburello (a type of tambourine), and
-                        sometimes folk clarinets or flutes. The rhythm is lively and repetitive, supporting the dance’s
-                        interactive nature.
-
-                        Although rooted in formal dance forms, the folk Quadriglia emphasizes fun over formality.
-                        Callers or musicians often shout cues, helping dancers stay in sync as they switch partners or
-                        change direction. The music drives this communal joy, echoing traditions of improvisation and
-                        oral instruction.
-
-                        Today, the Quadriglia is part of many folkloric repertoires across Italy. Its continued presence
-                        signals a vibrant cultural memory—dancing not just for art, but for connection.
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc3">
-                <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
-                        detail</span></label>
-                <div class="accordion-content">
-                    <p>
-                        The Italian folk Quadriglia is a rich cultural artifact that reflects both the diffusion and
-                        localization of European dance forms. Derived from the French “quadrille,” a fashionable
-                        ballroom dance of the 18th century, the Quadriglia was adapted in Italy to suit regional tastes,
-                        rural community values, and the evolving musical practices of the 19th century. What emerged is
-                        a dynamic, multiform dance genre that bridges elite and vernacular traditions.
-
-                        At its core, the Quadriglia is performed by multiple couples (usually four or more) arranged in
-                        symmetrical formations. The structure invites both order and spontaneity: dancers follow
-                        predetermined patterns—advancing, retreating, exchanging partners—while responding to musical
-                        cues and live instructions from a “caller” or band leader. This interactivity distinguishes it
-                        from fixed-form ballroom traditions and underscores its social function: a public display of
-                        coordination, inclusion, and local identity.
-
-                        Musically, Italian folk Quadriglie are performed in compound or duple meter, with tempos ranging
-                        from moderate to brisk depending on the region. Instrumentation varies, but often includes
-                        accordion (central to Italian folk), violin, tamburello, guitar, and occasionally wind
-                        instruments. In mountain regions, the zampogna (bagpipe) might also be featured. The music’s
-                        repetitive phrasing and rhythmic clarity serve to anchor the dance’s energetic flow.
-
-                        The Quadriglia’s proliferation coincided with key socio-economic shifts: the decline of
-                        feudalism, the growth of nationalist movements, and the slow urbanization of rural populations.
-                        These dances often accompanied harvest festivals, saint days, and other communal rites, becoming
-                        moments of cultural affirmation. They symbolized unity, fertility, and seasonal rhythm—a living
-                        choreography of agrarian life.
-
-                        Importantly, the Quadriglia also became a vehicle for musical transmission. In oral cultures,
-                        the repetition of tunes and dance forms served pedagogical purposes. Young dancers learned by
-                        doing, inheriting a tradition through embodied practice rather than formal training. In this
-                        way, the Quadriglia was a form of “kinetic folklore”—knowledge passed through movement, sound,
-                        and memory.
-
-                        With the rise of Italian folklore studies in the 20th century, ethnomusicologists began
-                        documenting regional variants of the Quadriglia. These ranged from the elegant and subdued
-                        versions in central Italy to the vibrant, almost theatrical renditions in the south. Scholars
-                        such as Roberto Leydi emphasized how dances like the Quadriglia reflected not just
-                        entertainment, but worldview—community values, gender roles, and historical continuity.
-
-                        Today, performances of the Quadriglia are part of cultural festivals and educational programs.
-                        Though modernized in some cases, traditional versions remain essential to the identity of folk
-                        ensembles across Italy. Their preservation signals an ongoing negotiation between heritage and
-                        innovation—proof that even communal dances from centuries ago can continue to move us, quite
-                        literally.
-
-                        Ultimately, the Quadriglia invites us to reconsider the boundaries between folk and formal, past
-                        and present. It is choreography as cultural narrative, and music as memory made visible.
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc4">
-                <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
-                        influencers</span></label>
-                <div class="accordion-content">
-                    <p>
-                        Spinning through time with a smile 💃🎻 The “Quadriglia” isn’t just a dance—it’s a full-on folk
-                        festival packed into a few joyful minutes. If you’ve never seen people twirl, clap, and switch
-                        partners like a human kaleidoscope, now’s your chance.
-
-                        This traditional Italian group dance is all about rhythm, community, and good vibes. The music?
-                        Bright accordion riffs, playful violin loops, and tambourine beats that get your toes tapping
-                        before you even realize it. It’s coordinated chaos—in the best way possible.
-
-                        Imagine you're at a village festa, the sun’s setting, and someone shouts “Cambio!”—and suddenly
-                        everyone’s laughing and swapping partners. That’s the Quadriglia vibe.
-
-                        Still danced today at local festivals and folk shows, this isn’t just a throwback. It’s living,
-                        breathing culture. No ballroom shoes required—just enthusiasm and maybe a little rhythm.
-
-                        Tag your dance buddy, your favorite musician, or someone who loves vintage party energy. Because
-                        the best moves never go out of style. #QuadrigliaVibes #FolkDanceJoy #ItalianRoots
-                        #SpinningWithStyle
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <input type="checkbox" id="acc5">
-                <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
-                        information</span></label>
-                <div class="accordion-content">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Title</td>
-                                <td>Quadriglia</td>
-                            </tr>
-                            <tr>
-                                <td>Artist</td>
-                                <td>Anonymous / Traditional</td>
-                            </tr>
-                            <tr>
-                                <td>Duration</td>
-                                <td>~2:30</td>
-                            </tr>
-                            <tr>
-                                <td>Album</td>
-                                <td>La saltarella dell'Alta Sabina</td>
-                            </tr>
-                            <tr>
-                                <td>Release Date</td>
-                                <td>2000</td>
-                            </tr>
-                            <tr>
-                                <td>Instrumentation</td>
-                                <td>Organetto, tamburello</td>
-                            </tr>
-                            <tr>
-                                <td>Recording Location</td>
-                                <td>Italy</td>
-                            </tr>
-                            <tr>
-                                <td>Language</td>
-                                <td>Italian</td>
-                            </tr>
-                            <tr>
-                                <td>Genre</td>
-                                <td>Folk</td>
-                            </tr>
-                            <tr>
-                                <td>Publisher</td>
-                                <td>Taranta Cultural Association</td>
-                            </tr>
-                            <tr>
-                                <td>coverage</td>
-                                <td>Lazio</td>
-                            </tr>
-                            <tr>
-                                <td>Producer</td>
-                                <td>Taranta Cultural Association</td>
-                            </tr>
-                            <tr>
-                                <td>subject</td>
-                                <td>dance</td>
-                            </tr>
-                            <tr>
-                                <td>Lyricist</td>
-                                <td>Giuseppe Michele Gala</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </div>
-    </div>
 </body>
 
 </html>

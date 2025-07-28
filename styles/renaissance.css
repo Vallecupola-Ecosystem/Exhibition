@@ -27,7 +27,7 @@ body::before {
     width: 300px;
     height: 799px;
     bottom: 0;
-position: fixed;
+position: absolute;
 }
 
 body::after {
@@ -36,6 +36,7 @@ body::after {
     left: 1080px;
     width: 200px;
     height: 200px;
+position:absolute;
 }
 
 .container::after {

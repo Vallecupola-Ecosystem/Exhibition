@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Museum Objects</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Segoe UI, system-ui, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .container { 
+      max-width: 900px; 
+      margin: 80px auto 40px; 
+    }
+
+    .image-wrapper { 
+      position: relative; 
+      text-align: center; 
+      margin-bottom: 30px; 
+    }
+
+    .object-image { 
+      width: 100%; 
+      width: auto; 
+      max-width: 600px; 
+      height: 400px; 
+      border-radius: 15px; 
+      box-shadow: 0 8px 20px rgba(0,0,0,.6); 
+      margin: 0 auto; 
+      display: block; 
+    }
+
+    .nav-button {
+      position: absolute; 
+      top: 50%; 
+      transform: translateY(-50%);
+      background: #1e2a38; 
+      border: 1px solid #4b6b88; 
+      color: #f0f0f0;
+      font-size: 1.5em; 
+      width: 45px; 
+      height: 45px; 
+      border-radius: 50%;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      text-decoration: none;
+    }
+
+    .nav-left  { 
+      left: -20px; 
+    }
+
+    .nav-right { 
+      right: -20px; 
+    }
+
+    h1 { 
+      text-align: center; 
+      margin-bottom: 25px; 
+      font-size: 1.8em; 
+      color: #f0f0f0; 
+    }
+
+    .note {
+      display: block;
+      font-size: 0.85em;
+      font-style: italic;
+      color: #b0c4de;
+      margin-top: 5px;
+    }
+
+    .accordion-container { 
+      background:#1e2a38; 
+      border-radius:12px; 
+      box-shadow:0 8px 24px rgba(0,0,0,.5); 
+      padding:20px; 
+    }
+
+    .accordion-item { 
+      margin-bottom:10px; 
+      border:1px solid #34495e; 
+      border-radius:10px; 
+      overflow:hidden; 
+    }
+
+    input[type=checkbox]{ 
+      display:none; 
+    }
+
+    .accordion-label { 
+      display:block; 
+      background:#2c3e50; 
+      padding:16px 20px; 
+      font-size:1.05em; 
+      cursor:pointer; 
+      position:relative; 
+    }
+
+    .accordion-label:hover{ 
+      background:#3a536d; 
+    }
+
+    .accordion-label::after{ 
+      content:'▾'; 
+      position:absolute; 
+      right:20px; 
+      transition:transform .3s; 
+    }
+
+    input[type=checkbox]:checked + .accordion-label::after { 
+      transform:rotate(180deg); 
+    }
+
+    .accordion-content { 
+      background:#263645; 
+      max-height:0; 
+      overflow:hidden; 
+      transition:max-height .4s; 
+      padding:0 20px; 
+    }
+
+    input[type=checkbox]:checked ~ .accordion-content{ 
+      max-height:10000px; 
+      padding:15px 20px; 
+    }
+
+    #menu-toggle {
+      position:fixed; 
+      top:10px; 
+      left:10px; 
+      z-index:1045;
+    }
+
+
+    .accordion-label {
+      color: #f0f0f0 !important;
+      background: #2c3e50 !important;
+    }
+
+    .accordion-label:hover {
+      background: #3a536d !important;
+    }
+
+    .accordion-content {
+      color: #f0f0f0 !important;
+      background: #263645 !important;
+    }
+
+    h1 {
+      text-align: center !important;
+      margin-bottom: 25px !important;
+      font-size: 1.8em !important;
+      color: #f0f0f0 !important;
+    }
+
+        table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    td {
+      padding: 12px 16px;
+      text-align: left;
+      min-width: 200px;
+      color: #f0f0f0;
+      background-color: #1f2d3c;
+      border: 1px solid #4a5a6a;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #223344;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<button id="menu-toggle" class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Open menu">☰</button>
+
+<div class="container">
+  <div class="image-wrapper">
+    <a id="nav-left"  class="nav-button nav-left"  href="#">←</a>
+    <img id="hero" class="object-image" src="" alt="">
+    <a id="nav-right" class="nav-button nav-right" href="#">→</a>
+  </div>
+  
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sideMenuLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul id="menu-list" class="nav flex-column"></ul>
+    </div>
+  </div>
+  
+
+  <div class="accordion-container">
+
+    <h1 id="page-title"></h1>
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc1">
+      <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young adventurers</span></label>
+      <div class="accordion-content" id="content-discover"></div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc2">
+      <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
+      <div class="accordion-content" id="content-minute"></div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc3">
+      <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in detail</span></label>
+      <div class="accordion-content" id="content-deep"></div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc4">
+      <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern influencers</span></label>
+      <div class="accordion-content" id="content-share"></div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc5">
+      <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured information</span></label>
+      <div class="accordion-content" id="content-metadata"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(async () => {
+  const response = await fetch('objects.json');
+  const data     = await response.json();
+
+  const orderMode = localStorage.getItem('objectOrder') || 'year';
+
+  let orderedObjects;
+  if (orderMode === 'narrative') {
+    orderedObjects = [...data.objects].sort((a, b) =>
+      a.narr_order - b.narr_order
+    );
+  } else if (orderMode === 'graph') {
+    orderedObjects = [...data.objects].sort((a, b) =>
+      a.graph_order - b.graph_order
+    );
+  } else if (orderMode === 'year') {
+    orderedObjects = [...data.objects].sort((a, b) => {
+      const yA = a.year ?? Infinity;
+      const yB = b.year ?? Infinity;
+      return yA - yB;
+    });
+  } else {
+    //show all objects as-is
+    orderedObjects = [...data.objects];
+  }
+
+  //if orderedObjects is empty, use all objects as-is
+  if (!orderedObjects || orderedObjects.length === 0) {
+    orderedObjects = [...data.objects];
+  }
+
+  
+  for (let i = 0; i < orderedObjects.length; i++) {
+    orderedObjects[i].left  = orderedObjects[i - 1]?.id || orderedObjects[i].id;
+    orderedObjects[i].right = orderedObjects[i + 1]?.id || orderedObjects[i].id;
+  }
+
+  
+  const objects = Object.fromEntries(orderedObjects.map(o => [o.id, o]));
+
+  
+  const menuList = document.getElementById('menu-list');
+  menuList.innerHTML = '';
+  orderedObjects.forEach(obj => {
+    const li = document.createElement('li');
+    li.className = 'nav-item';
+
+    const a = document.createElement('a');
+    a.className = 'nav-link text-white';
+    a.href = `#${obj.id}`;
+    a.textContent = `${obj.year} — ${obj.title}`;
+    a.setAttribute('data-bs-dismiss', 'offcanvas');
+
+    li.appendChild(a);
+    menuList.appendChild(li);
+  });
+
+
+  const render = id => {
+    const o = objects[id];
+    if (!o) return;
+
+    document.title = o.title.replace(/ –.*/, '');
+    document.getElementById('page-title').textContent = `${o.title} (${o.year})`;
+    
+    //to handle the case where the image is not available and there is a video instead
+    const imageWrapper = document.querySelector('.image-wrapper');
+    let hero = document.getElementById('hero');
+
+    if (o.image && (o.image.startsWith('https://www.youtube.com/embed/') || o.image.startsWith('https://video'))) {
+
+      if (hero && hero.tagName.toLowerCase() !== 'iframe') {
+        hero.remove();
+        hero = null;
+      }
+
+      if (!hero) {
+        hero = document.createElement('iframe');
+        hero.id = 'hero';
+        hero.className = 'object-image';
+        hero.style.width = "100%";
+        hero.style.maxWidth = "80%";
+        hero.style.height = "400px";
+        hero.frameBorder = "0";
+        hero.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        hero.allowFullscreen = true;
+        imageWrapper.insertBefore(hero, imageWrapper.querySelector('.nav-right'));
+      }
+      hero.src = o.image;
+      hero.title = o.title;
+    } else {
+
+      if (hero && hero.tagName.toLowerCase() !== 'img') {
+        hero.remove();
+        hero = null;
+      }
+
+      if (!hero) {
+        hero = document.createElement('img');
+        hero.id = 'hero';
+        hero.className = 'object-image';
+        imageWrapper.insertBefore(hero, imageWrapper.querySelector('.nav-right'));
+      }
+      hero.src = o.image;
+      hero.alt = o.title;
+    }
+
+    document.getElementById('nav-left').href  = `#${o.left}`;
+    document.getElementById('nav-right').href = `#${o.right}`;
+
+    
+    document.getElementById('content-discover').innerHTML = o.sections?.discover ?? '';
+    document.getElementById('content-minute').innerHTML   = o.sections?.minute   ?? '';
+    document.getElementById('content-deep').innerHTML     = o.sections?.deepDive ?? '';
+    document.getElementById('content-share').innerHTML    = o.sections?.share    ?? '';
+    document.getElementById('content-metadata').innerHTML    = o.sections?.metadata    ?? '';
+  };
+
+  
+  const startId = location.hash.slice(1) || orderedObjects[0].id;
+  render(startId);
+  window.addEventListener('hashchange', () => render(location.hash.slice(1)));
+
+  document.getElementById('menu-list').addEventListener('click', e => {
+  if (e.target.tagName === 'A') {
+    const id = e.target.getAttribute('href').slice(1);
+    if (location.hash !== `#${id}`) {
+      location.hash = `#${id}`;
+    } else {
+      render(id);
+}
+  }
+});
+})();
+</script>
+
+</body>
+
+</html>

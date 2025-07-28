@@ -53,7 +53,7 @@ position:absolute;
     content: "";
     display: block;
     height: 220px;
-    /* adjust height to fit your images */
+    /* adjusting height to fit my images */
     margin-top: 30px;
     background-image:
         url('https://static.wixstatic.com/media/d436be_26f6ec4917a44084a1818e91c9c60e32~mv2.png'),
@@ -74,7 +74,7 @@ position:absolute;
     width: 50px;
     left: -280px;
     bottom: 0;
-    /* adjust to control the image's distance from the container */
+    /* adjusting to control the image's distance from the container */
     width: 270px;
     background-image: url('https://static.wixstatic.com/media/d436be_5f72dd1b982548d9b0c9661fa1403223~mv2.jpg');
     background-size: cover;

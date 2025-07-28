@@ -1,0 +1,202 @@
+<html>
+  <body>
+  <head>
+    <title>Vallecupola Ecosystem - Graph</title>
+    <style type="text/css"> 
+      html, body, #container { 
+        width: 160%; height: 160%; margin: 0; padding: 0; 
+      } 
+    </style>
+    <script src="https://cdn.anychart.com/releases/8.12.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.12.1/js/anychart-graph.min.js"></script>
+
+  <head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      anychart.onDocumentReady(function () {
+        // create data:
+        var data = 
+                {
+                    "nodes": 
+                    [
+
+                        //Main Concept
+                        { "id": "Vallecupola (Village)", "fill": "#B2F2B2", "value": 3, "height": 50 },
+                        
+                        //Exhibition Items
+                        { "id": "Vallecupola (Story)", "fill": {src: "https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg"}, "value": 2, "height": 80, uri:"vallecupola_story" },
+                        { "id": "Lampada a carburo", "fill": {src: "https://beniculturali.regione.veneto.it/xway-front/application/crv/engine/crv.jsp?verbo=attach&db=crv_back&id=82XZAgaV0l0%3D.jpg"}, "value": 2, "height": 80, uri:"lampada" },
+                        { "id": "Brillantina", "fill": {src: "https://sigecweb.beniculturali.it/images/fullsize/ICCD50007117/ICCD5548709_IMG_2283.jpg"}, "value": 2, "height": 80, uri:"brillantina" },
+                        { "id": "10 lire", "fill": {src: "https://en.numista.com/catalogue/photos/italie/5f79c73e0a06f9.73627146-original.jpg"}, "value": 2, "height": 80, uri:"ten_lire" },
+                        { "id": "Catinella", "fill": {src: "https://www.sigecweb.beniculturali.it/images/fullsize/ICCD1070358/ICCD15474117_341450.jpg"}, "value": 2, "height": 80, uri:"catinella" },
+                        { "id": "Usil", "fill": {src: "https://www.umbriacultura.it/samira/data/caos_010.jpg"}, "value": 2, "height": 80, uri:"usil" },
+                        { "id": "Stamp", "fill": {src: "./images/stampa_image.png"}, "value": 2, "height": 80, uri:"stamp" },
+                        { "id": "Feudo di Rocca Sinibalda", "fill": {src: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Bril%2C_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"}, "value": 2, "height": 80, uri:"feudo_di_rocca_sinibalda" },
+                        { "id": "Près de la fontaine", "fill": {src: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg?20140215154906"}, "value": 2, "height": 80, uri:"pres_de_la_fontaine" },
+                        { "id": "Quadriglia", "fill": {src: "https://static.wixstatic.com/media/d436be_ef537e45e2294bd59cbfbf6ccb23016c~mv2.jpeg"}, "value": 2, "height": 80, uri:"quadriglia" },
+                        { "id": "Quel mazzolin di fiori", "fill": {src: "https://static.wixstatic.com/media/d436be_a3f60900b6cb40ad87ad2103fb0b29ba~mv2.jpeg"}, "value": 2, "height": 80, uri:"quel_mazzolin_di_fiori" },
+                        { "id": "Cemetry Gates", "fill": {src: "https://static.wixstatic.com/media/d436be_2435568a372b4d35833eb22cc34b42ec~mv2.png"}, "value": 2, "height": 80, uri:"cemetry_gates" },
+                        { "id": "Croce astile", "fill": {src: "https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg"}, "value": 2, "height": 80, uri:"croce" },
+                        { "id": "Poesie", "fill": {src: "https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1607708096909.jpg"}, "value": 2, "height": 80, uri:"poesie" },
+                        { "id": "Nonno e nipote", "fill": {src: "https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1609772375103.jpg"}, "value": 2, "height": 80, uri:"nonno_e_nipote" },
+                        { "id": "Ballerini", "fill": {src: "https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608720856191.jpg"}, "value": 2, "height": 80, uri:"ballerini" },
+                        { "id": "Donna", "fill": {src: "https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608675504350.jpg"}, "value": 2, "height": 80, uri:"donna" },
+                        { "id": "Vallecupola Performance", "fill": {src: "./images/performance.JPEG"}, "value": 2, "height": 80, uri:"vallecupola_performance" },
+                        { "id": "Vallecupola Innevata (Video)", "fill": {src: "https://img.youtube.com/vi/l7hyC9NNZhE/maxresdefault.jpg"}, "value": 2, "height": 80, uri:"video" },
+                        { "id": "Conca", "fill": {src: "./images/conca.jpeg"}, "value": 2, "height": 80, uri:"conca" },
+
+                        //Extra Entities
+                        { "id": "Rocca Sinibalda", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Agapito Miniucchi", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Castle", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Chiesa di Santa Maria della Neve", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Angelo di Mario", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Graveyard", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Scene with dancers", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Biblioteca Casa Museo Angelo Di Mario", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Scene in the graveyard", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Scene with grandma and grandson", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Woman daily life", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Scene of girl with conca at the fountain", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Scene in Rocca Sinibalda", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Wall", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Poem n.IV", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Vallecupola Music", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Performance Video", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Grandparents and grandchildren bond", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Dancers", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Quel mazzolin di fiori (verse)", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Cemetry Gates (verse)", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Posticciola", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Museo diffuso delle tradizioni contadine e artigiane", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Carbide Lamp (In Story)", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Brilliantine (In Story)", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "10 lire coin (In Story)", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Antique basin (In Story)", "fill": "#CCCCCC", "value": 1, "height": 30 },
+                        { "id": "Conca (In Story)", "fill": "#CCCCCC", "value": 1, "height": 30 }
+                    ],
+                    edges:
+                    [
+                        { "from": "Vallecupola (Village)", "to": "Rocca Sinibalda", "relation": "is hamlet of" },
+                        { "from": "Vallecupola (Village)", "to": "Vallecupola (Story)", "relation": "inspired" },
+                        { "from": "Vallecupola (Village)", "to": "Graveyard", "relation": "is location of" },
+                        { "from": "Vallecupola (Village)", "to": "Chiesa di Santa Maria della Neve", "relation": "is location of" },
+                        { "from": "Vallecupola (Village)", "to": "Wall", "relation": "is location of" },
+                        { "from": "Vallecupola (Village)", "to": "Biblioteca Casa Museo Angelo Di Mario", "relation": "is location of" },
+                        { "from": "Vallecupola (Village)", "to": "Angelo di Mario", "relation": "is birthplace of" },
+                        { "from": "Biblioteca Casa Museo Angelo Di Mario", "to": "Angelo di Mario", "relation": "named after" },
+                        { "from": "Posticciola", "to": "Rocca Sinibalda", "relation": "is hamlet of" },
+                        { "from": "Posticciola", "to": "Museo diffuso delle tradizioni contadine e artigiane", "relation": "is location of" },
+                        { "from": "Vallecupola (Story)", "to": "Vallecupola (Village)", "relation": "setting" },
+                        { "from": "Vallecupola (Story)", "to": "Quel mazzolin di fiori (verse)", "relation": "quotes" },
+                        { "from": "Quel mazzolin di fiori (verse)", "to": "Quel mazzolin di fiori", "relation": "is part of" },
+                        { "from": "Vallecupola (Story)", "to": "Carbide Lamp (In Story)", "relation": "mentions" },
+                        { "from": "Vallecupola (Story)", "to": "Brilliantine (In Story)", "relation": "mentions" },
+                        { "from": "Vallecupola (Story)", "to": "10 lire coin (In Story)", "relation": "mentions" },
+                        { "from": "Vallecupola (Story)", "to": "Antique basin (In Story)", "relation": "mentions" },
+                        { "from": "Vallecupola (Story)", "to": "Scene in Rocca Sinibalda", "relation": "has part" },
+                        { "from": "Scene in Rocca Sinibalda", "to": "Rocca Sinibalda", "relation": "setting" },
+                        { "from": "Scene in Rocca Sinibalda", "to": "Castle", "relation": "mentions" },
+                        { "from": "Vallecupola (Story)", "to": "Scene with dancers", "relation": "has part" },
+                        { "from": "Scene with dancers", "to": "Quadriglia", "relation": "mentions" },
+                        { "from": "Scene with dancers", "to": "Dancers", "relation": "subject" },
+                        { "from": "Scene with dancers", "to": "Vallecupola Music", "relation": "inspired" },
+                        { "from": "Vallecupola Music", "to": "Vallecupola Performance", "relation": "has manifestation" },
+                        { "from": "Vallecupola Performance", "to": "Performance Video", "relation": "is exemplified by" },
+                        { "from": "Vallecupola (Story)", "to": "Scene with grandma and grandson", "relation": "has part" },
+                        { "from": "Scene with grandma and grandson", "to": "Grandparents and grandchildren bond", "relation": "subject" },
+                        { "from": "Scene with grandma and grandson", "to": "Wall", "relation": "setting" },
+                        { "from": "Vallecupola (Story)", "to": "Scene of girl with conca at the fountain", "relation": "has part" },
+                        { "from": "Scene of girl with conca at the fountain", "to": "Woman daily life", "relation": "subject" },
+                        { "from": "Scene of girl with conca at the fountain", "to": "Conca (In Story)", "relation": "mentions" },
+                        { "from": "Vallecupola (Story)", "to": "Scene in the graveyard", "relation": "has part" },
+                        { "from": "Scene in the graveyard", "to": "Graveyard", "relation": "setting" },
+                        { "from": "Scene in the graveyard", "to": "Cemetry Gates (verse)", "relation": "quotes" },
+                        { "from": "Cemetry Gates (verse)", "to": "Cemetry Gates", "relation": "is part of" },
+                        { "from": "Vallecupola (Story)", "to": "Chiesa di Santa Maria della Neve", "relation": "mentions" },
+                        { "from": "Lampada a carburo", "to": "Carbide Lamp (In Story)", "relation": "is similar to" },
+                        { "from": "Brillantina", "to": "Brilliantine (In Story)", "relation": "is similar to" },
+                        { "from": "10 lire", "to": "10 lire coin (In Story)", "relation": "is similar to" },
+                        { "from": "Catinella", "to": "Antique basin (In Story)", "relation": "is similar to" },
+                        { "from": "Conca", "to": "Conca (In Story)", "relation": "is similar to" },
+                        { "from": "Conca", "to": "Museo diffuso delle tradizioni contadine e artigiane", "relation": "is held by" },
+                        { "from": "Usil", "to": "Agapito Miniucchi", "relation": "has creator" },
+                        { "from": "Agapito Miniucchi", "to": "Rocca Sinibalda", "relation": "born in" },
+                        { "from": "Stamp", "to": "Castle", "relation": "shows" },
+                        { "from": "Feudo di Rocca Sinibalda", "to": "Castle", "relation": "shows" },
+                        { "from": "Castle", "to": "Rocca Sinibalda", "relation": "has location" },
+                        { "from": "Près de la fontaine", "to": "Conca (In Story)", "relation": "shows" },
+                        { "from": "Près de la fontaine", "to": "Woman daily life", "relation": "subject" },
+                        { "from": "Croce astile", "to": "Chiesa di Santa Maria della Neve", "relation": "provenance" },
+                        { "from": "Poesie", "to": "Angelo di Mario", "relation": "has author" },
+                        { "from": "Poesie", "to": "Poem n.IV", "relation": "has part" },
+                        { "from": "Poem n.IV", "to": "Wall", "relation": "setting" },
+                        { "from": "Nonno e nipote", "to": "Angelo di Mario", "relation": "has sculptor" },
+                        { "from": "Nonno e nipote", "to": "Biblioteca Casa Museo Angelo Di Mario", "relation": "is held by" },
+                        { "from": "Nonno e nipote", "to": "Grandparents and grandchildren bond", "relation": "subject" },
+                        { "from": "Ballerini", "to": "Angelo di Mario", "relation": "has sculptor" },
+                        { "from": "Ballerini", "to": "Biblioteca Casa Museo Angelo Di Mario", "relation": "is held by" },
+                        { "from": "Ballerini", "to": "Dancers", "relation": "subject" },
+                        { "from": "Donna", "to": "Angelo di Mario", "relation": "has sculptor" },
+                        { "from": "Donna", "to": "Biblioteca Casa Museo Angelo Di Mario", "relation": "is held by" },
+                        { "from": "Donna", "to": "Woman daily life", "relation": "subject" },
+                        { "from": "Vallecupola Innevata (Video)", "to": "Vallecupola (Village)", "relation": "shows" }
+                    ]
+                };
+                
+        // create a network graph and set the data:
+        var chart = anychart.graph(data);
+        // enable node labels:
+        var nodes = chart.nodes();
+        nodes.labels().enabled(true);
+        // customize node labels:
+        nodes.labels().fontSize(15);
+        nodes.labels().fontColor("black")
+        // customize node tooltips:
+        nodes.tooltip().useHtml(true);
+        nodes.tooltip().format(function(e){
+        const name = e.getData("id");
+        return name
+        });
+        // customize edge tooltips:
+        var edges = chart.edges();
+        edges.tooltip().useHtml(true);
+        edges.tooltip().format(function(e){
+        const from = e.getData("from");
+        const to = e.getData("to");
+        const rel = e.getData("relation");
+        return `<b>${from}</b> ${rel} <b>${to}</b>`
+        })
+        // customize the edge stroke:
+        edges.stroke("lightblue", 2, "10 5")
+        // set the chart title:
+        chart.title("Vallecupola Ecosystem Knowledge Base Graph");
+
+        //clickable nodes - NOT WORKING:
+        chart.listen("pointClick", function(e) {
+            var nodeData = e.point.getData();
+            var nodeId = nodeData.id;
+            
+            // Find the original node data to get the URI
+            var originalNode = data.nodes.find(function(node) {
+                return node.id === nodeId;
+            });
+            
+            if (originalNode && originalNode.uri) {
+                window.location.href = "./objects.html#" + originalNode.uri;
+            }
+        });
+
+        // set the container id:
+        chart.container("container");
+     
+        // initiate drawing the chart:
+        chart.draw();
+
+        });
+
+    </script>
+  </body>
+<html>

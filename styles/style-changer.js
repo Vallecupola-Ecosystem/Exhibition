@@ -1,14 +1,13 @@
 (() => {
     const prefix = '/Exhibition/styles/';
-
     const themes = {
-  nrw:        prefix + 'new_wave.css',
-  artdeco:    prefix + 'art_deco.css',
-  futu:       prefix + 'furturistic.css',
-  memories:   prefix + 'memories.css',
-  popmag:     prefix + 'pop_magazine.css',
-  renaissance:prefix + 'renaissance.css'
-};
+        nrw: prefix + 'new_wave.css',
+        artdeco: prefix + 'art_deco.css',
+        futu: prefix + 'furturistic.css',
+        memories: prefix + 'memories.css',
+        popmag: prefix + 'pop_magazine.css',
+        renaissance: prefix + 'renaissance.css'
+    };
     const linkEl = document.getElementById('theme-style');
     const menu = document.getElementById('style-menu');
     document.getElementById('style-toggle')

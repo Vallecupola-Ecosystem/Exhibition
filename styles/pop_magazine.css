@@ -30,6 +30,15 @@ body {
   margin: 0 auto;
   padding: 1rem;
   max-width: 1000px;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 2rem;
 }
 
 h1 {

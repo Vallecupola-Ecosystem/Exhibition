@@ -138,6 +138,24 @@
       z-index:1045;
     }
 
+    .top-icons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .icon-button {
+      background: #1e2a38;
+      border: 1px solid #4b6b88;
+      color: #f0f0f0;
+      font-size: 1.1em;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
 
     .accordion-label {
       color: #f0f0f0 !important;
@@ -183,25 +201,29 @@
 </head>
 
 <body>
-
-<button id="menu-toggle" class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Open menu">☰</button>
-
-<div class="container">
-  <div class="image-wrapper">
-    <a id="nav-left"  class="nav-button nav-left"  href="#">←</a>
-    <img id="hero" class="object-image" src="" alt="">
-    <a id="nav-right" class="nav-button nav-right" href="#">→</a>
+  <div class="top-icons">
+    <a href="#" class="icon-button">🌐 Translate</a>
+    <a href="#" class="icon-button">📤 Share</a>
   </div>
-  
-  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="sideMenuLabel">Menu</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+  <button id="menu-toggle" class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Open menu">☰</button>
+
+  <div class="container">
+    <div class="image-wrapper">
+      <a id="nav-left"  class="nav-button nav-left"  href="#">←</a>
+      <img id="hero" class="object-image" src="" alt="">
+      <a id="nav-right" class="nav-button nav-right" href="#">→</a>
     </div>
-    <div class="offcanvas-body">
-      <ul id="menu-list" class="nav flex-column"></ul>
+    
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sideMenuLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul id="menu-list" class="nav flex-column"></ul>
+      </div>
     </div>
-  </div>
   
 
   <div class="accordion-container">

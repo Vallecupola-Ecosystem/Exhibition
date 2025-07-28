@@ -6,7 +6,8 @@
         future: prefix + 'furturistic.css',
         memories: prefix + 'memories.css',
         popmag: prefix + 'pop_magazine.css',
-        renaissance: prefix + 'renaissance.css'
+        renaissance: prefix + 'renaissance.css',
+        default: prefix + 'default.css',
     };
     const linkEl = document.getElementById('theme-style');
     const menu = document.getElementById('style-menu');

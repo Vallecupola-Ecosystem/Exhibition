@@ -966,7 +966,7 @@
                     <div class="narrative-info">
                         <h3>Chronology</h3>
                         <p>Navigate through the collection following the chronological order of creation or publication of the items</p>
-                        <a href="chronological-order.html" class="narrative-link">Enter →</a>
+                        <a href="#" class="narrative-link" onclick="selectOrder('year'); return false;">Enter →</a>
                     </div>
                 </div>
 
@@ -1348,6 +1348,10 @@
         });
         }
 
+        function selectOrder(order) {
+            localStorage.setItem('objectOrder', order);
+            window.location.href = 'objects_template.html';
+        }
     </script>
 
 </body>

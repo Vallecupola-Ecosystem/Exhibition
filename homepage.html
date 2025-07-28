@@ -1060,12 +1060,9 @@
         }
 
         // Function to handle object interaction
-        function handleObjectInteraction(objectId, title) {
+        function handleObjectInteraction(objectId){
             const url = objectURLs[objectId];
-            if (url) {
-                window.location.href = url;
-                window.open(url, '_blank');
-            }
+            if (url) window.location.href = url;
         }
 
         // Add event listeners to room hotspots

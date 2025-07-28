@@ -3,7 +3,7 @@
     const themes = {
         nrw: prefix + 'new_wave.css',
         artdeco: prefix + 'art_deco.css',
-        futu: prefix + 'furturistic.css',
+        future: prefix + 'furturistic.css',
         memories: prefix + 'memories.css',
         popmag: prefix + 'pop_magazine.css',
         renaissance: prefix + 'renaissance.css'

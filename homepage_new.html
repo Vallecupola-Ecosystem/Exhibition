@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallecupola Ecosystem - Virtual Exhibition</title>
+    <link rel="icon" type="image/png" href="./images/icons8-snow-capped-mountain-96.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+
+/* inizio elementi ispirati all'index */
+
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 2px 4px rgba(44, 62, 80, 0.1);
+            }
+            to {
+                text-shadow: 0 2px 4px rgba(44, 62, 80, 0.1), 0 0 20px rgba(44, 62, 80, 0.1);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 30px;
+            font-weight: 400;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .description p {
+            margin-bottom: 1rem;
+        }
+
+/* fine elementi ispirati all'index */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header styling consistent with existing site */
+        .header {
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #6c757d;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #495057;
+            line-height: 1.7;
+        }
+
+        /* Main content area */
+        .main-content {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* Museum map container */
+        .museum-map-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.375rem;
+            overflow: hidden;
+        }
+
+        .museum-map {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%; /* Aspect ratio based on your image */
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjhmOWZhIi8+CjwhLS0gUGxhY2Vob2xkZXIgZm9yIHlvdXIgbWFwIGltYWdlIC0tPgo8dGV4dCB4PSI2MDAiIHk9IjMwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZjNzU3ZCIgZm9udC1zaXplPSIyNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPllvdXIgTXVzZXVtIE1hcCBJbWFnZSBXaWxsIEJlIEhlcmU8L3RleHQ+Cjwvc3ZnPgo=') no-repeat center center;
+            background-image: url("./images/map.png");
+            background-size: contain;
+        }
+
+        /* Room hotspots - positioned based on your image */
+        .room-hotspot {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 123, 255, 0.8);
+            border: 3px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .room-hotspot:hover {
+            transform: scale(1.2);
+            background: rgba(0, 123, 255, 1);
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.4);
+        }
+
+        .room-hotspot::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        /* Object hotspots - smaller and different style */
+        .object-hotspot {
+            position: absolute;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            background: rgba(220, 53, 69, 0.8);
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 9;
+        }
+
+        .object-hotspot:hover {
+            transform: scale(1.3);
+            background: rgba(220, 53, 69, 1);
+            box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+        }
+
+        .object-hotspot::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(220, 53, 69, 0.3);
+            animation: pulseObject 2.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulseObject {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Room positions based on your image layout */
+        .room-1 { top: 78%; right: 6%; }
+        .room-2 { bottom: 10%; left: 5%; }
+        .room-3 { top: 14%; left: 7%; }
+        .room-4 { top: 0%; left: 37%; }
+        .room-5 { top: 11%; right: 5%; }
+
+        /* Object positions based on your image - Room 1 objects */
+        .obj-video { bottom: 17%; right: 30%; }
+        .obj-story { bottom: 22%; right: 22%; }
+
+        /* Room 2 objects */
+        .obj-ten_lire { bottom: 35%; left: 39%; }
+        .obj-conca { bottom: 14%; left: 41%; }
+        .obj-catinella { bottom: 16%; left: 49%; }
+        .obj-brillantina { bottom: 2%; left: 48%; }
+        .obj-lampada { bottom: 2%; left: 39%; }
+        .obj-pres_de_la_fontaine { bottom: 12%; left: 24%; }
+
+        /* Room 3 objects */
+        .obj-usil { top: 45%; left: 28%; }
+        .obj-stamp { top: 46%; left: 35%; }
+        .obj-feudo { top: 28%; left: 35%; }
+
+        /* Room 4 objects */
+        .obj-performance { top: 20%; left: 42%; }
+        .obj-cemetry { top: 18%; left: 53%; }
+        .obj-quel_mazzolin { top: 31%; left: 55%; }
+        .obj-quadriglia { top: 40%; left: 55%; }
+
+
+        /* Room 5 objects */
+        .obj-nonno_e_nipote { top: 15%; right: 30%; }
+        .obj-ballerini { top: 15%; right: 21%; }
+        .obj-croce { top: 35%; right: 24%; }
+        .obj-donna { top: 58%; right: 33%; }
+        .obj-poesie { top: 58%; right: 22%; }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        /* Room legend */
+        .room-legend {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 0.375rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .legend-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .legend-grid {
+            display: inline-block;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 0.375rem;
+            border: 1px solid #dee2e6;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .legend-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .legend-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .legend-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 0.25rem;
+        }
+
+        .legend-content p {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: white;
+            border-top: 1px solid #e9ecef;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #0056b3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .main-content {
+                padding: 1.5rem;
+            }
+            
+            .room-hotspot {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .room-hotspot::before {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .room-hotspot {
+                width: 30px;
+                height: 30px;
+                font-size: 0.875rem;
+            }
+            
+            .legend-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Instructions panel */
+        .instructions {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 0.375rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .instructions h3 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .instructions p {
+            color: #1976d2;
+            margin-bottom: 0.5rem;
+        }
+
+        .instructions ul {
+            margin-left: 1.5rem;
+            color: #1976d2;
+        }
+
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+
+        .hotspot-legend {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hotspot-type {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hotspot-example {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .room-example {
+            background: rgba(0, 123, 255, 0.8);
+            border: 2px solid white;
+        }
+
+        .object-example {
+            background: rgba(220, 53, 69, 0.8);
+            border: 2px solid white;
+        }
+
+        /* Stili per i controlli della mappa */
+        .map-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #495057;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-width: 44px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .control-btn:hover {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .control-btn.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        /* Stili per fullscreen */
+        .museum-map-container.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            background: #000;
+            border-radius: 0;
+        }
+
+        .museum-map-container.fullscreen .museum-map {
+            height: 100vh;
+            padding-bottom: 0;
+        }
+
+        .museum-map-container.fullscreen .map-controls {
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Stili per zoom */
+        .museum-map.zoomed {
+            transform-origin: center center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Overlay per fullscreen */
+        .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9998;
+            display: none;
+        }
+
+        /* Responsive per controlli */
+        @media (max-width: 768px) {
+            .map-controls {
+                top: 8px;
+                right: 8px;
+                gap: 6px;
+            }
+            
+            .control-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+                min-width: 40px;
+            }
+        }
+
+        /* Stili per il tooltip dei controlli */
+        .control-btn[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            margin-right: 8px;
+            z-index: 1000;
+        }
+    </style>
+    <link href="styles/narratives_panel.css" rel="stylesheet" type="text/css">
+    <link href="styles/cards.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="title">Vallecupola Ecosystem</h1>
+            <p class="subtitle">Unveiling the Hidden Cultural Network of a Mountain Village</p>
+            <p class="description">
+                Explore the rich cultural heritage of Vallecupola through this <em>interactive virtual exhibition</em>. 
+                Each room of the museum will guide you through different aspects of the history, art and traditions 
+                of this fascinating mountain village in the Sabina region.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="instructions">
+            <h3>✨ Multiple kinds of experience</h3>
+            <p><strong>Enjoy the virtual museum</strong> through:</p>
+            <ul>
+                <li><strong><i class="fas fa-map-marked"></i> Map</strong> exploration</li>
+                <li><strong><i class="fas fa-route"></i> Guided Tour</strong> help underlying</li>
+            </ul>
+            <p><strong>Select other narratives</strong> to explore the collection in alternative ways:</p>
+            <ul>
+                <li><strong><i class="fas fa-clock"></i> Chronological order</strong> of the items</li>
+                <li><strong><i class="fas fa-book-open"></i> Story narrative</strong> reading the short story <em>Vallecupola</em></li>
+            </ul>
+        </div>
+        <div class="instructions">
+            <h3>🎯 How to Navigate the Virtual Museum</h3>
+            <p><strong>Explore rooms and individual objects</strong> in the museum map below:</p>
+            <ul>
+                <li><strong>Blue circles (1-5)</strong> - Exhibition Rooms</li>
+                <li><strong>Red circles (🏺🎶🏰)</strong> - Click to examine specific objects in detail</li>
+                <li><strong>Hover</strong> over any hotspot to see detailed descriptions</li>
+                <li><strong><i class="material-icons" style="font-size:15px">screen_rotation</i> Rotate</strong> screen for better experience on mobile devices</li>
+                <li>Use the legend below the map as a quick reference guide</li>
+            </ul>
+            <div class="hotspot-legend">
+                <div class="hotspot-type">
+                    <div class="hotspot-example room-example">1</div>
+                    <span>Rooms</span>
+                </div>
+                <div class="hotspot-type">
+                    <div class="hotspot-example object-example">🎶</div>
+                    <span>Individual Objects</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h2 class="section-title">Virtual Museum Map</h2>
+            
+            <div class="museum-map-container">
+
+                <div class="museum-map">
+
+                    <!--Map Controls-->
+                    <div class="map-controls">
+                        <button class="control-btn" id="fullscreenBtn" data-tooltip="Schermo intero">
+                            <span class="icon">🖥️</span>
+                            <span class="text">Full</span>
+                        </button>
+                        
+                        <!-- IT WAS FOR ZOOM FUNCTIONS, BUT THEY ARE WEIRD
+                        <button class="control-btn" id="zoomInBtn" data-tooltip="Ingrandisci">
+                            <span class="icon">➕</span>
+                        </button>
+                        <button class="control-btn" id="zoomOutBtn" data-tooltip="Riduci">
+                            <span class="icon">➖</span>
+                        </button>
+                        <button class="control-btn" id="resetBtn" data-tooltip="Ripristina">
+                            <span class="icon">🔄</span>
+                        </button>
+                        -->
+                    </div>
+
+                    <!-- Room hotspots positioned over your image -->
+                    <div class="room-hotspot room-1" data-room="1" data-title="Introduction to Vallecupola (Village and Story)" data-description="Discover this enchanting mountain village through its representations">1</div>
+                    <div class="room-hotspot room-2" data-room="2" data-title="Customs and Traditions of the Past" data-description="Explore the rich cultural traditions and customs that shaped local life">2</div>
+                    <div class="room-hotspot room-3" data-room="3" data-title="Rocca Sinibalda and its Art" data-description="Delve into the artistic heritage of Rocca Sinibalda, to whose municipality Vallecupola belongs">3</div>
+                    <div class="room-hotspot room-4" data-room="4" data-title="Music and Performances around Vallecupola" data-description="Get carried away by musical and theatrical grandeur linked to Vallecupola">4</div>
+                    <div class="room-hotspot room-5" data-room="5" data-title="Angelo di Mario and Vallecupola's Art" data-description="Meet artworks coming from Vallecupola, some of which created by Angelo Di Mario, born there">5</div>
+                    
+                    <!-- Object hotspots for Room 1 -->
+                    <div class="object-hotspot obj-video" data-type="object" data-room="1" data-title="Vallecupola Innevata" data-description="Video showing Vallecupola in snow">❄️</div>
+                    <div class="object-hotspot obj-story" data-type="object" data-room="1" data-title="Vallecupola Story" data-description='Short story entitled "Vallecupola"'>📜</div>
+                    
+                    <!-- Object hotspots for Room 2 -->
+                    <div class="object-hotspot obj-ten_lire" data-type="object" data-room="2" data-title="10 Lire" data-description="Historical Italian coin, emblem of the past">💰</div>
+                    <div class="object-hotspot obj-conca" data-type="object" data-room="2" data-title="Conca" data-description="Traditional container used for carrying water">🏺</div>
+                    <div class="object-hotspot obj-catinella" data-type="object" data-room="2" data-title="Catinella" data-description="Small domestic basin, typical of old Italian daily life">💧</div>
+                    <div class="object-hotspot obj-brillantina" data-type="object" data-room="2" data-title="Brillantina" data-description="Glass jar used for hair cream, symbol of personal care history">👱🏻</div>
+                    <div class="object-hotspot obj-lampada" data-type="object" data-room="2" data-title="Lampada a carburo" data-description="Carbide lamp, once a staple source of portable light">🕯️</div>
+                    <div class="object-hotspot obj-pres_de_la_fontaine" data-type="object" data-room="2" data-title="Près de la Fontaine" data-description="Romantic 19th-century painting near a fountain by Van Bree">🎨</div>
+
+                    <!-- Object hotspots for Room 3 -->
+                    <div class="object-hotspot obj-usil" data-type="object" data-room="3" data-title="Usil" data-description="Modern reinterpretation of the Etruscan solar deity, blending myth and performance">🌄</div>
+                    <div class="object-hotspot obj-stamp" data-type="object" data-room="3" data-title="550 Lire Stamp" data-description="A vintage postage stamp, depicting Rocca Sinibalda Castle">🎟️</div>
+                    <div class="object-hotspot obj-feudo" data-type="object" data-room="3" data-title="Feudo di Rocca Sinibalda" data-description="Historic landscape painting of Rocca Sinibalda Castle by Paul Bril">🏰</div>
+                    
+                    <!-- Object hotspots for Room 4 -->
+                    <div class="object-hotspot obj-performance" data-type="object" data-room="4" data-title="Vallecupola Performance" data-description="Theatrical event capturing the spirit of the village. Inspired to Vallecupola Story">🎭</div>
+                    <div class="object-hotspot obj-cemetry" data-type="object" data-room="4" data-title="Cemetry Gates" data-description="Song about death and literature. Mentioned in the story, in Vallecupola graveyard">🎶</div>
+                    <div class="object-hotspot obj-quel_mazzolin" data-type="object" data-room="4" data-title="Quel Mazzolìn di Fiori" data-description="Symbolic bouquet tied to Italian folk heritage and songs">💐</div>
+                    <div class="object-hotspot obj-quadriglia" data-type="object" data-room="4" data-title="Quadriglia" data-description="Traditional folk-dance evoking rural festivities">🕺</div>
+
+                    <!-- Object hotspots for Room 5 -->
+                    <div class="object-hotspot obj-nonno_e_nipote" data-type="object" data-room="5" data-title="Nonno e Nipote" data-description="A tender family moment between grandfather and grandchild, capturing generational warmth">👴🏻</div>
+                    <div class="object-hotspot obj-ballerini" data-type="object" data-room="5" data-title="Ballerini" data-description="Energetic dancers in motion, representing a cultural snapshot">💃</div>
+                    <div class="object-hotspot obj-croce" data-type="object" data-room="5" data-title="Croce Astile" data-description="A processional cross with intricate detail, symbolic of local religious heritage">✟</div>
+                    <div class="object-hotspot obj-donna" data-type="object" data-room="5" data-title="Donna" data-description="Portrait of a woman, revealing grace and dignity">👩‍🌾</div>
+                    <div class="object-hotspot obj-poesie" data-type="object" data-room="5" data-title="Poesie" data-description="A collection of poems written by Angelo Di Mario">📖</div>
+                </div>
+            </div>
+
+            <div class="room-legend">
+                <h3 class="legend-title">Exhibition Rooms Guide</h3>
+                <div class="legend-grid">
+
+                    <div class="legend-item accordion" data-room="1" id="room-1">
+                        <div class="legend-number">1</div>
+                        <div class="legend-content">
+                            <h4>Introduction to Vallecupola</h4>
+                            <p>Village and Story - Discover this enchanting mountain village through its representations</p>
+                        </div>
+                    </div>
+                    <div class="card-gallery panel">
+                        <a class="card" href="./objects_template.html#video" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="video">
+                            <img src="https://img.youtube.com/vi/l7hyC9NNZhE/maxresdefault.jpg"
+                                alt="Vallecupola Innevata">
+                            <div class="type">Video</div>
+                            <h3>Vallecupola Innevata</h3>
+                            <p>A video of the village in snow that opened a music event in Rocca Sinibalda.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#vallecupola_story" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="vallecupola_story">
+                            <img src="https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg"
+                                alt="Vallecupola Story">
+                            <div class="type">Short Story</div>
+                            <h3>Vallecupola</h3>
+                            <p>Story inspired to Vallecupola and set in the village, finalist at Campiello Giovani 2024 Prize.</p>
+                        </a>
+                    </div>
+                              
+                    <div class="legend-item accordion" data-room="2" id="room-2">
+                        <div class="legend-number">2</div>
+                        <div class="legend-content">
+                            <h4>Customs and Traditions of the Past</h4>
+                            <p>Explore the many traditional practices of the past, through a series of daily life items</p>
+                        </div>
+                    </div>
+                    <div class="card-gallery panel">
+                        <a class="card" href="./objects_template.html#conca" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="conca">
+                            <img src="./images/conca.jpeg"
+                                alt="Conca">
+                            <div class="type">Object</div>
+                            <h3>Conca</h3>
+                            <p>Traditional container used for carrying water.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#pres_de_la_fontaine" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="pres_de_la_fontaine">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Philippe-Jacques_van_Bree_-_Pr%C3%A8s_de_la_fontaine.jpg?20140215154906"
+                                alt="Pres de La Fontaine">
+                            <div class="type">Painting</div>
+                            <h3>Près de La Fontaine</h3>
+                            <p>Romantic 19th-century painting near a fountain by Van Bree.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#lampada" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="lampada">
+                            <img src="https://beniculturali.regione.veneto.it/xway-front/application/crv/engine/crv.jsp?verbo=attach&db=crv_back&id=82XZAgaV0l0%3D.jpg"
+                                alt="Lampada a Carburo">
+                            <div class="type">Object</div>
+                            <h3>Lampada a Carburo</h3>
+                            <p>Carbide lamp, once a staple source of portable light.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#brillantina" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="brillantina">
+                            <img src="https://sigecweb.beniculturali.it/images/fullsize/ICCD50007117/ICCD5548709_IMG_2283.jpg"
+                                alt="Vasetto per Brillantina">
+                            <div class="type">Object</div>
+                            <h3>Vasetto per Brillantina</h3>
+                            <p>Glass jar used for hair cream, symbol of personal care history.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#catinella" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="catinella">
+                            <img src="https://www.sigecweb.beniculturali.it/images/fullsize/ICCD1070358/ICCD15474117_341450.jpg"
+                                alt="Catinella">
+                            <div class="type">Object</div>
+                            <h3>Catinella</h3>
+                            <p>A small domestic basin, typical of old Italian daily life.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#ten_lire" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="ten_lire">
+                            <img src="https://en.numista.com/catalogue/photos/italie/5f79c73e0a06f9.73627146-original.jpg"
+                                alt="10 Lire">
+                            <div class="type">Coin</div>
+                            <h3>10 Lire</h3>
+                            <p>Historical Italian coin, emblem of past national currency.</p>
+                        </a>
+                    </div>
+
+
+                    <div class="legend-item accordion" data-room="3" id="room-3">
+                        <div class="legend-number">3</div>
+                        <div class="legend-content">
+                            <h4>Rocca Sinibalda and its Art</h4>
+                            <p>Artistic treasures and heritage of Rocca Sinibalda, village to whose municipality Vallecupola belongs</p>
+                        </div>
+                    </div>
+                    <div class="card-gallery panel">
+                        <a class="card" href="./objects_template.html#feudo_di_rocca_sinibalda" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="feudo_di_rocca_sinibalda">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Bril%2C_Paul_-_Feudo_di_Rocca_Sinibalda_-_1601.jpg"
+                                alt="Feudo di Rocca Sinibalda">
+                            <div class="type">Painting</div>
+                            <h3>Feudo di Rocca Sinibalda</h3>
+                            <p>Historic landscape painting of Rocca Sinibalda Castle by Paul Bril.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#stamp" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="stamp">
+                            <img src="./images/stampa_image.png" alt="Stamp">
+                            <div class="type">Stamp</div>
+                            <h3>550 Lire – Castello di Rocca Sinibalda</h3>
+                            <p>A vintage postage stamp, marking time and memory.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#usil" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="usil">
+                            <img src="https://www.umbriacultura.it/samira/data/caos_010.jpg" alt="Usil">
+                            <div class="type">Installation</div>
+                            <h3>Usil</h3>
+                            <p>Modern reinterpretation of the Etruscan solar deity by Agapito Miniucchi (Rocca Sinibalda), blending myth and
+                                performance.</p>
+                        </a>
+                    </div>
+
+                    <div class="legend-item accordion" data-room="4" id="room-4">
+                        <div class="legend-number">4</div>
+                        <div class="legend-content">
+                            <h4>Music and Performances around Vallecupola</h4>
+                            <p>Musical and theatrical heritage around Vallecupola. Get carried away by all the multimedia grandeur linked to this village</p>
+                        </div>
+                    </div>
+                    <div class="card-gallery panel">
+                        <a class="card" href="./objects_template.html#vallecupola_performance" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="vallecupola_performance">
+                            <img src="./images/performance.JPEG" alt="Vallecupola Performance">
+                            <div class="type">Music/Performance</div>
+                            <h3>Vallecupola</h3>
+                            <p>Theatrical event capturing the spirit of the village. Inspired to Vallecupola Story.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#quadriglia" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="quadriglia">
+                            <img src="https://static.wixstatic.com/media/d436be_ef537e45e2294bd59cbfbf6ccb23016c~mv2.jpeg"
+                                alt="Quadriglia">
+                            <div class="type">Music</div>
+                            <h3>Quadriglia</h3>
+                            <p>Traditional dance formation evoking rural festivities.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#quel_mazzolin_di_fiori" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="quel_mazzolin_di_fiori">
+                            <img src="https://static.wixstatic.com/media/d436be_a3f60900b6cb40ad87ad2103fb0b29ba~mv2.jpeg"
+                                alt="Quel Mazzolin di Fiori">
+                            <div class="type">Music</div>
+                            <h3>Quel Mazzolìn di Fiori</h3>
+                            <p>Symbolic bouquet tied to Italian folk heritage and songs.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#cemetry_gates" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="cemetry_gates">
+                            <img src="https://static.wixstatic.com/media/d436be_2435568a372b4d35833eb22cc34b42ec~mv2.png"
+                                alt="Cemetery Gates">
+                            <div class="type">Music</div>
+                            <h3>Cemetry Gates</h3>
+                            <p>Song about death and literature. Mentioned in the story, in Vallecupola graveyard.</p>
+                        </a>
+                    </div>
+
+                    <div class="legend-item accordion" data-room="5" id="room-5">
+                        <div class="legend-number">5</div>
+                        <div class="legend-content">
+                            <h4>Angelo Di Mario and Vallecupola's Art</h4>
+                            <p>Meet artworks coming from Vallecupola, such as the poems and sculptures created by Angelo Di Mario, an important artist born in the village</p>
+                        </div>
+                    </div>
+                    <div class="card-gallery panel">
+                        <a class="card" href="./objects_template.html#ballerini" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="ballerini">
+                            <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608720856191.jpg"
+                                alt="Ballerini">
+                            <div class="type">Sculpture</div>
+                            <h3>Ballerini</h3>
+                            <p>Energetic dancers in motion, representing a cultural snapshot.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#nonno_e_nipote" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="nonno_e_nipote">
+                            <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1609772375103.jpg"
+                                alt="Nonno e Nipote">
+                            <div class="type">Sculpture</div>
+                            <h3>Nonno e Nipote</h3>
+                            <p>A tender family moment between grandfather and grandchild, capturing generational
+                                warmth.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#donna" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="donna">
+                            <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1608675504350.jpg"
+                                alt="Donna">
+                            <div class="type">Sculpture</div>
+                            <h3>Donna</h3>
+                            <p>Portrait of a woman, revealing grace and dignity.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#poesie" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="poesie">
+                            <img src="https://www.bibliotecasamuseoangelodimario.com/cms6/photo/1607708096909.jpg"
+                                alt="Poesie">
+                            <div class="type">Book</div>
+                            <h3>Poesie</h3>
+                            <p>A collection of poems by Angelo Di Mario reflecting the emotions and landscapes of rural life.</p>
+                        </a>
+                        <a class="card" href="./objects_template.html#croce" onclick="localStorage.setItem('objectOrder','map')" class="object-link" data-object-id="croce">
+                            <img src="https://www.sabinamagazine.it/wp-content/uploads/2021/08/foto-croce-astile-vallecupola-675x360.jpg"
+                                alt="Croce Astile">
+                            <div class="type">Artifact</div>
+                            <h3>Croce Astile</h3>
+                            <p>A processional cross with intricate detail, symbolic of local religious heritage.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Narratives Panel -->
+        <div class="main-content" id="other-narratives">
+            <h2 class="section-title">Other Narratives</h2>
+             
+            <div class="narratives-grid">
+                <!-- Chronological Order -->
+                <div class="narrative-card">
+                    <div class="narrative-icon">
+                        <div class="icon-circle">
+                            <span class="icon-content">⏰</span>
+                        </div>
+                    </div>
+                    <div class="narrative-info">
+                        <h3>Chronology</h3>
+                        <p>Navigate through the collection following the chronological order of creation or publication of the items</p>
+                        <a href="#" class="narrative-link" onclick="selectOrder('year'); return false;">Enter →</a>
+                    </div>
+                </div>
+
+                <!-- Story Narrative -->
+                <div class="narrative-card">
+                    <div class="narrative-icon">
+                        <div class="icon-circle">
+                            <img class="icon-content" src="https://www.sfogliami.it/imgEdit.php?ac=rw&m=1920&p=/sfogliabili/299/671/_big_page_1.jpg" width="50%"/>
+                            <!--<span class="icon-content">📖</span>-->
+                        </div>
+                    </div>
+                    <div class="narrative-info">
+                        <h3>Story</h3>
+                        <p>Read the interactive online version of <em>Vallecupola</em> short story and discover the items whenever a connection appears</p>
+                        <a href="./narratives/story.html" class="narrative-link">Enter →</a>
+                    </div>
+                </div>
+                
+                <!-- Graph -->
+                <div class="narrative-card">
+                    <div class="narrative-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-share-alt icon-content"></i>
+                        </div>
+                    </div>
+                    <div class="narrative-info">
+                        <h3>Graph</h3>
+                        <p>Explore the complete graph describing all the meaningful connections in the Vallecupola Ecosystem Knowledge Base</p>
+                        <a href="graph.html" class="narrative-link">Enter →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p><strong>⛰️ Vallecupola Ecosystem</strong> - A Digital Humanities and Digital Knowledge Project</p>
+            <p>University of Bologna | Academic Year 2024-2025 | <a href="documentation.html#about">About</a> | <a href="documentation.html#disclaimer">Disclaimer</a></p>
+            <em>"A village, a story, a framework: get inside Vallecupola Ecosystem"</em>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Room and Object URLs - Replace with your actual URLs
+        const roomURLs = {
+            1: '#room-1',
+            2: '#room-2',
+            3: '#room-3',
+            4: '#room-4',
+            5: '#room-5'
+        };
+
+        const objectURLs = {
+            'video': './objects_template.html#video',
+            'vallecupola_story': './objects_template.html#vallecupola_story',
+            'ten_lire': './objects_template.html#ten_lire',
+            'conca': './objects_template.html#conca',
+            'catinella': './objects_template.html#catinella',
+            'brillantina': './objects_template.html#brillantina',
+            'lampada': './objects_template.html#lampada',
+            'pres_de_la_fontaine': './objects_template.html#pres_de_la_fontaine',
+            'usil': './objects_template.html#usil',
+            'stamp': './objects_template.html#stamp',
+            'feudo_di_rocca_sinibalda': './objects_template.html#feudo_di_rocca_sinibalda',
+            'vallecupola_performance': './objects_template.html#vallecupola_performance',
+            'cemetry_gates': './objects_template.html#cemetry_gates',
+            'quel_mazzolin_di_fiori': './objects_template.html#quel_mazzolin_di_fiori',
+            'quadriglia': './objects_template.html#quadriglia',
+            'nonno_e_nipote': './objects_template.html#nonno_e_nipote',
+            'ballerini': './objects_template.html#ballerini',
+            'croce': './objects_template.html#croce',
+            'donna': './objects_template.html#donna',
+            'poesie': './objects_template.html#poesie'
+        };
+
+        const hotspots = document.querySelectorAll('.room-hotspot');
+        const objectHotspots = document.querySelectorAll('.object-hotspot');
+        const tooltip = document.getElementById('tooltip');
+
+        // Function to handle room interaction
+        function handleRoomInteraction(roomNumber) {
+            const url = roomURLs[roomNumber];
+            if (url) {
+                window.location.href = url;
+            }
+        }
+
+        // Function to handle object interaction
+        function handleObjectInteraction(objectId, title) {
+            const url = objectURLs[objectId];
+            if (url) {
+                //window.location.href = url;
+                window.open(url, '_blank'); //to just open the object in a new tab
+            }
+        }
+
+        // Add event listeners to room hotspots
+        hotspots.forEach(hotspot => {
+            hotspot.addEventListener('mouseenter', function(e) {
+                const title = this.getAttribute('data-title');
+                const description = this.getAttribute('data-description');
+                tooltip.innerHTML = `<strong>🏛️ ${title}</strong><br>${description}`;
+                tooltip.classList.add('show');
+            });
+
+            hotspot.addEventListener('mouseleave', function(e) {
+                tooltip.classList.remove('show');
+            });
+
+            hotspot.addEventListener('mousemove', function(e) {
+                tooltip.style.left = e.pageX + 15 + 'px';
+                tooltip.style.top = e.pageY - 60 + 'px';
+            });
+
+            hotspot.addEventListener('click', function(e) {
+                e.preventDefault();
+                const roomNumber = this.getAttribute('data-room');
+                handleRoomInteraction(roomNumber);
+            });
+        });
+
+        // Add event listeners to object hotspots
+        objectHotspots.forEach(hotspot => {
+            hotspot.addEventListener('mouseenter', function(e) {
+                const title = this.getAttribute('data-title');
+                const description = this.getAttribute('data-description');
+                const room = this.getAttribute('data-room');
+                tooltip.innerHTML = `<strong>🎯 ${title}</strong><br>${description}<br><em>Room ${room}</em>`;
+                tooltip.classList.add('show');
+            });
+
+            hotspot.addEventListener('mouseleave', function(e) {
+                tooltip.classList.remove('show');
+            });
+
+            hotspot.addEventListener('mousemove', function(e) {
+                tooltip.style.left = e.pageX + 15 + 'px';
+                tooltip.style.top = e.pageY - 60 + 'px';
+            });
+
+            hotspot.addEventListener('click', function(e) {
+                e.preventDefault();
+                const objectClass = this.className.split(' ').find(cls => cls.startsWith('obj-'));
+                const objectId = objectClass ? objectClass.replace('obj-', '') : '';
+                const title = this.getAttribute('data-title');
+                handleObjectInteraction(objectId, title);
+            });
+        });
+
+        // Responsive image handling
+        function updateMapImage() {
+            const mapElement = document.querySelector('.museum-map');
+            
+            // Here you would replace the placeholder with your actual image
+            // For now, keeping placeholder - replace the background-image URL with your actual image
+            // mapElement.style.backgroundImage = 'url("./images/map.png")';
+        }
+
+        // Initialize
+        window.addEventListener('load', updateMapImage);
+        window.addEventListener('resize', updateMapImage);
+
+        // Add some entrance animation
+        window.addEventListener('load', function() {
+            // Animate rooms first
+            hotspots.forEach((hotspot, index) => {
+                setTimeout(() => {
+                    hotspot.style.opacity = '0';
+                    hotspot.style.transform = 'scale(0.5)';
+                    setTimeout(() => {
+                        hotspot.style.transition = 'all 0.5s ease';
+                        hotspot.style.opacity = '1';
+                        hotspot.style.transform = 'scale(1)';
+                    }, 100);
+                }, index * 200);
+            });
+
+            // Then animate objects
+            setTimeout(() => {
+                objectHotspots.forEach((hotspot, index) => {
+                    setTimeout(() => {
+                        hotspot.style.opacity = '0';
+                        hotspot.style.transform = 'scale(0.3)';
+                        setTimeout(() => {
+                            hotspot.style.transition = 'all 0.4s ease';
+                            hotspot.style.opacity = '1';
+                            hotspot.style.transform = 'scale(1)';
+                        }, 50);
+                    }, index * 100);
+                });
+            }, 1000);
+        });
+    
+        // Variabili per controllo zoom e fullscreen
+        let currentZoom = 1;
+        let isFullscreen = false;
+        
+        // Selettori elementi
+        const mapContainer = document.querySelector('.museum-map-container');
+        const museumMap = document.querySelector('.museum-map');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const zoomInBtn = document.getElementById('zoomInBtn');
+        const zoomOutBtn = document.getElementById('zoomOutBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        // Funzione per fullscreen
+        function toggleFullscreen() {
+            if (!isFullscreen) {
+                // Entra in fullscreen
+                mapContainer.classList.add('fullscreen');
+                fullscreenBtn.classList.add('active');
+                fullscreenBtn.innerHTML = '<span class="icon">🗙</span><span class="text">Exit</span>';
+                isFullscreen = true;
+                
+                // Previeni scroll del body
+                document.body.style.overflow = 'hidden';
+                
+                // Listener per ESC
+                document.addEventListener('keydown', escapeFullscreen);
+                
+            } else {
+                // Esci da fullscreen
+                exitFullscreen();
+            }
+        }
+
+        // Funzione per uscire da fullscreen
+        function exitFullscreen() {
+            mapContainer.classList.remove('fullscreen');
+            fullscreenBtn.classList.remove('active');
+            fullscreenBtn.innerHTML = '<span class="icon">🖥️</span><span class="text">Full</span>';
+            isFullscreen = false;
+            
+            // Ripristina scroll del body
+            document.body.style.overflow = 'auto';
+            
+            // Rimuovi listener ESC
+            document.removeEventListener('keydown', escapeFullscreen);
+        }
+
+        // Funzione per gestire ESC in fullscreen
+        function escapeFullscreen(event) {
+            if (event.key === 'Escape' && isFullscreen) {
+                exitFullscreen();
+            }
+        }
+
+        //Event Listener
+        if (fullscreenBtn) fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+/* IT WAS FOR ZOOM FUNCTIONS, BUT THEY ARE WEIRD
+        // Funzione per zoom in
+        function zoomIn() {
+            if (currentZoom < 3) {
+                currentZoom += 0.2;
+                applyZoom();
+            }
+        }
+
+        // Funzione per zoom out
+        function zoomOut() {
+            if (currentZoom > 0.5) {
+                currentZoom -= 0.2;
+                applyZoom();
+            }
+        }
+
+        // Funzione per applicare lo zoom
+        function applyZoom() {
+            if (museumMap) {
+                museumMap.style.transform = `scale(${currentZoom})`;
+                museumMap.classList.add('zoomed');
+        
+                // Aggiorna stato bottoni
+                if (zoomInBtn) zoomInBtn.style.opacity = currentZoom >= 3 ? '0.5' : '1';
+                if (zoomOutBtn) zoomOutBtn.style.opacity = currentZoom <= 0.5 ? '0.5' : '1';
+            }
+        }
+
+        // Funzione per reset zoom
+        function resetZoom() {
+            currentZoom = 1;
+            museumMap.style.transform = 'scale(1)';
+            museumMap.classList.remove('zoomed');
+            
+            // Ripristina stato bottoni
+            zoomInBtn.style.opacity = '1';
+            zoomOutBtn.style.opacity = '1';
+        }
+
+        // Event listeners
+        if (zoomInBtn) zoomInBtn.addEventListener('click', zoomIn);
+        if (zoomOutBtn) zoomOutBtn.addEventListener('click', zoomOut);
+        if (resetBtn) resetBtn.addEventListener('click', resetZoom);
+
+        // Gestione zoom con rotellina mouse (opzionale)
+        if (museumMap) {
+            museumMap.addEventListener('wheel', function(event) {
+            event.preventDefault();
+            
+            if (event.deltaY < 0) {
+                zoomIn();
+            } else {
+                zoomOut();
+            }
+        })};
+
+        // Gestione touch per zoom su mobile (opzionale)
+        let lastTouchDistance = 0;
+        
+        museumMap.addEventListener('touchstart', function(event) {
+            if (event.touches.length === 2) {
+                lastTouchDistance = getTouchDistance(event.touches[0], event.touches[1]);
+            }
+        });
+
+        museumMap.addEventListener('touchmove', function(event) {
+            if (event.touches.length === 2) {
+                event.preventDefault();
+                const currentDistance = getTouchDistance(event.touches[0], event.touches[1]);
+                
+                if (currentDistance > lastTouchDistance + 10) {
+                    zoomIn();
+                    lastTouchDistance = currentDistance;
+                } else if (currentDistance < lastTouchDistance - 10) {
+                    zoomOut();
+                    lastTouchDistance = currentDistance;
+                }
+            }
+        });
+
+        function getTouchDistance(touch1, touch2) {
+            return Math.sqrt(
+                Math.pow(touch2.clientX - touch1.clientX, 2) +
+                Math.pow(touch2.clientY - touch1.clientY, 2)
+            );
+        }
+
+        // Inizializzazione
+        applyZoom();
+*/
+
+        //questo è per gestire aperture e chiusure degli accordion
+/*        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
+*/
+
+
+        const acc = document.getElementsByClassName("accordion");
+
+        for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            const panel = this.nextElementSibling;
+
+            if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
+            panel.style.maxHeight = "0";
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+        }
+
+        function selectOrder(order) {
+            localStorage.setItem('objectOrder', order);
+            window.location.href = 'objects_template.html';
+        }
+
+    </script>
+
+</body>
+</html>

@@ -306,17 +306,21 @@ margin-top: 50px;
         transform: none;
         margin: 12px 8px 0;
     }
-
-    .image-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.nav-left {
+    left: -70px !important;
 }
+
+.nav-right {
+    right: -70px !important;
+}
+
+
 
 
 .image-wrapper {
     display: block !important;
+flex-direction: column;
+align-items: center;
     padding: 0 !important;
     position: relative;
     margin: 40px auto 60px;
@@ -332,12 +336,6 @@ margin-top: 50px;
     margin: 0 auto;
 }
 
-.nav-left {
-    left: -70px !important;
-}
 
-.nav-right {
-    right: -70px !important;
-}
 
 

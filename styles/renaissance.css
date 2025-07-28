@@ -13,7 +13,7 @@ body::before,
 body::after,
 .container::after {
     content: "";
-    position: absolute;
+    
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none;
@@ -27,7 +27,7 @@ body::before {
     width: 300px;
     height: 799px;
     bottom: 0;
-position: absolute;
+position: fixed;
 }
 
 body::after {
@@ -36,7 +36,7 @@ body::after {
     left: 1080px;
     width: 200px;
     height: 200px;
-position:absolute;
+position: fixed;
 }
 
 .container::after {
@@ -45,7 +45,7 @@ position:absolute;
     right: -265px;
     width: 300px;
     height: 300px;
-    position: absolute;
+    position: fixed;
 }
 
 .image-wrapper::after {

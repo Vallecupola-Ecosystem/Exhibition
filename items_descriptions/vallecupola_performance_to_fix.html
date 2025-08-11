@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vallecupola Performance</title>
+  <!-- <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .top-icons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .icon-button {
+      background: #1e2a38;
+      border: 1px solid #4b6b88;
+      color: #f0f0f0;
+      font-size: 1.1em;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto 40px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .object-image {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #1e2a38;
+      border: 1px solid #4b6b88;
+      color: #f0f0f0;
+      font-size: 1.5em;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-left { left: -20px; }
+    .nav-right { right: -20px; }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+    }
+
+    .accordion-container {
+      background-color: #1e2a38;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+
+    .accordion-item {
+      margin-bottom: 10px;
+      border: 1px solid #34495e;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .accordion-label {
+      display: block;
+      background-color: #2c3e50;
+      padding: 16px 20px;
+      font-size: 1.05em;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .accordion-label:hover {
+      background-color: #3a536d;
+    }
+
+    .accordion-label::after {
+      content: '▾';
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked + .accordion-label::after {
+      transform: rotate(180deg);
+    }
+
+    .note {
+      display: block;
+      font-size: 0.85em;
+      font-style: italic;
+      color: #b0c4de;
+      margin-top: 5px;
+    }
+
+    .accordion-content {
+      background-color: #263645;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 20px;
+    }
+
+    input[type="checkbox"]:checked ~ .accordion-content {
+      max-height: 1000px;
+      padding: 15px 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    td {
+      padding: 12px 16px;
+      text-align: left;
+      min-width: 200px;
+      color: #f0f0f0;
+      background-color: #1f2d3c;
+      border: 1px solid #4a5a6a;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #223344;
+    }
+  </style> -->
+  <link rel="stylesheet" href="/Exhibition/styles/base.css">
+  <link id="theme-style" rel="stylesheet" href="/Exhibition/styles/default.css">
+</head>
+
+<script src="/Exhibition/styles/style-changer.js" defer></script>
+
+<body>
+  <div class="style-switcher">
+    <button id="style-toggle">Change Style ▾</button>
+    <ul id="style-menu">
+      <li data-style="default">Default</li>
+      <li data-style="nrw">New Retro Wave</li>
+      <li data-style="artdeco">Art Deco</li>
+      <li data-style="future">Furturistic</li>
+      <li data-style="memories">19ᵗʰ‑Century Memories</li>
+      <li data-style="popmag">Pop Magazine</li>
+      <li data-style="renaissance">Renaissance</li>
+    </ul>
+  </div>
+  <!-- Top Buttons -->
+  <div class="top-icons">
+    <a href="#" class="icon-button">🌐 Translate</a>
+    <a href="#" class="icon-button">📤 Share</a>
+  </div>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <div class="landscape"></div>
+      </div>
+      <!-- Image and Navigation -->
+      <div class="image-wrapper">
+        <a href="BOH" class="nav-button nav-left" title="Previous Object">←</a>
+        <iframe width="80%" height="430"
+          src="https://www.youtube.com/embed/eZRKpIoJ0WQ?start=5642&end=5960&rel=0&modestbranding=1"
+          title="Vallecupola Performance – Note e Parole" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <a href="BOH" class="nav-button nav-right" title="Next Object">→</a>
+      </div>
+
+      <div class="accordion-container">
+        <h1>🎻 Vallecupola Performance</h1>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc1">
+          <label for="acc1" class="accordion-label">🧩 Let’s Discover! <span class="note">for young
+              adventurers</span></label>
+          <div class="accordion-content">
+            <p>🎬 In this special video, we see a touching scene from the story <em>Vallecupola</em>. On stage at the
+              <strong>Teatro Goldoni in Venice</strong>, a group of actors reads the story aloud while gentle, emotional
+              music plays in the background.
+            </p>
+            <p>This part of the story takes place in a big farmhouse kitchen. The girls are peeling corn, the boys are
+              braiding the husks, and everyone dances together as a boy plays the accordion. Lucrezia, the main
+              character,
+              thinks about her little sister Aurora, who recites a beautiful nursery rhyme. Then the party ends: Edoardo
+              has to leave with the sheep, and Lucrezia simply says, “I'll wait for you.” 💔</p>
+            <p>The video is from <strong>“Note e Parole,”</strong> the final evening of the <strong>Campiello Giovani
+                Prize 2024</strong>, which took place on <strong>September 20th, 2024, in Venice</strong>. The music was
+              written by two young students from <strong>CPM Music Institute in Milan</strong>, a school where people
+              study to become professional musicians! 🎵</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc2">
+          <label for="acc2" class="accordion-label">⌛ In a Minute <span class="note">for those in a rush</span></label>
+          <div class="accordion-content">
+            <p>This short, intense performance—recorded on <strong>September 20, 2024</strong>, at the <strong>Teatro
+                Goldoni in Venice</strong>—presents a live reading of a key excerpt from the story <em>Vallecupola</em>,
+              with original music playing alongside the actors' voices. It was part of <strong>“Note e Parole,”</strong>
+              the closing event of the <strong>Campiello Giovani Prize 2024</strong>.</p>
+            <p>The chosen scene is one of the most symbolic in the story: the corn husking ritual, where girls and boys
+              work together, tease one another, and dance tightly in a farmhouse room to the sound of an accordion. A
+              nursery rhyme recited by little Aurora touches on themes of growth, waiting, and golden rewards. Then the
+              mood shifts—Edoardo leaves at dawn, and Lucrezia remains behind.</p>
+            <p>The music—composed by <strong>Giovanni Deidda and Giulia Leone</strong>, students at the <strong>CPM
+                Music
+                Institute in Milan</strong>—perfectly matches the emotional arc: from lighthearted celebration to the
+              quiet ache of farewell.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc3">
+          <label for="acc3" class="accordion-label">🎓 Deep Dive <span class="note">for great seekers, studying in
+              detail</span></label>
+          <div class="accordion-content">
+            <p>This video excerpt, taken from the evening event <strong>“Note e Parole”</strong> (<em>Campiello Giovani
+                Prize</em>, September 20, 2024, Teatro Goldoni, Venice), presents a staged reading of one of the most
+              emotionally and thematically rich blocks of the short story <em>Vallecupola</em>, accompanied by original
+              live music.</p>
+            <h3>Scene content</h3>
+            <p>Set during a communal corn husking ritual, the excerpt depicts a vibrant rural tradition: peeling corn,
+              braiding husks, music, dancing. Aurora’s nursery rhyme evokes the cycle of life, harvest, and expectation.
+              There's humor and liveliness, but also a slow buildup to a turning point—Edoardo’s quiet departure with
+              the
+              sheep, and Lucrezia’s whispered farewell: “I'll wait for you.”</p>
+
+            <h3>Performed dimension</h3>
+            <p>The reading is paired with a soundtrack composed by <strong>Giovanni Deidda and Giulia Leone</strong>,
+              students at <strong>CPM Music Institute</strong>, a Milan-based higher education music school
+              (AFAM-accredited) founded by Franco Mussida, focused on contemporary and pop music composition and
+              performance.</p>
+
+            <h3>Critical significance</h3>
+            <ul>
+              <li>the shared physical memory of community labor</li>
+              <li>childhood dreams and resilience (Aurora’s ambition)</li>
+              <li>farewell and longing (Lucrezia–Edoardo)</li>
+              <li>and the cyclical rhythm of life, rural tradition, and personal loss</li>
+            </ul>
+            <p>A successful and respectful adaptation that conveys the multilayered emotional texture of the original
+              narrative.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc4">
+          <label for="acc4" class="accordion-label">📱 #ShareIt! <span class="note">for modern
+              influencers</span></label>
+          <div class="accordion-content">
+            <p>🎥🔥 This scene is a vibe! From the final event <strong>“Note e Parole”</strong> (Venice, Sept 20, 2024),
+              actors read one of the most moving moments from <em>Vallecupola</em>—and the music makes it even better.
+              🎶
+              The score was written by two up-and-coming musicians from <strong>CPM Music Institute Milan</strong>:
+              <strong>Giovanni Deidda and Giulia Leone</strong>.
+            </p>
+
+            <p><strong>What happens?</strong> A mix of fun, corn, dancing, and farewells. 🌽💃💔 Lucrezia and the others
+              are peeling corn, dancing to accordion music, laughing… but then comes the goodbye. Edoardo leaves with
+              the
+              herd, and Lucrezia watches him disappear down the valley. She just says, “I'll wait for you.”</p>
+
+            <h3>🌾 Highlights:</h3>
+            <ul>
+              <li>farm party energy</li>
+              <li>live emotional music</li>
+              <li>performance made for the stage and the screen</li>
+              <li>full of love, memory, sisterhood, and soft heartbreak</li>
+            </ul>
+
+            <p>🎯 <strong>Watch it, feel it, share it.</strong> This is a story that sings and stings—and stays with
+              you.
+              <br>
+              #CampielloGiovani2024 #VallecupolaLive #NoteEParole #IllWaitForYou
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="acc5">
+          <label for="acc5" class="accordion-label">📊 Metadata <span class="note">for those who need structured
+              information</span></label>
+          <div class="accordion-content">
+            <table>
+              <tbody>
+                <tr>
+                  <td><strong>Title</strong></td>
+                  <td>Vallecupola</td>
+                </tr>
+                <tr>
+                  <td><strong>ISWC Code</strong></td>
+                  <td>T-327.873.610-6</td>
+                </tr>
+                <tr>
+                  <td><strong>Composer</strong></td>
+                  <td>Giovanni Deidda</td>
+                </tr>
+                <tr>
+                  <td><strong>Composer</strong></td>
+                  <td>Giulia Leone</td>
+                </tr>
+                <tr>
+                  <td><strong>Contributor</strong></td>
+                  <td>CPM Music Institute</td>
+                </tr>
+                <tr>
+                  <td><strong>Contributor</strong></td>
+                  <td>Fondazione Il Campiello</td>
+                </tr>
+                <tr>
+                  <td><strong>Place</strong></td>
+                  <td>Teatro Goldoni (Venezia)</td>
+                </tr>
+                <tr>
+                  <td><strong>Date</strong></td>
+                  <td>20/09/2024</td>
+                </tr>
+                <tr>
+                  <td><strong>Guitar</strong></td>
+                  <td>Nicola Stefanello</td>
+                </tr>
+                <tr>
+                  <td><strong>Drums</strong></td>
+                  <td>Vincenzo Garofalo</td>
+                </tr>
+                <tr>
+                  <td><strong>Keyboard</strong></td>
+                  <td>Giacomo Gulino</td>
+                </tr>
+                <tr>
+                  <td><strong>Singer</strong></td>
+                  <td>Sofia Pragliola</td>
+                </tr>
+                <tr>
+                  <td><strong>Reader</strong></td>
+                  <td>Leone Tarchiani</td>
+                </tr>
+                <tr>
+                  <td><strong>Reader</strong></td>
+                  <td>Magdalena Soldati</td>
+                </tr>
+                <tr>
+                  <td><strong>Dancers</strong></td>
+                  <td>Diaghilev Dance School</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</body>
+
+</html>
